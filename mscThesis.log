@@ -1,0 +1,380 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  30 NOV 2016 10:29
+entering extended mode
+**mscThesis.tex
+
+("C:\Users\Nam\Google Drive\TU\Graduation\Literature\Latex working thesis\mscTh
+esis.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+
+("C:\Users\Nam\Google Drive\TU\Graduation\Literature\Latex working thesis\mscTh
+esis.cls"
+Document Class: mscThesis 12/03/2007 Standard Systems and Control MSc Thesis cl
+ass
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\bk11.clo"
+File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ntheorem\ntheorem.st
+y"
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks14
+\theorem@@style=\toks15
+\theorembodyfont=\toks16
+\theoremnumbering=\toks17
+\theorempreskipamount=\skip41
+\theorempostskipamount=\skip42
+\theoremframepreskipamount=\skip43
+\theoremframepostskipamount=\skip44
+\theoreminframepreskipamount=\skip45
+\theoreminframepostskipamount=\skip46
+\theorem@preskip=\toks18
+\theorem@postskip=\toks19
+\theorem@framepreskip=\toks20
+\theorem@framepostskip=\toks21
+\theorem@inframepreskip=\toks22
+\theorem@inframepostskip=\toks23
+\theoremindent=\dimen102
+\theorem@indent=\dimen103
+\theoremrightindent=\dimen104
+\theorem@rightindent=\dimen105
+\theoremheaderfont=\toks24
+\theoremseparator=\toks25
+\theoremprework=\toks26
+\theorempostwork=\toks27
+\theoremsymbol=\toks28
+\qedsymbol=\toks29
+\theoremkeyword=\toks30
+\qedsymbol=\toks31
+\thm@topsep=\skip47
+\thm@topsepadd=\skip48
+)
+\c@Anecdote=\count86
+\c@anecdote=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen106
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\hyperref.st
+y"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\generic\oberdiek\hobsub-hy
+perref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\generic\oberdiek\hobsub-ge
+neric.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks32
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\generic\ifxetex\ifxetex.st
+y"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\auxhook.sty
+"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\kvoptions.s
+ty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen107
+\Hy@linkcounter=\count90
+\Hy@pagecounter=\count91
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count92
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\00miktex\hyperref.cf
+g"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+
+! Package hyperref Error: Wrong DVI mode driver option `dvips',
+(hyperref)                because pdfTeX or LuaTeX is running in PDF mode.
+
+See the hyperref package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4319 \ProcessKeyvalOptions{Hyp}
+                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package hyperref Error: Wrong DVI mode driver option `ps2pdf',
+(hyperref)                because pdfTeX or LuaTeX is running in PDF mode.
+
+See the hyperref package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4319 \ProcessKeyvalOptions{Hyp}
+                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count93
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen108
+\Fld@menulength=\count94
+\Field@Width=\dimen109
+\Fld@charsize=\dimen110
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count95
+\c@Item=\count96
+\c@Hfootnote=\count97
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\hpdftex.def
+"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count98
+\c@bookmark@seq@number=\count99
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\rerunfilech
+eck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip51
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\colortbl\colortbl.st
+y"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+ ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen111
+\extrarowheight=\dimen112
+\NC@list=\toks33
+\extratabsurround=\skip52
+\backup@length=\skip53
+) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\color.sty
+"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\pdftex-def\pdftex.de
+f"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count100
+))
+\everycr=\toks34
+\minrowclearance=\skip54
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 872.
+Package hyperref Info: Option `breaklinks' set `true' on input line 872.
+
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\a4wide\a4wide.sty"
+Package: a4wide 1994/08/30
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ntgclass\a4.sty"
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\fancyhdr\fancyhdr.st
+y"
+\fancy@headwidth=\skip55
+\f@ncyO@elh=\skip56
+\f@ncyO@erh=\skip57
+\f@ncyO@olh=\skip58
+\f@ncyO@orh=\skip59
+\f@ncyO@elf=\skip60
+\f@ncyO@erf=\skip61
+\f@ncyO@olf=\skip62
+\f@ncyO@orf=\skip63
+)
+("C:\Users\Nam\Google Drive\TU\Graduation\Literature\Latex working thesis\Style
+Stuff/changebar.sty"
+Package: StyleStuff/changebar 2000/09/26 v3.3j Indicate changes with marginal b
+ars
+\cb@nextpoint=\count101
+\cb@topleft=\count102
+\cb@topright=\count103
+\cb@botleft=\count104
+\cb@botright=\count105
+\cb@curbarwd=\dimen113
+\cb@page=\count106
+\cb@pagecount=\count107
+\cb@odd@left=\dimen114
+\cb@odd@right=\dimen115
+\cb@even@left=\dimen116
+\cb@even@right=\dimen117
+\changebarwidth=\skip64
+\deletebarwidth=\skip65
+\changebarsep=\skip66
+\c@changebargrey=\count108
+\cb@write=\write3
+\cb@read=\read1
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\tools\theorem.sty")
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\caption\caption2.sty
+"
+Package: caption2 2015/09/15 v2.2-100 Customising captions (AR)
+
+
+Package caption2 Warning: ****************************************************
+(caption2)                THIS PACKAGE IS OBSOLETE:
+(caption2)                This package attempts to provide an `caption2'
+(caption2)                package v2.0/2.1 author environment so that OLD
+(caption2)                documents can be successfully processed. It should
+(caption2)                NOT be used for NEW documents! New documents should
+(caption2)                use the regular `caption' package v3.x instead.
+(caption2)                ****************************************************
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\caption\caption3.sty
+"
+Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
+e 221.
+\captionlinewidth=\dimen125
+\realcaptionwidth=\dimen126
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\graphicx.st
+y"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\graphics.st
+y"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\00miktex\graphics.cf
+g"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+
+! LaTeX Error: File `psfrag.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.890 \RequirePackage
+                     {StyleStuff/nomencl}
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 5949 strings out of 493921
+ 91197 string characters out of 3144882
+ 169260 words of memory out of 3000000
+ 9229 multiletter control sequences out of 15000+200000
+ 3940 words of font info for 15 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 43i,0n,45p,218b,36s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

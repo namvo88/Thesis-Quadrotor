@@ -1,0 +1,22 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdftex 2016.5.3)  7 SEP 2016 16:52
+entering extended mode
+**C:/Users/Nam/Google*Drive/TU/Graduation/Literature/Latex*working/library.bib
+("C:/Users/Nam/Google Drive/TU/Graduation/Literature/Latex working/library.bib"
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.79 doi = {10.1007/978-3-642-00312-7_
+                                      7},
+? 
+! Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.79 doi = {10.1007/978-3-642-00312-7_
+                                      7},
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

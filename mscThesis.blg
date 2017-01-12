@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: mscThesis.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: preface.aux
+A level-1 auxiliary file: acknowledgements.aux
+A level-1 auxiliary file: dedication.aux
+A level-1 auxiliary file: variables.aux
+The style file: ieeetr.bst
+Illegal, another \bibdata command---line 27 of file mscThesis.aux
+ : \bibdata
+ :         {library}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: glossary.aux
+I found no \citation commands---while reading file mscThesis.aux
+Database file #1: library.bib
+(There were 2 error messages)

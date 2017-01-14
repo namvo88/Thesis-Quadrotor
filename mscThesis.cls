@@ -868,8 +868,8 @@
             urlcolor=darkblue,
             linkcolor=darkblue,
             menucolor=darkblue,
-            anchorcolor=red,
-            pagecolor=cyan,}
+            anchorcolor=red,}
+%            pagecolor=cyan,}
 %            pdfborder=[0 0 0],}
 %%
 %%
@@ -884,7 +884,6 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[leftbars]{StyleStuff/changebar}
 \RequirePackage{theorem}
-\RequirePackage[normal]{caption2}
 \RequirePackage{graphicx}
 \RequirePackage{psfrag}
 \RequirePackage{StyleStuff/nomencl}
@@ -939,9 +938,9 @@
   \fi}
 %
 %--------------------------------------------------------------------------------------
-\renewcommand{\captionfont}{\small\sffamily}
-\renewcommand{\captionlabelfont}{\small\bfseries\sffamily}
-\setlength{\captionmargin}{20pt}
+%\renewcommand{\captionfont}{\small\sffamily}
+%\renewcommand{\captionlabelfont}{\small\bfseries\sffamily}
+%\setlength{\captionmargin}{20pt}
 %For fncychap
 \makeatletter
   %\ChNameUpperCase

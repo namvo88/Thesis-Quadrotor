@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  30 NOV 2016 10:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.3.13)  14 JAN 2017 20:16
 entering extended mode
 **mscThesis.tex
-
-("C:\Users\Nam\Google Drive\TU\Graduation\Literature\Latex working thesis\mscTh
-esis.tex"
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-
-("C:\Users\Nam\Google Drive\TU\Graduation\Literature\Latex working thesis\mscTh
-esis.cls"
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.cls
 Document Class: mscThesis 12/03/2007 Standard Systems and Control MSc Thesis cl
 ass
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\bk11.clo"
@@ -98,7 +94,7 @@ Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -111,7 +107,7 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
@@ -157,32 +153,6 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 g"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-
-! Package hyperref Error: Wrong DVI mode driver option `dvips',
-(hyperref)                because pdfTeX or LuaTeX is running in PDF mode.
-
-See the hyperref package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4319 \ProcessKeyvalOptions{Hyp}
-                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package hyperref Error: Wrong DVI mode driver option `ps2pdf',
-(hyperref)                because pdfTeX or LuaTeX is running in PDF mode.
-
-See the hyperref package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4319 \ProcessKeyvalOptions{Hyp}
-                                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
@@ -191,7 +161,7 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count93
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\url\url.sty"
+ ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -214,13 +184,20 @@ LaTeX Info: Redefining \pageref on input line 6369.
 \c@Hfootnote=\count97
 )
 
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Message: Driver: hdvips.
 
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\hpdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\hdvips.def"
+File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\pdfmark.def
 "
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count98
-\c@bookmark@seq@number=\count99
+File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
+\pdf@docset=\toks33
+\pdf@box=\box26
+\pdf@toks=\toks34
+\pdf@defaulttoks=\toks35
+\HyField@AnnotCount=\count98
+\Fld@listcount=\count99
+\c@bookmark@seq@number=\count100
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\rerunfilech
 eck.sty"
@@ -229,7 +206,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip51
-)
+))
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\colortbl\colortbl.st
 y"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
@@ -237,7 +214,7 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen111
 \extrarowheight=\dimen112
-\NC@list=\toks33
+\NC@list=\toks36
 \extratabsurround=\skip52
 \backup@length=\skip53
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\color.sty
@@ -246,14 +223,15 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
-
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\pdftex-def\pdftex.de
+Package color Info: Driver file: dvips.def on input line 130.
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\dvipsnam.de
 f"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count100
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\everycr=\toks34
+\everycr=\toks37
 \minrowclearance=\skip54
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 872.
@@ -279,9 +257,7 @@ y"
 \f@ncyO@erf=\skip61
 \f@ncyO@olf=\skip62
 \f@ncyO@orf=\skip63
-)
-("C:\Users\Nam\Google Drive\TU\Graduation\Literature\Latex working thesis\Style
-Stuff/changebar.sty"
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/changebar.sty
 Package: StyleStuff/changebar 2000/09/26 v3.3j Indicate changes with marginal b
 ars
 \cb@nextpoint=\count101
@@ -349,32 +325,525 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 g"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 )
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\psfrag\psfrag.sty"
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count109
+\pfg@scount=\count110
+\pfg@temp=\write4
+)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/nomencl.sty
+Package: StyleStuff/nomencl 2000/12/03 v3.1a Nomenclature package (BS)
+\nomlabelwidth=\dimen129
+\nom@tempdim=\dimen130
+\nomitemsep=\skip67
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen131
+\epsfysize=\dimen132
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/eso-pic.sty
+Package: StyleStuff/eso-pic 2002/11/16 v1.1b eso-pic (RN)
 
-! LaTeX Error: File `psfrag.sty' not found.
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/fncychap.sty
+Package: StyleStuff/fncychap 1997/04/06 v1.11 LaTeX package (Revised chapters)
+\RW=\skip68
+\mylen=\skip69
+\myhi=\skip70
+\px=\skip71
+\py=\skip72
+\pyy=\skip73
+\pxx=\skip74
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\sidecap\sidecap.sty"
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+\SC@BOXWD=\dimen133
+\SC@CAPWD=\dimen134
+\SC@tempdima=\dimen135
+\SC@tempdimb=\dimen136
+\c@SC@C=\count111
+\SC@BOX=\box27
+) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsmath.st
+y"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip75
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks38
+\ex@=\dimen137
+)) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsbsy.st
+y"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen138
+) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsopn.sty
+"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count112
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count113
+\leftroot@=\count114
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count115
+\DOTSCASE@=\count116
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen139
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count117
+\c@MaxMatrixCols=\count118
+\dotsspace@=\muskip11
+\c@parentequation=\count119
+\dspbrk@lvl=\count120
+\tag@help=\toks39
+\row@=\count121
+\column@=\count122
+\maxfields@=\count123
+\andhelp@=\toks40
+\eqnshift@=\dimen140
+\alignsep@=\dimen141
+\tagshift@=\dimen142
+\tagwidth@=\dimen143
+\totwidth@=\dimen144
+\lineht@=\dimen145
+\@envbody=\toks41
+\multlinegap=\skip76
+\multlinetaggap=\skip77
+\mathdisplay@stack=\toks42
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\amssymb.sty
+"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.890 \RequirePackage
-                     {StyleStuff/nomencl}
-*** (cannot \read from terminal in nonstop modes)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\amsfonts.st
+y"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\units\nicefrac.sty"
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip78
+\L@UnitsRaiseTextstyle=\skip79
+\L@UnitsRaiseScriptstyle=\skip80
+) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\eurosym\eurosym.st
+y"
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box30
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/latexcad.sty
+ latexcad.sty (V 1.9 Mar 98) - Support for LaTeXCAD drawing package. 
+ John Leis, leis@usq.edu.au Adapted from various CTAN sources. 
+\@drawingscale=\skip81
+\@dfltdrawingscale=\skip82
+\@pswidth=\skip83
+\@dfltpswidth=\skip84
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/rotate.sty
+\@rotdimen=\dimen146
+\@rotbox=\box31
+)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/fancybox.sty
+\c@tocdepth=\count124
 
- 
+Style option: `fancybox' v1.0/97 patch 1 <1997/05/16> (tvz)
+\@fancybox=\box32
+\shadowsize=\dimen147
+\@Sbox=\box33
+\do@VerbBox=\toks43
+\the@fancyput=\toks44
+\this@fancyput=\toks45
+\EndVerbatimTokens=\toks46
+\Verbatim@Outfile=\write5
+\Verbatim@Infile=\read2
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count125
+\d@lta=\count126
+\@delta=\dimen148
+\@@delta=\dimen149
+\@gridcnt=\count127
+\@joinkind=\count128
+\@dotgap=\dimen150
+\@ddotgap=\dimen151
+\@x@diff=\count129
+\@y@diff=\count130
+\x@diff=\dimen152
+\y@diff=\dimen153
+\@dotbox=\box34
+\num@segments=\count131
+\num@segmentsi=\count132
+\@datafile=\read3
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/eepic.sty
+Extension to Epic and LaTeX. Version 1.1b - Released Febrary 7, 1988
+\@gphlinewidth=\count133
+\@eepictcnt=\count134
+\@tempdimc=\dimen154
+\maxovaldiam=\dimen155
+\@filltype=\box35
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/epsf.sty
+\epsffilein=\read4
+\epsfxsize=\dimen156
+\epsfysize=\dimen157
+\epsftsize=\dimen158
+\epsfrsize=\dimen159
+\epsftmp=\dimen160
+\pspoints=\dimen161
+))
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\listings.st
+y"
+\lst@mode=\count135
+\lst@gtempboxa=\box36
+\lst@token=\toks47
+\lst@length=\count136
+\lst@currlwidth=\dimen162
+\lst@column=\count137
+\lst@pos=\count138
+\lst@lostspace=\dimen163
+\lst@width=\dimen164
+\lst@newlines=\count139
+\lst@lineno=\count140
+\lst@maxwidth=\dimen165
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\lstmisc.sty
+"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count141
+\lst@skipnumbers=\count142
+\lst@framebox=\box37
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\listings.cf
+g"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\lstlang1.st
+y"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\acronym\acronym.sty"
+Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5a Variant command support
+) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\xstring\xstring.st
+y"
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\generic\xstring\xstring.te
+x"
+\@xs@message=\write6
+\integerpart=\count143
+\decimalpart=\count144
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks48
+)
+\c@example=\count145
+)
+\@glossaryfile=\write7
+
+Writing glossary file mscThesis.glo
+\@indexfile=\write8
+Writing index file mscThesis.idx
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.aux
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+\AtBeginShipoutBox=\box38
+Package hyperref Info: Link coloring ON on input line 38.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\nameref.sty
+"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\generic\oberdiek\gettitles
+tring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count146
+)
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
+ (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
+\@outlinefile=\write9
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ABD: EveryShipout initializing macros
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ms\ragged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip85
+\RaggedLeftLeftskip=\skip86
+\RaggedRightLeftskip=\skip87
+\CenteringRightskip=\skip88
+\RaggedLeftRightskip=\skip89
+\RaggedRightRightskip=\skip90
+\CenteringParfillskip=\skip91
+\RaggedLeftParfillskip=\skip92
+\RaggedRightParfillskip=\skip93
+\JustifyingParfillskip=\skip94
+\CenteringParindent=\skip95
+\RaggedLeftParindent=\skip96
+\RaggedRightParindent=\skip97
+\JustifyingParindent=\skip98
+)
+\c@lstlisting=\count147
+File: example_titlefig.eps Graphic file (type eps)
+ <example_titlefig.eps>
+File: StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps Graphic file (type eps)
+
+<StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
+Overfull \hbox (17.79086pt too wide) has occurred while \output is active
+ [][] 
+ []
+
+[1
+
+
+
+] [2
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (29.00462pt too wide) in paragraph at lines 44--44
+ [] 
+ []
+
+[1]
+File: examplelogo.eps Graphic file (type eps)
+ <examplelogo.eps>
+File: StyleStuff/tud.eps Graphic file (type eps)
+ <StyleStuff/tud.eps>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 44.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+
+ []
+
+[3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+]
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.toc
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 20.
+
+[9])
+\tf@toc=\write10
+ [10] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.lof)
+\tf@lof=\write11
+ [11
+
+
+
+]
+[12
+
+] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.lot)
+\tf@lot=\write12
+ [13
+
+] [14
+
+]
+No file mscThesis.gls.
+[15
+
+
+
+] [16
+
+]
+No file mscThesis.ind.
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.tex
+Chapter 1.
+
+LaTeX Warning: Citation `texbook' on page 1 undefined on input line 5.
+
+Package acronym Info: Label `acro:DUT' newly defined as it shall be overridden
+although it is yet undefined on input line 6.
+[1
+
+
+
+
+] [2
+
+]) [3
+
+
+] [4]
+Chapter 2.
+[5
+
+] [6
+
+] [7] [8]
+Chapter 3.
+[9
+
+] [10
+
+]
+Chapter 4.
+[11] [12
+
+]
+Chapter 5.
+[13] [14
+
+] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl
+
+LaTeX Warning: Empty 'thebibliography' environment on input line 3.
+
+) [15
+
+] [16
+
+]
+Appendix A.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\lstlang1.st
+y"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\lstlang1.st
+y"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\lstmisc.sty
+"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 160.
+ (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.c
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 5.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
+)
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 162.
+
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m) [17
+
+] [18
+
+]
+Appendix B.
+\tf@thm=\write13
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
+ (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.aux
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
+Package rerunfilecheck Info: File `mscThesis.out' has not changed.
+(rerunfilecheck)             Checksum: 4097782236BFF8A4CB71E2828D984DE6;1420.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
+ ) 
 Here is how much of TeX's memory you used:
- 5949 strings out of 493921
- 91197 string characters out of 3144882
- 169260 words of memory out of 3000000
- 9229 multiletter control sequences out of 15000+200000
- 3940 words of font info for 15 fonts, out of 3000000 for 9000
+ 10526 strings out of 493922
+ 154762 string characters out of 3144905
+ 279556 words of memory out of 3000000
+ 13598 multiletter control sequences out of 15000+200000
+ 15551 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,0n,45p,218b,36s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 43i,11n,58p,296b,1483s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on mscThesis.dvi (37 pages, 57880 bytes).

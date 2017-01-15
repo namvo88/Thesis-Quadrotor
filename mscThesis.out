@@ -1,18 +1,18 @@
-\BOOKMARK [0][-]{section*.1}{Abstract}{}% 1
-\BOOKMARK [0][-]{section*.2}{Acknowledgements}{}% 2
-\BOOKMARK [0][-]{section*.3}{Nomenclature}{}% 3
-\BOOKMARK [0][-]{section*.4}{Acronyms}{}% 4
+\BOOKMARK [0][-]{section*.4}{Abstract}{}% 1
+\BOOKMARK [0][-]{section*.5}{Acknowledgements}{}% 2
+\BOOKMARK [0][-]{section*.6}{Nomenclature}{}% 3
+\BOOKMARK [0][-]{section*.7}{Acronyms}{}% 4
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 5
 \BOOKMARK [-1][-]{part.1}{I First Part}{}% 6
 \BOOKMARK [0][-]{chapter.2}{First Real Chapter}{part.1}% 7
 \BOOKMARK [1][-]{section.2.1}{First section}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.1.1}{The first subsection}{section.2.1}% 9
-\BOOKMARK [3][-]{section*.6}{Subsection Short Title}{subsection.2.1.1}% 10
+\BOOKMARK [3][-]{section*.9}{Subsection Short Title}{subsection.2.1.1}% 10
 \BOOKMARK [-1][-]{part.2}{II Second part}{}% 11
 \BOOKMARK [0][-]{chapter.3}{Second part chapter}{part.2}% 12
 \BOOKMARK [0][-]{chapter.4}{TEMP second part chapter this is a very long line to test if the table of figures will wrap the line or will continue to go over the border of the page}{part.2}% 13
 \BOOKMARK [0][-]{chapter.5}{Second second part chapter}{part.2}% 14
-\BOOKMARK [0][-]{section*.8}{Bibliography}{part.2}% 15
+\BOOKMARK [0][-]{section*.12}{Bibliography}{part.2}% 15
 \BOOKMARK [0][-]{appendix.A}{The back of the thesis}{part.2}% 16
 \BOOKMARK [1][-]{section.A.1}{An appendix section}{appendix.A}% 17
 \BOOKMARK [2][-]{subsection.A.1.1}{An appendix subsection with C++ Listing}{section.A.1}% 18

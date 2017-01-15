@@ -1,5 +1,23 @@
 \documentclass[a4paper,11pt]{mscThesis}
 %
+%========================== Packages ======================================
+		\usepackage{lipsum} 
+		\usepackage{outlines}
+		\usepackage{amsmath}
+		\usepackage{tabularx}
+		\usepackage{graphicx}
+		\usepackage{subfig}
+		\usepackage{hhline}
+		
+%		\usepackage{titling}
+		
+		%Tabitems
+		\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+		\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+		
+		% Bibliography
+		\usepackage[utf8]{inputenc}
+%================================================================		
 
 \mscDepartment{Delft Center for Systems and Control}
 %{Systems and Control}
@@ -53,7 +71,7 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
     \nonumchap{Acknowledgements}%
 
     I would like to thank my supervisors \mscreaderone\ from DCSC and \mscreadertwo\ from Alten Nederland B.V. for their assistance during the writing
-    of this thesis. I would also\ldots
+    of this thesis. I would also \ldots
     \vspace*{15mm}
 
     \noindent
@@ -86,7 +104,6 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 \mainmatter
 %
 % Introduction
-%\include{keywords}
 \include{introduction}
 
 %

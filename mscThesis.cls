@@ -854,7 +854,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%
-\RequirePackage[dvips,ps2pdf]{hyperref}
+\RequirePackage{hyperref}
 \RequirePackage{colortbl}
 %
 \definecolor{darkred}{rgb}{0.5,0,0}

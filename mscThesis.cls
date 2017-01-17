@@ -886,7 +886,7 @@
 \RequirePackage{theorem}
 \RequirePackage{graphicx}
 \RequirePackage{psfrag}
-\RequirePackage{StyleStuff/nomencl}
+
 \RequirePackage{makeidx}
 \RequirePackage{color,ifthen,epsfig}
 \RequirePackage{StyleStuff/eso-pic}
@@ -1036,42 +1036,43 @@
 %\renewcommand{\cfttabfont}{\sffamily}
 %\renewcommand{\cftmarklot}{\markboth{\bfseries\listtablename}{\bfseries\listtablename}}
 %--------------------------------------------------------------------------------------
-\renewcommand{\nomname}{Nomenclature}
-\setlength{\nomitemsep}{-0.5\parsep}
+%\renewcommand{\nomname}{Nomenclature}
+%\setlength{\nomitemsep}{-0.5\parsep}
 
-\newcommand{\abbrev}[2]
-   {#2 (#1)\nomenclature[a ]{#1}{\MakeUppercase#2}}
+		\newcommand{\abbrev}[2]
+		   {#2 (#1)\nomenclature[a ]{#1}{\MakeUppercase#2}}
+		
+		\newcommand{\lsymb}[2]
+		   {#1\nomenclature[c ]{#1}{\MakeUppercase#2}}
+		
+		\newcommand{\gsymb}[2]
+		   {#1\nomenclature[b ]{#1}{\MakeUppercase#2}}
+		
+		\newcommand{\subs}[2]
+		   {\nomenclature[d ]{$ _{#1} $}{\MakeUppercase#2}}
+		
+		\newcommand{\supers}[2]
+		   {\nomenclature[e ]{$ ^{#1} $}{\MakeUppercase#2}}
+		
+		\newcommand{\others}[2]
+		   {\nomenclature[f ]{#1}{\MakeUppercase#2}}
 
-\newcommand{\lsymb}[2]
-   {#1\nomenclature[c ]{#1}{\MakeUppercase#2}}
-
-\newcommand{\gsymb}[2]
-   {#1\nomenclature[b ]{#1}{\MakeUppercase#2}}
-
-\newcommand{\subs}[2]
-   {\nomenclature[d ]{$ _{#1} $}{\MakeUppercase#2}}
-
-\newcommand{\supers}[2]
-   {\nomenclature[e ]{$ ^{#1} $}{\MakeUppercase#2}}
-
-\newcommand{\others}[2]
-   {\nomenclature[f ]{#1}{\MakeUppercase#2}}
 
 
-\renewcommand{\nomgroup}[1]{%
-  \ifthenelse{\equal{#1}{A}}{%
-  \medskip\item[\LARGE\textbf{\textsf{Abbreviations}}]\medskip}{%
-  \ifthenelse{\equal{#1}{C}}{%
-   \medskip\item[\LARGE\textbf{\textsf{Latin Symbols}}]\medskip}{%
-  \ifthenelse{\equal{#1}{B}}{%
-   \medskip\item[\LARGE\textbf{\textsf{Greek Symbols}}]\medskip}{%
-  \ifthenelse{\equal{#1}{D}}{%
-   \medskip\item[\LARGE\textbf{\textsf{Subscripts}}]\medskip}{%
-  \ifthenelse{\equal{#1}{E}}{%
-  \medskip\item[\LARGE\textbf{\textsf{Superscripts}}]\medskip}{%
-    \ifthenelse{\equal{#1}{F}}{%
-   \medskip\item[\LARGE\textbf{\textsf{Other}}]\medskip}{}%
-   }}}}}}
+%\renewcommand{\nomgroup}[1]{%
+%  \ifthenelse{\equal{#1}{A}}{%
+%  \medskip\item[\LARGE\textbf{\textsf{Abbreviations}}]\medskip}{%
+%  \ifthenelse{\equal{#1}{C}}{%
+%   \medskip\item[\LARGE\textbf{\textsf{Latin Symbols}}]\medskip}{%
+%  \ifthenelse{\equal{#1}{B}}{%
+%   \medskip\item[\LARGE\textbf{\textsf{Greek Symbols}}]\medskip}{%
+%  \ifthenelse{\equal{#1}{D}}{%
+%   \medskip\item[\LARGE\textbf{\textsf{Subscripts}}]\medskip}{%
+%  \ifthenelse{\equal{#1}{E}}{%
+%  \medskip\item[\LARGE\textbf{\textsf{Superscripts}}]\medskip}{%
+%    \ifthenelse{\equal{#1}{F}}{%
+%   \medskip\item[\LARGE\textbf{\textsf{Other}}]\medskip}{}%
+%   }}}}}}
 %--------------------------------------------------------------------------------------
 \makeatletter
 %removed Jan 8, 2009
@@ -1228,7 +1229,7 @@ Readers:       \hfill \underline{ \hspace{7cm} }\\
 %% Fill out PDF author - title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\setThesisInfo}{
-\makeglossary
+
 \makeindex
 \hypersetup{pdftitle    = Masters Thesis: \msctitle,
             pdfauthor   = \mscname,
@@ -1278,14 +1279,7 @@ Readers:       \hfill \underline{ \hspace{7cm} }\\
     
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Print nomenclature list
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newcommand{\printnomencl}{
-% \addcontentsline{toc}{chapter}{\numberline{}\nomname}
-% \markboth{\nomname}{\nomname}
-% \printglossary[0.8in]
-% \cleardoublepage
-% }
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %% Print bib list
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1312,16 +1306,6 @@ Readers:       \hfill \underline{ \hspace{7cm} }\\
     \markboth{#1}{#1}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Print nomenclature list
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\printnomencl}{
-\phantomsection % Added by Martijn van de Giessen
-\addcontentsline{toc}{chapter}{\numberline{}\nomname}
-\markboth{\nomname}{\nomname}
-\printglossary[0.8in]
-\cleardoublepage
-}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Print bib list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

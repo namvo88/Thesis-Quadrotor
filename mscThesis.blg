@@ -1,9 +1,9 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: mscThesis.aux
+A level-1 auxiliary file: examples.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: modeling.aux
 A level-1 auxiliary file: control.aux
-A level-1 auxiliary file: implementation.aux
-A level-1 auxiliary file: results.aux
+A level-1 auxiliary file: setup_results.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: apalike.bst
 Database file #1: library.bib

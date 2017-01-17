@@ -1,21 +1,36 @@
+% arara: pdflatex
+% arara: nomencl
+% arara: pdflatex
 \documentclass[a4paper,11pt]{mscThesis}
+
 %
 %========================== Packages ======================================
 		\usepackage{lipsum} 
 		\usepackage{outlines}
 		\usepackage{amsmath}
+		\usepackage{amssymb}
 		\usepackage{tabularx}
 		\usepackage{graphicx}
 		\usepackage{subfig}
 		\usepackage{hhline}
 		\usepackage{epstopdf}
+		% Acronyms
+		\usepackage{acronym}
+		%Nomenclature
+		\usepackage{nomencl}
+		\makenomenclature		
+		%Index package
+		\usepackage{imakeidx}		
+		\makeindex
 
+		
 		%Tabitems
 		\usepackage{booktabs}% http://ctan.org/pkg/booktabs
 		\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 		
 		% Bibliography
 		\usepackage[utf8]{inputenc}
+
 %================================================================		
 
 \mscDepartment{Delft Center for Systems and Control}
@@ -52,6 +67,8 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 \setThesisInfo
 %
 
+
+
 \begin{document}
 %
 %============================= Front matter ========================================
@@ -81,21 +98,7 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 % table of contents, (\toc of \toclof of \tocloflot )
     \tocloflot
 %
-% Nomenclature
-    \printnomencl %
-%
-% Acronyms
-    \nonumchap{Acronyms} %
-    %
-    \begin{acronym}[XXXXX]% Note: replace XXXXX by the longest acronym
-                          %       in your list.
-        \acro{DUT}{Delft University of Technology}%
-    \end{acronym}%
-    %
-    \cleardoublepage%
-%
-% Index
-    \printindex%
+    
     \cleardoublepage%
 %
 %============================= Main matter =========================================
@@ -103,23 +106,26 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 \mainmatter
 %
 % Introduction
+\include{examples}
 \include{introduction}
 \include{modeling}
 \include{control}
-\include{implementation}
-\include{results}
+\include{setup_results}
 \include{conclusion}
-
 %
 % First Part
     \part{First Part}
 
     \chapter{First Real Chapter}
 
-    This is real chapter for \ac{DUT}, ok? I will explain everything about \gsymb{$\gamma$}{Path Angle}. Next, everything
-    will be explained about the transfer function \lsymb{$H(s)$}{Transfer function}. Also, subscripts and can
-    superscripts can be put in the nomenclature \index{nomenclature} list. \supers{max}{Maximum} \subs{min}{Minimum} Other things can also
-    be added to the nomenclature list of \ac{DUT}. \others{[kts]}{Knots} \others{$^{\circ}$, [deg]}{Degrees}
+%    This is real chapter for \ac{DUT}, ok? I will explain everything about \gsymb{$\gamma$}{Path Angle}. Next, everything
+%    will be explained about the transfer function \lsymb{$H(s)$}{Transfer function}. Also, subscripts and can
+    superscripts can be put in the nomenclature \index{nomenclature} list. 
+%    \supers{max}{Maximum} 
+%    \subs{min}{Minimum} 
+    Other things can also
+    be added to the nomenclature list of \ac{DUT} 
+%    \others{[kts]}{Knots} \others{$^{\circ}$, [deg]}{Degrees}
 
         \section{First section}
 
@@ -159,20 +165,31 @@ New chapter gives a full acronym \ac{DUT}.
 \end{eqnarray}
 
     \chapter{Second second part chapter}
+    \section{Section}
 
-    This is a test for nomenclature \lsymb{$A(s)$}{Answer function}
-%
-%
-% Biblio
-    \bibliographystyle{apalike}
-    \printbib{library}
+    This is a test for nomenclature \lsymb{$A(s)$}{Answer function}\\
+    \lsymb{$a_f$, $b_f$, $c_f$ and $d_f$}{The variables I am trying to group}\\
+    \lsymb{$a_b$}{another variable}\\
+\section{Main equations}
+
+\begin{equation}
+a=\frac{N}{A}
+\end{equation}%
+
+\nomenclature{$a$}{The number of angels per unit area}%
+\nomenclature{$N$}{The number of angels per needle point}%
+\nomenclature{$A$}{The area of the needle point}%
+
+The equation $\sigma = m a$%
+\nomenclature{$\sigma$}{The total mass of angels per unit area}%
+\nomenclature{$m$}{The mass of one angel}
+follows easily.
 
 
-%============================= Back matter =========================================
+	
+%============================= Appendices=========================================
 \appendix
-
     \chapter{The back of the thesis}
-
     \section{An appendix section}
 
     \subsection{An appendix subsection with C++ Listing}
@@ -191,5 +208,23 @@ New chapter gives a full acronym \ac{DUT}.
 
     Ok, all is well.
 
+%============================= Back matter =========================================
+\backmatter
+	% Bibliography
+	\bibliographystyle{apalike}
+	\printbib{library}
+	
+	% Index
+	\printindex
+
+	% Nomenclature
+	\printnomenclature
+
+	% Acronyms
+    \nonumchap{Acronyms}    
+    \begin{acronym}[XXXXX]% Note: replace XXXXX by the longest acronym
+                          %       in your list.
+        \acro{DUT}{Delft University of Technology}%
+    \end{acronym}%
 
 \end{document}

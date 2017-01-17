@@ -1,0 +1,25 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\sigma$}]\begingroup The total mass of angels per unit area\nomeqref {9-1}
+		\nompageref{23}
+  \item [{$A$}]\begingroup The area of the needle point\nomeqref {9-1}
+		\nompageref{23}
+  \item [{$a$}]\begingroup The number of angels per unit area\nomeqref {9-1}
+		\nompageref{23}
+  \item [{$m$}]\begingroup The mass of one angel\nomeqref {9-1}
+		\nompageref{23}
+  \item [{$N$}]\begingroup The number of angels per needle point\nomeqref {9-1}
+		\nompageref{23}
+
+ \nomgroup{C}
+
+  \item [{$A(s)$}]\begingroup \MakeUppercase Answer function\nomeqref {9-0}
+		\nompageref{23}
+  \item [{$a_b$}]\begingroup \MakeUppercase another variable\nomeqref {9-0}
+		\nompageref{23}
+  \item [{$a_f$, $b_f$, $c_f$ and $d_f$}]\begingroup \MakeUppercase The variables I am trying to group\nomeqref {9-0}
+		\nompageref{23}
+
+\end{thenomenclature}

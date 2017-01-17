@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=latex 2014.3.13)  14 JAN 2017 21:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  17 JAN 2017 09:57
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -94,7 +94,7 @@ Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -107,7 +107,7 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
@@ -184,20 +184,13 @@ LaTeX Info: Redefining \pageref on input line 6369.
 \c@Hfootnote=\count97
 )
 
-Package hyperref Message: Driver: hdvips.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\hdvips.def"
-File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\pdfmark.def
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\hpdftex.def
 "
-File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks33
-\pdf@box=\box26
-\pdf@toks=\toks34
-\pdf@defaulttoks=\toks35
-\HyField@AnnotCount=\count98
-\Fld@listcount=\count99
-\c@bookmark@seq@number=\count100
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count98
+\c@bookmark@seq@number=\count99
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\rerunfilech
 eck.sty"
@@ -206,7 +199,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip51
-))
+)
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\colortbl\colortbl.st
 y"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
@@ -214,7 +207,7 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen111
 \extrarowheight=\dimen112
-\NC@list=\toks36
+\NC@list=\toks33
 \extratabsurround=\skip52
 \backup@length=\skip53
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\color.sty
@@ -223,15 +216,14 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 130.
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\dvips.def"
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-)
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\graphics\dvipsnam.de
+Package color Info: Driver file: pdftex.def on input line 130.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\pdftex-def\pdftex.de
 f"
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count100
 ))
-\everycr=\toks37
+\everycr=\toks34
 \minrowclearance=\skip54
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 871.
@@ -291,7 +283,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 g"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen118
 \Gin@req@width=\dimen119
@@ -338,7 +330,7 @@ Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
 \SC@tempdima=\dimen126
 \SC@tempdimb=\dimen127
 \c@SC@C=\count111
-\SC@BOX=\box27
+\SC@BOX=\box26
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsmath.st
 y"
 Package: amsmath 2013/01/14 v2.14 AMS math features
@@ -349,7 +341,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks38
+\@emptytoks=\toks35
 \ex@=\dimen128
 )) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsmath\amsbsy.st
 y"
@@ -369,8 +361,8 @@ LaTeX Info: Redefining \overline on input line 306.
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
+\Mathstrutbox@=\box27
+\strutbox@=\box28
 \big@size=\dimen130
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
@@ -379,21 +371,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip11
 \c@parentequation=\count119
 \dspbrk@lvl=\count120
-\tag@help=\toks39
+\tag@help=\toks36
 \row@=\count121
 \column@=\count122
 \maxfields@=\count123
-\andhelp@=\toks40
+\andhelp@=\toks37
 \eqnshift@=\dimen131
 \alignsep@=\dimen132
 \tagshift@=\dimen133
 \tagwidth@=\dimen134
 \totwidth@=\dimen135
 \lineht@=\dimen136
-\@envbody=\toks41
+\@envbody=\toks38
 \multlinegap=\skip76
 \multlinetaggap=\skip77
-\mathdisplay@stack=\toks42
+\mathdisplay@stack=\toks39
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -417,7 +409,7 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\eurosym\eurosym.st
 y"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box30
+\@eurobox=\box29
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/latexcad.sty
  latexcad.sty (V 1.9 Mar 98) - Support for LaTeXCAD drawing package. 
  John Leis, leis@usq.edu.au Adapted from various CTAN sources. 
@@ -427,19 +419,19 @@ Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@dfltpswidth=\skip84
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/rotate.sty
 \@rotdimen=\dimen137
-\@rotbox=\box31
+\@rotbox=\box30
 )
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/fancybox.sty
 \c@tocdepth=\count124
 
 Style option: `fancybox' v1.0/97 patch 1 <1997/05/16> (tvz)
-\@fancybox=\box32
+\@fancybox=\box31
 \shadowsize=\dimen138
-\@Sbox=\box33
-\do@VerbBox=\toks43
-\the@fancyput=\toks44
-\this@fancyput=\toks45
-\EndVerbatimTokens=\toks46
+\@Sbox=\box32
+\do@VerbBox=\toks40
+\the@fancyput=\toks41
+\this@fancyput=\toks42
+\EndVerbatimTokens=\toks43
 \Verbatim@Outfile=\write5
 \Verbatim@Infile=\read2
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/epic.sty
@@ -456,7 +448,7 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@y@diff=\count130
 \x@diff=\dimen143
 \y@diff=\dimen144
-\@dotbox=\box34
+\@dotbox=\box33
 \num@segments=\count131
 \num@segmentsi=\count132
 \@datafile=\read3
@@ -466,7 +458,7 @@ Extension to Epic and LaTeX. Version 1.1b - Released Febrary 7, 1988
 \@eepictcnt=\count134
 \@tempdimc=\dimen145
 \maxovaldiam=\dimen146
-\@filltype=\box35
+\@filltype=\box34
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\StyleStuff/epsf.sty
 \epsffilein=\read4
 \epsfxsize=\dimen147
@@ -479,8 +471,8 @@ Extension to Epic and LaTeX. Version 1.1b - Released Febrary 7, 1988
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\listings.st
 y"
 \lst@mode=\count135
-\lst@gtempboxa=\box36
-\lst@token=\toks47
+\lst@gtempboxa=\box35
+\lst@token=\toks44
 \lst@length=\count136
 \lst@currlwidth=\dimen153
 \lst@column=\count137
@@ -496,7 +488,7 @@ y"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count141
 \lst@skipnumbers=\count142
-\lst@framebox=\box37
+\lst@framebox=\box36
 )
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\listings\listings.cf
 g"
@@ -522,7 +514,7 @@ x"
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks48
+\AC@clearlist=\toks45
 )
 \c@example=\count145
 )
@@ -542,7 +534,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@target=\dimen160
 \TX@delta=\dimen161
 \TX@cols=\count147
-\TX@ftn=\toks49
+\TX@ftn=\toks46
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
@@ -581,6 +573,22 @@ Package caption Info: sidecap package is loaded.
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\tools\hhline.sty"
 Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
 )
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\epstopdf.st
+y"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\epstopdf-ba
+se.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\booktabs\booktabs.st
 y"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -603,8 +611,8 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisrulewidth=\dimen182
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks50
-\inpenc@posthook=\toks51
+\inpenc@prehook=\toks47
+\inpenc@posthook=\toks48
  ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
@@ -825,23 +833,28 @@ Writing glossary file mscThesis.glo
 \@indexfile=\write8
 Writing index file mscThesis.idx
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.aux
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-\AtBeginShipoutBox=\box38
-Package hyperref Info: Link coloring ON on input line 56.
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\modeling.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\implementation.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\results.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+\AtBeginShipoutBox=\box37
+Package hyperref Info: Link coloring ON on input line 55.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\nameref.sty
 "
@@ -853,14 +866,28 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count160
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
  (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
 \@outlinefile=\write9
 
-ABD: EveryShipout initializing macros
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\context\base\supp-pdf.mkii
+"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count161
+\scratchdimen=\dimen183
+\scratchbox=\box38
+\nofMPsegments=\count162
+\nofMParguments=\count163
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count164
+\MPscratchDim=\dimen184
+\MPnumerator=\count165
+\makeMPintoPDFobject=\count166
+\everyMPtoPDFconversion=\toks50
+) ABD: EveryShipout initializing macros
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
@@ -885,65 +912,135 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedRightParindent=\skip102
 \JustifyingParindent=\skip103
 )
-\c@lstlisting=\count161
+\c@lstlisting=\count167
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-File: example_titlefig.eps Graphic file (type eps)
- <example_titlefig.eps>
-File: StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps Graphic file (type eps)
+Package epstopdf Info: Source file: <example_titlefig.eps>
+(epstopdf)                    date: 2017-01-12 11:13:59
+(epstopdf)                    size: 2222992 bytes
+(epstopdf)             Output file: <example_titlefig-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-01-17 09:54:36
+(epstopdf)                    size: 87521 bytes
+(epstopdf)             Command: <epstopdf --outfile=example_titlefig-eps-conver
+ted-to.pdf example_titlefig.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
 
-<StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
-Overfull \hbox (17.79086pt too wide) has occurred while \output is active
+<example_titlefig-eps-converted-to.pdf, id=87, 450.68375pt x 354.32375pt>
+File: example_titlefig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use example_titlefig-eps-converted-to.pdf>
+Package pdftex.def Info: example_titlefig-eps-converted-to.pdf used on input li
+ne 61.
+(pdftex.def)             Requested size: 455.24408pt x 357.92903pt.
+Package epstopdf Info: Source file: <StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
+
+(epstopdf)                    date: 2008-12-11 13:28:10
+(epstopdf)                    size: 570593 bytes
+(epstopdf)             Output file: <StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2017-01-17 09:54:38
+(epstopdf)                    size: 15594 bytes
+(epstopdf)             Command: <epstopdf --outfile=StyleStuff/TUD_DCSC_bies_wh
+ite_A4_ENG-eps-converted-to.pdf StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf, id=88, 615.29875pt
+ x 105.39375pt>
+File: StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf>
+Package pdftex.def Info: StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to
+.pdf used on input line 61.
+(pdftex.def)             Requested size: 615.29724pt x 105.39348pt.
+
+Overfull \hbox (17.78937pt too wide) has occurred while \output is active
  [][] 
  []
 
 [1
+Non-PDF special ignored!
 
 
 
-] [2
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Nam/Documents/Gi
+t/Thesis-Quadrotor/StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf> 
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor/example_titlefig-eps-converted-to.
+pdf>] [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 61.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 61.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (29.00462pt too wide) in paragraph at lines 62--62
+Overfull \hbox (29.00462pt too wide) in paragraph at lines 61--61
  [] 
  []
 
-[1]
-File: examplelogo.eps Graphic file (type eps)
- <examplelogo.eps>
-File: StyleStuff/tud.eps Graphic file (type eps)
- <StyleStuff/tud.eps>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.61  \maketitle
+                 [1] <examplelogo.png, id=121, 227.6505pt x 168.3891pt>
+File: examplelogo.png Graphic file (type png)
+
+<use examplelogo.png>
+Package pdftex.def Info: examplelogo.png used on input line 61.
+(pdftex.def)             Requested size: 115.40201pt x 85.35826pt.
+Package epstopdf Info: Source file: <StyleStuff/tud.eps>
+(epstopdf)                    date: 2004-09-30 21:41:36
+(epstopdf)                    size: 22952 bytes
+(epstopdf)             Output file: <StyleStuff/tud-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-01-17 09:54:40
+(epstopdf)                    size: 7382 bytes
+(epstopdf)             Command: <epstopdf --outfile=StyleStuff/tud-eps-converte
+d-to.pdf StyleStuff/tud.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<StyleStuff/tud-eps-converted-to.pdf, id=122, 140.525pt x 77.28876pt>
+File: StyleStuff/tud-eps-converted-to.pdf Graphic file (type pdf)
+
+<use StyleStuff/tud-eps-converted-to.pdf>
+Package pdftex.def Info: StyleStuff/tud-eps-converted-to.pdf used on input line
+ 61.
+(pdftex.def)             Requested size: 140.52464pt x 77.28856pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.61  \maketitle
+                 [2 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/examplelogo.pn
+g (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/tud-eps-c
+onverted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
 
  []
 
@@ -1006,7 +1103,21 @@ although it is yet undefined on input line 6.
 
 ] [2
 
-]) [3
+]) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\modeling.tex)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\implementation.tex)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\results.tex)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex) [3
+
+
+
+
+
+
+
+
+
+
 
 
 ] [4]
@@ -1053,7 +1164,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 177.
+nput line 181.
  (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.c
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 5.
 
@@ -1067,7 +1178,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 179.
+(Font)              using `OT1/cmss/bx/n' instead on input line 183.
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m) [17
 
@@ -1077,12 +1188,17 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
 Appendix B.
 \tf@thm=\write13
 [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
  (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.aux
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\introduction.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\modeling.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\implementation.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\results.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
 Package rerunfilecheck Info: File `mscThesis.out' has not changed.
 (rerunfilecheck)             Checksum: 4A2BE0296FBCC37042B0E996B41A4109;1421.
 
@@ -1092,15 +1208,38 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 11931 strings out of 493922
- 172830 string characters out of 3144905
- 391750 words of memory out of 3000000
- 14968 multiletter control sequences out of 15000+200000
+ 12432 strings out of 493921
+ 181097 string characters out of 3144882
+ 399687 words of memory out of 3000000
+ 15326 multiletter control sequences out of 15000+200000
  14952 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,11n,58p,317b,1611s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,58p,317b,1614s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xel
+atex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.
+9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr
+6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/publ
+ic/amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts
+/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xel
+atex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/c
+m/cmtt8.pfb>
+Output written on mscThesis.pdf (37 pages, 898568 bytes).
+PDF statistics:
+ 409 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on mscThesis.dvi (37 pages, 58348 bytes).

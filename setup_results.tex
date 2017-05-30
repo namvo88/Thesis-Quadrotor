@@ -50,6 +50,11 @@ Explain cases, why interesting and what can be expected?\\
 \section{Command Filtering}
 To compute $ \dot{R}_c, \ddot{R}_c,\dot{q}_c, \ddot{q}_c $, the virtual control command to stabilize the loop within. \cite{Farrell2009}
 
+\begin{align}\label{eq:CF}
+\frac{x_c}{x_c^o}&=\frac{\omega_{n1}}{s+\omega_{n1}}\cdot\frac{\omega_{n2}^2}{s^2+2\zeta\omega_{n2}s+\omega_{n2}^2}\\
+\Rightarrow x_c^{'''}&=-(2\zeta\omega_{n2}+\omega_{n1})x_c^{''}-(2\zeta\omega_{n1}\omega_{n2}+\omega_{n2}^2)x_c^{'}-(\omega_{n1}\omega_{n2} ^2)(x_c-x_c^o)
+\end{align}
+
 A command filter is implemented by following examples from \cite{Farrell2008} and \cite{Djapic2008}. The load attitude controller generates a commanded QR attitude $ R_c $ and the load position controller generates a commanded load attitude $ q_c $. The controllers contain functions of these signals and their derivatives. Instead differentiation of these signals, the signals are obtained by integration by filtering the original signals $ R_c^o $ and $ q_c^o $. The state space implementation of this filter is \cite{Djapic2008}
 \begin{align}\label{key}
 \dot{x}_1 &= x_2\\

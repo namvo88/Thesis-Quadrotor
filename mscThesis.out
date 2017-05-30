@@ -1,26 +1,52 @@
 \BOOKMARK [0][-]{section*.4}{Abstract}{}% 1
 \BOOKMARK [0][-]{section*.5}{Acknowledgements}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
-\BOOKMARK [0][-]{chapter.2}{System Modeling}{}% 4
-\BOOKMARK [0][-]{chapter.3}{Control Design}{}% 5
-\BOOKMARK [0][-]{chapter.4}{Experimental Setup and Results}{}% 6
-\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 7
-\BOOKMARK [-1][-]{part.1}{I First Part}{}% 8
-\BOOKMARK [0][-]{chapter.6}{First Real Chapter}{part.1}% 9
-\BOOKMARK [1][-]{section.6.1}{First section}{chapter.6}% 10
-\BOOKMARK [2][-]{subsection.6.1.1}{The first subsection}{section.6.1}% 11
-\BOOKMARK [3][-]{section*.7}{Subsection Short Title}{subsection.6.1.1}% 12
-\BOOKMARK [-1][-]{part.2}{II Second part}{}% 13
-\BOOKMARK [0][-]{chapter.7}{Second part chapter}{part.2}% 14
-\BOOKMARK [0][-]{chapter.8}{TEMP second part chapter this is a very long line to test if the table of figures will wrap the line or will continue to go over the border of the page}{part.2}% 15
-\BOOKMARK [0][-]{chapter.9}{Second second part chapter}{part.2}% 16
-\BOOKMARK [1][-]{section.9.1}{Section}{chapter.9}% 17
-\BOOKMARK [1][-]{section.9.2}{Main equations}{chapter.9}% 18
-\BOOKMARK [0][-]{appendix.A}{The back of the thesis}{part.2}% 19
-\BOOKMARK [1][-]{section.A.1}{An appendix section}{appendix.A}% 20
-\BOOKMARK [2][-]{subsection.A.1.1}{An appendix subsection with C++ Listing}{section.A.1}% 21
-\BOOKMARK [2][-]{subsection.A.1.2}{A MatlabListing}{section.A.1}% 22
-\BOOKMARK [0][-]{appendix.B}{Yet another appendix}{part.2}% 23
-\BOOKMARK [1][-]{section.B.1}{Test section \(again?\)}{appendix.B}% 24
-\BOOKMARK [0][-]{section*.10}{Bibliography}{part.2}% 25
-\BOOKMARK [0][-]{section*.11}{Acronyms}{part.2}% 26
+\BOOKMARK [1][-]{section.1.1}{Aim and Motivation}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Organization of the Report}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Dynamic Model}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Modeling Assumptions}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Geometric Modeling}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Lie Group Configuration Manifold}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{QR-Load Modeling}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{QR Modeling}{section.2.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Classical Modeling}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{QR Modeling}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.2}{QR-Load Modeling}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{Conclusion}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Control Design}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Backstepping Control}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Geometric Control of QR system}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Attitude Tracking}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Position Tracking}{section.3.2}% 20
+\BOOKMARK [1][-]{section.3.3}{Geometric Control of QR-Load system}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Quadrotor Attitude Tracking}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Load Attitude Tracking}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.3}{Load Position Tracking}{section.3.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Parameter - and State Estimation}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Experimental Setup and Results}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Software}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Experiments}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.2.1}{Performance Criteria}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.2}{Case A}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.3}{Case B}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.4}{Case C}{section.4.2}% 33
+\BOOKMARK [1][-]{section.4.3}{Command Filtering}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.4.1}{Case A}{section.4.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.2}{Case B}{section.4.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.3}{Case C}{section.4.4}% 38
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Summary}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Thesis Contribution}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.3}{Recommendations for Future Work}{chapter.5}% 43
+\BOOKMARK [2][-]{subsection.5.3.1}{Modeling Constraints}{section.5.3}% 44
+\BOOKMARK [2][-]{subsection.5.3.2}{Hybrid Modeling}{section.5.3}% 45
+\BOOKMARK [2][-]{subsection.5.3.3}{Trajectory Generation}{section.5.3}% 46
+\BOOKMARK [3][-]{section*.16}{Minimum Snap Trajectory Generation}{subsection.5.3.3}% 47
+\BOOKMARK [0][-]{appendix.A}{Space for Appendix}{}% 48
+\BOOKMARK [1][-]{section.A.1}{An appendix section}{appendix.A}% 49
+\BOOKMARK [2][-]{subsection.A.1.1}{A MatlabListing}{section.A.1}% 50
+\BOOKMARK [0][-]{section*.17}{Bibliography}{}% 51
+\BOOKMARK [0][-]{section*.18}{Acronyms}{}% 52

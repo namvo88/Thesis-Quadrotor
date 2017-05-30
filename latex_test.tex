@@ -1,0 +1,74 @@
+\part{TEST PARTS}
+%\include{trajectory}
+%
+% First Part
+    \part{First Part}
+
+    \chapter{First Real Chapter}
+
+%    This is real chapter for \ac{DUT}, ok? I will explain everything about \gsymb{$\gamma$}{Path Angle}. Next, everything
+%    will be explained about the transfer function \lsymb{$H(s)$}{Transfer function}. Also, subscripts and can
+    superscripts can be put in the nomenclature \index{nomenclature} list. 
+%    \supers{max}{Maximum} 
+%    \subs{min}{Minimum} 
+    Other things can also
+    be added to the nomenclature list of \ac{DUT} 
+%    \others{[kts]}{Knots} \others{$^{\circ}$, [deg]}{Degrees}
+
+        \section{First section}
+
+        This is the section. Referring to equations, figures and tables can easily be done by the commands \verb"\eqnref{}",
+        \verb"\figref{}" and \verb"\tabref{}".
+        \begin{equation}\label{eq:First}
+              H(s) = \frac{1}{s+2}
+        \end{equation}
+        You see? Refer to equations like this \eqnref{eq:First}.
+            \subsection{The first subsection}
+
+                \subsubsection[Subsection Short Title]{The first sub-subsection with a very very very long title, but in the table of contents one can only see the short title}
+
+                Nice, ain't it?\index{Nice}
+
+                    \paragraph{A paragraph.}
+    \part{Second part}
+
+    \chapter{Second part chapter}
+   \begin{figure}
+    \caption{this is a very long line to test if the table of
+    figures will wrap the line or will continue to go over the
+    border  of the page}
+    \end{figure}
+
+    \chapter{TEMP second part chapter this is a very long line to test if the table of
+    figures will wrap the line or will continue to go over the
+    border  of the page}
+
+New chapter gives a full acronym \ac{TU}.
+
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  1 &=& 2\\
+  x &=& 5 \\
+  y &=& \theta
+\end{eqnarray}
+
+    \chapter{Second second part chapter}
+    \section{Section}
+
+    This is a test for nomenclature \lsymb{$A(s)$}{Answer function}\\
+    \lsymb{$a_f$, $b_f$, $c_f$ and $d_f$}{The variables I am trying to group}\\
+    \lsymb{$a_b$}{another variable}\\
+\section{Main equations}
+
+\begin{equation}
+a=\frac{N}{A}
+\end{equation}%
+
+\nomenclature{$a$}{The number of angels per unit area}%
+\nomenclature{$N$}{The number of angels per needle point}%
+\nomenclature{$A$}{The area of the needle point}%
+
+The equation $\sigma = m a$%
+\nomenclature{$\sigma$}{The total mass of angels per unit area}%
+\nomenclature{$m$}{The mass of one angel}
+follows easily.

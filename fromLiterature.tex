@@ -1,0 +1,119 @@
+\chapter*{Plan of approach}
+
+Geometric Control looks most promising for attitude tracking of the QR and includes the ability to maneuver aggressively. To build almost-globally attractive controllers, stability of the error dynamics must be proven in order to guarantee the overall stability of the complete dynamics. Based on Geometric Control, Hybrid Control considers the different dynamics of a quadrotor-load system and makes this is a potential candidate for the position tracking of the load and attitude tracking of the quadrotor.
+
+Minimizing Snap Trajectory Generation, where a Quadratic Programming problem is solved, looks most promising in terms of computational load and feasibility to generate an aggressive, yet smooth trajectory for both quadrotor and quadrotor-load systems. Obstacle avoidance constraints can be added by using integer variables and solving a Mixed Integer Quadratic Programming problem.
+
+The goal is to make a control design for the QR-Load system based on Geometric Modeling and Geometric Control, which is capable of tracking a load trajectory, while maintaining the attitude control of the QR. The objective is divided into subproblems and the following approach is proposed to achieve this objective.
+
+The feasibility of the nonlinear geometric control design has to be shown for the QR system, before involving the dynamics of a suspended load. Next, it must be proven that the proposed Hybrid Control of the QR-Load system is able to track a load trajectory, allowing switches between the QR-Load subsystem and QR subsystem. By defining a trigonometric function, the trajectory tracking can be tested in a controlled manner. A trajectory can be optimized by minimizing an objective function of the fourth and sixth derivative of position w.r.t. time, which is able to take various constraints into account by using the properties of differential flatness.
+\section{QR System}
+\begin{outline}
+\1 Modeling QR system, using geometric algebra and Lie algebra
+\begin{align}
+	\dot{x}&=v\\
+	m\dot{v}&=mge_3-fRe_3\\
+	\dot{R}&=R\hat{\Omega}\\
+	M&=J\dot{\Omega}+\Omega\times J\Omega
+\end{align} 
+\1 Simulation using:
+\2 Simulink
+\2 MATLAB
+\2 MATLAB Robotics Toolbox \footnote{\url{http://www.petercorke.com/RTB/robot.pdf}}												
+\1 Reproduce Geometric Position Control							
+\1 Reproduce Geometric Attitude Control	
+\1 Reproduce Trajectory Generation
+\1 Incorporate effects of model- and parameter uncertainties
+\begin{align}
+\dot{x}&=v\\
+m\dot{v}&=mge_3-fRe_3+\Delta_x\\
+\dot{R}&=R\hat{\Omega}\\
+M+\Delta_R&=J\dot{\Omega}+\Omega\times J\Omega
+\end{align} 
+where $ \Delta_x $ and $ \Delta_R \in\mathbb{R}^3$ denote unstructured, but fixed uncertainties in the translational and rotational dynamics.
+\1 Incorporate effects of sensor noise and filters							
+\1 Simulation including effects of implementation
+\end{outline}						
+
+If the feasibility of the nonlinear geometric control design is shown, the QR-Load system is considered by incorporating the dynamic effects of the load. 
+For the QR-Load system, the same approach as in the previous section is used. Simulation must prove the feasibility of the theories.
+\section{QR-Load System}
+\begin{outline}
+	\1 Modeling of the QR-Load system, using geometric algebra and Lie algebra.
+	For the QR-Load Subsystem, with non-zero cable tension
+	\begin{align}
+	\dot{x}_L&=v_L\\
+	(m+m_L)(\dot{v}_L+ge_3)&=(q\cdot fRe_3-ml(\dot{q}\cdot\dot{q}))q\\
+	\dot{q}&=\omega\times q\\
+	ml\dot{\omega}&=-q\times fRe_3\\
+	\dot{R}&=R\hat{\Omega}\\
+	M&=J\dot{\Omega}+\Omega\times J\Omega
+	\end{align} 
+
+	For the QR Subsystem, with zero cable tension
+	\begin{align}
+	\dot{x}_L&=v_L\\
+	m_L(\dot{v}_L+ge_3)&=0\\
+	\dot{x}&=v\\
+	m\dot{v}&=mge_3-fRe_3\\
+	\dot{R}&=R\hat{\Omega}\\
+	M&=J\dot{\Omega}+\Omega\times J\Omega
+	\end{align} 
+	
+	\1 Hybrid Control Design	
+	\begin{align}
+	\Sigma_n&=\begin{cases}
+	\dot{X}_n=f_n(X_n)+g_n(X_n)u, & X_n\notin\mathcal{S}_z\\
+	X^+_z=\Delta_{n\rightarrow z}(X_n^-), & X_n\in\mathcal{S}_z
+	\end{cases}\\	
+	\Sigma_z&=\begin{cases}
+	\dot{X}_z=f_z(X_z)+g_z(X_z)u, & 	X_z\notin\mathcal{S}_n\\
+	X_n^+=\Delta_{z\rightarrow n}(X_z^-),& 	X_z\in\mathcal{S}_n
+	\end{cases}	
+	\end{align}
+	where
+	\begin{align}
+	X_n&=\left\{x_L,q,R,v_L,\omega,\Omega\right\}\\
+	X_z&=\left\{x_L,x_Q,R,v_L,v_Q,\Omega\right\}\\
+	u&=\left\{f,M\right\}\\
+	&\text{Where the guards are defined as}\\
+	\mathcal{S}_n&=\left\{X_z|\parallel x_Q-x_L\parallel\equiv l,\frac{d}{dt}\parallel x_Q-x_L\parallel>0\right\}\\
+	\mathcal{S}_z&=\left\{X_n|T\equiv0\right\}\\
+	&\text{Where the tension is defined as}\\
+	T&:=\parallel m_L(\ddot{x}_L+ge_3)\parallel
+	\end{align}
+	where $ \Delta_{n\rightarrow z} $ is an identity map, and $ \Delta_{z\rightarrow n} $ is modeled as an inelastic collision of two objects, that ensures $ \dot{x}_Q^+-\dot{x}_L^+=0 $.
+
+	\2 Test for the planar 2-D case 
+	\2 Test for the full 3-D case	
+	\3 Reproduce Geometric Attitude Control	for QR	
+	\3 Reproduce Geometric Attitude Control	for Load	
+	\3 Reproduce Geometric Position Control	for Load						
+	\3 Reproduce Trajectory Generation for Load
+		
+\section{Trajectory Generation}
+Minimizing the sixth-derivative of the load position ensures minimum snap motion for the QR. The following must be solved,
+\begin{equation}\label{key}
+\min \int_{t_0}^{t_1}\parallel\frac{d^kx_i}{dt^k}\parallel^2dt
+\end{equation}
+\1 \textbf{Obstacle avoidance}
+\2 Trajectory generation, as done by \cite{Tang2015}
+\end{outline}				
+
+
+\section{QR System Implementation}		
+\begin{outline}
+\1 Set up communication with Optitrack, Paparazzi's Nat2Ivy
+\1 Set up manual control and use known \a{uav} parameters for modeling
+\1 Test Geometric Position Control with existing Attitude Control 
+\1 Test Geometric Attitude Control				
+
+\1 \textbf{Optional; Improve Model}
+\2 System identification with \textbf{\a{indi}}\cite{Smeur2015,Smeur2016}
+\2 Evaluate the validity of identified system
+\2 Dynamic modeling of QR system				
+
+\1 \textbf{Optional; Off-board Control }\\
+This will allow off-board communication and calculations				
+\2 Set up former framework as done by \cite{PraveenThesis}
+\end{outline}

@@ -1,27 +1,52 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{v}{section*.4}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{vii}{section*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}System Modeling}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Control Design}{7}{chapter.3}
-\contentsline {chapter}{\numberline {4}Experimental Setup and Results}{9}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{11}{chapter.5}
-\contentsline {part}{I\hspace {1em}First Part}{13}{part.1}
-\contentsline {chapter}{\numberline {6}First Real Chapter}{15}{chapter.6}
-\contentsline {section}{\numberline {6-1}First section}{15}{section.6.1}
-\contentsline {subsection}{\numberline {6-1-1}The first subsection}{15}{subsection.6.1.1}
-\contentsline {subsubsection}{Subsection Short Title}{15}{section*.7}
-\contentsline {paragraph}{A paragraph.}{15}{section*.8}
-\contentsline {part}{II\hspace {1em}Second part}{17}{part.2}
-\contentsline {chapter}{\numberline {7}Second part chapter}{19}{chapter.7}
-\contentsline {chapter}{\numberline {8}TEMP second part chapter this is a very long line to test if the table of figures will wrap the line or will continue to go over the border of the page}{21}{chapter.8}
-\contentsline {chapter}{\numberline {9}Second second part chapter}{23}{chapter.9}
-\contentsline {section}{\numberline {9-1}Section}{23}{section.9.1}
-\contentsline {section}{\numberline {9-2}Main equations}{23}{section.9.2}
-\contentsline {chapter}{\numberline {A}The back of the thesis}{25}{appendix.A}
-\contentsline {section}{\numberline {A-1}An appendix section}{25}{section.A.1}
-\contentsline {subsection}{\numberline {A-1-1}An appendix subsection with C++ Listing}{25}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A-1-2}A \textsc {Matlab}Listing}{25}{subsection.A.1.2}
-\contentsline {chapter}{\numberline {B}Yet another appendix}{27}{appendix.B}
-\contentsline {section}{\numberline {B-1}Test section (again?)}{27}{section.B.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{29}{section*.10}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{33}{section*.11}
+\contentsline {section}{\numberline {1-1}Aim and Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1-2}Organization of the Report}{2}{section.1.2}
+\contentsline {chapter}{\numberline {2}Dynamic Model}{3}{chapter.2}
+\contentsline {section}{\numberline {2-1}Modeling Assumptions}{3}{section.2.1}
+\contentsline {section}{\numberline {2-2}Geometric Modeling}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2-2-1}Lie Group Configuration Manifold}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2-2-2}QR-Load Modeling}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2-2-3}QR Modeling}{9}{subsection.2.2.3}
+\contentsline {section}{\numberline {2-3}Classical Modeling}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2-3-1}QR Modeling}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2-3-2}QR-Load Modeling}{10}{subsection.2.3.2}
+\contentsline {section}{\numberline {2-4}Conclusion}{10}{section.2.4}
+\contentsline {chapter}{\numberline {3}Control Design}{11}{chapter.3}
+\contentsline {section}{\numberline {3-1}Backstepping Control}{12}{section.3.1}
+\contentsline {section}{\numberline {3-2}Geometric Control of QR system}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3-2-1}Attitude Tracking}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3-2-2}Position Tracking}{13}{subsection.3.2.2}
+\contentsline {section}{\numberline {3-3}Geometric Control of QR-Load system}{13}{section.3.3}
+\contentsline {subsection}{\numberline {3-3-1}Quadrotor Attitude Tracking}{14}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3-3-2}Load Attitude Tracking}{14}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3-3-3}Load Position Tracking}{14}{subsection.3.3.3}
+\contentsline {section}{\numberline {3-4}Parameter - and State Estimation}{14}{section.3.4}
+\contentsline {section}{\numberline {3-5}Conclusion}{14}{section.3.5}
+\contentsline {chapter}{\numberline {4}Experimental Setup and Results}{15}{chapter.4}
+\contentsline {section}{\numberline {4-1}Software}{15}{section.4.1}
+\contentsline {section}{\numberline {4-2}Experiments}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4-2-1}Performance Criteria}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4-2-2}Case A}{16}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4-2-3}Case B}{16}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4-2-4}Case C}{16}{subsection.4.2.4}
+\contentsline {section}{\numberline {4-3}Command Filtering}{16}{section.4.3}
+\contentsline {section}{\numberline {4-4}Results}{17}{section.4.4}
+\contentsline {subsection}{\numberline {4-4-1}Case A}{17}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4-4-2}Case B}{17}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4-4-3}Case C}{17}{subsection.4.4.3}
+\contentsline {section}{\numberline {4-5}Conclusion}{17}{section.4.5}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{19}{chapter.5}
+\contentsline {section}{\numberline {5-1}Summary}{19}{section.5.1}
+\contentsline {section}{\numberline {5-2}Thesis Contribution}{19}{section.5.2}
+\contentsline {section}{\numberline {5-3}Recommendations for Future Work}{19}{section.5.3}
+\contentsline {subsection}{\numberline {5-3-1}Modeling Constraints}{19}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5-3-2}Hybrid Modeling}{19}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5-3-3}Trajectory Generation}{20}{subsection.5.3.3}
+\contentsline {subsubsection}{Minimum Snap Trajectory Generation}{20}{section*.16}
+\contentsline {chapter}{\numberline {A}Space for Appendix}{21}{appendix.A}
+\contentsline {section}{\numberline {A-1}An appendix section}{21}{section.A.1}
+\contentsline {subsection}{\numberline {A-1-1}A \textsc {Matlab}Listing}{21}{subsection.A.1.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{25}{section*.17}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{28}{section*.18}

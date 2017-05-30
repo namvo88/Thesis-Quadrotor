@@ -14,6 +14,8 @@
 		\usepackage{subfig}
 		\usepackage{hhline}
 		\usepackage{epstopdf}
+		\usepackage{url}
+		
 		% Acronyms
 		\usepackage{acronym}
 		%Nomenclature
@@ -22,7 +24,9 @@
 		%Index package
 		\usepackage{imakeidx}		
 		\makeindex
-
+		
+		\renewcommand{\a}[1]{\acs{#1}} %Fastkey \acs{[1]}
+		\renewcommand{\v}[1]{\vspace{-#1mm}} 
 		
 		%Tabitems
 		\usepackage{booktabs}% http://ctan.org/pkg/booktabs
@@ -37,7 +41,7 @@
 %{Systems and Control}
 \mscProgram{Mechanical Engineering} \mscFaculty{Mechanical,
 Maritime and Materials Engineering} \mscName{N.N. Vo}
-\mscDate{\today} \mscTitle{Title} \mscSubTitle{Subtitle}
+\mscDate{\today} \mscTitle{Geometric Control of a Quadrotor with a Suspended Load} \mscSubTitle{Subtitle}
 \mscKeyWords{thesis, msc, subject}
 %
 %use the next line if you want a picture on the title page
@@ -48,26 +52,24 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 %% THIRD PARTY OPTIONS
 
 %use the next line if you want a text to acknowledge (a) third party/parties on the copyright page
-\mscThirdPartyText{The work in this literature survey was supported by Alten. Their cooperation is hereby gratefully acknowledged.}
+\mscThirdPartyText{The work in Master of Science Thesis was supported by Alten. Their cooperation is hereby gratefully acknowledged.}
 
 %use the next line if you want the logo of a third party on the copyright page
 %NOTE: on the title page only the TUDelft and DCSC logo's are permitted. These are automatically created
 
-\mscThirdPartyLogo{examplelogo}
+\mscThirdPartyLogo{./StyleStuff/ALTEN.png}
 %Note: the file examplelogo.eps is just for illustration. Do not use this for your own thesis
 
 %% --------------------------------------------------------------------
 
 
 \mscReaderOne{dr.ir. T. Keviczky}
-\mscReaderTwo{ir. P. Ritzen}
+\mscReaderTwo{ir. B. van Vliet}
 %\mscReaderThree{ir. My. Readertwo}
 %\mscReaderFour{}
 %
 \setThesisInfo
 %
-
-
 
 \begin{document}
 %
@@ -78,16 +80,13 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
  \maketitle
 %
 % Abstract
-    \nonumchap{Abstract}
-
-    This is an abstract
-    \cleardoublepage
+\include{abstract}
 %
 % Acknowledgements
     \nonumchap{Acknowledgements}%
-
+ %NOG NIET AF
     I would like to thank my supervisors \mscreaderone\ from DCSC and \mscreadertwo\ from Alten Nederland B.V. for their assistance during the writing
-    of this thesis. I would also \ldots
+    of this thesis. I would also \ldots 
     \vspace*{15mm}
 
     \noindent
@@ -106,112 +105,52 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 \mainmatter
 %
 % Introduction
-\include{examples}
+%\include{examples}
+%FROM LITERATURE
+%\include{fromLiterature}
+
 \include{introduction}
 \include{modeling}
 \include{control}
+
 \include{setup_results}
 \include{conclusion}
-%
-% First Part
-    \part{First Part}
+\include{future_work}
 
-    \chapter{First Real Chapter}
-
-%    This is real chapter for \ac{DUT}, ok? I will explain everything about \gsymb{$\gamma$}{Path Angle}. Next, everything
-%    will be explained about the transfer function \lsymb{$H(s)$}{Transfer function}. Also, subscripts and can
-    superscripts can be put in the nomenclature \index{nomenclature} list. 
-%    \supers{max}{Maximum} 
-%    \subs{min}{Minimum} 
-    Other things can also
-    be added to the nomenclature list of \ac{DUT} 
-%    \others{[kts]}{Knots} \others{$^{\circ}$, [deg]}{Degrees}
-
-        \section{First section}
-
-        This is the section. Referring to equations, figures and tables can easily be done by the commands \verb"\eqnref{}",
-        \verb"\figref{}" and \verb"\tabref{}".
-        \begin{equation}\label{eq:First}
-              H(s) = \frac{1}{s+2}
-        \end{equation}
-        You see? Refer to equations like this \eqnref{eq:First}.
-            \subsection{The first subsection}
-
-                \subsubsection[Subsection Short Title]{The first sub-subsection with a very very very long title, but in the table of contents one can only see the short title}
-
-                Nice, ain't it?\index{Nice}
-
-                    \paragraph{A paragraph.}
-    \part{Second part}
-
-    \chapter{Second part chapter}
-   \begin{figure}
-    \caption{this is a very long line to test if the table of
-    figures will wrap the line or will continue to go over the
-    border  of the page}
-    \end{figure}
-
-    \chapter{TEMP second part chapter this is a very long line to test if the table of
-    figures will wrap the line or will continue to go over the
-    border  of the page}
-
-New chapter gives a full acronym \ac{DUT}.
-
-\begin{eqnarray}
-% \nonumber to remove numbering (before each equation)
-  1 &=& 2\\
-  x &=& 5 \\
-  y &=& \theta
-\end{eqnarray}
-
-    \chapter{Second second part chapter}
-    \section{Section}
-
-    This is a test for nomenclature \lsymb{$A(s)$}{Answer function}\\
-    \lsymb{$a_f$, $b_f$, $c_f$ and $d_f$}{The variables I am trying to group}\\
-    \lsymb{$a_b$}{another variable}\\
-\section{Main equations}
-
-\begin{equation}
-a=\frac{N}{A}
-\end{equation}%
-
-\nomenclature{$a$}{The number of angels per unit area}%
-\nomenclature{$N$}{The number of angels per needle point}%
-\nomenclature{$A$}{The area of the needle point}%
-
-The equation $\sigma = m a$%
-\nomenclature{$\sigma$}{The total mass of angels per unit area}%
-\nomenclature{$m$}{The mass of one angel}
-follows easily.
+%LATEX TEST
+%\include{latex_test}
 
 
 	
 %============================= Appendices=========================================
 \appendix
-    \chapter{The back of the thesis}
+    \chapter{Space for Appendix}
     \section{An appendix section}
-
-    \subsection{An appendix subsection with C++ Listing}
-
-    \lstset{language=C++}
-    \lstinputlisting{test.c}
 
     \subsection{A \matlab Listing}
 
     \lstset{language=matlab}
     \lstinputlisting{test.m}
+    
+%    \subsection{An appendix subsection with C++ Listing}
+%
+%    \lstset{language=C++}
+%    \lstinputlisting{test.c}    
 
-    \chapter{Yet another appendix}
-
-    \section{Test section (again?)}
-
-    Ok, all is well.
+%    \chapter{Yet another appendix}
+%
+%    \section{Test section (again?)}
+%
+%    Ok, all is well.
 
 %============================= Back matter =========================================
 \backmatter
 	% Bibliography
-	\bibliographystyle{apalike}
+	\bibliographystyle{ieeetr}
+	\bibliography{library}
+	
+	%CHECK all entries for uniformity 	
+	
 	\printbib{library}
 	
 	% Index
@@ -219,12 +158,12 @@ follows easily.
 
 	% Nomenclature
 	\printnomenclature
-
+\include{glossary}
 	% Acronyms
-    \nonumchap{Acronyms}    
-    \begin{acronym}[XXXXX]% Note: replace XXXXX by the longest acronym
-                          %       in your list.
-        \acro{DUT}{Delft University of Technology}%
-    \end{acronym}%
+%    \nonumchap{Acronyms}    
+%    \begin{acronym}[XXXXX]% Note: replace XXXXX by the longest acronym
+%                          %       in your list.
+%        \acro{DUT}{Delft University of Technology}%
+%    \end{acronym}%
 
 \end{document}

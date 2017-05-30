@@ -1,3 +1,66 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{Goodarzi2013a}
+F.~Goodarzi, D.~Lee, and T.~Lee, ``{Geometric nonlinear PID control of a
+  quadrotor UAV on SE (3)},'' {\em Control Conference (ECC), 2013 European},
+  pp.~3845--3850, 2013.
+
+\bibitem{Lee}
+T.~Lee, ``{Geometric Control of an Autonomous Quadrotor UAV},'' {\em Control}.
+
+\bibitem{Bullo2005}
+F.~Bullo and A.~D. Lewis, {\em {Geometric control of mechanical systems:
+  modeling, analysis, and design for simple mechanical control systems}}.
+\newblock Springer, 2005.
+
+\bibitem{Jurdjevic1997}
+V.~Jurdjevic, {\em {Geometric Control Theory}}.
+\newblock Cambridge: Cambridge University Press, 1997.
+
+\bibitem{Lee2008}
+T.~Lee, {\em {Computational Geometric Mechanics and Control of Rigid Bodies}}.
+\newblock PhD thesis, The University of Michigan, 2008.
+
+\bibitem{Murray1994}
+R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
+  Robotic Manipulation}}, vol.~29.
+\newblock 1994.
+
+\bibitem{Lee2011}
+T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Stable Manifolds of Saddle Points for
+  Pendulum Dynamics on S{\^{}}2 and SO(3)},'' p.~9, 2011.
+
+\bibitem{Farrell2008}
+J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
+  Backstepping},'' pp.~1923--1928, 2008.
+
+\bibitem{Djapic2008}
+V.~Djapic, J.~Farrell, and W.~Dong, ``{Land vehicle control using a command
+  filtered backstepping approach},'' {\em Proceedings of the American Control
+  Conference}, pp.~2461--2466, 2008.
+
+\bibitem{Gillula2010}
+J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
+  safe maneuvers using reachable sets: Autonomous quadrotor aerobatics in
+  theory and practice},'' in {\em Proceedings - IEEE International Conference
+  on Robotics and Automation}, pp.~1649--1654, 2010.
+
+\bibitem{Lee2010}
+T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
+  Quadrotor UAV on SE(3)},'' {\em 49th IEEE Conference on Decision and
+  Control}, no.~3, pp.~5420--5425, 2010.
+
+\bibitem{Mellinger2011}
+D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
+  for quadrotors},'' in {\em Proceedings - IEEE International Conference on
+  Robotics and Automation}, pp.~2520--2525, 2011.
+
+\bibitem{Lee2010c}
+T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a
+  quadrotor UAV using geometric methods on SE (3)},'' {\em arXiv}, 2010.
+
+\bibitem{Goodarzi2015b}
+F.~A. Goodarzi, ``{Geometric Nonlinear Controls for Multiple Cooperative
+  Quadrotor UAVs Transporting a Rigid Body},'' no.~December 2009, 2015.
 
 \end{thebibliography}

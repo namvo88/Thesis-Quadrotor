@@ -1,23 +1,36 @@
 \chapter{Control Design} \label{ch:control}
-***************************************\\
+
+Geometric Control Theory explores the application of differential geometric techniques to systems control. The objective is to express both the dynamics and its control input on manifolds instead of on local charts.
+
+Geometric Control is based on a coordinate-free representation of the dynamics. The equations of motion are compact, unambiguous and singularity free. 
+
+Attitude control systems naturally evolve on non-linear configurations such as $ S^2 $ and $ SO(3) $. 
+
+Global nonlinear dynamics of various classes of closed loop attitude control systems have been studied in recent years \cite{Chaturvedi2011a}.
 
 ***************************************\\
+
+
+%ADD Reason to consider Geometric Control 
 Existing Control Systems for Quadrotor UAVs:\\
 Based on the linearized dynamics of a quadrotor UAV \\
 Singularities in representing complex maneuvers \\
 Fundamental restriction in tracking nontrivial trajectories
 
-***************************************\\
+In contrast to hybrid control systems \cite{Gillula2010}, \textbf{complicated reachability set analysis is not required} to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally.
+Tracking control system can be developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
 
 Benchmark with Linear Control\\
 
-Reason to consider Geometric Control\\ 
 ***************************************\\
-Geometric Control Theory explores the application of differential geometric techniques to systems control. 
+
+
+
+***************************************\\
 Therefore, the prerequisites for its study are linear algebra, vector calculus, differential geometry and non-linear control theory.
 Geometric control theory is the study of how the geometry of the state space influences controls problems. This includes local properties like curvature, and global properties like the number of `holes’ in the space (sphere vs doughnut).
 
-Intuition: The objective is to have both the dynamics and it's control input to directly flow along their inherent manifolds instead of on local charts. For example, I want to write out the equations of motion of a 3D pendulum and also control its orientation directly on the Special Orthogonal Group (using rotation matrices)  instead of using local charts induced by Euler Angle Parametrizations ( theta, phi and psi - the three famous angles of dynamics!).
+Intuition:  For example, I want to write out the equations of motion of a 3D pendulum and also control its orientation directly on the Special Orthogonal Group (using rotation matrices)  instead of using local charts induced by Euler Angle Parametrizations ( theta, phi and psi - the three famous angles of dynamics!).
 Pros:\\
 ->  Compact expressions that are also intuitive.
 -> Globally defined (no singularities!). Therefore, one can build almost globally attractive controllers.\\
@@ -25,8 +38,7 @@ Cons:\\
 -> The math gets very involved very quickly. (This could be subjective)
 ***************************************\\
 
-In contrast to hybrid control systems \cite{Gillula2010}, \textbf{complicated reachability set analysis is not required} to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally.
-Tracking control system can be developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
+
 
 
 Control Schemes\\

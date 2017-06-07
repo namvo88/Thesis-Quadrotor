@@ -2,11 +2,13 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2-1}{\ignorespaces Quadrotor model representation\relax }}{4}{figure.caption.8}
 \contentsline {figure}{\numberline {2-2}{\ignorespaces Quadrotor with Load model representation\relax }}{4}{figure.caption.9}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces \relax }}{5}{figure.caption.12}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Quadrotor-Load model representation\relax }}{9}{figure.caption.15}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor-Load model representation\relax }}{12}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Open Loop control QR \relax }}{15}{figure.caption.13}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Cases of which the performance could be evaluated \relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Open Loop control QR \relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces LQR control design\relax }}{17}{figure.caption.19}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Cases of which the performance could be evaluated \relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces Representation of the command filter\relax }}{19}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces \relax }}{20}{figure.caption.15}
 \addvspace {10\p@ }

@@ -1,10 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Goodarzi2013a}
-F.~Goodarzi, D.~Lee, and T.~Lee, ``{Geometric nonlinear PID control of a
-  quadrotor UAV on SE (3)},'' {\em Control Conference (ECC), 2013 European},
-  pp.~3845--3850, 2013.
-
 \bibitem{Lee}
 T.~Lee, ``{Geometric Control of an Autonomous Quadrotor UAV},'' {\em Control}.
 
@@ -26,18 +21,30 @@ R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
   Robotic Manipulation}}, vol.~29.
 \newblock 1994.
 
+\bibitem{Boothby2003}
+W.~M. Boothby, {\em {An Introduction to Differentiable Manifolds and Riemannian
+  Geometry}}.
+\newblock 2003.
+
+\bibitem{Lee2005}
+T.~L.~T. Lee, N.~McClamroch, and M.~Leok, ``{A lie group variational integrator
+  for the attitude dynamics of a rigid body with applications to the 3D
+  pendulum},'' {\em Proceedings of 2005 IEEE Conference on Control
+  Applications, 2005. CCA 2005.}, pp.~962--967, 2005.
+
+\bibitem{Lee2009}
+T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Lagrangian mechanics and variational
+  integrators on two-spheres},'' {\em International Journal for Numerical
+  Methods in Engineering}, vol.~79, no.~9, pp.~1147--1174, 2009.
+
 \bibitem{Lee2011}
 T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Stable Manifolds of Saddle Points for
   Pendulum Dynamics on S{\^{}}2 and SO(3)},'' p.~9, 2011.
 
-\bibitem{Farrell2008}
-J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
-  Backstepping},'' pp.~1923--1928, 2008.
-
-\bibitem{Djapic2008}
-V.~Djapic, J.~Farrell, and W.~Dong, ``{Land vehicle control using a command
-  filtered backstepping approach},'' {\em Proceedings of the American Control
-  Conference}, pp.~2461--2466, 2008.
+\bibitem{Mahony2012}
+R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
+  Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
+  Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
 
 \bibitem{Gillula2010}
 J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
@@ -62,5 +69,19 @@ T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a
 \bibitem{Goodarzi2015b}
 F.~A. Goodarzi, ``{Geometric Nonlinear Controls for Multiple Cooperative
   Quadrotor UAVs Transporting a Rigid Body},'' no.~December 2009, 2015.
+
+\bibitem{Farrell2008}
+J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
+  Backstepping},'' pp.~1923--1928, 2008.
+
+\bibitem{Djapic2008}
+V.~Djapic, J.~Farrell, and W.~Dong, ``{Land vehicle control using a command
+  filtered backstepping approach},'' {\em Proceedings of the American Control
+  Conference}, pp.~2461--2466, 2008.
+
+\bibitem{Goodarzi2013a}
+F.~Goodarzi, D.~Lee, and T.~Lee, ``{Geometric nonlinear PID control of a
+  quadrotor UAV on SE (3)},'' {\em Control Conference (ECC), 2013 European},
+  pp.~3845--3850, 2013.
 
 \end{thebibliography}

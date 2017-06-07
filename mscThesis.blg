@@ -3,27 +3,30 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: modeling.aux
 A level-1 auxiliary file: control.aux
-White space in argument---line 8 of file control.aux
+White space in argument---line 9 of file control.aux
  : \citation{Lee
  :               2010c}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: setup_results.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: ieeetr.bst
-Illegal, another \bibdata command---line 90 of file mscThesis.aux
+Illegal, another \bibdata command---line 73 of file mscThesis.aux
  : \bibdata
  :         {library}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: glossary.aux
 Database file #1: library.bib
-Repeated entry---line 1580 of file library.bib
+Repeated entry---line 2601 of file library.bib
  : @book{Murray1994
  :                 ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Chaturvedi2011a"
+Warning--I didn't find a database entry for "Djapic"
 Warning--I didn't find a database entry for "Farrell2009"
 Warning--empty year in Lee
 Warning--empty publisher in Murray1994
+Warning--empty publisher in Boothby2003
 Warning--empty journal in Lee2011
-Warning--empty journal in Farrell2008
 Warning--empty journal in Goodarzi2015b
+Warning--empty journal in Farrell2008
 (There were 3 error messages)

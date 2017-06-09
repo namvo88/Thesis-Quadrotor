@@ -1,8 +1,8 @@
-\chapter{Control Design} \label{ch:control}
+\chapter{Geometric Control Design} \label{ch:control}
 
-Geometric Control Theory explores the application of differential geometric techniques to systems control. The objective is to express both the dynamics and its control input on manifolds instead of on local charts.
+Geometric Control Theory explores the application of differential geometric techniques to systems control. The objective is to express both the dynamics and its control inputs on manifolds instead of on local charts.
 
-Geometric Control is based on a coordinate-free representation of the dynamics. The equations of motion are compact, unambiguous and singularity free. 
+Geometric Control is based on a coordinate-free representation of the dynamics, where the equations of motion are compact, unambiguous and singularity free. 
 
 Attitude control systems naturally evolve on non-linear configurations such as $ S^2 $ and $ SO(3) $. 
 
@@ -38,21 +38,15 @@ Cons:\\
 -> The math gets very involved very quickly. (This could be subjective)
 ***************************************\\
 
-
-
-
 Control Schemes\\
-Nonlinear Geometric Control. Error functions. Tracking controllers.\\
+Nonlinear Geometric Control. Error functions\\
 
 Attitude Controller\\
 
 Define errors associated with the attitude dynamics of the QR. The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee 2010c} 
 
-How to select gains for errors\\
-Constants \cite{Lee2010} or matrices; enabling unique gains for roll/pitch/yaw \cite{Mellinger2011}\\
 
-Parameter Estimation\\
-State Estimation\\
+Constants \cite{Lee2010} or matrices; enabling unique gains for roll/pitch/yaw \cite{Mellinger2011}\\
 
 \section{Backstepping Control}
 
@@ -61,12 +55,71 @@ Nonlinear control: Backstepping control is common.
 Definition backstepping: A technique for designing stabilizing controls for a special recursive class of nonlinear dynamical systems.
 %The backstepping approach determines how to stabilize the {\displaystyle \mathbf {x} } \mathbf {x}  subsystem using {\displaystyle z_{1}} z_{1}, and then proceeds with determining how to make the next state {\displaystyle z_{2}} z_{2} drive {\displaystyle z_{1}} z_{1} to the control required to stabilize {\displaystyle \mathbf {x} } \mathbf {x} . Hence, the process "steps backward" from {\displaystyle \mathbf {x} } \mathbf {x}  out of the strict-feedback form system until the ultimate control {\displaystyle u} u is designed.
 
-In a backstepping control approach, the control law is designed by using states as virtual control signals. At each step, a 
+In a backstepping control approach, the control law is designed by using states as virtual control signals. Each control loop outputs a commanded tracking signal for the underlaying control loop.
+
+***************************************\\
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/.png}}
+	\caption{Backstepping Control representation\label{fig:backstep}}
+\end{figure}		
+
+
+%CHECK dit mag weg?
+%***************************************\\
+%where is $ e_\Omega $?
+%
+%Three Flight Modes \cite{Lee,Lee2010c}\\
+%Attitude Controlled Mode: track an attitude command $ R_d(t) $ \\
+%Position Controlled Mode: track a position command $ x_d(t) $ and a heading direction $ b_{1_d}(t) $\\
+%Velocity Controlled Mode: track a velocity command $ v_d(t) $ and a heading direction $ b_{1_d}(t) $\\
+%***************************************\\
+%
+
+***************************************\\
+Because the \a{qr} has only four actuators, it is impossible to track all \a{DOF}s. A nested feedback loop allows different flight modes to be controlled.
+
+Three Flight Modes\\
+QR Attitude Controlled Mode: track a QR attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $ \\
+Load Attitude Controlled Mode: track a load attitude command $ q_d(t) $ \\
+Load Position Controlled Mode: track a load position $ x_{L,d}(t) $\\
 
 ***************************************\\
 
-\section{Geometric Control of QR system}
 
+***************************************\\
+Explain how $ f $ and $ \vec{b_{1_d}} $ is obtained from $ x_d(t) $?\\
+
+***************************************\\
+
+
+The attitude and angular velocity tracking error should be carefully chosen as the evolve on the tangent bundle of the nonlinear space $ SO(3) $. \cite{Lee2010}\\
+Why? Appendix\cite{Lee2010}, and \cite{Bullo2005}?
+
+
+%ADD Error functions
+The error function on $ SO(3) $ is chosen to be \cite{Lee2010}
+\begin{equation}\label{eq:errorfunc}
+\Psi(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
+\end{equation}
+
+%ADD (physical) Meaning of the error functions
+
+		\subsection{Quadrotor Attitude Tracking}
+		Attitude control problem is the inner loop of the control design. This inner loop must guarantee stability of the \a{qr}.
+		
+		Must track reference attitude.
+		
+		%ADD references to QR attitude tracking 
+		This control problem has been addressed in various works *****
+
+***************************************\\
+%CHECK what this is about
+Asymptotic tracking of the quadrotor attitude does not require specification of the thrust magnitude. As an auxiliary problem, the thrust magnitude can be chosen in many different ways to achieve an additional translational motion objective. For example, it can be used to asymptotically track a quadrotor altitude command [28]. Since the translational motion of the quadrotor UAV can only be partially controlled; this flight mode is most suitable for short time periods where an attitude maneuver is to be completed. \cite{Goodarzi2015b}
+
+***************************************\\
+
+%CHECK  waar zijn de feedforward termen?
 Control input \cite{Lee2011}
 \begin{equation}\label{eq:inputattitude}
 u=-k_Re_R-k_\Omega\Omega-mg\rho\times R^Te_3
@@ -77,52 +130,36 @@ J\dot{\Omega} &= -\Omega\times J\Omega-k_Re_R-k_\Omega\Omega \\
 \dot{R} &= R\hat{\Omega}
 \end{align}
 
-***************************************\\
-where is $ e_\Omega $?
-
-***************************************\\
-
-Three Flight Modes \cite{Lee,Lee2010c}\\
-Attitude Controlled Mode: track an attitude command $ R_d(t) $ \\
-Position Controlled Mode: track a position command $ x_d(t) $ and a heading direction $ b_{1_d}(t) $\\
-Velocity Controlled Mode: track a velocity command $ v_d(t) $ and a heading direction $ b_{1_d}(t) $\\
-
-		\subsection{Attitude Tracking}
-		***************************************\\
-		Asymptotic tracking of the quadrotor attitude does not require specification of the thrust magnitude. As an auxiliary problem, the thrust magnitude can be chosen in many different ways to achieve an additional translational mo- tion objective. For example, it can be used to asymptotically track a quadrotor altitude command [28]. Since the translational motion of the quadrotor UAV can only be partially controlled; this flight mode is most suitable for short time periods where an attitude maneuver is to be completed. \cite{Goodarzi2015b}
-		
-		***************************************\\
-
-		\subsection{Position Tracking}
-		
-		
-		Explain how $ f $ and $ \vec{b_{1_d}} $ is obtained from $ x_d(t) $?\\
-		
-		The attitude and angular velocity tracking error should be carefully chosen as the evolve on the tangent bundle of the nonlinear space $ SO(3) $. \cite{Lee2010}\\
-		Why? Appendix\cite{Lee2010}, and \cite{Bullo2005}?
-		
-		The error function on $ SO(3) $ is chosen to be \cite{Lee2010}
-		\begin{equation}\label{eq:errorfunc}
-		\Psi(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
-		\end{equation}
-
-\section{Geometric Control of QR-Load system}
-Three Flight Modes\\
-QR Attitude Controlled Mode: track a QR attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $ \\
-Load Attitude Controlled Mode: track a load attitude command $ q_d(t) $ \\
-Load Position Controlled Mode: track a load position $ x_{L,d}(t) $\\
-
-		\subsection{Quadrotor Attitude Tracking}
-
 		\subsection{Load Attitude Tracking}
 		
+		Tracks load attitude reference. Outputs attitude reference to attitude controller.
+			
+		How is the controller built.
+		
+		Dependent of what values? 	How to choose parameters.
+		
+		
 		\subsection{Load Position Tracking}
+		
+		Tracks load position reference. Outputs load attitude reference.
+		
 
-\section{Parameter - and State Estimation}
-How to choose parameters and how to estimate states?
+\section{Parameter- and State Estimation}
+
+%ADD Justify choice of parameters. Up to what level can we push the system? Where can we find more info about domain of attractions.
+How to choose parameters and how to select gains for errors\\
+
+%ADD?? Methods to obtain states? Suggest Vicon and how to deal with noise?
+How to estimate states?
+%ADD?? test robustness by adding noise? KF to estimate states? 
 
 
-\section{Conclusion}
+
+What parameters must be 
+
+Refer to Lyapunov stability analysis \cite{Bullo2005}
+
+\section{Summary}
 
 ***************************************\\
 What is Geometric Control?\\

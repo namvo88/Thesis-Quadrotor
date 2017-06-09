@@ -6,7 +6,7 @@
 \BOOKMARK [0][-]{chapter.2}{Dynamic Model}{}% 6
 \BOOKMARK [1][-]{section.2.1}{Modeling Assumptions}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.2}{Geometric Modeling}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.1}{Quadrotor-Load Modeling}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Quadrotor-Load Model}{section.2.2}% 9
 \BOOKMARK [1][-]{section.2.3}{Classical Modeling}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.4}{Conclusion}{chapter.2}% 11
 \BOOKMARK [0][-]{chapter.3}{Control Design}{}% 12

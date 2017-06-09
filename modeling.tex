@@ -346,9 +346,9 @@ From Newton's law follows
 \begin{equation}\label{eq:newton}
 \begin{aligned}
 \dot{x}_Q &= v_Q\\
-m\dot{v}_Q &=fRe_3-m_Qge_3-Tq\\
+m_Q\dot{v}_Q &=fRe_3-m_Qge_3-Tq\\
 \dot{x}_L &= v_L\\
-m\dot{v}_L &=-m_Lge_3+Tq
+m_L\dot{v}_L &=-m_Lge_3+Tq
 \end{aligned}
 \end{equation}
 %which gives the following equation, derived in Section \ref{sec.app:loaddyn},
@@ -366,18 +366,38 @@ c_{\theta}s_{\psi}+c_{\psi}s_{\phi}s_{\theta}&c_{\phi}c_{\psi}&s_{\psi}s_{\theta
 \end{bmatrix}
 \end{equation}
 
-The unit vector $ q $ from the \a{qr} to the load is represented in \BF. Define $ \psi_L $ as the yaw-rotation of the load around the z-axis of \BF and $ \theta_L $ as the pitch-rotation of the load around the new y-axis of \BF, see Figure \ref{fig:QRLmodelTrad}.
-
-\begin{equation}\label{key}
+The unit vector $ q $ from the \a{qr} to the load is represented in \BF. Define $ \phi_L $ as the yaw-rotation of the load around the z-axis of \BF and $ \theta_L $ as the pitch-rotation of the load around the new y-axis of \BF, see Figure \ref{fig:QRLmodelTrad}.
+\begin{equation}\label{eq:q}
 %		q=-R_{\psi_L}R_{\theta_L}e_3=\begin{bmatrix}
 %		s_{\theta_L}c_{\psi_L}\\s_{\theta_L}s_{\psi_L}\\-c_{\theta_L}
 %		\end{bmatrix}
+%\begin{align}
 q=\begin{bmatrix}
-s_{\theta_L}c_{\psi_L}\\
-s_{\theta_L}s_{\psi_L}\\
+s_{\theta_L}c_{\phi_L}\\
+s_{\theta_L}s_{\phi_L}\\
 c_{\theta_L}
 \end{bmatrix}
-\end{equation} 
+%\dot{q}&=\begin{bmatrix}
+%s_{\theta_L}c_{\psi_L}\\
+%s_{\theta_L}s_{\psi_L}\\
+%c_{\theta_L}
+%\end{bmatrix}\\
+%\end{align}
+\end{equation}  
+Differentiating Equation (\ref{eq:xQ2xL}) and (\ref{eq:q}) gives
+\begin{equation}\label{key}
+\begin{aligned}
+\ddot{x}_L&=\ddot{x}_Q-\ddot{q}L\\
+\ddot{q}&=\begin{bmatrix}
+\ddot{\theta}_Lc_{\theta_L}c_{\phi_L}-\ddot{\phi}_Ls_{\theta_L}s_{\phi_L}-\dot{\phi}_L^2s_{\theta_L}c_{\phi_L}-\dot{\theta}_L^2s_{\theta_L}c_{\phi_L}-2\dot{\theta}_L\dot{\phi}_Lc_{\theta_L}s_{\phi_L}\\
+\ddot{\theta}_Lc_{\theta_L}s_{\phi_L}+\ddot{\phi}_Ls_{\theta_L}c_{\phi_L}-\dot{\phi}_L^2s_{\theta_L}s_{\phi_L}-\dot{\theta}_L^2s_{\theta_L}s_{\phi_L}+2\dot{\theta}_L\dot{\phi}_Lc_{\theta_L}c_{\phi_L}\\
+-\ddot{\theta}_Ls_{\theta_L}-\dot{\theta}_L^2 c_{\theta_L}\\
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+
+
 
 \begin{equation}\label{key}
 \begin{aligned}
@@ -401,7 +421,7 @@ c_{\theta_L}
 \ddot{\phi} &=\tilde{\tau}_{\phi}
 \end{align}
 
-\section{Conclusion}
+\section{Summary}
 
 ***************************************\\
 Compact, unambiguous, globally defined, 

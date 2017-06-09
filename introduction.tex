@@ -10,11 +10,19 @@
     		\section{Aim and Motivation}\label{sec:int.motivation}
     				The inspiration for this literature survey is build upon the idea of creating a multiple autonomous QR system for a cooperative towing task. The advantage of using multiple robots for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
     				
-    				%AIM
+    				%ADD AIM
     				The aim is to control the position of a suspended load using a Quadrotor. Former work on Quadrotor control regularly rely on linear control such as PID or LQR for a dynamic model linearized about the hover state. A single Quadrotor is considered for the transportation of a cable suspended load, which exerts forces and torques on the Quadrotor. 
 %    				The aim of this literature survey is to investigate state-of-the-art control methods for manipulation and transportation of cable suspended loads using QRs. A single QR is considered for the transportation of a cable suspended load, which could exert undesired forces and torques on the QR. This could lead to undesired behavior or dangerous situations. A possible objective is to minimize the oscillations of the load during and after motion or to minimize the time for transportation of the load, using active control techniques. The system is referred to as a \textit{Aerial Towing System} or \textit{Quadrotor-Load System} ({QR-Load system}). Difficulties that come with modeling and controlling the non-linearities of the system are the reason that linear control near an equilibrium state is commonly applied in research. However, this type of control limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
 %    				    				
-    				%MOTIVATION
+
+%ADD state of the art. what is missing.
+A lot of methods for \a{qr} control.\\
+Not a lot based on geometric control\\
+Globally defined, useful for nonlinear problems\\
+Only few, why so little?\\
+What is its value compared against linear control
+
+    				%ADD MOTIVATION
     				This motivates to compare a linear control strategy with a non-linear control strategy. 
 %    				This motivates to find a suitable non-linear modeling method and/or a non-linear control strategy that will allow the QR-Load system to follow a trajectory,     				while maintaining a desired position of the load. Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of control design. Furthermore, the high number of under-actuation of the system makes the motion control of the system challenging, especially for aggressive maneuvers. 
 %    
@@ -24,9 +32,10 @@
             ***************************************\\
 
 State of the art methods\\
-Research and Engineering goals\\
-Organization of the report
 
+
+%ADD Reason to consider Geometric Control 
+%ADD Contributions
 ***************************************\\
 
 \section{Organization of the Report}

@@ -1,14 +1,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Quadrotor model representation\relax }}{4}{figure.caption.8}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Quadrotor with Load model representation\relax }}{4}{figure.caption.9}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces Quadrotor-Load model representation\relax }}{9}{figure.caption.15}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor-Load model representation\relax }}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Quadrotor model representation\relax }}{6}{figure.caption.10}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Quadrotor with Load model representation\relax }}{6}{figure.caption.11}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces \relax }}{9}{figure.caption.15}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Configuration Space of a 2-link arm\relax }}{9}{figure.caption.16}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Quadrotor-Load model representation\relax }}{13}{figure.caption.19}
+\contentsline {figure}{\numberline {2-6}{\ignorespaces Quadrotor-Load model representation\relax }}{15}{figure.caption.20}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Backstepping Control representation\relax }}{19}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Open Loop control QR \relax }}{17}{figure.caption.18}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces LQR control design\relax }}{17}{figure.caption.19}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Cases of which the performance could be evaluated \relax }}{18}{figure.caption.20}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces Representation of the command filter\relax }}{19}{figure.caption.21}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{23}{figure.caption.22}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Cases of which the performance could be evaluated \relax }}{24}{figure.caption.23}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Representation of the command filter\relax }}{25}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -62,13 +62,13 @@ D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
   for quadrotors},'' in {\em Proceedings - IEEE International Conference on
   Robotics and Automation}, pp.~2520--2525, 2011.
 
-\bibitem{Lee2010c}
-T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a
-  quadrotor UAV using geometric methods on SE (3)},'' {\em arXiv}, 2010.
-
 \bibitem{Goodarzi2015b}
 F.~A. Goodarzi, ``{Geometric Nonlinear Controls for Multiple Cooperative
   Quadrotor UAVs Transporting a Rigid Body},'' no.~December 2009, 2015.
+
+\bibitem{Lee2010c}
+T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a
+  quadrotor UAV using geometric methods on SE (3)},'' {\em arXiv}, 2010.
 
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
@@ -83,5 +83,10 @@ V.~Djapic, J.~Farrell, and W.~Dong, ``{Land vehicle control using a command
 F.~Goodarzi, D.~Lee, and T.~Lee, ``{Geometric nonlinear PID control of a
   quadrotor UAV on SE (3)},'' {\em Control Conference (ECC), 2013 European},
   pp.~3845--3850, 2013.
+
+\bibitem{Tang2014}
+S.~Tang, ``{Aggressive Maneuvering of a Quadrotor with a Cable-Suspended
+  Payload},'' tech. rep., University of Pennsylvania Philadelphia,
+  Pennsylvania, 2014.
 
 \end{thebibliography}

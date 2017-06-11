@@ -1,44 +1,49 @@
 \chapter{Dynamic Model} \label{ch:model}
 
-***************************************\\
 %ADD INTRO 
 
-The dynamics of the \a{qr}-Load system are described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. Opposed to the classical modeling techniques, it is also possible to describe the system's configuration space as a differentiable manifold with the tools of differential geometry. \\
+The dynamics of the \a{qr}-Load system are described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. Opposed to the classical modeling techniques, it is also possible to describe the system's configuration space as a differentiable manifold using the tools of differential geometry. \\
 
-Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. The motion of a rigid body can be described by a translation of the center of mass and a rotation about the center of mass. The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body transformations. 
+Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. The motion of a rigid body can be described by a translation of the \acf{cm} and a rotation about the \a{cm}. The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body displacements. 
 
-To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 sets of Euler angles, which can lead to ambiguity. In order to avoid these complexities, the attitude dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ S^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making all the trigonometric functions that Euler angles introduce unnecessary.
+To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 sets of Euler angles, which can lead to ambiguity. In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ S^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce.
+
+%ADD iets over manifolds
+An Introduction to Differentiable Manifolds is given by \cite{Boothby2003}
+
+%ADD deze references introduceren
+\cite{Bullo2005}
+\cite{Jurdjevic1997}
+
+
 ***************************************\\
-
+%CHECK wat is dit precies?
+Computational Geometric Mechanics and Control\\
+Computation algorithms must be developed which preserve the geometric properties of a mechanical system.\\
+Robust and careful numerical implementation of geometric control theory to complex engineering systems.\\
+Provides nontrivial maneuvers that are globally valid on a nonlinear configuration manifold.
 
 ***************************************\\
-A mathematical model of the system needs to be derived in order to study the effects of Geometric Control. 
-
-***************************************\\
-
 
 \section{Modeling Assumptions} 
+A mathematical model of the system needs to be derived in order to simulate and study the effects of Geometric Control. 
 The following assumptions are applied to simplify the model.\\
 
-	%CHANGE intermediate frame. nodig?
+	%CHECK intermediate frame. nodig?
 The \a{qr} model representation is shown in Figure \ref{fig:mod.model}. Three Cartesian coordinate frames are defined:\v{5}
 \begin{itemize}
 	\setlength\itemsep{.2pt}
 	\item The body-fixed reference frame \lsymb{$ \{\mathcal{B}\} $}{Body Frame} (Body Frame)
-	%								\nomenclature{$ \{\mathcal{B}\} $}{Body Frame}
 	\subitem with unit vectors \lsymb{$ \{\mathbf{b}_1,\mathbf{b}_2,\mathbf{b}_3\} $}{Unit vectors along the axes of $ \{\mathcal{B}\} $} along the axes
 	\item The ground-fixed reference frame \lsymb{$ \{\mathcal{I} \}$}{Inertial World Frame} (Inertial Frame)
-	%								\nomenclature{$ \{\mathcal{I} \}$}{Inertial World Frame}
 	\subitem with unit vectors \lsymb{$ \{\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3\} $}{Unit vectors along the axes of $ \{\mathcal{I}\} $} along the axes								
 	\item The intermediary frame \lsymb{$ \{\mathcal{C} \}$}{Intermediary Frame}, ($ \{\mathcal{I} \}$ rotated by the yaw angle $ \psi $) 
-	%								\nomenclature{$ \{\mathcal{C} \}$}{Intermediary Frame}
 	\subitem with unit vectors \lsymb{$ \{\mathbf{c}_1,\mathbf{c}_2,\mathbf{c}_3\} $}{Unit vectors along the axes of $ \{\mathcal{C}\} $} along the axes								
 \end{itemize}
 
 \begin{figure}[h!]
-	%CHANGE intermediate frame. nodig?
 	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/qrmodelppt.png}}
+	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/dcsc.png}}
 	\caption{Quadrotor model representation\label{fig:mod.model}}
 \end{figure}	
 
@@ -48,16 +53,16 @@ The \a{qr} model representation is shown in Figure \ref{fig:mod.model}. Three Ca
 	\caption{Quadrotor with Load model representation\label{fig:mod.modelQRL}}
 \end{figure}	
 
-The position of the body frame is described by a vector evolving on $ \mathbb{R}^3 $, and is represented with respect to the inertial frame. The orientation of the body frame with respect to the inertial frame evolves on a nonlinear space, for which several methods exist to describe this, such as \textit{Euler Angles}, quaternions or rotation matrices. 
+The position of the body frame is described by a vector evolving on $ \mathbb{R}^3 $, and is represented with respect to the inertial frame. The orientation, also called attitude, of the body frame with respect to the inertial frame evolves on a nonlinear space, for which several methods exist to describe this, such as \textit{Euler Angles}, quaternions or rotation matrices. 
 
 %CHECK is dit wel nodig?
 The complex dynamics of the rotors and their interactions with drag and thrust forces are represented by a simplified model. 
-The angular speed \lsymb{$ \omega_i $}{Angular speed of rotor $ i $} of rotor $ i $,  for $ i=1,\dots,4 $, generates a force \lsymb{$ F_i $}{Force generated by rotor $ i $} parallel to the direction of the rotor axis of rotor $ i $, given by
+The angular speed \lsymb{$ \omega_i $}{Angular speed of rotor $ i $} of rotor $ i $, for $ i=1,\dots,4 $, generates a force \lsymb{$ F_i $}{Force generated by rotor $ i $} parallel to the direction of the rotor axis of rotor $ i $, given by
 \begin{equation}\label{key}
 F_i=\left( \frac{K_vK_\tau\sqrt{2\rho A}}{K_t}\omega_i\right)^2=b\omega_i^2 
 \end{equation}
 where $ K_v,K_t $ are constants related to the motor properties, $ \rho $ is the density of the surrounding air, $ A $ is the area swept out by the rotor, $ K_\tau $ is a constant determined by the blade configuration and parameters, and $ b $ is the thrust factor.\\
-The torque around the axis of rotor $ i $ generated due to drag is given by
+The torque around the axis of rotor $ i $, for $ i=1,\dots,4 $, generated due to drag is given by
 \begin{equation}\label{key}
 M_{i}=\frac{1}{2}R\rho C_DA(\omega_iR)^2=d\omega_i^2
 \end{equation}
@@ -131,104 +136,99 @@ Table \ref{tab:mod.assumptions} shows the most common assumptions that are used 
 \end{table}
 
 
-\section{Geometric Modeling}\label{sec:mod.geometric}
+\section{Geometric Mechanics}\label{sec:mod.geometric}
 
-%HOE DAN? 
-Differential geometry is used to analyze the underlying geometric properties of a system. In geometric modeling the configuration space is a group manifold instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces.
+In this section an introduction is given about Geometric Mechanics, which is an approach that describes the classical mechanics from the perspective of Differential Geometry and its fundamental object called a differentiable manifold.
 
-***************************************\\
+%ADD intro 
+In Geometric Mechanics the configuration space of systems is a \textit{group manifold} instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces. It explores the geometric structure of a Lagrangian- or Hamiltonian system through the concepts of vector calculus, linear algebra, differential geometry, and non-linear control theory. Geometric mechanics provides fundamental insights into the non-linear system mechanics and yields useful tools for dynamics and control theory.
 
-The orientation of the QR is described on the Special Orthogonal Group $ SO(3) $, using rotation matrices, instead of using local charts induced by Euler Angle parameterizations. Whereas the orientation of the Load is described on a two-sphere  $ S^2 $
-
-***************************************\\
 
 ***************************************\\
+Mechanics studies the dynamics of physical bodies acting under forces and potential fields. 
+In Lagrangian mechanics, the trajectories are obtained by finding the paths that minimize the integral of a Lagrangian over time, called the action integral. 
+Rigid body dynamics are characterized by Lagrangian/Hamiltonian dynamics. The dynamics of a Lagrangian system has unique geometric properties and these are exploited to obtain Euler-Lagrange equations. The resulting intrinsic form of the Euler-Lagrange equations are more compact than equations expressed in terms of local coordinates.
+
+
+%ADD PROS CONS
 Problems, singularities with Euler-Angles\\
 Other attitude representations, such as exponential coordinates, quaternions, or Euler
 angles, can also be used following standard descriptions, but each of the representations has a disadvantage
 of introducing an ambiguity or singularity.
 Why charts on $ SO(3) $ \url{https://en.wikipedia.org/wiki/Charts_on_SO(3)}\\
 
+Euler Angles\\
+However, the definition of Euler angles is not unique and in the literature many different conventions are used. These conventions depend on the axes about which the rotations are carried out, and their sequence because rotations are not commutative. Therefore, Euler angles are never expressed in terms of the external frame, or in terms of the co-moving rotated body frame, but in a mixture. Other conventions (e.g., rotation matrix or quaternions) are used to avoid this problem.
+
+***************************************\\
+
+***************************************\\
+
+When angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required 3-D rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided to generate agile maneuvers in a uniform way. 			
+
+\paragraph{Manifolds}
+%ADD  manifolds
+The fundamental object ..
+
+A manifold is a topological space that locally resembles Euclidean space near each point. A differentiable manifold is a type of manifold that is locally similar enough to a linear space to allow to do calculus. In Figure \ref{fig:mod.manifold} is illustrated that each point of an n-dimensional manifold has a neighbourhood that is homeomorphic to the n-dimensional Euclidean space.
+
+
+***************************************\\
+A manifold is an abstract mathematical space in which every point has a neighbourhood which resembles Euclidean space, but in which the global structure may be more complicated.
+Manifolds are important objects in mathematics and physics because they allow more complicated structures to be expressed and understood in terms of the relatively well-understood properties of simpler spaces.
+
+For most applications a special kind of topological manifold, a differentiable manifold, is used. One can define directions, tangent spaces, and differentiable functions on that manifold. In particular it is possible to use calculus on a differentiable manifold.
+
+Differentiable manifolds
+If the local charts on a manifold are compatible in a certain sense,  Each point of an n-dimensional differentiable manifold has a tangent space. This is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through the point.
+Two important classes of differentiable manifolds are smooth and analytic manifolds. For smooth manifolds the transition maps are smooth, that is infinitely differentiable. Analytic manifolds are smooth manifolds with the additional condition that the transition maps are analytic (a technical definition which loosely means that Taylor's theorem holds). The sphere can be given analytic structure, as can most familiar curves and surfaces.
+A rectifiable set generalizes the idea of a piecewise smooth or rectifiable curve to higher dimensions; however, rectifiable sets are not in general manifolds.
+
 ***************************************\\
 
 
-***************************************\\
-\cite{Lee}
-%ADD Why is this used, pros/cons\\
+\begin{figure}[h!]
+	%ADD figure of local space on manifold to cartesian space
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\caption{\label{fig:mod.manifold}}
+\end{figure}		
 
-%		\subsection{Lagrangian System}
-Mechanics studies the dynamics of physical bodies acting under forces and potential fields. 
-In Lagrangian mechanics, the trajectories are obtained by finding the paths that minimize the integral of a Lagrangian over time, called the action integral. 
-Rigid body dynamics are characterized by Lagrangian/Hamiltonian dynamics. The dynamics of a Lagrangian system has unique geometric properties and these are exploited to obtain Euler-Lagrange equations. The resulting intrinsic form of the Euler-Lagrange equations are more compact than equations expressed in terms of local coordinates.
+%CHECK goede plek voor deze uitleg
+An example can be given of an 2-link arm, in Figure \ref{fig:mod.armmanifold}, where the configuration of can be expressed by 2 coordinates. Figure \ref{fig:mod.robotcartesian} represents the configuration space as a Cartesian space, where the two red dots represent the same configuration. This illustrates that this representation suffers from singularities. In mathematics there are different types of singularity, this case is about the situation where multiple points in one representation are mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a manifold, where every configuration is a unique representation.
 
-When angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required 3-D rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided to generate agile maneuvers in a uniform way. 				
+\begin{figure}[h!]
+	\centering
+	%ADD figure ROBOT ARM / cartesian 2 coordinates / torus
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{Configuration Space of a 2-link arm\label{fig:mod.armmanifold}}
+\end{figure}		
+
+
+%CHECK mag weg?
+%Infinitesimal changes close to the singularity in one representation may cause large changes in the other representation.
+%\cite{Lee}
+
 
 Most of nonlinear dynamics and control problems are studied in a linear space.\\
 \begin{equation}\label{key}
 \dot{x}=\textbf{f}(t,x,u), \quad x\in\mathbb{R}^n, u\in\mathbb{R}^m, \textbf{f}:\mathbb{R}^{n+m+1}\rightarrow\mathbb{R}^n
 \end{equation}
 
-Geometric Mechanics and Control is used to understand the structure of the equations of motion of a system in order to facilitate its analysis and design. The evolution of the system and the design of controllers is done on a nonlinear manifold.\\
-
-In mathematics there are different types of singularity, in these cases we are talking about the situation where:\\
-Many points in one representation are mapped onto a single point in another representation.\\
-Infinitesimal changes close to the singularity in one representation may cause large changes in the other representation.
-
-Computational Geometric Mechanics and Control\\
-Computation algorithms must be developed which preserve the geometric properties of a mechanical system.\\
-Robust and careful numerical implementation of geometric control theory to complex engineering systems.\\
-Provides nontrivial maneuvers that are globally valid on a nonlinear configuration manifold.
+Geometric Mechanics and Control is used to understand the structure of the equations of motion of a system in order to allow its analysis and design. The system evolves on a nonlinear manifold and the controllers are designed on this same manifold.\\
 
 
 
-\begin{equation}\label{key}
-SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}:RR^T=I_{3\times3},det(R)=1\right\rbrace 
-\end{equation}
-
-Rotational matrices with determinant 1 is a Lie group: $ SO(3) $\\
-$ SO(3) $ is the group of all rotations about origin of three-dimensional Euclidean space\\
-Rotation about the origin is a transformation that preserves the origin, Euclidean distance and orientation.\\
-Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation.\\
-Possible ways to represent rotations: orthogonal matrices with determinant 1, axis and rotation angle, geometric algebra as a rotor, sequence of three rotations about three fixed axes; Euler Angles\\
-Lie group is a group that is also a differentiable manifold.\\
-Differentiable manifold is a type of manifold that is locally similar enough to a linear space to allow to do calculus.\\
-Manifold is a topological space that locally resembles Euclidean space near each point. Each point of an n-dimensional manifold has a neighbourhood that is homeomorphic to the n-dimensional Euclidean space.\\
-Homeomorphism is a continuous function between topological spaces that has a continuous inverse function. (mug transforms to a torus)\\
-
-
-\paragraph{Special Orthogonal group}
-\begin{equation}\label{key}
-SO(3)=\left\lbrace R\in\mathbb{R}^{3\times3}|R^TR=I,\quad detR=1\right\rbrace 
-\end{equation}
-The group operation for $ SO(3) $ corresponds to matrix multiplication.\\
-The attitude kinematics equation is given by
-\begin{equation}\label{key}
-\dot{R}=R\hat{\Omega}
-\end{equation}
-where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame. The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices. The Lie algebra $ \mathfrak{so}(3) $ is defined by
-\begin{equation}\label{key}
-\hat{\Omega}=\begin{bmatrix}
-0&-\Omega_3&\Omega_2\\
-\Omega_3&0&-\Omega_1\\
--\Omega_2&\Omega_1&0
-\end{bmatrix}
-\end{equation}
-
-Rotation formalisms in three dimensions \url{https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#cite_note-5}\\
-Combining two successive rotations, each represented by an Euler axis and angle, is not straightforward, and in fact does not satisfy the law of vector addition, which shows that finite rotations are not really vectors at all. It is best to employ the rotation matrix or quaternion notation, calculate the product, and then convert back to Euler axis and angle.
-
-Euler Angles\\
-However, the definition of Euler angles is not unique and in the literature many different conventions are used. These conventions depend on the axes about which the rotations are carried out, and their sequence because rotations are not commutative. Therefore, Euler angles are never expressed in terms of the external frame, or in terms of the co-moving rotated body frame, but in a mixture. Other conventions (e.g., rotation matrix or quaternions) are used to avoid this problem.
-
-***************************************\\
-Geometric mechanics is a modern description of classical mechanics from the perspective of differential geometry \cite{Bullo2005,Jurdjevic1997}. It explores the geometric structure of a Lagrangian or Hamiltonian system through the concept of vector fields, symplectic geometry, and symmetry techniques. Geometric mechanics provides fundamental insights into mechanics and yields useful tools for dynamics and control theory.
-
-In control systems engineering, the underlying geometric features of a dynamic system are often not considered carefully. For example, many control systems are developed for the standard form of ordinary differential equations, namely $ \dot{x}=f(x,u) $, where the state and the control input are denoted by $ x $ and $ u $. It is assumed that the state and the control input lie in Euclidean spaces, and the system equations are defined in terms of smooth functions between Euclidean spaces. However, for many interesting mechanical systems, the configuration space cannot be expressed globally as a Euclidean space.
-
-In \cite{Lee2008} dynamics and optimal control problems for rigid bodies are studied, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. Computational methods for rigid bodies, that preserve the underlying Lagrangian/Hamiltonian system structure of rigid body dynamics as well as the Lie group structure of the configurations are developed.
 
 \paragraph{Lie Group Configuration Manifold} 
-The configuration of a rigid body can be described by the location of its mass center and the orientation of the rigid body in a 3-D space. The location of the rigid body can be expressed in Euclidean space, but the attitude evolves in a nonlinear space with a certain geometry. The attitude of a rigid body is defined as the orientation of a body-fixed frame with respect to a reference frame
+
+Lie group is a group that is also a differentiable manifold.\\
+
+Rotational matrices with determinant 1 is a Lie group: $ SO(3) $\\
+
+
 %CHECK fact check?
 %considered as a linear transformation on the vector space $ \mathbb{R}^3 $.\\ 
 %The attitude 
@@ -245,22 +245,76 @@ The configuration manifold for the attitude dynamics of a rigid body is $ SO(3) 
 ***************************************\\
 Introduction to the basics of Lie group theory and its connections with rigid body kinematics is given in \cite{Murray1994}. 
 
-An Introduction to Differentiable Manifolds \cite{Boothby2003}
 
-Geometric Control by \cite{Bullo2005}.
 
 ***************************************\\
 
-\paragraph{Differentiable Manifolds}
+\paragraph{Special Orthogonal group}
+
+%ADD introduce rotation matrix
+Rotation matrices are used to describe the attitude of the \a{qr}. A rotation matrix maps a representation of vectors expressed in \BF to a representation expressed in \IF. 
+Rotation matrices provide global representations of the attitude, which is an advantage over other attitude representations, such as exponential coordinates, quaternions, or Euler
+angles, where each of the representations has a disadvantage of introducing ambiguities or singularities. The configuration of the \a{qr} is a rotation matrix $ R $ in the Special Orthogonal Group $ SO(3) $ defined as
+
+\begin{equation}\label{key}
+SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}:RR^T=I_{3\times3}, det(R)=1\right\rbrace 
+\end{equation}
+
+$ SO(3) $ is the group of all rotations about origin of three-dimensional Euclidean space, which preserves the origin, Euclidean distance and orientation.
+Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation.
+
+The group operation for $ SO(3) $ corresponds to matrix multiplication.\\
+The attitude kinematics equation is given by
+\begin{equation}\label{key}
+\dot{R}=R\hat{\Omega}
+\end{equation}
+where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame. The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices. The Lie algebra $ \mathfrak{so}(3) $ is defined by
+\begin{equation}\label{key}
+\hat{\Omega}=\begin{bmatrix}
+0&-\Omega_3&\Omega_2\\
+\Omega_3&0&-\Omega_1\\
+-\Omega_2&\Omega_1&0
+\end{bmatrix}
+\end{equation}
 
 
-\subsection{Quadrotor-Load Model}	
+%CHECK kan weg?
+%Possible ways to represent rotations: orthogonal matrices with determinant 1, axis and rotation angle, geometric algebra as a rotor, sequence of three rotations about three fixed axes; Euler Angles\\
+
+
+***************************************\\
+% CHECK nodig?
+Rotation formalisms in three dimensions \url{https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#cite_note-5}\\
+Combining two successive rotations, each represented by an Euler axis and angle, is not straightforward, and in fact does not satisfy the law of vector addition, which shows that finite rotations are not really vectors at all. It is best to employ the rotation matrix or quaternion notation, calculate the product, and then convert back to Euler axis and angle.
+
+***************************************\\
+
+%ADD summary / conclusion
+This concludes the introduction about Geometric Mechanics, which is used to model the \a{qr}-Load system in the following section.
+
+
+\section{Quadrotor-Load Model}	
+
+
+***************************************\\
+In \cite{Lee2008} dynamics and optimal control problems for rigid bodies are studied, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. Computational methods for rigid bodies, that preserve the underlying Lagrangian/Hamiltonian system structure of rigid body dynamics as well as the Lie group structure of the configurations are developed.
+
+***************************************\\
+The orientation of the QR is described on the Special Orthogonal Group $ SO(3) $, using rotation matrices, instead of using local charts induced by Euler Angle parameterizations. Whereas the orientation of the Load is described on a two-sphere  $ S^2 $
+
+The configuration of a rigid body can be described by the location of its mass center and the orientation of the rigid body in a 3-D space. The location of the rigid body can be expressed in Euclidean space, but the attitude evolves in a nonlinear space with a certain geometry. The attitude of a rigid body is defined as the orientation of a body-fixed frame with respect to a reference frame
+
+***************************************\\
+\paragraph{Variations}
+%ADD Variations on manifolds
+***************************************\\
 
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
 	\caption{Quadrotor-Load model representation\label{fig:QRLmodel}}
 \end{figure}		
+
 The Quadrotor-Load model is represented in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF.
 The position of the \a{qr} and Load, \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM} and \lsymb{$ x_L $}{Position of the  of the \a{qr} CM} resp., are related by
 \begin{equation}\label{eq:xQ2xL}
@@ -270,7 +324,7 @@ where \lsymb{$ L $}{Length of the cable} is the length of the cable.
 
 
 %LOAD ATTITUDE DYNAMICS
-\paragraph{Load Attitude Dynamics}
+
 To develop the Euler-Lagrange equations for mechanical systems that evolve on a Lie group, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is used, which is based on Hamilton's principle. 
 
 The action integral is defined as
@@ -334,6 +388,9 @@ Based on \cite{Lee2011}.
 
 \section{Classical Modeling}
 
+%CHECK waarom dit? Per se nodig om LQR uit te leggen?
+This section describes the derivation of the model by using classical modeling techniques.
+
 ***************************************\\
 %CHECK is deze reference nog relevant?
 Reference \ref{app:model}
@@ -357,7 +414,8 @@ m_L\dot{v}_L &=-m_Lge_3+Tq
 %(m_Q+m_L)(\dot{v}_L+ge_3)=fRe_3-m_QL\ddot{q}
 %\end{equation}
 
-Where the function that maps a vector of the Z-X-Y Euler angles to its rotation matrix $ R\in SO(3) $ is denoted as \cite{Mahony2012}
+
+Because the Euler-Angles are used, a function is required that maps a vector of the Z-X-Y Euler angles to its rotation matrix $ R\in SO(3) $, which is denoted as \cite{Mahony2012}
 \begin{equation}\label{key}
 R_{312}({\phi},{\theta},{\psi})=\begin{bmatrix}
 c_{\psi}c_{\theta}-s_{\phi}s_{\psi}s_{\theta}&-c_{\phi}s_{\psi}&c_{\psi}s_{\theta}+c_{\theta}s_{\phi}s_{\psi}\\
@@ -365,8 +423,21 @@ c_{\theta}s_{\psi}+c_{\psi}s_{\phi}s_{\theta}&c_{\phi}c_{\psi}&s_{\psi}s_{\theta
 -c_{\phi}s_{\theta}&s_{\phi}&c_{\phi}c_{\theta}
 \end{bmatrix}
 \end{equation}
+The Z-X-Y Euler angles to model the rotation can be seen in Figure \ref{fig:mod.modelQRtrad}. The first rotation by yaw angle $ \psi $ is around the z-axis of \IF. Next is the rotation by roll angle $ \phi $, and the last rotation is by pitch angle $ \theta $.
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/qrmodelppt.png}}
+	\caption{Quadrotor-Load model representation\label{fig:mod.modelQRtrad}}
+\end{figure}
 
-The unit vector $ q $ from the \a{qr} to the load is represented in \BF. Define $ \phi_L $ as the yaw-rotation of the load around the z-axis of \BF and $ \theta_L $ as the pitch-rotation of the load around the new y-axis of \BF, see Figure \ref{fig:QRLmodelTrad}.
+The unit vector $ q $ from the \a{qr} to the load is represented in \BF. Define $ \phi_L $ as the yaw-rotation of the load around the z-axis of \BF and $ \theta_L $ as the angle between the cable and the z-axis of \BF, see Figure \ref{fig:mod.modelQRLtrad}.
+\begin{figure}[h!]
+	%ADD figure with angles phiL and theta L
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\caption{\label{fig:mod.modelQRLtrad}}
+\end{figure}	
+
 \begin{equation}\label{eq:q}
 %		q=-R_{\psi_L}R_{\theta_L}e_3=\begin{bmatrix}
 %		s_{\theta_L}c_{\psi_L}\\s_{\theta_L}s_{\psi_L}\\-c_{\theta_L}
@@ -396,9 +467,6 @@ Differentiating Equation (\ref{eq:xQ2xL}) and (\ref{eq:q}) gives
 \end{aligned}
 \end{equation}
 
-
-
-
 \begin{equation}\label{key}
 \begin{aligned}
 \ddot{x}_Q&=\frac{1}{m_Q}(f(c_{\psi}s_{\theta}+c_{\theta}s_{\phi}s_{\psi})-Ts_{\theta_L}c_{\psi_L})\\
@@ -407,15 +475,10 @@ Differentiating Equation (\ref{eq:xQ2xL}) and (\ref{eq:q}) gives
 \end{aligned}
 \end{equation}
 
-\begin{figure}[h!]
-	%ADD figure: intermediate rotation matrix for representing q. Rotation about z, then rotation about y.
-	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-	\caption{Quadrotor-Load model representation\label{fig:QRLmodelTrad}}
-\end{figure}
+
 
 \begin{align}\label{key}
-%CHECK wat is hier de bedoeling van?
+%CHECK wat is hier de bedoeling van? Checken in Garcia of literatuur?
 	\ddot{\psi}&=\tilde{\tau}_{\psi}\\
 \ddot{\theta}&=\tilde{\tau}_{\theta}\\
 \ddot{\phi} &=\tilde{\tau}_{\phi}

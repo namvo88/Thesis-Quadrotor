@@ -1,23 +1,35 @@
     \chapter{Introduction} \label{ch:intro}
 
-    ***************************************\\
-    		A \acf{qr} is a type of \acf{uav} that has received an increasing amount of attention recently with many applications being actively investigated. Possible applications include search and rescue, surveillance, reliable supply of food and medicines as disaster relief and object manipulation in construction and transportation. It has already proven itself useful for many tasks like multi-agent missions, mapping, explorations and even acrobatic performances.
+    		A \acf{qr} is a type of \acf{uav} that has received an increasing amount of attention recently with many applications being actively investigated. Possible applications include search and rescue, surveillance, reliable supply of food and medicines as disaster relief and object manipulation in construction and transportation. It has already proven itself useful for many tasks like multi-agent missions, mapping, explorations, transportation and entertainment such as acrobatic performances.
     
-    		Considering a multi-agent task, one can think of multiple QRs assisting in the transportation of a load. This cooperation can be executed in many ways, but this literature focuses on QRs with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of this movement. It could be the case that the residual motion results in damage or in order to avoid obstacles, a accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but challenging in the fact that a cable-suspended system is under-actuated.
+    		Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load. This cooperation can be executed in many ways, but this literature focuses on \a{qr}s with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated.
     
     		In this chapter, the motivation for writing this literature study is given. Next, a former research in the scope of this literature survey is discussed. And finally, the organization of the report is presented.
     
     		\section{Aim and Motivation}\label{sec:int.motivation}
-    				The inspiration for this literature survey is build upon the idea of creating a multiple autonomous QR system for a cooperative towing task. The advantage of using multiple robots for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
+    				The inspiration for this literature survey is build upon the idea of creating a multiple autonomous \a{qr} system for a cooperative towing task. The advantage of using multiple robots for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
     				
     				%ADD AIM
     				The aim is to control the position of a suspended load using a Quadrotor. Former work on Quadrotor control regularly rely on linear control such as PID or LQR for a dynamic model linearized about the hover state. A single Quadrotor is considered for the transportation of a cable suspended load, which exerts forces and torques on the Quadrotor. 
-%    				The aim of this literature survey is to investigate state-of-the-art control methods for manipulation and transportation of cable suspended loads using QRs. A single QR is considered for the transportation of a cable suspended load, which could exert undesired forces and torques on the QR. This could lead to undesired behavior or dangerous situations. A possible objective is to minimize the oscillations of the load during and after motion or to minimize the time for transportation of the load, using active control techniques. The system is referred to as a \textit{Aerial Towing System} or \textit{Quadrotor-Load System} ({QR-Load system}). Difficulties that come with modeling and controlling the non-linearities of the system are the reason that linear control near an equilibrium state is commonly applied in research. However, this type of control limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
+%    				A single QR is considered for the transportation of a cable suspended load, which could exert undesired forces and torques on the QR. This could lead to undesired behavior or dangerous situations. A possible objective is to minimize the oscillations of the load during and after motion or to minimize the time for transportation of the load, using active control techniques. The system is referred to as a \textit{Aerial Towing System} or \textit{Quadrotor-Load System} ({QR-Load system}). Difficulties that come with modeling and controlling the non-linearities of the system are the reason that linear control near an equilibrium state is commonly applied in research. However, this type of control limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
 %    				    				
 
 %ADD state of the art. what is missing.
-A lot of methods for \a{qr} control.\\
-Not a lot based on geometric control\\
+Numerous control methods have proven useful for \a{qr} control. Many are based on a linearized dynamical model of the system, such that the system dynamics are described by a set of linear differential equations.
+
+Optimal control. 
+
+PID control.
+
+An \acf{lqr} algorithm is able to find a state feedback controller by linearizing the dynamics around an equilibrium point such as the hover mode.
+
+However, one particular method based on geometric control has been addressed in very few literature.\\
+
+The control of a \a{qr}-Load system is a more specific case, and already is found less in literature. 
+
+Optimal control. \a{mpc} and \a{lqr}. Minimization of the swing.
+
+
 Globally defined, useful for nonlinear problems\\
 Only few, why so little?\\
 What is its value compared against linear control

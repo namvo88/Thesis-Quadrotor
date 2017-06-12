@@ -93,7 +93,7 @@ Back-Stepping Lemma
 \end{equation}
 Assume $ \phi(0)=0 $, $ f(0)=0 $,
 \begin{equation}\label{key}
-\dot{z}&=f(z)+g(z)\phi(z)
+\dot{z}=f(z)+g(z)\phi(z)
 \end{equation}
 stable, and $ V(z) $ a Lyapunov function (with $ \dot{V}\leq-W $). Then, 
 \begin{equation}\label{key}
@@ -138,16 +138,28 @@ Explain how $ f $ and $ \vec{b_{1_d}} $ is obtained from $ x_d(t) $?\\
 
 ***************************************\\
 
-%ADD Error functions by bullo2005
+\paragraph{Configuration Errors}
+Most of nonlinear dynamics and control problems are studied in a linear space.\\
+\begin{equation}\label{key}
+\dot{x}=\textbf{f}(t,x,u), \quad x\in\mathbb{R}^n, u\in\mathbb{R}^m, \textbf{f}:\mathbb{R}^{n+m+1}\rightarrow\mathbb{R}^n
+\end{equation}
+
+Before the controllers are described, the configuration functions are defined as in \cite{Bullo2005}. These functions describe the error on the manifolds $ SO(3) $ and $ S^2 $, which describe the configuration spaces for the \a{qr} attitude and the load attitude, respectively.
+
+
 The error function on $ SO(3) $ is chosen to be \cite{Lee2010}
 \begin{equation}\label{eq:errorfunc}
 \Psi_R(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
 \end{equation}
+The error function on $ S^2 $ is chosen to be 
 \begin{equation}\label{key}
 \Psi_q
 \end{equation}
 
 %ADD (physical) Meaning of the error functions
+
+%ADD description tangent spaces TSO(3) and TS^2
+The tracking error functions on $ TSO(3) $ are defined as
 \begin{equation}\label{key}
 e_R
 \end{equation}
@@ -155,11 +167,33 @@ e_R
 e_\Omega 
 \end{equation}
 
+The tracking error functions on $ TS^2$ are defined as
+\begin{equation}\label{key}
+e_q
+\end{equation}
+\begin{equation}\label{key}
+e_{\dot{q}} 
+\end{equation}
+
+The tracking errors for position and velocity are defined as
+\begin{align}\label{key}
+e_x&=x-x_d\\
+e_v&=v-v_d\\
+\text{where, }v_d&=\dot{x}_d
+\end{align}
+where $ x_d(t) \in \mathbb{R}^3$ is a smooth desired load position.
 
 \subsection{Quadrotor Attitude Tracking}
 
 %ADD references to QR attitude tracking 
 This control problem has been addressed in various works *****
+
+The most inner loop controls the attitude of the \a{qr}.
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\caption{\label{fig:con.qrattloop}}
+\end{figure}		
 
 Attitude control problem is the inner loop of the control design. This inner loop must guarantee stability of the \a{qr}.
 
@@ -201,6 +235,12 @@ How is the controller built.
 
 Dependent of what values? 	How to choose parameters.
 
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\caption{\label{fig:con.loadattloop}}
+\end{figure}		
+
 \begin{equation}\label{key}
 R = 
 \end{equation}
@@ -212,6 +252,12 @@ Tracks load position reference. Outputs load attitude reference.
 \begin{equation}\label{key}
 q =
 \end{equation}
+
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\caption{\label{fig:con.loadposloop}}
+\end{figure}		
 
 \section{Parameter- and State Estimation}
 

@@ -5,47 +5,49 @@
 \contentsline {section}{\numberline {1-2}Organization of the Report}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Dynamic Model}{5}{chapter.2}
 \contentsline {section}{\numberline {2-1}Modeling Assumptions}{6}{section.2.1}
-\contentsline {section}{\numberline {2-2}Geometric Mechanics}{8}{section.2.2}
+\contentsline {section}{\numberline {2-2}Geometric Mechanics}{7}{section.2.2}
 \contentsline {paragraph}{Manifolds}{9}{section*.14}
-\contentsline {paragraph}{Lie Group Configuration Manifold}{11}{section*.17}
-\contentsline {paragraph}{Special Orthogonal group}{12}{section*.18}
-\contentsline {subsection}{\numberline {2-2-1}Quadrotor-Load Model}{12}{subsection.2.2.1}
-\contentsline {section}{\numberline {2-3}Classical Modeling}{14}{section.2.3}
-\contentsline {section}{\numberline {2-4}Summary}{15}{section.2.4}
+\contentsline {paragraph}{Lie Group Configuration Manifold}{10}{section*.17}
+\contentsline {paragraph}{Special Orthogonal group}{10}{section*.18}
+\contentsline {section}{\numberline {2-3}Quadrotor-Load Model}{11}{section.2.3}
+\contentsline {paragraph}{Variations}{12}{section*.19}
+\contentsline {section}{\numberline {2-4}Classical Modeling}{13}{section.2.4}
+\contentsline {section}{\numberline {2-5}Summary}{15}{section.2.5}
 \contentsline {chapter}{\numberline {3}Geometric Control Design}{17}{chapter.3}
 \contentsline {section}{\numberline {3-1}Backstepping Control}{18}{section.3.1}
-\contentsline {subsection}{\numberline {3-1-1}Quadrotor Attitude Tracking}{19}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3-1-2}Load Attitude Tracking}{20}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3-1-3}Load Position Tracking}{20}{subsection.3.1.3}
-\contentsline {section}{\numberline {3-2}Parameter- and State Estimation}{20}{section.3.2}
-\contentsline {section}{\numberline {3-3}Summary}{20}{section.3.3}
-\contentsline {chapter}{\numberline {4}Experiments and Results}{23}{chapter.4}
-\contentsline {section}{\numberline {4-1}Experiments}{23}{section.4.1}
-\contentsline {subsection}{\numberline {4-1-1}LQR Control}{23}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4-1-2}Performance Criteria}{23}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4-1-3}Case A}{24}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4-1-4}Case B}{24}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4-1-5}Case C}{24}{subsection.4.1.5}
-\contentsline {section}{\numberline {4-2}Command Filtering}{24}{section.4.2}
-\contentsline {section}{\numberline {4-3}Results}{25}{section.4.3}
-\contentsline {subsection}{\numberline {4-3-1}Case A}{25}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4-3-2}Case B}{25}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4-3-3}Case C}{25}{subsection.4.3.3}
-\contentsline {section}{\numberline {4-4}Conclusion}{25}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{27}{chapter.5}
-\contentsline {section}{\numberline {5-1}Summary and Conclusions}{27}{section.5.1}
-\contentsline {section}{\numberline {5-2}Recommendations for Future Work}{27}{section.5.2}
-\contentsline {subsection}{\numberline {5-2-1}Modeling Constraints}{27}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5-2-2}Hybrid Modeling}{27}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5-2-3}Trajectory Generation}{28}{subsection.5.2.3}
-\contentsline {subsubsection}{Minimum Snap Trajectory Generation}{28}{section*.25}
-\contentsline {chapter}{\numberline {A}Appendix}{29}{appendix.A}
-\contentsline {section}{\numberline {A-1}Derivation of LQR controller}{29}{section.A.1}
-\contentsline {subsection}{\numberline {A-1-1}Modeling}{29}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A-1-2}Controller}{29}{subsection.A.1.2}
-\contentsline {section}{\numberline {A-2}Derivation of Equations of motion}{30}{section.A.2}
-\contentsline {subsection}{\numberline {A-2-1}Load Dynamics}{30}{subsection.A.2.1}
-\contentsline {section}{\numberline {A-3}An appendix section}{31}{section.A.3}
-\contentsline {subsection}{\numberline {A-3-1}A \textsc {Matlab}Listing}{31}{subsection.A.3.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{35}{section*.26}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{38}{section*.27}
+\contentsline {paragraph}{Configuration Errors}{20}{section*.25}
+\contentsline {subsection}{\numberline {3-1-1}Quadrotor Attitude Tracking}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3-1-2}Load Attitude Tracking}{22}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3-1-3}Load Position Tracking}{22}{subsection.3.1.3}
+\contentsline {section}{\numberline {3-2}Parameter- and State Estimation}{22}{section.3.2}
+\contentsline {section}{\numberline {3-3}Summary}{23}{section.3.3}
+\contentsline {chapter}{\numberline {4}Experiments and Results}{25}{chapter.4}
+\contentsline {section}{\numberline {4-1}Experiments}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4-1-1}LQR Control}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4-1-2}Performance Criteria}{25}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4-1-3}Case A}{26}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4-1-4}Case B}{26}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4-1-5}Case C}{26}{subsection.4.1.5}
+\contentsline {section}{\numberline {4-2}Command Filtering}{26}{section.4.2}
+\contentsline {section}{\numberline {4-3}Results}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4-3-1}Case A}{27}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4-3-2}Case B}{27}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4-3-3}Case C}{27}{subsection.4.3.3}
+\contentsline {section}{\numberline {4-4}Conclusion}{27}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{29}{chapter.5}
+\contentsline {section}{\numberline {5-1}Summary and Conclusions}{29}{section.5.1}
+\contentsline {section}{\numberline {5-2}Recommendations for Future Work}{29}{section.5.2}
+\contentsline {subsection}{\numberline {5-2-1}Modeling Constraints}{29}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5-2-2}Hybrid Modeling}{29}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5-2-3}Trajectory Generation}{30}{subsection.5.2.3}
+\contentsline {subsubsection}{Minimum Snap Trajectory Generation}{30}{section*.32}
+\contentsline {chapter}{\numberline {A}Appendix}{31}{appendix.A}
+\contentsline {section}{\numberline {A-1}Derivation of LQR controller}{31}{section.A.1}
+\contentsline {subsection}{\numberline {A-1-1}Modeling}{31}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A-1-2}Controller}{31}{subsection.A.1.2}
+\contentsline {section}{\numberline {A-2}Derivation of Equations of motion}{32}{section.A.2}
+\contentsline {subsection}{\numberline {A-2-1}Load Dynamics}{32}{subsection.A.2.1}
+\contentsline {section}{\numberline {A-3}An appendix section}{33}{section.A.3}
+\contentsline {subsection}{\numberline {A-3-1}A \textsc {Matlab}Listing}{33}{subsection.A.3.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{37}{section*.33}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{40}{section*.34}

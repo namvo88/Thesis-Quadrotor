@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  10 JUN 2017 20:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  11 JUN 2017 15:12
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -938,11 +938,47 @@ LaTeX Warning: Label `key' multiply defined.
 
 LaTeX Warning: Label `key' multiply defined.
 
-) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux)
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.aux
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux
 
-LaTeX Warning: Label `fig:' multiply defined.
+LaTeX Warning: Label `key' multiply defined.
 
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.aux
 
 LaTeX Warning: Label `key' multiply defined.
 
@@ -1262,7 +1298,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 [9]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 49.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 51.
 
 )
 \tf@toc=\write11
@@ -1350,36 +1386,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 Package acronym Info: Label `acro:cm' newly defined as it shall be overridden
 although it is yet undefined on input line 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
  []
 
-[5] <./StyleStuff/qrmodelppt.png, id=420, 722.7pt x 542.025pt>
-File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
-
-<use ./StyleStuff/qrmodelppt.png>
-Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 40.
-(pdftex.def)             Requested size: 298.75394pt x 224.06776pt.
-
-<./StyleStuff/dcsc.png, id=421, 227.6505pt x 72.27pt>
+<./StyleStuff/dcsc.png, id=436, 227.6505pt x 72.27pt>
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 46.
 (pdftex.def)             Requested size: 298.75394pt x 94.85191pt.
- [6 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png> <C:
-/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/dcsc.png>]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 90--109
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 52.
+(pdftex.def)             Requested size: 298.75394pt x 94.85191pt.
+ [6 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/dcsc.png>]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 96--115
  [][] 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 115--128
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 121--134
  [][] 
  []
 
@@ -1387,128 +1419,109 @@ Overfull \hbox (12.79999pt too wide) in paragraph at lines 115--128
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 150--155
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
-
- []
-
 File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 174.
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 178.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 185.
-(pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
-File: ./StyleStuff/dcsc.png Graphic file (type png)
 
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 186.
-(pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
-File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 187.
-(pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
+
+
+LaTeX Warning: Reference `fig:mod.robotcartesian' on page 9 undefined on input 
+line 199.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 204.
+(pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 205.
+(pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 206.
+(pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 213--217
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+[10]
+LaTeX Font Info:    Try loading font information for U+euf on input line 272.
+ ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 1147) in paragraph at lines 286--290
 \OT1/cmr/m/n/10.95 Rotation for-malisms in three di-men-sions [][]$\OT1/cmtt/m/
 n/10.95 https : / / en . wikipedia . org / wiki / Rotation _$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 296.
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\ueuf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
-[12]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 325.
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 315.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
-
- []
-
-[13]
-Underfull \hbox (badness 1803) in paragraph at lines 386--389
+Underfull \hbox (badness 1803) in paragraph at lines 377--380
 \OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 m$ \OT1/cmr/m/n/10.95 is the mass
  of the body, $\OMS/cmsy/m/n/10.95 I$ \OT1/cmr/m/n/10.95 is the in-er-tia ten-s
 or, and $\OML/cmm/m/it/10.95 V[] \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 v[];
@@ -1516,32 +1529,37 @@ or, and $\OML/cmm/m/it/10.95 V[] \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 v[];
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 386--389
+Underfull \hbox (badness 7631) in paragraph at lines 377--380
 \OT1/cmr/m/n/10.95 and $\OML/cmm/m/it/10.95 F[]$ \OT1/cmr/m/n/10.95 rep-re-sent
  the in-stan-ta-neous body ve-loc-ity and ap-plied body wrench.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--389
+Underfull \hbox (badness 10000) in paragraph at lines 377--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--397
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
-[14]
+[13] <./StyleStuff/qrmodelppt.png, id=542, 722.7pt x 542.025pt>
+File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
+
+<use ./StyleStuff/qrmodelppt.png>
+Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 430.
+(pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 477.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 438.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-
+ [14 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
@@ -1556,7 +1574,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 504--115
 
  []
 
-[15] [16] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex
+[15] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex [16
+
+
+
+]
 Chapter 3.
 
 LaTeX Warning: Citation `Chaturvedi2011a' on page 17 undefined on input line 9.
@@ -1572,11 +1594,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[17
-
-
-
-]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -1615,70 +1633,119 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 67.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 86--90
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+[][]$\OT1/cmtt/m/n/10.95 http : / / www . control . lth . se / media / Educatio
+n / EngineeringProgram / FRTN05 / 2013 /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 113.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--172
+LaTeX Warning: Reference `fig:con.gcloop' on page 20 undefined on input line 12
+8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 132.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 189.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+[21]
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 235.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 253.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--287
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 182--116
+Underfull \hbox (badness 10000) in paragraph at lines 288--116
 
  []
 
-[21] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.tex [22
+[23] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.tex [24
 
 
 
@@ -1693,7 +1760,7 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 17.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [23]
+ [25]
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
@@ -1704,23 +1771,23 @@ Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 51.
 (pdftex.def)             Requested size: 119.49974pt x 37.93568pt.
 
 
-LaTeX Warning: Citation `Djapic' on page 24 undefined on input line 57.
+LaTeX Warning: Citation `Djapic' on page 26 undefined on input line 57.
 
 
-LaTeX Warning: Citation `Farrell2009' on page 24 undefined on input line 60.
+LaTeX Warning: Citation `Farrell2009' on page 26 undefined on input line 60.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-[24]
+[26]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 88.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-) [25]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex [26
+) [27]
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex [28
 
 
 
@@ -1739,11 +1806,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
 Package acronym Warning: Acronym `QP' is not defined on input line 25.
 
-[27]
+[29]
 
 Package acronym Warning: Acronym `QP' is not defined on input line 29.
 
-) [28]
+) [30]
 Appendix A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 139--140
@@ -1760,22 +1827,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--150
 
  []
 
-[29
+[31
 
 
-] [30]
+] [32]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
 (Font)              using `OT1/cmss/bx/n' instead on input line 269.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 272.
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m) [31] [32
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m) [33] [34
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [33
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [35
 
-]) [34]
+]) [36]
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bblpdfTeX warning (ext4)
 : destination with the same identifier (name{cite.Lee}) has been already used, 
 duplicate ignored
@@ -1837,7 +1904,7 @@ tifier (name{cite.Lee2010}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.55 \bibitem{Lee2010}
-                       [35
+                       [37
 
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{cite.Melling
@@ -1875,20 +1942,20 @@ entifier (name{cite.Tang2014}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.87 \bibitem{Tang2014}
-                       ) [36]
+                       ) [38]
 runsystem(makeindex mscThesis.idx)...executed (allowed).
 
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.ind)
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [37
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [39
 
 
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [38
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [40
 
 
-]) [39]
+]) [41]
 \tf@thm=\write14
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
@@ -1904,7 +1971,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
 Package rerunfilecheck Info: File `mscThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3905AA121881B6F06D7B1B3B40CB8737;3125.
+(rerunfilecheck)             Checksum: 4B8DCE8C5115359C50420BC3D3ACCE2C;3118.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1918,10 +1985,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
  ) 
 Here is how much of TeX's memory you used:
- 13063 strings out of 493921
- 190947 string characters out of 3144882
- 412027 words of memory out of 3000000
- 15799 multiletter control sequences out of 15000+200000
+ 13099 strings out of 493921
+ 191520 string characters out of 3144882
+ 412240 words of memory out of 3000000
+ 15811 multiletter control sequences out of 15000+200000
  16019 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  45i,17n,94p,867b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1953,9 +2020,9 @@ s (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/euler/eufm10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on mscThesis.pdf (55 pages, 839151 bytes).
+Output written on mscThesis.pdf (57 pages, 853076 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
+ 909 PDF objects out of 1000 (max. 8388607)
+ 240 named destinations out of 1000 (max. 500000)
  415 words of extra memory for PDF output out of 10000 (max. 10000000)
 

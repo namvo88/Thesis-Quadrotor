@@ -1,67 +1,75 @@
-    \chapter{Introduction} \label{ch:intro}
+\chapter{Introduction} \label{ch:intro}
 
-    		A \acf{qr} is a type of \acf{uav} that has received an increasing amount of attention recently with many applications being actively investigated. Possible applications include search and rescue, surveillance, reliable supply of food and medicines as disaster relief and object manipulation in construction and transportation. It has already proven itself useful for many tasks like multi-agent missions, mapping, explorations, transportation and entertainment such as acrobatic performances.
-    
-    		Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load. This cooperation can be executed in many ways, but this literature focuses on \a{qr}s with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated.
-    
-    		In this chapter, the motivation for writing this literature study is given. Next, a former research in the scope of this literature survey is discussed. And finally, the organization of the report is presented.
-    
-    		\section{Aim and Motivation}\label{sec:int.motivation}
-    				The inspiration for this literature survey is build upon the idea of creating a multiple autonomous \a{qr} system for a cooperative towing task. The advantage of using multiple robots for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
-    				
-    				%ADD AIM
-    				The aim is to control the position of a suspended load using a Quadrotor. Former work on Quadrotor control regularly rely on linear control such as PID or LQR for a dynamic model linearized about the hover state. A single Quadrotor is considered for the transportation of a cable suspended load, which exerts forces and torques on the Quadrotor. 
-%    				A single QR is considered for the transportation of a cable suspended load, which could exert undesired forces and torques on the QR. This could lead to undesired behavior or dangerous situations. A possible objective is to minimize the oscillations of the load during and after motion or to minimize the time for transportation of the load, using active control techniques. The system is referred to as a \textit{Aerial Towing System} or \textit{Quadrotor-Load System} ({QR-Load system}). Difficulties that come with modeling and controlling the non-linearities of the system are the reason that linear control near an equilibrium state is commonly applied in research. However, this type of control limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
-%    				    				
+A \acf{qr} is a type of \acf{uav} that has received an increasing amount of attention recently with many applications being actively investigated. Possible applications include search and rescue, surveillance, reliable supply of food and medicines as disaster relief and object manipulation in construction and transportation. It has already proven itself useful for many tasks like multi-agent missions, mapping, explorations, transportation and entertainment such as acrobatic performances.
 
-%ADD state of the art. what is missing.
-Numerous control methods have proven useful for \a{qr} control. Many are based on a linearized dynamical model of the system, such that the system dynamics are described by a set of linear differential equations.
+Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load. This cooperation can be executed in many ways, but this literature focuses on \a{qr}s with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated.
 
-Optimal control. 
+In this chapter, the motivation for writing this literature study is given. Next, a former research in the scope of this literature survey is discussed. And finally, the organization of the report is presented.
 
-PID control.
+\section{Aim and Motivation}\label{sec:int.motivation}
+The inspiration for this research is build upon the idea of creating a multiple autonomous \a{qr} system for a cooperative towing task. The advantage of using multiple robots for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
 
-An \acf{lqr} algorithm is able to find a state feedback controller by linearizing the dynamics around an equilibrium point such as the hover mode.
+The aim is to control the position of a suspended load using a \a{qr}. In this research a single \a{qr} is considered for the transportation of a cable suspended load, which will exert forces and torques on the \a{qr}. This is challenging control problem in the fact that the \a{qr}-Load system is under-actuated and oscillations of the load occur at the end of every movement. Possible objectives are minimizing the oscillations of the load during and after motion, or minimizing the time to bring the load to a desired position, using active control techniques.
 
-However, one particular method based on geometric control has been addressed in very few literature.\\
+Former work on \a{qr} attitude- and position control often rely on linear control methods such as \acs{pid}\cite{bibid}, \a{mpc}\cite{Bangura2014} and \a{lqr} control \cite{bibid}, where the dynamic model is linearized about an equilibrium point, describing the system dynamics by a set of linear differential equations. 
+%ADD references to pid and lqr controllers qr attitude
 
-The control of a \a{qr}-Load system is a more specific case, and already is found less in literature. 
+The control of a \a{qr}-Load system is a more specific case, and therefore is found less in literature. 
+Using an optimal control strategy can help minimize the swing of the load. Former work include \a{mpc}\cite{PraveenThesis} and \a{lqr}\cite{bibid} approaches. 
+%ADD what more former work?
+
+%ADD state of the art
 
 Optimal control. \a{mpc} and \a{lqr}. Minimization of the swing.
+An \acf{lqr} algorithm is able to find a state feedback controller by linearizing the dynamics around an equilibrium point such as the hover mode.
 
+%ADD Nonlinear vs linear. 
+%ADD Reason to consider nonlinear
+The reason that linear control near an equilibrium state is commonly applied in research is partly to avoid difficulties that come with modeling and controlling the non-linearities of the system. However, this limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
+ 
+%ADD Nonlinear
+\acs{nmpc} is a variant of \a{mpc} which uses a nonlinear dynamical system to predict the required inputs.
 
-Globally defined, useful for nonlinear problems\\
-Only few, why so little?\\
-What is its value compared against linear control
+Geometric Control, a nonlinear model based control technique based on a modeling approach involving differential geometry, has been addressed in very little literature. However, the concepts of differential geometry result in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties.
 
-    				%ADD MOTIVATION
-    				This motivates to compare a linear control strategy with a non-linear control strategy. 
-%    				This motivates to find a suitable non-linear modeling method and/or a non-linear control strategy that will allow the QR-Load system to follow a trajectory,     				while maintaining a desired position of the load. Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of control design. Furthermore, the high number of under-actuation of the system makes the motion control of the system challenging, especially for aggressive maneuvers. 
-%    
-    ***************************************\\
+For the control of a \a{qr}, a \a{pid} controller is designed in \cite{Goodarzi2013a}\\
 
+Controllers for a \a{qr}-Load system are proposed in \cite{Sreenath2013b,Tang2015}.
 
-            ***************************************\\
-
-State of the art methods\\
-
+%ADD computational cost. limited processing power
+For a real-time \a{qr}-Load control system
+on-board processor is limited 
+computational effort vs what?
 
 %ADD Reason to consider Geometric Control 
-%ADD Contributions
-***************************************\\
+
+%ADD MOTIVATION
+
+This motivates to compare a linear control strategy with a non-linear geometric control strategy.
+
+A controller is designed a priori to guarantee global asymptotic stability. Unlike a \a{mpc} approach, the 
+
+What are the possibilities and limitations of geometric control
+
+What can we learn and conclude from different performance comparisons
+
+What is its value compared against linear control
+
+%ADD Contributions in this thesis
+Geometric Mechanics and Control is used to understand the structure of the equations of motion of a system in order to allow its analysis and design. The system evolves on a nonlinear manifold and the controllers are designed on this same manifold.
+
+Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of control design.
+
+System consists of two sub-systems
+Limited to subsystem where the tension of the cable is non-zero. 
 
 \section{Organization of the Report}
+
 \begin{itemize}
-	\item Chapter \ref{ch:intro}
-	\item Chapter \ref{ch:model}
-	\item Chapter \ref{ch:control}
-	\item Chapter \ref{ch:results}
-	\item Chapter \ref{ch:conclusion}
-	\item Chapter \ref{ch:trajectory}
+\item Chapter \ref{ch:intro}
+\item Chapter \ref{ch:model}
+\item Chapter \ref{ch:control}
+\item Chapter \ref{ch:results}
+\item Chapter \ref{ch:conclusion}
+\item Chapter \ref{ch:trajectory}
 \end{itemize}
-
-***************************************\\
-Hoe de keuze tot stand is gekomen, hoe uitgebreid? \\
-Moet ik nog een stuk wijden aan literature survey?
-
-***************************************\\

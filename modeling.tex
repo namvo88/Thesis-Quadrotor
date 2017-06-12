@@ -138,7 +138,7 @@ Table \ref{tab:mod.assumptions} shows the most common assumptions that are used 
 
 \section{Geometric Mechanics}\label{sec:mod.geometric}
 
-In this section an introduction is given about Geometric Mechanics, which is an approach that describes the classical mechanics from the perspective of Differential Geometry and its fundamental object called a differentiable manifold.
+In this section an introduction is given about Geometric Mechanics, which is an approach that describes the classical mechanics from the perspective of Differential Geometry, which is a discipline in mathematics that studies manifolds and their geometric properties, using the tools of calculus.
 
 %ADD intro 
 In Geometric Mechanics the configuration space of systems is a \textit{group manifold} instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces. It explores the geometric structure of a Lagrangian- or Hamiltonian system through the concepts of vector calculus, linear algebra, differential geometry, and non-linear control theory. Geometric mechanics provides fundamental insights into the non-linear system mechanics and yields useful tools for dynamics and control theory.
@@ -168,31 +168,24 @@ When angular errors are large, the difference in Euler angles is no longer a goo
 
 \paragraph{Manifolds}
 %ADD  manifolds
-The fundamental object ..
-
-A manifold is a topological space that locally resembles Euclidean space near each point. A differentiable manifold is a type of manifold that is locally similar enough to a linear space to allow to do calculus. In Figure \ref{fig:mod.manifold} is illustrated that each point of an n-dimensional manifold has a neighbourhood that is homeomorphic to the n-dimensional Euclidean space.
-
-
-***************************************\\
-A manifold is an abstract mathematical space in which every point has a neighbourhood which resembles Euclidean space, but in which the global structure may be more complicated.
-Manifolds are important objects in mathematics and physics because they allow more complicated structures to be expressed and understood in terms of the relatively well-understood properties of simpler spaces.
-
-For most applications a special kind of topological manifold, a differentiable manifold, is used. One can define directions, tangent spaces, and differentiable functions on that manifold. In particular it is possible to use calculus on a differentiable manifold.
-
-Differentiable manifolds
-If the local charts on a manifold are compatible in a certain sense,  Each point of an n-dimensional differentiable manifold has a tangent space. This is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through the point.
-Two important classes of differentiable manifolds are smooth and analytic manifolds. For smooth manifolds the transition maps are smooth, that is infinitely differentiable. Analytic manifolds are smooth manifolds with the additional condition that the transition maps are analytic (a technical definition which loosely means that Taylor's theorem holds). The sphere can be given analytic structure, as can most familiar curves and surfaces.
-A rectifiable set generalizes the idea of a piecewise smooth or rectifiable curve to higher dimensions; however, rectifiable sets are not in general manifolds.
-
-***************************************\\
-
+The fundamental object of differential geometry a manifold. A manifold is a mathematical space, a collection of points, that locally resembles Euclidean space near each point. Examples are a plane, a ball, a torus and a sphere. Manifolds are important objects in mathematics and physics because they allow more complicated structures to be expressed and understood in terms of the relatively well-understood properties of simpler spaces. In Figure \ref{fig:mod.manifold} is illustrated that each point of an n-dimensional manifold has a neighborhood that is homeomorphic to the n-dimensional Euclidean space, meaning that there is a continuous function describing the relation between these spaces.
 
 \begin{figure}[h!]
 	%ADD figure of local space on manifold to cartesian space
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
 	\caption{\label{fig:mod.manifold}}
+\end{figure}
+
+A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ S^2 $ is shown, with a tangent space at point $ x $, denoted by $ T_xS^2 $. Taking the derivative at a point on a manifold is equivalent to the tangent vector at that point. 
+
+\begin{figure}[h!]
+	%ADD fig sphere with tangent bundle at x
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/.png}}
+	\caption{\label{fig:mod.tspace}}
 \end{figure}		
+
 
 %CHECK goede plek voor deze uitleg
 An example can be given of an 2-link arm, in Figure \ref{fig:mod.armmanifold}, where the configuration of can be expressed by 2 coordinates. Figure \ref{fig:mod.robotcartesian} represents the configuration space as a Cartesian space, where the two red dots represent the same configuration. This illustrates that this representation suffers from singularities. In mathematics there are different types of singularity, this case is about the situation where multiple points in one representation are mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a manifold, where every configuration is a unique representation.
@@ -212,12 +205,6 @@ An example can be given of an 2-link arm, in Figure \ref{fig:mod.armmanifold}, w
 %\cite{Lee}
 
 
-Most of nonlinear dynamics and control problems are studied in a linear space.\\
-\begin{equation}\label{key}
-\dot{x}=\textbf{f}(t,x,u), \quad x\in\mathbb{R}^n, u\in\mathbb{R}^m, \textbf{f}:\mathbb{R}^{n+m+1}\rightarrow\mathbb{R}^n
-\end{equation}
-
-Geometric Mechanics and Control is used to understand the structure of the equations of motion of a system in order to allow its analysis and design. The system evolves on a nonlinear manifold and the controllers are designed on this same manifold.\\
 
 
 

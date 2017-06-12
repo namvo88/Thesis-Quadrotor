@@ -1,5 +1,7 @@
 \chapter{Dynamic Model} \label{ch:model}
 
+%ADD intro: in this chapter
+
 %ADD INTRO 
 
 The dynamics of the \a{qr}-Load system are described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. Opposed to the classical modeling techniques, it is also possible to describe the system's configuration space as a differentiable manifold using the tools of differential geometry. \\
@@ -138,7 +140,7 @@ Table \ref{tab:mod.assumptions} shows the most common assumptions that are used 
 
 \section{Geometric Mechanics}\label{sec:mod.geometric}
 
-In this section an introduction is given about Geometric Mechanics, which is an approach that describes the classical mechanics from the perspective of Differential Geometry, which is a discipline in mathematics that studies manifolds and their geometric properties, using the tools of calculus.
+In this section an introduction is given about Geometric Mechanics, which is a modern description of the classical mechanics from the perspective of Differential Geometry, which is a discipline in mathematics that studies manifolds and their geometric properties, using the tools of calculus. Geometric Mechanics is used to model the \a{qr}-Load system, which is described in Section \ref{sec:mod.QRLmod}.
 
 %ADD intro 
 In Geometric Mechanics the configuration space of systems is a \textit{group manifold} instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces. It explores the geometric structure of a Lagrangian- or Hamiltonian system through the concepts of vector calculus, linear algebra, differential geometry, and non-linear control theory. Geometric mechanics provides fundamental insights into the non-linear system mechanics and yields useful tools for dynamics and control theory.
@@ -164,98 +166,50 @@ However, the definition of Euler angles is not unique and in the literature many
 
 ***************************************\\
 
-When angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required 3-D rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided to generate agile maneuvers in a uniform way. 			
-
 \paragraph{Manifolds}
 %ADD  manifolds
 The fundamental object of differential geometry a manifold. A manifold is a mathematical space, a collection of points, that locally resembles Euclidean space near each point. Examples are a plane, a ball, a torus and a sphere. Manifolds are important objects in mathematics and physics because they allow more complicated structures to be expressed and understood in terms of the relatively well-understood properties of simpler spaces. In Figure \ref{fig:mod.manifold} is illustrated that each point of an n-dimensional manifold has a neighborhood that is homeomorphic to the n-dimensional Euclidean space, meaning that there is a continuous function describing the relation between these spaces.
 
 \begin{figure}[h!]
-	%ADD figure of local space on manifold to cartesian space
+	%ADD figure of local space on manifold to cartesian space. Sphere onto R2
+	%CHECK \url{https://en.wikipedia.org/wiki/Differentiable_manifold}
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-	\caption{\label{fig:mod.manifold}}
+	\caption{A manifold locally resembles a Euclidean space\label{fig:mod.manifold}}
 \end{figure}
 
-A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ S^2 $ is shown, with a tangent space at point $ x $, denoted by $ T_xS^2 $. Taking the derivative at a point on a manifold is equivalent to the tangent vector at that point. 
-
+A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ S^2 $ is represented as a sphere, with a tangent space at point $ x $, denoted by $ T_xS^2 $. Taking the derivative at a point on a manifold is equivalent to the tangent vector at that point.
 \begin{figure}[h!]
+	\centering
 	%ADD fig sphere with tangent bundle at x
-	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/.png}}
-	\caption{\label{fig:mod.tspace}}
+	\makebox[.49\textwidth][c]{\subfloat[][Representation of a manifold with a tangent space \label{fig:mod.tspace}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	%ADD fig space with SO(3) and so(3)
+	\makebox[.49\textwidth][c]{\subfloat[][Identity map of $ SO(3) $ with Lie Algebra $ \mathfrak{so}(3) $ \label{fig:mod.so3}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{\label{fig:}}
 \end{figure}		
 
-
-%CHECK goede plek voor deze uitleg
-An example can be given of an 2-link arm, in Figure \ref{fig:mod.armmanifold}, where the configuration of can be expressed by 2 coordinates. Figure \ref{fig:mod.robotcartesian} represents the configuration space as a Cartesian space, where the two red dots represent the same configuration. This illustrates that this representation suffers from singularities. In mathematics there are different types of singularity, this case is about the situation where multiple points in one representation are mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a manifold, where every configuration is a unique representation.
-
-\begin{figure}[h!]
-	\centering
-	%ADD figure ROBOT ARM / cartesian 2 coordinates / torus
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\caption{Configuration Space of a 2-link arm\label{fig:mod.armmanifold}}
-\end{figure}		
-
-
-%CHECK mag weg?
-%Infinitesimal changes close to the singularity in one representation may cause large changes in the other representation.
-%\cite{Lee}
-
-
-
-
-
-
-\paragraph{Lie Group Configuration Manifold} 
-
-Lie group is a group that is also a differentiable manifold.\\
-
-Rotational matrices with determinant 1 is a Lie group: $ SO(3) $\\
-
-
-%CHECK fact check?
-%considered as a linear transformation on the vector space $ \mathbb{R}^3 $.\\ 
-%The attitude 
-and can be represented mathematically by a $ 3\times 3 $ orthonormal matrix. 
-
-A manifold is locally diffeomorphic to a Euclidean space, and it also has a group structure with the group action of matrix multiplication. A smooth manifold with a group structure is referred to as a Lie group; the Lie group of $ 3\times 3 $ orthonormal matrices with positive determinant is referred to as the special orthogonal group, $ SO(3) $ \cite{Murray1994}.
-
-%The set of $ 3\times3 $ orthonormal matrices with positive determinant is a manifold.
-
-The configuration manifold for the attitude dynamics of a rigid body is $ SO(3) $, and the configuration manifold for combined translational and rotational motion of a rigid body is the special Euclidean group $ SE(3) $, which is a semi-direct product of $ SO(3)  $ and $ \mathbb{R}^3 $. A direct product of the Lie groups $ SE(3), SO(3), \text{and } \mathbb{R}^n $ can represent the configuration of multiple rigid bodies, and it is also a Lie group. 
-%since a product of Lie groups is also a Lie group. Therefore, the configuration manifold of an interconnection of rigid bodies is also a Lie group.
-
-
-***************************************\\
-Introduction to the basics of Lie group theory and its connections with rigid body kinematics is given in \cite{Murray1994}. 
-
-
-
-***************************************\\
-
-\paragraph{Special Orthogonal group}
-
-%ADD introduce rotation matrix
-Rotation matrices are used to describe the attitude of the \a{qr}. A rotation matrix maps a representation of vectors expressed in \BF to a representation expressed in \IF. 
-Rotation matrices provide global representations of the attitude, which is an advantage over other attitude representations, such as exponential coordinates, quaternions, or Euler
-angles, where each of the representations has a disadvantage of introducing ambiguities or singularities. The configuration of the \a{qr} is a rotation matrix $ R $ in the Special Orthogonal Group $ SO(3) $ defined as
-
+\subparagraph{Configuration Spaces}
+Rotation matrices are used to provide a global representation of the attitude of a rigid body, by mapping a representation of vectors expressed in \BF to a representation expressed in \IF \cite{Chaturvedi2011,Murray1994}. 
+The configuration of the \a{qr} attitude is a rotation matrix $ R $ in the Special Orthogonal Group $ SO(3) $ defined as
 \begin{equation}\label{key}
-SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}:RR^T=I_{3\times3}, det(R)=1\right\rbrace 
+SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}|RR^T=I_{3\times3}, det(R)=1\right\rbrace 
 \end{equation}
 
-$ SO(3) $ is the group of all rotations about origin of three-dimensional Euclidean space, which preserves the origin, Euclidean distance and orientation.
-Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation.
+%CHECK nodig?
+%The configuration manifold for combined translational and rotational motion of a rigid body is the special Euclidean group $ SE(3) $, which is a semi-direct product of $ SO(3) $ and $ \mathbb{R}^3 $.
 
-The group operation for $ SO(3) $ corresponds to matrix multiplication.\\
-The attitude kinematics equation is given by
+$ SO(3) $ is the group of all rotations about the origin of a 3-D Euclidean space, which preserves the origin, Euclidean distance and orientation.
+Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation. The elements of \textit{Lie Algebra} $ \mathfrak{so}(3) $, a property associated with $ SO(3) $, are the elements of the tangent space of $ SO(3) $ at the identity element, see Figure \ref{fig:mod.so3}. 
+These elements define the relation between the rotation $ R $ and its derivative $ \dot{R} $, such that
 \begin{equation}\label{key}
-\dot{R}=R\hat{\Omega}
+\dot{R} = R\hat{\Omega}
 \end{equation}
-where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame. The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices. The Lie algebra $ \mathfrak{so}(3) $ is defined by
+$ \mathfrak{so}(3) $ is defined as
+\begin{equation}\label{key}
+\mathfrak{so}(3) \triangleq \left\lbrace U\in \mathbb{R}^{3\times 3}|U^T=-U\right\rbrace
+\end{equation}
+
+Where a mapping from the angular velocity vector $ \Omega\in\mathbb{R}^3 $ to $ \hat{\Omega}\in\mathfrak{so}(3) $ is defined as \cite{Murray1994}
 \begin{equation}\label{key}
 \hat{\Omega}=\begin{bmatrix}
 0&-\Omega_3&\Omega_2\\
@@ -263,38 +217,71 @@ where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body 
 -\Omega_2&\Omega_1&0
 \end{bmatrix}
 \end{equation}
+  
+The configuration space of the load is represented on a 2-sphere, defined as
+%CHECK which one to use?
+\begin{equation}\label{key}
+\mathbb{S}^2 \triangleq \left\lbrace q\in\mathbb{R}^{3}|q\cdot q=1\right\rbrace 
+\end{equation}
+\begin{equation}\label{key}
+\mathbb{S}^2 \triangleq \left\lbrace (x_1, x_2, x_3)\in\mathbb{R}^{3}| \parallel (x_1, x_2, x_3)\parallel=1\right\rbrace 
+\end{equation}
 
+\paragraph{Local coordinates} Euler angles are kinematically singular since the transformation from their time rates of change to the angular velocity vector is not globally defined. Furthermore, when angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided.
 
-%CHECK kan weg?
-%Possible ways to represent rotations: orthogonal matrices with determinant 1, axis and rotation angle, geometric algebra as a rotor, sequence of three rotations about three fixed axes; Euler Angles\\
+An example is given of a 2-link arm, in Figure \ref{fig:mod.armmanifold}, where the configuration can be expressed by 2 coordinates. Figure \ref{fig:mod.armcartesian} represents the configuration space as a Cartesian space, where the dots represent one of the many identical configurations. This illustrates that this representation suffers from singularities caused by multiple points in one representation being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a \textit{torus}, a manifold where every configuration is mapped uniquely to the manifold.
 
+\begin{figure}[h!]
+	\centering
+	%ADD figure ROBOT ARM / cartesian 2 coordinates / torus
+	%ADD figure with the red dot representing sam point
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{Configuration Space of a 2-link arm\label{fig:mod.armmanifold}}
+\end{figure}		
 
-***************************************\\
-% CHECK nodig?
-Rotation formalisms in three dimensions \url{https://en.wikipedia.org/wiki/Rotation_formalisms_in_three_dimensions#cite_note-5}\\
-Combining two successive rotations, each represented by an Euler axis and angle, is not straightforward, and in fact does not satisfy the law of vector addition, which shows that finite rotations are not really vectors at all. It is best to employ the rotation matrix or quaternion notation, calculate the product, and then convert back to Euler axis and angle.
-
-***************************************\\
-
-%ADD summary / conclusion
-This concludes the introduction about Geometric Mechanics, which is used to model the \a{qr}-Load system in the following section.
-
-
-\section{Quadrotor-Load Model}	
-
-
+\section{Quadrotor-Load Model}	\label{sec:mod.QRLmod}
 ***************************************\\
 In \cite{Lee2008} dynamics and optimal control problems for rigid bodies are studied, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. Computational methods for rigid bodies, that preserve the underlying Lagrangian/Hamiltonian system structure of rigid body dynamics as well as the Lie group structure of the configurations are developed.
 
 ***************************************\\
-The orientation of the QR is described on the Special Orthogonal Group $ SO(3) $, using rotation matrices, instead of using local charts induced by Euler Angle parameterizations. Whereas the orientation of the Load is described on a two-sphere  $ S^2 $
 
-The configuration of a rigid body can be described by the location of its mass center and the orientation of the rigid body in a 3-D space. The location of the rigid body can be expressed in Euclidean space, but the attitude evolves in a nonlinear space with a certain geometry. The attitude of a rigid body is defined as the orientation of a body-fixed frame with respect to a reference frame
+**************************************\\
+
+The Quadrotor-Load model is shown in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF.
+
+The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, described in Euclidean space \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $ respectively. Whereas the configuration of the load can also be described by its location and attitude, described in Euclidean space \lsymb{$ x_L $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and on a two-sphere $ q\in S^2 $.
+
+The position of the \a{qr} and Load are related by
+\begin{equation}\label{eq:xQ2xL}
+x_Q=x_L-Lq
+\end{equation}
+where \lsymb{$ L $}{Length of the cable} is the length of the cable.
+
+The attitude kinematics equation is given by
+\begin{equation}\label{key}
+\dot{R}=R\hat{\Omega}
+\end{equation}
+where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, and defined as
+\begin{equation}\label{key}
+\hat{\Omega}=\begin{bmatrix}
+0&-\Omega_3&\Omega_2\\
+\Omega_3&0&-\Omega_1\\
+-\Omega_2&\Omega_1&0
+\end{bmatrix}
+\end{equation}
+The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices.
+
+\paragraph{Variations on manifolds}
+
+%ADD
+***************************************\\
+Looking at the variations on manifolds\\
+This is different from traditional mechanics
 
 ***************************************\\
-\paragraph{Variations}
-%ADD Variations on manifolds
-***************************************\\
+
 
 \begin{figure}[h!]
 	\centering
@@ -302,12 +289,7 @@ The configuration of a rigid body can be described by the location of its mass c
 	\caption{Quadrotor-Load model representation\label{fig:QRLmodel}}
 \end{figure}		
 
-The Quadrotor-Load model is represented in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF.
-The position of the \a{qr} and Load, \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM} and \lsymb{$ x_L $}{Position of the  of the \a{qr} CM} resp., are related by
-\begin{equation}\label{eq:xQ2xL}
-x_Q=x_L-Lq
-\end{equation}
-where \lsymb{$ L $}{Length of the cable} is the length of the cable.
+
 
 
 %LOAD ATTITUDE DYNAMICS
@@ -462,14 +444,18 @@ Differentiating Equation (\ref{eq:xQ2xL}) and (\ref{eq:q}) gives
 \end{aligned}
 \end{equation}
 
-
-
 \begin{align}\label{key}
 %CHECK wat is hier de bedoeling van? Checken in Garcia of literatuur?
 	\ddot{\psi}&=\tilde{\tau}_{\psi}\\
 \ddot{\theta}&=\tilde{\tau}_{\theta}\\
 \ddot{\phi} &=\tilde{\tau}_{\phi}
 \end{align}
+
+\section{Stability Analysis}
+Lyapunov Analysis on SO3 x R3 and S2 x R3
+Closed-loop full-attitude dynamics evolve on the non- Euclidean manifold SO3 x R3, while closed-loop re-
+duced-attitude dynamics evolve on the non-Euclidean mani- fold S2 x R3. Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be assessed using standard Lyapunov methods. In ad- dition, the LaSalle invariance result and related Lyapunov results apply to closed-loop vector fields defined on these
+manifolds. However, since the manifolds SO132 and S2 are compact, the radial unboundedness assumption cannot be satisfied; consequently, global asymptotic stability cannot fol- low from a Lyapunov analysis on Euclidean spaces [40], and therefore must be analyzed in alternative ways [19]–[23].\cite[p.43]{Chaturvedi2011}
 
 \section{Summary}
 

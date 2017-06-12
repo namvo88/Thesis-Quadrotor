@@ -4,7 +4,7 @@ A \acf{qr} is a type of \acf{uav} that has received an increasing amount of atte
 
 Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load. This cooperation can be executed in many ways, but this literature focuses on \a{qr}s with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated.
 
-In this chapter, the motivation for writing this literature study is given. Next, a former research in the scope of this literature survey is discussed. And finally, the organization of the report is presented.
+In this chapter, firstly the aim and motivation for this research are given. Next, the contributions given by this research are explained. And finally, the organization of the report is presented.
 
 \section{Aim and Motivation}\label{sec:int.motivation}
 The inspiration for this research is build upon the idea of creating a multiple autonomous \a{qr} system for a cooperative towing task. The advantage of using multiple robots for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
@@ -29,31 +29,30 @@ The reason that linear control near an equilibrium state is commonly applied in 
  
 %ADD Nonlinear
 \acs{nmpc} is a variant of \a{mpc} which uses a nonlinear dynamical system to predict the required inputs.
+%ADD Pro/Con
+High computational cos.
 
+%ADD Reason to consider Geometric Control 
 Geometric Control, a nonlinear model based control technique based on a modeling approach involving differential geometry, has been addressed in very little literature. However, the concepts of differential geometry result in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties.
 
 For the control of a \a{qr}, a \a{pid} controller is designed in \cite{Goodarzi2013a}\\
 
 Controllers for a \a{qr}-Load system are proposed in \cite{Sreenath2013b,Tang2015}.
 
-%ADD computational cost. limited processing power
-For a real-time \a{qr}-Load control system
-on-board processor is limited 
-computational effort vs what?
-
-%ADD Reason to consider Geometric Control 
 
 %ADD MOTIVATION
+This motivates to investigate the possibilities and limitations of a non-linear Geometric Control design, when it is compared to a linear control strategy.
 
-This motivates to compare a linear control strategy with a non-linear geometric control strategy.
-
-A controller is designed a priori to guarantee global asymptotic stability. Unlike a \a{mpc} approach, the 
-
-What are the possibilities and limitations of geometric control
+A controller is designed a priori to guarantee global asymptotic stability. 
+Unlike a \a{mpc} approach, the 
 
 What can we learn and conclude from different performance comparisons
 
 What is its value compared against linear control
+
+Could it be interesting for a real-time on-board controller
+Considering the computational power of an on-board processor is limited
+computational effort vs what?
 
 %ADD Contributions in this thesis
 Geometric Mechanics and Control is used to understand the structure of the equations of motion of a system in order to allow its analysis and design. The system evolves on a nonlinear manifold and the controllers are designed on this same manifold.

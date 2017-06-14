@@ -1,0 +1,173 @@
+\chapter{Appendix}
+
+\section{Derivation of Equations of motion}
+\subsection{Load Dynamics}\label{sec.app:loaddyn}
+%PROOF prop.3 Sreenath2013a. Also Sreenath2013b?
+%DEFINE e_3 / R / f 
+
+Let \lsymb{$ x_{CM} $}{Position \lsymb{$ CM $}{Center of Mass} of \a{qr}-Load system} denote the position of the center of mass of the combined Quadrotor-Load system, expressed in \IF. Which can be found by
+\begin{align}\label{eq:CM}
+\begin{split}
+m_Q(x_Q-x_{CM})+m_L(x_L-x_{CM})&=0\\
+(m_Q+m_L)x_{CM}&=m_Qx_Q+m_Lx_L
+\end{split}
+\end{align}
+Applying the laws of motion to (\ref{eq:CM}) and inserting (\ref{eq:xQ2xL}) gives the 
+\begin{align}\label{key}
+\begin{split}
+(m_Q+m_L)\ddot{x}_{CM}&=fRe_3 - (m_Q+m_L)ge_3\\
+%&=fRe_3 - (m_Q+m_L)ge_3\\
+%(m_Q+m_L)\ddot{x}_{CM}&=m_Q\ddot{x}_Q + m_L\ddot{x}_L\\
+%\\
+%m_Q\ddot{x}_Q+m_L\ddot{x}_L&=fRe_3 - (m_Q+m_L)ge_3\\
+%m_Q(\ddot{x}_L-L\ddot{q})+m_L\ddot{x}_L&=fRe_3 - (m_Q+m_L)ge_3\\
+(m_Q+m_L)(\ddot{x}_L+ge_3)&= fRe_3+m_QL\ddot{q}
+\end{split}
+\end{align}
+
+%ADD derivation of ddq (TANG2014)
+
+
+\section{Derivation of LQR controller}\label{app:lqr}
+
+\subsection{Modeling}
+From Newton's laws follows
+\begin{align}
+x_Q&=fRe_3-m_Qge_3-Tq\\
+x_L&=-m_Lge_3+Tq
+\end{align}
+
+$ x_Q $ and $ x_L $ are related by
+\begin{equation}\label{key}
+x_L = x_Q+Lq
+\end{equation}
+
+\begin{equation}\label{eq:app.QRpos}
+\begin{aligned}
+%ADD Not done yet
+\ddot{x}&=\\
+\ddot{y}&=\\
+\ddot{z}&=
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{eq:app.QRatt}
+\begin{aligned}
+%ADD Not done yet
+\ddot{\phi}&=\\
+\ddot{\theta}&=\\
+\ddot{\psi}&=
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{eq:app.Latt}
+\begin{aligned}
+%ADD Not done yet
+\ddot{\phi}_L&=\\
+\ddot{\theta}_L&=
+\end{aligned}
+\end{equation}
+
+
+
+
+
+%	    ***************************************\\
+%	    \begin{equation}
+%	    ax = 
+%	    \begin{bmatrix}
+%	    (f*m*sin(\phi_q)*sin(\psi_q) + f*m_l*sin(\phi_q)*sin(\psi_q) - f*m_l*cos(\theta)^2*sin(\phi_q)*sin(\psi_q) + f*m*cos(\phi_q)*cos(\psi_q)*sin(\theta_q) + f*m_l*cos(\phi_q)*cos(\psi_q)*sin(\theta_q) + l*m*m_l*v_\theta^2*cos(\theta)*sin(\phi) + f*m_l*cos(\phi)^2*cos(\theta)^2*sin(\phi_q)*sin(\psi_q) + l*m*m_l*v_\phi^2*cos(\theta)^3*sin(\phi) - f*m_l*cos(\phi_q)*cos(\psi_q)*cos(\theta)^2*sin(\theta_q) + f*m_l*cos(\phi)^2*cos(\phi_q)*cos(\psi_q)*cos(\theta)^2*sin(\theta_q) + f*m_l*cos(\psi_q)*cos(\theta)*sin(\phi)*sin(\phi_q)*sin(\theta) + f*m_l*cos(\phi)*cos(\phi_q)*cos(\theta_q)*cos(\theta)^2*sin(\phi) - f*m_l*cos(\phi_q)*cos(\theta)*sin(\phi)*sin(\psi_q)*sin(\theta_q)*sin(\theta))/(m*(m + m_l))\\
+%	    (l*m*m_l*v_\theta^2*sin(\theta) - f*m_l*cos(\psi_q)*cos(\theta)^2*sin(\phi_q) - f*m*cos(\psi_q)*sin(\phi_q) + f*m*cos(\phi_q)*sin(\psi_q)*sin(\theta_q) + f*m_l*cos(\phi_q)*cos(\theta)^2*sin(\psi_q)*sin(\theta_q) + l*m*m_l*v_\phi^2*cos(\theta)^2*sin(\theta) + f*m_l*cos(\phi)*cos(\phi_q)*cos(\theta_q)*cos(\theta)*sin(\theta) - f*m_l*cos(\theta)*sin(\phi)*sin(\phi_q)*sin(\psi_q)*sin(\theta) - f*m_l*cos(\phi_q)*cos(\psi_q)*cos(\theta)*sin(\phi)*sin(\theta_q)*sin(\theta))/(m*(m + m_l))\\
+%	    -(g*m^2 + g*m*m_l - f*m*cos(\phi_q)*cos(\theta_q) - f*m_l*cos(\phi_q)*cos(\theta_q) + l*m*m_l*v_\theta^2*cos(\phi)*cos(\theta) + f*m_l*cos(\phi)^2*cos(\phi_q)*cos(\theta_q)*cos(\theta)^2 + l*m*m_l*v_\phi^2*cos(\phi)*cos(\theta)^3 + f*m_l*cos(\phi)*cos(\psi_q)*cos(\theta)*sin(\phi_q)*sin(\theta) - f*m_l*cos(\phi)*cos(\theta)^2*sin(\phi)*sin(\phi_q)*sin(\psi_q) - f*m_l*cos(\phi)*cos(\phi_q)*cos(\theta)*sin(\psi_q)*sin(\theta_q)*sin(\theta) - f*m_l*cos(\phi)*cos(\phi_q)*cos(\psi_q)*cos(\theta)^2*sin(\phi)*sin(\theta_q))/(m*(m + m_l))\\
+%	    (- l*m*cos(\theta)*sin(\theta)*v_\phi^2 + f*cos(\psi_q)*cos(\theta)*sin(\phi_q) - f*cos(\phi)*cos(\phi_q)*cos(\theta_q)*sin(\theta) - f*cos(\phi_q)*cos(\theta)*sin(\psi_q)*sin(\theta_q) + f*sin(\phi)*sin(\phi_q)*sin(\psi_q)*sin(\theta) + f*cos(\phi_q)*cos(\psi_q)*sin(\phi)*sin(\theta_q)*sin(\theta))/(l*m)\\
+%	    -(f*cos(\phi_q)*cos(\theta_q)*sin(\phi) + f*cos(\phi)*sin(\phi_q)*sin(\psi_q) - 2*l*m*v_\phi*v_\theta*sin(\theta) + f*cos(\phi)*cos(\phi_q)*cos(\psi_q)*sin(\theta_q))/(l*m*cos(theta))
+%	    \end{bmatrix}
+%	    \end{equation}	    
+%	    
+%	    ***************************************\\	
+
+\subsection{Controller}
+\begin{align}\label{eq:state}
+\textbf{x}&=\begin{bmatrix}
+\textbf{q}\\
+\mathbf{\dot{q}}
+\end{bmatrix}\\
+\mathbf{q}&=\begin{bmatrix}
+x&y&z&\phi&\theta&\psi&\theta_L&\psi_L
+\end{bmatrix}^T\\
+\mathbf{\dot{q}}&=\begin{bmatrix}
+\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\theta}_L&\dot{\psi}_L
+\end{bmatrix}^T\\
+u&=\begin{bmatrix}
+f&M_\phi&M_\theta&M_\psi
+\end{bmatrix}^T
+\end{align}
+
+\begin{align}\label{eq:ss}
+\mathbf{\dot{x} }&=A\mathbf{x}+Bu\\
+y&=C\mathbf{x}+Du
+\end{align}
+
+%CHECK if needed?
+\begin{equation}\label{key}
+\mathbf{\dot{x}}=\textbf{f}(\mathbf{x,u})
+\end{equation}
+
+%ADD reference
+By linearizing Equations \ref{eq:app.QRpos},\ref{eq:app.QRatt},\ref{eq:app.Latt} follows
+\begin{align}\label{key}
+%CHECK this equations
+\ddot{x}&=-\frac{f}{m}\\
+\ddot{y}&=\\
+\ddot{z}&=
+\end{align}
+
+The mathematical model is linearized around the following operating points
+\begin{align}\label{key}
+\bar{\mathbf{x}}&=\begin{bmatrix}\bar{x}&\bar{y}&\bar{z}&\textbf{0}_{1\times13}\end{bmatrix}^T\\
+\bar{\textbf{u}}&=\begin{bmatrix}
+(m_Q+m_L)g&0&0&0
+\end{bmatrix}^T
+\end{align}
+
+%CHECK are these asssumptions correct?
+Assuming small angles, the following holds
+\begin{align}\label{key}
+\text{for } \gamma &= \phi, \theta, \psi, \theta_L, \psi_L\\
+sin(\gamma)&\simeq \gamma\\
+cos(\gamma)&\simeq 1\\
+\dot{\gamma} &\simeq 0\\
+F &\simeq (m_Q+m_L)g
+\end{align}
+
+\begin{equation}\label{key}
+A=\frac{\partial \textbf{f}(x,u)}{\partial x}\mid _{	x=\bar{x},u=\bar{u}	}
+\end{equation}
+\begin{equation}\label{key}
+B=\frac{\partial \textbf{f}(x,u)}{\partial u}\mid _{	x=\bar{x},u=\bar{u}	}
+\end{equation}
+
+\begin{equation}\label{key}
+u=-K\left[\textbf{x}_{des}(t)-\textbf{x}(t)\right] 
+\end{equation}
+
+
+\section{\texttt{MATLAB} code}
+\begin{equation}\label{key}
+Test equation
+\end{equation}
+\subsection{A \matlab Listing}
+
+\lstset{language=matlab}
+\lstinputlisting{test.m}
+
+%    \subsection{An appendix subsection with C++ Listing}
+%
+%    \lstset{language=C++}
+%    \lstinputlisting{test.c}    
+
+%    \chapter{Appendix: Figures}
+%
+%    \section{Test section (again?)}
+%
+%    Ok, all is well.

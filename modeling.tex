@@ -8,7 +8,7 @@ The dynamics of the \a{qr}-Load system are described by the laws of kinematics a
 
 Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. The motion of a rigid body can be described by a translation of the \acf{cm} and a rotation about the \a{cm}. The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body displacements. 
 
-To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 sets of Euler angles, which can lead to ambiguity. In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ S^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce.
+To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 sets of Euler angles, which can lead to ambiguity. In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce.
 
 %ADD iets over manifolds
 An Introduction to Differentiable Manifolds is given by \cite{Boothby2003}
@@ -178,7 +178,7 @@ The fundamental object of differential geometry a manifold. A manifold is a math
 	\caption{A manifold locally resembles a Euclidean space\label{fig:mod.manifold}}
 \end{figure}
 
-A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ S^2 $ is represented as a sphere, with a tangent space at point $ x $, denoted by $ T_xS^2 $. Taking the derivative at a point on a manifold is equivalent to the tangent vector at that point.
+A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ \mathbb{S}^2 $ is represented as a sphere, with a tangent space at point $ x $, denoted by $ T_x\mathbb{S}^2 $. Taking the derivative at a point on a manifold is equivalent to a tangent vector at that point. Meaning that derivatives are conceptually equivalent to an infinitesimally short tangent vector. 
 \begin{figure}[h!]
 	\centering
 	%ADD fig sphere with tangent bundle at x
@@ -210,31 +210,36 @@ $ \mathfrak{so}(3) $ is defined as
 \end{equation}
 
 Where a mapping from the angular velocity vector $ \Omega\in\mathbb{R}^3 $ to $ \hat{\Omega}\in\mathfrak{so}(3) $ is defined as \cite{Murray1994}
-\begin{equation}\label{key}
+\begin{equation}\label{eq:mod.hatOmega}
 \hat{\Omega}=\begin{bmatrix}
 0&-\Omega_3&\Omega_2\\
 \Omega_3&0&-\Omega_1\\
 -\Omega_2&\Omega_1&0
 \end{bmatrix}
 \end{equation}
-  
+The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices.
+
 The configuration space of the load is represented on a 2-sphere, defined as
-%CHECK which one to use?
 \begin{equation}\label{key}
 \mathbb{S}^2 \triangleq \left\lbrace q\in\mathbb{R}^{3}|q\cdot q=1\right\rbrace 
 \end{equation}
+%\begin{equation}\label{key}
+%\mathbb{S}^2 \triangleq \left\lbrace (x_1, x_2, x_3)\in\mathbb{R}^{3}| \parallel (x_1, x_2, x_3)\parallel=1\right\rbrace 
+%\end{equation}
+%ADD sphere - tangent space - perpendicular : angular velocity
 \begin{equation}\label{key}
-\mathbb{S}^2 \triangleq \left\lbrace (x_1, x_2, x_3)\in\mathbb{R}^{3}| \parallel (x_1, x_2, x_3)\parallel=1\right\rbrace 
+\dot{q} = \omega\times q
 \end{equation}
+where $ \omega $ is the angular velocity of the suspended load.
 
 \paragraph{Local coordinates} Euler angles are kinematically singular since the transformation from their time rates of change to the angular velocity vector is not globally defined. Furthermore, when angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided.
 
-An example is given of a 2-link arm, in Figure \ref{fig:mod.armmanifold}, where the configuration can be expressed by 2 coordinates. Figure \ref{fig:mod.armcartesian} represents the configuration space as a Cartesian space, where the dots represent one of the many identical configurations. This illustrates that this representation suffers from singularities caused by multiple points in one representation being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a \textit{torus}, a manifold where every configuration is mapped uniquely to the manifold.
-
+To illustrate the difference in configuration spaces, an example is given of a 2-link arm, where the configuration can be expressed by 2 coordinates, see in Figure \ref{fig:mod.armmanifold}. Figure \ref{fig:mod.armcartesian} represents the configuration space as a Cartesian space, where the same dots represent one of the many identical configurations. This shows that this representation suffers from singularities caused by multiple points in one representation being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a \textit{torus}, a manifold where every configuration is mapped uniquely onto the manifold.
 \begin{figure}[h!]
 	\centering
-	%ADD figure ROBOT ARM / cartesian 2 coordinates / torus
-	%ADD figure with the red dot representing sam point
+	%ADD figure Robot Arm
+	%ADD figure cartesian (q1,q2), with the red dot representing sam point
+	%ADD figure torus (q1,q2)
 	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
 	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
 	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
@@ -242,16 +247,12 @@ An example is given of a 2-link arm, in Figure \ref{fig:mod.armmanifold}, where 
 \end{figure}		
 
 \section{Quadrotor-Load Model}	\label{sec:mod.QRLmod}
-***************************************\\
-In \cite{Lee2008} dynamics and optimal control problems for rigid bodies are studied, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. Computational methods for rigid bodies, that preserve the underlying Lagrangian/Hamiltonian system structure of rigid body dynamics as well as the Lie group structure of the configurations are developed.
 
-***************************************\\
-
-**************************************\\
+In this section the model dynamics are obtained with the concepts of differential geometry. The dynamics of the \a{qr}-Load system can be described on nonlinear manifolds. The focus lies on the subsystem where the cable tension is considered to be non-zero. 
 
 The Quadrotor-Load model is shown in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF.
 
-The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, described in Euclidean space \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $ respectively. Whereas the configuration of the load can also be described by its location and attitude, described in Euclidean space \lsymb{$ x_L $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and on a two-sphere $ q\in S^2 $.
+The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, described in Euclidean space \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $ respectively. Whereas the configuration of the load can also be described by its location and attitude, described in Euclidean space \lsymb{$ x_L $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and on a two-sphere $ q\in \mathbb{S}^2 $.
 
 The position of the \a{qr} and Load are related by
 \begin{equation}\label{eq:xQ2xL}
@@ -263,15 +264,14 @@ The attitude kinematics equation is given by
 \begin{equation}\label{key}
 \dot{R}=R\hat{\Omega}
 \end{equation}
-where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, and defined as
-\begin{equation}\label{key}
-\hat{\Omega}=\begin{bmatrix}
-0&-\Omega_3&\Omega_2\\
-\Omega_3&0&-\Omega_1\\
--\Omega_2&\Omega_1&0
-\end{bmatrix}
-\end{equation}
-The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices.
+where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, defined as Equation \ref{eq:mod.hatOmega}.
+%\begin{equation}\label{key}
+%\hat{\Omega}=\begin{bmatrix}
+%0&-\Omega_3&\Omega_2\\
+%\Omega_3&0&-\Omega_1\\
+%-\Omega_2&\Omega_1&0
+%\end{bmatrix}
+%\end{equation}
 
 \paragraph{Variations on manifolds}
 
@@ -308,7 +308,7 @@ where $ \delta\mathcal{L} $ is the variation of the Lagrangian. For systems with
 \begin{equation}\label{eq:HamPrNon}
 \delta S=\int_{t_1}^{t_2}(\delta W+\delta\mathcal{L})dt=0
 \end{equation}
-where $ \delta W $ is the virtual work. Equation \ref{eq:HamPrNon} is applied to the QR-Load system, where the configuration manifold is $ \mathbb{R}^3\times S^2\times SO(3) $. With the following states
+where $ \delta W $ is the virtual work. Equation \ref{eq:HamPrNon} is applied to the QR-Load system, where the configuration manifold is $ \mathbb{R}^3\times \mathbb{S}^2\times SO(3) $. With the following states
 \begin{equation}\label{key}
 \textbf{x}= \begin{bmatrix}x_L& \dot{x}_L& q& \omega&R&\Omega
 \end{bmatrix}^T
@@ -348,7 +348,7 @@ where $ m $ is the mass of the body, $ \mathcal{I} $ is the inertia tensor, and 
 
 
 ***************************************\\
-The load dynamics evolve on $S^2 $.
+The load dynamics evolve on $\mathbb{S}^2 $.
 Based on \cite{Lee2011}.
 
 ***************************************\\

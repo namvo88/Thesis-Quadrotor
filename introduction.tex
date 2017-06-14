@@ -11,31 +11,33 @@ The inspiration for this research is build upon the idea of creating a multiple 
 
 The aim is to control the position of a suspended load using a \a{qr}. In this research a single \a{qr} is considered for the transportation of a cable suspended load, which will exert forces and torques on the \a{qr}. This is challenging control problem in the fact that the \a{qr}-Load system is under-actuated and oscillations of the load occur at the end of every movement. Possible objectives are minimizing the oscillations of the load during and after motion, or minimizing the time to bring the load to a desired position, using active control techniques.
 
-Former work on \a{qr} attitude- and position control often rely on linear control methods such as \acs{pid}\cite{bibid}, \a{mpc}\cite{Bangura2014} and \a{lqr} control \cite{bibid}, where the dynamic model is linearized about an equilibrium point, describing the system dynamics by a set of linear differential equations. 
+Former work on \a{qr} attitude- and position control often rely on linear control methods such as \acs{pid}\cite{bibid}, \a{mpc} \cite{Bangura2014} and \a{lqr} control \cite{bibid}. The dynamics are linearized around an equilibrium point, describing the system dynamics by a set of linear differential equations. 
 %ADD references to pid and lqr controllers qr attitude
 
-The control of a \a{qr}-Load system is a more specific case, and therefore is found less in literature. 
-Using an optimal control strategy can help minimize the swing of the load. Former work include \a{mpc}\cite{PraveenThesis} and \a{lqr}\cite{bibid} approaches. 
+The control of a \a{qr}-Load system is a more specific case, and therefore found less in literature. 
+An optimal control strategy is able to minimize the swing of the load. Former work include \a{mpc} \cite{PraveenThesis} and \a{lqr}\cite{bibid} control approaches. 
 %ADD what more former work?
 
 %ADD state of the art
 
-Optimal control. \a{mpc} and \a{lqr}. Minimization of the swing.
-An \acf{lqr} algorithm is able to find a state feedback controller by linearizing the dynamics around an equilibrium point such as the hover mode.
-
 %ADD Nonlinear vs linear. 
 %ADD Reason to consider nonlinear
-The reason that linear control near an equilibrium state is commonly applied in research is partly to avoid difficulties that come with modeling and controlling the non-linearities of the system. However, this limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
+The reason that linear control near an equilibrium state is commonly applied is partly to avoid difficulties that come with modeling and controlling the non-linearities of the system. However, this limits the system to small angle movements, as the optimization will not allow large angles due to the linearization.
  
 %ADD Nonlinear
+Non-linear control systems are often governed by nonlinear differential equations. 
 \acs{nmpc} is a variant of \a{mpc} which uses a nonlinear dynamical system to predict the required inputs.
 %ADD Pro/Con
-High computational cos.
+High computational cost.
+While these problems are convex in linear \a{mpc}, in nonlinear \a{mpc} they are not convex anymore. This poses challenges for both \a{nmpc} stability theory and numerical solution.
 
 %ADD Reason to consider Geometric Control 
-Geometric Control, a nonlinear model based control technique based on a modeling approach involving differential geometry, has been addressed in very little literature. However, the concepts of differential geometry result in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties.
+Geometric Control, a nonlinear model based control technique based on a modeling approach involving differential geometry, is found less common it literature. However, the concepts of differential geometry result in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties.
 
-For the control of a \a{qr}, a \a{pid} controller is designed in \cite{Goodarzi2013a}\\
+Dynamics and optimal control problems for rigid bodies are studied in \cite{Lee2008}, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. 
+%Computational methods for rigid bodies, that preserve the underlying Lagrangian/Hamiltonian system structure of rigid body dynamics are developed.
+
+A nonlinear geometric \a{pid} control for a \a{qr} is studied in \cite{Goodarzi2013a}
 
 Controllers for a \a{qr}-Load system are proposed in \cite{Sreenath2013b,Tang2015}.
 

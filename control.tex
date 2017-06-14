@@ -2,157 +2,107 @@
 %ADD intro: in this chapter
 
 Geometric Control Theory explores the application of differential geometric techniques to systems control. The objective is to express both the dynamics and its control inputs on manifolds instead of on local charts.
-
-Geometric Control is based on a coordinate-free representation of the dynamics, where the equations of motion are compact, unambiguous and singularity free. 
-
-Attitude control systems naturally evolve on non-linear configurations such as $ S^2 $ and $ SO(3) $. 
-
-Global nonlinear dynamics of various classes of closed loop attitude control systems have been studied in recent years \cite{Chaturvedi2011a}.
-
-***************************************\\
-%ADD Reason to consider Geometric Control 
-Existing Control Systems for Quadrotor UAVs:\\
-Based on the linearized dynamics of a quadrotor UAV \\
-Singularities in representing complex maneuvers \\
-Fundamental restriction in tracking nontrivial trajectories
-
-In contrast to hybrid control systems \cite{Gillula2010}, \textbf{complicated reachability set analysis is not required} to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally.
-Tracking control system can be developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
-
-Benchmark with Linear Control\\
-
-***************************************\\
-
-
-***************************************\\
-In control systems engineering, the underlying geometric features of a dynamic system are often not considered carefully. For example, many control systems are developed for the standard form of ordinary differential equations, namely $ \dot{x}=f(x,u) $, where the state and the control input are denoted by $ x $ and $ u $. It is assumed that the state and the control input lie in Euclidean spaces, and the system equations are defined in terms of smooth functions between Euclidean spaces. However, for many interesting mechanical systems, the configuration space cannot be expressed globally as a Euclidean space.
-
-***************************************\\
-
-
-***************************************\\
-
 Geometric control theory is the study of how the geometry of the state space influences controls problems. This includes local properties like curvature, and global properties like the number of `holes’ in the space (sphere vs doughnut).
 
-Intuition:  For example, I want to write out the equations of motion of a 3D pendulum and also control its orientation directly on the Special Orthogonal Group (using rotation matrices)  instead of using local charts induced by Euler Angle Parametrizations ( theta, phi and psi - the three famous angles of dynamics!).
-Pros:\\
-->  Compact expressions that are also intuitive.
--> Globally defined (no singularities!). Therefore, one can build almost globally attractive controllers.\\
-Cons:\\
--> The math gets very involved very quickly. (This could be subjective)
-***************************************\\
+%ADD this is useful because .. In contrast with existing linear control systems with linearized dynamics. Benchmark with Linear Control\\
+%ADD Singularities in representing complex maneuvers. complex maneuvers, could contain large angles, linear control problem. Fundamental restriction in tracking nontrivial trajectories
 
-Control Schemes\\
-Nonlinear Geometric Control. Error functions\\
+Geometric Control is based on a coordinate-free representation of the dynamics, where the equations of motion are compact, unambiguous and singularity free. 
+Globally defined (no singularities!). Therefore, one can build almost globally attractive controllers
 
-Attitude Controller\\
+Attitude control systems naturally evolve on non-linear configurations such as $ \mathbb{S}^2 $ and $ SO(3) $. 
+Tracking control system can be developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
 
-Define errors associated with the attitude dynamics of the QR. The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee 2010c} 
-
-
-Constants \cite{Lee2010} or matrices; enabling unique gains for roll/pitch/yaw \cite{Mellinger2011}\\
+Global nonlinear dynamics of various classes of closed loop attitude control systems have been studied in recent years \cite{Chaturvedi2011a}.
+In contrast to hybrid control systems \cite{Gillula2010}, \textbf{complicated reachability set analysis is not required} to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally.
 
 \section{Backstepping Control}
+A backstepping approach, or cascade control, is a Lyapunov based technique to design the control of nonlinear dynamical systems, while ensuring Lyapunov stability. The principle is to create a cascaded structure by starting with a stable system as a base, then "stepping back" from the base to add a control loop around it that stabilizes the added subsystem. This is repeated until the the final external control is reached.
+The control law is designed by using states as virtual control signals. Each outer loop outputs a virtual control input for the inner loop in order to control the outer loop.
 
-***************************************\\
-%CHECK backstepping / nested loop control . wat is de precieze term?
 
-Nonlinear control: Backstepping control is common.
-
-Every loop creates a virtual control input for the next loop in order to stabilize the origin?
-
-Definition backstepping: A technique for designing stabilizing controls for a special recursive class of nonlinear dynamical systems.
+%***************************************\\
+% CHECK nodig?
+%\url{http://www.control.lth.se/media/Education/EngineeringProgram/FRTN05/2013/lec09_2013eight.pdf}
+%We want to design a state feedback u=u(x) that stabilizes
+%\begin{equation}\label{key}
+%\begin{aligned}
+%\dot{x}_1&=f(x_1)+g(x_1)x_2\\
+%\dot{x}_2&=u
+%\end{aligned}
+%\end{equation}
+%Idea is to see system as a cascade connection. Design controller first for inner loop, then for the outer.
+%
+%Back-Stepping Lemma
+%\textbf{Lemma}: Let $ z=\begin{pmatrix}x_1,\cdots,x_{k-1}\end{pmatrix}^T$ and 
+%\begin{equation}\label{key}
+%\begin{aligned}
+%\dot{z}&=f(z)+g(z)x_k\\
+%\dot{x}_k&=u
+%\end{aligned}
+%\end{equation}
+%Assume $ \phi(0)=0 $, $ f(0)=0 $,
+%\begin{equation}\label{key}
+%\dot{z}=f(z)+g(z)\phi(z)
+%\end{equation}
+%stable, and $ V(z) $ a Lyapunov function (with $ \dot{V}\leq-W $). Then, 
+%\begin{equation}\label{key}
+%u=\frac{d\phi}{dz}\begin{pmatrix}
+%f(z)+g(z)x_k
+%\end{pmatrix}-\frac{dV}{dz}g(z)-(x_k-\phi(z))
+%\end{equation}
+%stabilizes $ x=0 $ with $ V(z)+(x_k-\phi(z))^2/2 $ begin a Lyapunov function.
+%
 %The backstepping approach determines how to stabilize the {\displaystyle \mathbf {x} } \mathbf {x}  subsystem using {\displaystyle z_{1}} z_{1}, and then proceeds with determining how to make the next state {\displaystyle z_{2}} z_{2} drive {\displaystyle z_{1}} z_{1} to the control required to stabilize {\displaystyle \mathbf {x} } \mathbf {x} . Hence, the process "steps backward" from {\displaystyle \mathbf {x} } \mathbf {x}  out of the strict-feedback form system until the ultimate control {\displaystyle u} u is designed.
-
-In a backstepping control approach, the control law is designed by using states as virtual control signals. Each control loop outputs a commanded tracking signal for the underlaying control loop.
-
-***************************************\\
-
-
-***************************************\\
-\url{http://www.control.lth.se/media/Education/EngineeringProgram/FRTN05/2013/lec09_2013eight.pdf}
-We want to design a state feedback u=u(x) that stabilizes
-\begin{equation}\label{key}
-\begin{aligned}
-\dot{x}_1&=f(x_1)+g(x_1)x_2\\
-\dot{x}_2&=u
-\end{aligned}
-\end{equation}
-Idea is to see system as a cascade connection. Design controller first for inner loop, then for the outer.
-
-***************************************\\
-
-
-***************************************\\
-Back-Stepping Lemma
-\textbf{Lemma}: Let $ z=\begin{pmatrix}x_1,\cdots,x_{k-1}\end{pmatrix}^T$ and 
-\begin{equation}\label{key}
-\begin{aligned}
-\dot{z}&=f(z)+g(z)x_k\\
-\dot{x}_k&=u
-\end{aligned}
-\end{equation}
-Assume $ \phi(0)=0 $, $ f(0)=0 $,
-\begin{equation}\label{key}
-\dot{z}=f(z)+g(z)\phi(z)
-\end{equation}
-stable, and $ V(z) $ a Lyapunov function (with $ \dot{V}\leq-W $). Then, 
-\begin{equation}\label{key}
-u=\frac{d\phi}{dz}\begin{pmatrix}
-f(z)+g(z)x_k
-\end{pmatrix}-\frac{dV}{dz}g(z)-(x_k-\phi(z))
-\end{equation}
-stabilizes $ x=0 $ with $ V(z)+(x_k-\phi(z))^2/2 $ begin a Lyapunov function.
-
-***************************************\\
-
-A backstepping control approach is common for \a{qr}s and can be seen in Figure \ref{fig:con.backstepQR}. The lowest level has the highest bandwidth and is in control of the rotor rotational speeds. The next level controls the \a{qr} attitude, and the top level controls the \a{qr} position. 
-
+%***************************************\\
 \begin{figure}[h!]
-%ADD figure backstepping loop for QR as in mahony2012
+	%ADD figure backstepping loop for QR as in Mahony
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-	\caption{Backstepping Control representation\label{fig:con.backstepQR}}
+	\caption{Backstepping Control representation of the QR \label{fig:con.backstepQR}}
 \end{figure}		
+A backstepping control approach is common for \a{qr}s \cite{bibid} and can be seen in Figure \ref{fig:con.backstepQR}. The lowest level has the highest bandwidth and is in control of the rotor rotational speeds. The next level controls the \a{qr} attitude, and the top level controls the \a{qr} position. 
 
-
-***************************************\\
-Because the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s. A nested feedback loop allows different flight modes to be controlled.
-
-Three Flight Modes\\
-QR Attitude Controlled Mode: track a QR attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $ \\
-Load Attitude Controlled Mode: track a load attitude command $ q_d(t) $ \\
-Load Position Controlled Mode: track a load position $ x_{L,d}(t) $\\
-
-***************************************\\
-
-The earlier mentioned backstepping approach is also used for the control of these different flight modes, see Figure \ref{fig:con.gcloop}\\
+Because the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s of the \a{qr}-Load system. Therefore, different flight modes are specified in which parts of the \a{DOF}s are controlled. The same backstepping approach allows different flight modes that are defined as follows
+\begin{outline}
+\1 QR Attitude Controlled Mode 
+\2 Track a QR attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $
+\1 Load Attitude Controlled Mode 
+\2 Track a load attitude command $ q_d(t) $
+\1 Load Position Controlled Mode
+\2 Track a load position $ x_{L,d}(t) $
+\end{outline}
 
 \begin{figure}[h!]
+	%ADD figure backstepping loop for QR-Load as in sreenath and tang
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-	\caption{Geometric Control loop{fig:con.gcloop}}
+	\caption{Backstepping Control representation of the QR-Load system\label{fig:con.backstepQRL}}
 \end{figure}		
 
-***************************************\\
-Explain how $ f $ and $ \vec{b_{1_d}} $ is obtained from $ x_d(t) $?\\
+\section{Configuration Errors}
 
 ***************************************\\
-
-\paragraph{Configuration Errors}
+%CHECK which one is best?
 Most of nonlinear dynamics and control problems are studied in a linear space.\\
 \begin{equation}\label{key}
 \dot{x}=\textbf{f}(t,x,u), \quad x\in\mathbb{R}^n, u\in\mathbb{R}^m, \textbf{f}:\mathbb{R}^{n+m+1}\rightarrow\mathbb{R}^n
 \end{equation}
 
-Before the controllers are described, the configuration functions are defined as in \cite{Bullo2005}. These functions describe the error on the manifolds $ SO(3) $ and $ S^2 $, which describe the configuration spaces for the \a{qr} attitude and the load attitude, respectively.
+In control systems engineering, the underlying geometric features of a dynamic system are often not considered carefully. For example, many control systems are developed for the standard form of ordinary differential equations, namely $ \dot{x}=f(x,u) $, where the state and the control input are denoted by $ x $ and $ u $. It is assumed that the state and the control input lie in Euclidean spaces, and the system equations are defined in terms of smooth functions between Euclidean spaces. However, for many interesting mechanical systems, the configuration space cannot be expressed globally as a Euclidean space.
 
+***************************************\\
+
+Before the controllers are described, the configuration functions are defined as in \cite{Bullo2005}. These functions describe the error on the manifolds $ SO(3) $ and $ \mathbb{S}^2 $, which describe the configuration spaces for the \a{qr} attitude and the load attitude, respectively.
+
+
+Define errors associated with the attitude dynamics of the QR. The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee 2010c} 
 
 The error function on $ SO(3) $ is chosen to be \cite{Lee2010}
 \begin{equation}\label{eq:errorfunc}
 \Psi_R(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
 \end{equation}
-The error function on $ S^2 $ is chosen to be 
+The error function on $ \mathbb{S}^2 $ is chosen to be 
 \begin{equation}\label{key}
 \Psi_q
 \end{equation}
@@ -160,7 +110,7 @@ The error function on $ S^2 $ is chosen to be
 %ADD (physical) Meaning of the error functions
 
 %ADD description tangent spaces TSO(3) and TS^2
-The tracking error functions on $ TSO(3) $ are defined as
+The tracking error functions on the tangent space of $ SO(3) $, denoted by $ TSO(3) $ are defined as
 \begin{equation}\label{key}
 e_R
 \end{equation}
@@ -168,7 +118,7 @@ e_R
 e_\Omega 
 \end{equation}
 
-The tracking error functions on $ TS^2$ are defined as
+The tracking error functions on the tangent space of $ \mathbb{S}^2 $, denoted by $ T\mathbb{S}^2$ are defined as
 \begin{equation}\label{key}
 e_q
 \end{equation}
@@ -184,7 +134,9 @@ e_v&=v-v_d\\
 \end{align}
 where $ x_d(t) \in \mathbb{R}^3$ is a smooth desired load position.
 
-\subsection{Quadrotor Attitude Tracking}
+\section{Quadrotor Attitude Tracking}
+%CHECK dit nog vermelden?
+%Constants \cite{Lee2010} or matrices; enabling unique gains for roll/pitch/yaw \cite{Mellinger2011}\\
 
 %ADD references to QR attitude tracking 
 This control problem has been addressed in various works *****
@@ -204,7 +156,7 @@ The attitude and angular velocity tracking error should be carefully chosen as t
 Why? Appendix\cite{Lee2010}, and \cite{Bullo2005}?
 
 The moment consists of a proportional term, a derivative term and a canceling term, and is defined as follows
-\begin{equation}\label{key}
+\begin{equation}\label{eq:con.M}
 M = \frac{1}{\epsilon^2}k_ReR-\frac{1}{\epsilon}k_\Omega e_\Omega+\Omega\times J_Q\Omega-J_Q(\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d)
 \end{equation}
 %DEFINE epsilon, J, Omega, kR, kOmega, Omegahat
@@ -228,7 +180,7 @@ J\dot{\Omega} &= -\Omega\times J\Omega-k_Re_R-k_\Omega\Omega \\
 \dot{R} &= R\hat{\Omega}
 \end{align}
 
-\subsection{Load Attitude Tracking}
+\section{Load Attitude Tracking}
 
 Tracks load attitude reference. Outputs attitude reference to attitude controller.
 	
@@ -242,15 +194,18 @@ Dependent of what values? 	How to choose parameters.
 	\caption{\label{fig:con.loadattloop}}
 \end{figure}		
 
-\begin{equation}\label{key}
+\begin{equation}\label{eq:con.R}
 R = 
 \end{equation}
 
-\subsection{Load Position Tracking}
+\section{Load Position Tracking}
+
+%CHECK nodig?
+%Explain how $ f $ and $ \vec{b_{1_d}} $ is obtained from $ x_d(t) $?\\
 
 Tracks load position reference. Outputs load attitude reference.
 
-\begin{equation}\label{key}
+\begin{equation}\label{eq:con.q}
 q =
 \end{equation}
 
@@ -282,13 +237,18 @@ What is Geometric Control?\\
 Why Geometric Control?\\
 Control design will be based on Nonlinear Geometric Control\\
 
+%PRO
 The proposed control system is robust to switching conditions since each flight mode has almost global stability properties, and it is straightforward to design a complex maneuver of a QR. \cite{Lee2010c}
 Where are the Error functions based on?\\
 
 Form bridge between Geometric Control and Hybrid Control\\
 Why Hybrid Control?\\
-
+%CONS
 Parameter Estimation can be done by\\
+
 State Estimation can be done by\\
 
+Drawback: assumes all states to be known
+
+Model based. What if analytical model is not accurate?
 ***************************************\\

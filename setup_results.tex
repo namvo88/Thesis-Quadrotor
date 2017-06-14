@@ -1,59 +1,102 @@
 \chapter{Experiments and Results}\label{ch:results}
 %ADD intro: in this chapter
+This chapter describes experiments that are done in order to investigate the abilities and performance of a nonlinear Geometric Control design. 
+Different cases are defined that describe tracking objectives in order to test the performance of both a simple \a{lqr} control design and a nonlinear Geometric Control design. These results are presented, and this chapter ends with a conclusion based on these results.
 
-\section{Experiments}
-Simulations were developed using Matlab and Simulink.\\
+\section{Setup}
+\paragraph{Model parameters}
+The simulations are developed using Matlab and Simulink, using the following system parameters.
+\begin{equation}\label{key}
+\begin{aligned}
+J&=\\
+m_Q&=\\
+\nonumber
+\end{aligned}
+\quad
+\begin{aligned}
+d&=\\
+c_{\tau f}&=\\
+\nonumber
+\end{aligned}
+\quad
+\begin{aligned}
+m_L&=\\
+l_L&=\\
+\nonumber
+\end{aligned}
+\end{equation}
 
-%ADD chosen parameters GC
-
-%ADD chosen model parameters 
-
-\subsection{LQR Control}
-LQR as benchmark.\\
-LQR based on small angle assumption.\\
-Derivation on linearized model in appendix \ref{app:model}
-
+\paragraph{LQR Control}
+\a{lqr} control is based on small angle assumption. Therefore, a traditional modeling method may represent the rotation matrix with a local coordinate system, for example with a Euler Angle parameterization. An \a{lqr} control design is based on a linearized model of the system, which is derived in Section \ref{app:lqr}, and is shown in Figure \ref{fig:set.lqr}.
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-	\caption{LQR control design\label{fig:}}
+	\caption{LQR control design\label{fig:set.lqr}}
 \end{figure}		
+
+%ADD matrix parameters
+The tuning parameters of the \a{lqr} controller a chosen as follows
+\begin{equation}\label{key}
+A=\begin{bmatrix}
+content...
+\end{bmatrix}
+\end{equation}
+\begin{equation}\label{key}
+B=\begin{bmatrix}
+content...
+\end{bmatrix}
+\end{equation}
+\begin{equation}\label{key}
+C=\begin{bmatrix}
+content...
+\end{bmatrix}
+\end{equation}
+
+where the state $ \mathbf{x} $ and input $ u $ are defined as 
+\begin{align}\label{eq:state}
+\textbf{x}&=\begin{bmatrix}
+\textbf{q}\\
+\mathbf{\dot{q}}
+\end{bmatrix}\\
+\mathbf{q}&=\begin{bmatrix}
+x&y&z&\phi&\theta&\psi&\theta_L&\psi_L
+\end{bmatrix}^T\\
+\mathbf{\dot{q}}&=\begin{bmatrix}
+\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\theta}_L&\dot{\psi}_L
+\end{bmatrix}^T\\
+u&=\begin{bmatrix}
+f&M_\phi&M_\theta&M_\psi
+\end{bmatrix}^T
+\end{align}
+
+\paragraph{Geometric Control}
+%ADD chosen parameters GC
+The controller gains in Equations \ref{eq:con.M},\ref{eq:con.R},\ref{eq:con.q} are chosen to be
+\begin{equation}\label{key}
+\begin{aligned}
+k_R&=\\
+k_\Omega&=\\
+\end{aligned}
+\quad
+\begin{aligned}
+k_q&=\\
+k_\omega&=\\
+\end{aligned}
+\quad
+\begin{aligned}
+k_x&=\\
+k_v&=
+\nonumber
+\end{aligned}
+\end{equation}
+%ADD chosen model parameters 
+
+
 
 %ADD chosen parameters LQR
 
-\subsection{Performance Criteria}
-***************************************\\
-Performance that can be evaluated for the cases in Figure \ref{fig:routes}. Performance can be specified as the following items.
-\begin{outline}
-	\1 Step Response
-	\2 Settling time (if swing minimization is important)
-	\2 Rising time (important if time critical)
-	\2 Overshoot (if max swing is critical)
-	\2 Steady state error / swing of load (if accuracy is important)
-	
-	\1 Disturbance Rejection
-	
-	\1 Trajectory tracking
-	\2 Can we minimize time, while minimizing position error (All Cases)
-	\2 Minimum position error (All Cases)
-	\2 Maximum amplitude/frequency of wave with respect to stability (Case B)
-	
-	\1 Computational Effort (?)
-\end{outline}
 
-Explain cases, why interesting and what can be expected?\\
-
-\subsection{Case A}
-\subsection{Case B}
-\subsection{Case C}
-
-\begin{figure}[h!]
-	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.2\paperwidth]{./StyleStuff/dcsc.png}}
-	\caption{Cases of which the performance could be evaluated \label{fig:routes}}
-\end{figure}
-
-\section{Command Filtering}
+\subsection{Command Filtering}
 %ADD Why is Command Filtering needed? 
 Consequence of backstepping control is that inner control loops depend on the the output of outer control loops. The controllers are functions of these generated outputs and their derivatives. This can be calculated analytically, which can be tedious or by estimating with the use of a Command Filter as explained by \cite{Djapic} 
 %CHECK Djapic of andere?
@@ -94,6 +137,44 @@ where $ x_1 = x_c$, $ x_2 = \dot{x}_c$ and $ x_3 = \ddot{x}_c$.
 \frac{x_c}{x_c^o}&=\frac{\omega_{n1}}{s+\omega_{n1}}\cdot\frac{\omega_{n2}^2}{s^2+2\zeta\omega_{n2}s+\omega_{n2}^2}\\
 \Rightarrow x_c^{'''}&=-(2\zeta\omega_{n2}+\omega_{n1})x_c^{''}-(2\zeta\omega_{n1}\omega_{n2}+\omega_{n2}^2)x_c^{'}-(\omega_{n1}\omega_{n2} ^2)(x_c-x_c^o)
 \end{align}
+
+\section{Experiments}
+
+\a{lqr} is an optimal control strategy and will be used to compare its result to a Nonlinear Geometric Controller.
+
+
+\subsection{Performance Criteria}
+Performance  that can be evaluated for different cases can be specified as the following items.
+\begin{outline}
+	\1 Step Response
+	\2 Settling time (if swing minimization is important)
+	\2 Rising time (important if time critical)
+	\2 Overshoot (if max swing is critical)
+	\2 Steady state error / swing of load (if accuracy is important)
+	\2 Max load angle
+	
+	\1 Disturbance Rejection
+	
+	\1 Trajectory tracking
+	\2 Can we minimize time, while minimizing position error (All Cases)
+	\2 Minimum position error (All Cases)
+	\2 Maximum amplitude/frequency of wave with respect to stability (Case B)
+	
+	\1 Computational Effort (?)
+\end{outline}
+
+Explain cases, why interesting and what can be expected?\\
+
+\subsection{Case A}
+\subsection{Case B}
+\subsection{Case C}
+
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.2\paperwidth]{./StyleStuff/dcsc.png}}
+	\caption{Cases of which the performance could be evaluated \label{fig:routes}}
+\end{figure}
+
 
 \section{Results}
 \subsection{Case A}

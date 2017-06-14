@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  13 JUN 2017 00:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  13 JUN 2017 18:42
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -583,11 +583,20 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\enumitem\enumitem.st
+y"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip89
+\enit@outerparindent=\dimen168
+\enit@toks=\toks47
+\enit@inbox=\box37
+\enitdp@description=\count156
+)
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\nomencl\nomencl.sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen168
-\nom@tempdim=\dimen169
-\nomitemsep=\skip89
+\nomlabelwidth=\dimen169
+\nom@tempdim=\dimen170
+\nomitemsep=\skip90
 )
 \@nomenclaturefile=\write7
 
@@ -603,34 +612,33 @@ Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\generic\xkeyval\xkeyval.te
 x"
-\XKV@toks=\toks47
-\XKV@tempa@toks=\toks48
-\XKV@depth=\count156
+\XKV@toks=\toks48
+\XKV@tempa@toks=\toks49
+\XKV@depth=\count157
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count157
-\mult@box=\box37
-\multicol@leftmargin=\dimen170
-\c@unbalance=\count158
-\c@collectmore=\count159
-\doublecol@number=\count160
-\multicoltolerance=\count161
-\multicolpretolerance=\count162
-\full@width=\dimen171
-\page@free=\dimen172
-\premulticols=\dimen173
-\postmulticols=\dimen174
-\multicolsep=\skip90
-\multicolbaselineskip=\skip91
-\partial@page=\box38
-\last@line=\box39
-\mult@rightbox=\box40
-\mult@grightbox=\box41
-\mult@gfirstbox=\box42
-\mult@firstbox=\box43
-\@tempa=\box44
+\c@tracingmulticols=\count158
+\mult@box=\box38
+\multicol@leftmargin=\dimen171
+\c@unbalance=\count159
+\c@collectmore=\count160
+\doublecol@number=\count161
+\multicoltolerance=\count162
+\multicolpretolerance=\count163
+\full@width=\dimen172
+\page@free=\dimen173
+\premulticols=\dimen174
+\postmulticols=\dimen175
+\multicolsep=\skip91
+\multicolbaselineskip=\skip92
+\partial@page=\box39
+\last@line=\box40
+\mult@rightbox=\box41
+\mult@grightbox=\box42
+\mult@gfirstbox=\box43
+\mult@firstbox=\box44
 \@tempa=\box45
 \@tempa=\box46
 \@tempa=\box47
@@ -647,14 +655,15 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box58
 \@tempa=\box59
 \@tempa=\box60
-\c@columnbadness=\count163
-\c@finalcolumnbadness=\count164
-\last@try=\dimen175
-\multicolovershoot=\dimen176
-\multicolundershoot=\dimen177
-\mult@nat@firstbox=\box61
-\colbreak@box=\box62
-\multicol@sort@counter=\count165
+\@tempa=\box61
+\c@columnbadness=\count164
+\c@finalcolumnbadness=\count165
+\last@try=\dimen176
+\multicolovershoot=\dimen177
+\multicolundershoot=\dimen178
+\mult@nat@firstbox=\box62
+\colbreak@box=\box63
+\multicol@sort@counter=\count166
 ))
 \mscThesis@idxfile=\write8
 
@@ -663,27 +672,27 @@ Writing index file mscThesis.idx
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\booktabs\booktabs.st
 y"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen178
-\lightrulewidth=\dimen179
-\cmidrulewidth=\dimen180
-\belowrulesep=\dimen181
-\belowbottomsep=\dimen182
-\aboverulesep=\dimen183
-\abovetopsep=\dimen184
-\cmidrulesep=\dimen185
-\cmidrulekern=\dimen186
-\defaultaddspace=\dimen187
-\@cmidla=\count166
-\@cmidlb=\count167
-\@aboverulesep=\dimen188
-\@belowrulesep=\dimen189
-\@thisruleclass=\count168
-\@lastruleclass=\count169
-\@thisrulewidth=\dimen190
+\heavyrulewidth=\dimen179
+\lightrulewidth=\dimen180
+\cmidrulewidth=\dimen181
+\belowrulesep=\dimen182
+\belowbottomsep=\dimen183
+\aboverulesep=\dimen184
+\abovetopsep=\dimen185
+\cmidrulesep=\dimen186
+\cmidrulekern=\dimen187
+\defaultaddspace=\dimen188
+\@cmidla=\count167
+\@cmidlb=\count168
+\@aboverulesep=\dimen189
+\@belowrulesep=\dimen190
+\@thisruleclass=\count169
+\@lastruleclass=\count170
+\@thisrulewidth=\dimen191
 ) ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks49
-\inpenc@posthook=\toks50
+\inpenc@prehook=\toks50
+\inpenc@posthook=\toks51
  ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
@@ -944,34 +953,7 @@ LaTeX Warning: Label `key' multiply defined.
 
 LaTeX Warning: Label `key' multiply defined.
 
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
 
 LaTeX Warning: Label `key' multiply defined.
 
@@ -995,7 +977,19 @@ LaTeX Warning: Label `key' multiply defined.
 
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.aux
 
-LaTeX Warning: Label `fig:' multiply defined.
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
 
 
 LaTeX Warning: Label `key' multiply defined.
@@ -1004,6 +998,16 @@ LaTeX Warning: Label `key' multiply defined.
 LaTeX Warning: Label `key' multiply defined.
 
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.aux
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `eq:state' multiply defined.
+
 
 LaTeX Warning: Label `key' multiply defined.
 
@@ -1028,14 +1032,15 @@ LaTeX Warning: Label `key' multiply defined.
 
 LaTeX Warning: Label `key' multiply defined.
 
-
-LaTeX Warning: Label `key' multiply defined.
-
+)
 
 LaTeX Warning: Label `Bangura2014' multiply defined.
 
 
 LaTeX Warning: Label `PraveenThesis' multiply defined.
+
+
+LaTeX Warning: Label `Lee2008' multiply defined.
 
 
 LaTeX Warning: Label `Goodarzi2013a' multiply defined.
@@ -1059,7 +1064,7 @@ LaTeX Warning: Label `Jurdjevic1997' multiply defined.
 LaTeX Warning: Label `Chaturvedi2011' multiply defined.
 
 
-LaTeX Warning: Label `Lee2008' multiply defined.
+LaTeX Warning: Label `Murray1994' multiply defined.
 
 
 LaTeX Warning: Label `Lee2005' multiply defined.
@@ -1069,9 +1074,6 @@ LaTeX Warning: Label `Lee2009' multiply defined.
 
 
 LaTeX Warning: Label `Lee2011' multiply defined.
-
-
-LaTeX Warning: Label `Murray1994' multiply defined.
 
 
 LaTeX Warning: Label `Mahony2012' multiply defined.
@@ -1101,22 +1103,22 @@ LaTeX Warning: Label `Djapic2008' multiply defined.
 LaTeX Warning: Label `Tang2014' multiply defined.
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-\AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring ON on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+\AtBeginShipoutBox=\box64
+Package hyperref Info: Link coloring ON on input line 77.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\nameref.sty
 "
@@ -1126,11 +1128,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 tring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count170
+\c@section@level=\count171
 )
-LaTeX Info: Redefining \ref on input line 76.
-LaTeX Info: Redefining \pageref on input line 76.
-LaTeX Info: Redefining \nameref on input line 76.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
  (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
 \@outlinefile=\write10
@@ -1138,17 +1140,17 @@ LaTeX Info: Redefining \nameref on input line 76.
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\context\base\supp-pdf.mkii
 "
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count171
-\scratchdimen=\dimen191
-\scratchbox=\box64
-\nofMPsegments=\count172
-\nofMParguments=\count173
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count174
-\MPscratchDim=\dimen192
-\MPnumerator=\count175
-\makeMPintoPDFobject=\count176
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count172
+\scratchdimen=\dimen192
+\scratchbox=\box65
+\nofMPsegments=\count173
+\nofMParguments=\count174
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count175
+\MPscratchDim=\dimen193
+\MPnumerator=\count176
+\makeMPintoPDFobject=\count177
+\everyMPtoPDFconversion=\toks53
 ) ABD: EveryShipout initializing macros
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
@@ -1159,22 +1161,22 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 126.
 )
-\CenteringLeftskip=\skip92
-\RaggedLeftLeftskip=\skip93
-\RaggedRightLeftskip=\skip94
-\CenteringRightskip=\skip95
-\RaggedLeftRightskip=\skip96
-\RaggedRightRightskip=\skip97
-\CenteringParfillskip=\skip98
-\RaggedLeftParfillskip=\skip99
-\RaggedRightParfillskip=\skip100
-\JustifyingParfillskip=\skip101
-\CenteringParindent=\skip102
-\RaggedLeftParindent=\skip103
-\RaggedRightParindent=\skip104
-\JustifyingParindent=\skip105
+\CenteringLeftskip=\skip93
+\RaggedLeftLeftskip=\skip94
+\RaggedRightLeftskip=\skip95
+\CenteringRightskip=\skip96
+\RaggedLeftRightskip=\skip97
+\RaggedRightRightskip=\skip98
+\CenteringParfillskip=\skip99
+\RaggedLeftParfillskip=\skip100
+\RaggedRightParfillskip=\skip101
+\JustifyingParfillskip=\skip102
+\CenteringParindent=\skip103
+\RaggedLeftParindent=\skip104
+\RaggedRightParindent=\skip105
+\JustifyingParindent=\skip106
 )
-\c@lstlisting=\count177
+\c@lstlisting=\count178
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1186,15 +1188,15 @@ Package epstopdf Info: Source file: <example_titlefig.eps>
 (epstopdf)                    size: 87521 bytes
 (epstopdf)             Command: <epstopdf --outfile=example_titlefig-eps-conver
 ted-to.pdf example_titlefig.eps>
-(epstopdf)             \includegraphics on input line 82.
+(epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<example_titlefig-eps-converted-to.pdf, id=199, 450.68375pt x 354.32375pt>
+<example_titlefig-eps-converted-to.pdf, id=207, 450.68375pt x 354.32375pt>
 File: example_titlefig-eps-converted-to.pdf Graphic file (type pdf)
 
 <use example_titlefig-eps-converted-to.pdf>
 Package pdftex.def Info: example_titlefig-eps-converted-to.pdf used on input li
-ne 82.
+ne 83.
 (pdftex.def)             Requested size: 455.24408pt x 357.92903pt.
 Package epstopdf Info: Source file: <StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
 
@@ -1206,17 +1208,17 @@ converted-to.pdf>
 (epstopdf)                    size: 15594 bytes
 (epstopdf)             Command: <epstopdf --outfile=StyleStuff/TUD_DCSC_bies_wh
 ite_A4_ENG-eps-converted-to.pdf StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
-(epstopdf)             \includegraphics on input line 82.
+(epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf, id=200, 615.29875p
+<StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf, id=208, 615.29875p
 t x 105.39375pt>
 File: StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf Graphic file (
 type pdf)
 
 <use StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf>
 Package pdftex.def Info: StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to
-.pdf used on input line 82.
+.pdf used on input line 83.
 (pdftex.def)             Requested size: 615.29724pt x 105.39348pt.
 
 Overfull \hbox (17.78937pt too wide) has occurred while \output is active
@@ -1234,17 +1236,17 @@ t/Thesis-Quadrotor/StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf>
 pdf>] [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 82.
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 82.
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (29.00462pt too wide) in paragraph at lines 82--82
+Overfull \hbox (29.00462pt too wide) in paragraph at lines 83--83
  [] 
  []
 
@@ -1252,12 +1254,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82  \maketitle
-                 [1] <./StyleStuff/ALTEN.png, id=233, 2007.5pt x 3365.57375pt>
+l.83  \maketitle
+                 [1] <./StyleStuff/ALTEN.png, id=241, 2007.5pt x 3365.57375pt>
 File: ./StyleStuff/ALTEN.png Graphic file (type png)
 
 <use ./StyleStuff/ALTEN.png>
-Package pdftex.def Info: ./StyleStuff/ALTEN.png used on input line 82.
+Package pdftex.def Info: ./StyleStuff/ALTEN.png used on input line 83.
 (pdftex.def)             Requested size: 50.91028pt x 85.35826pt.
 Package epstopdf Info: Source file: <StyleStuff/tud.eps>
 (epstopdf)                    date: 2004-09-30 22:41:36
@@ -1267,42 +1269,42 @@ Package epstopdf Info: Source file: <StyleStuff/tud.eps>
 (epstopdf)                    size: 7382 bytes
 (epstopdf)             Command: <epstopdf --outfile=StyleStuff/tud-eps-converte
 d-to.pdf StyleStuff/tud.eps>
-(epstopdf)             \includegraphics on input line 82.
+(epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<StyleStuff/tud-eps-converted-to.pdf, id=235, 140.525pt x 77.28876pt>
+<StyleStuff/tud-eps-converted-to.pdf, id=243, 140.525pt x 77.28876pt>
 File: StyleStuff/tud-eps-converted-to.pdf Graphic file (type pdf)
 
 <use StyleStuff/tud-eps-converted-to.pdf>
 Package pdftex.def Info: StyleStuff/tud-eps-converted-to.pdf used on input line
- 82.
+ 83.
 (pdftex.def)             Requested size: 140.52464pt x 77.28856pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82  \maketitle
+l.83  \maketitle
                  [2 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/ALT
 EN.png> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/tud-eps-convert
 ed-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 
  []
 
@@ -1328,7 +1330,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 [9]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 52.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 55.
 
 )
 \tf@toc=\write11
@@ -1354,12 +1356,6 @@ Package acronym Info: Label `acro:qr' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
 Package acronym Info: Label `acro:uav' newly defined as it shall be overridden
 although it is yet undefined on input line 3.
-
-Package acronym Warning: Acronym `uav' is not defined on input line 3.
-
-
-Package acronym Warning: Acronym `uav' is not defined on input line 3.
-
 [1
 
 
@@ -1376,16 +1372,15 @@ LaTeX Warning: Citation `bibid' on page 2 undefined on input line 14.
 
 LaTeX Warning: Citation `bibid' on page 2 undefined on input line 18.
 
-Package acronym Info: Label `acro:lqr' newly defined as it shall be overridden
-although it is yet undefined on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
+Underfull \hbox (badness 3333) in paragraph at lines 28--33
+[]\OT1/cmr/m/n/10.95 Non-linear con-trol sys-tems are of-ten gov-erned by non-l
+in-ear dif-fer-en-tial equa-tions.
  []
 
 [2]
 
-LaTeX Warning: Reference `ch:trajectory' on page 3 undefined on input line 73.
+LaTeX Warning: Reference `ch:trajectory' on page 3 undefined on input line 75.
 
 ) [3] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\modeling.tex [4
 
@@ -1405,12 +1400,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-<./StyleStuff/dcsc.png, id=470, 227.6505pt x 72.27pt>
+[5] <./StyleStuff/dcsc.png, id=485, 227.6505pt x 72.27pt>
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
@@ -1470,29 +1465,20 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 [9]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 238.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 243.
 (pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 239.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 244.
 (pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 240.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 245.
 (pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
  [10]
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
-
- []
-
-
-Package acronym Warning: Acronym `com' is not defined on input line 254.
+Package acronym Warning: Acronym `com' is not defined on input line 255.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 283--284
@@ -1503,11 +1489,7 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 288.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11]
+ [11]
 Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
@@ -1536,36 +1518,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--348
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 354--356
 
  []
+
+
+LaTeX Warning: Reference `app:model' on page 12 undefined on input line 365.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
-<./StyleStuff/qrmodelppt.png, id=583, 722.7pt x 542.025pt>
+[12] <./StyleStuff/qrmodelppt.png, id=595, 722.7pt x 542.025pt>
 File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
 
 <use ./StyleStuff/qrmodelppt.png>
 Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 398.
 (pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
+ <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 406.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13] [14 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png
->]
+[13 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
@@ -1575,7 +1555,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
-)
+[14])
 Underfull \hbox (badness 10000) in paragraph at lines 476--115
 
  []
@@ -1587,217 +1567,146 @@ Underfull \hbox (badness 10000) in paragraph at lines 476--115
 ]
 Chapter 3.
 
-LaTeX Warning: Citation `Chaturvedi2011a' on page 17 undefined on input line 10
+LaTeX Warning: Citation `Chaturvedi2011a' on page 17 undefined on input line 16
 .
 
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 61.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
-
- []
+LaTeX Warning: Citation `bibid' on page 17 undefined on input line 64.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 79.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+ [18]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Underfull \hbox (badness 7256) in paragraph at lines 37--44
-\OT1/cmr/m/n/10.95 -> The math gets very in-volved very quickly. (This could be
- sub-jec-tive)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-LaTeX Warning: Citation `Lee 2010c' on page 18 undefined on input line 50.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 72--75
-[][]$\OT1/cmtt/m/n/10.95 http : / / www . control . lth . se / media / Educatio
-n / EngineeringProgram / FRTN05 / 2013 /$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
+LaTeX Warning: Citation `Lee 2010c' on page 19 undefined on input line 99.
 
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 114.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 147.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--126
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
-
-
-LaTeX Warning: Reference `fig:con.gcloop' on page 20 undefined on input line 12
-9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 133.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 193.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [20]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 195.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 214.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
 
  []
 
 [21]
-File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 241.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 259.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 244--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--290
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 294--116
+Underfull \hbox (badness 10000) in paragraph at lines 253--116
+[]\OT1/cmr/m/n/10.95 Model based. What if an-a-lyt-i-cal model is not ac-cu-rat
+e?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--116
 
  []
 
-[23] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.tex [24
-
-
-
-]
+[22] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.tex
 Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 18.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 33.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [25]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+ [23
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.48 \end{equation}
+                   ]
+
+LaTeX Warning: Citation `Djapic' on page 24 undefined on input line 101.
+
+
+LaTeX Warning: Citation `Farrell2009' on page 24 undefined on input line 104.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 52.
-(pdftex.def)             Requested size: 119.49974pt x 37.93568pt.
+[24pdfTeX warning (ext4): destination with the same identifier (name{equation.4
+.1.8}) has been already used, duplicate ignored
 
-
-LaTeX Warning: Citation `Djapic' on page 26 undefined on input line 58.
-
-
-LaTeX Warning: Citation `Farrell2009' on page 26 undefined on input line 61.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-[26]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.127 \end{align}
+                 ]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 89.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 132.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-) [27]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex [28
 
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
+ []
 
-]
+[25]
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 174.
+(pdftex.def)             Requested size: 119.49974pt x 37.93568pt.
+) [26]
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
@@ -1812,43 +1721,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
 Package acronym Warning: Acronym `QP' is not defined on input line 25.
 
-[29]
+[27
+
+
+
+]
 
 Package acronym Warning: Acronym `QP' is not defined on input line 29.
 
-) [30]
+) [28] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex
 Appendix A.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
+[29
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
- []
+] [30]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 155.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--151
-
- []
-
-[31
-
-
-] [32]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 270.
+(Font)              using `OT1/cmss/bx/n' instead on input line 159.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 273.
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m) [33] [34
+nput line 162.
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m))
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 129.
+ [31] [32
+
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [35
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [33
 
-]) [36]
+]) [34]
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bblpdfTeX warning (ext4)
 : destination with the same identifier (name{cite.Bangura2014}) has been alread
 y used, duplicate ignored
@@ -1861,70 +1767,70 @@ ifier (name{cite.PraveenThesis}) has been already used, duplicate ignored
                    \relax 
 l.8 \bibitem{PraveenThesis}
                            pdfTeX warning (ext4): destination with the same ide
-ntifier (name{cite.Goodarzi2013a}) has been already used, duplicate ignored
+ntifier (name{cite.Lee2008}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 \bibitem{Goodarzi2013a}
+l.13 \bibitem{Lee2008}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{cite.Goodarzi2013a}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 \bibitem{Goodarzi2013a}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{cite.Sreenath2013b}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \bibitem{Sreenath2013b}
+l.22 \bibitem{Sreenath2013b}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{cite.Tang2015}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 \bibitem{Tang2015}
+l.28 \bibitem{Tang2015}
                        pdfTeX warning (ext4): destination with the same identif
 ier (name{cite.Boothby2003}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 \bibitem{Boothby2003}
+l.33 \bibitem{Boothby2003}
                           pdfTeX warning (ext4): destination with the same iden
 tifier (name{cite.Bullo2005}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 \bibitem{Bullo2005}
+l.38 \bibitem{Bullo2005}
                         pdfTeX warning (ext4): destination with the same identi
 fier (name{cite.Jurdjevic1997}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \bibitem{Jurdjevic1997}
+l.43 \bibitem{Jurdjevic1997}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{cite.Chaturvedi2011}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 \bibitem{Chaturvedi2011}
+l.47 \bibitem{Chaturvedi2011}
                              pdfTeX warning (ext4): destination with the same i
-dentifier (name{cite.Lee2008}) has been already used, duplicate ignored
+dentifier (name{cite.Murray1994}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 \bibitem{Lee2008}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{cite.Lee2005}) has been already used, duplicate ignored
+l.51 \bibitem{Murray1994}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.Lee2005}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 \bibitem{Lee2005}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{cite.Lee2009}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.57 \bibitem{Lee2009}
-                       [37
+l.56 \bibitem{Lee2005}
+                       [35
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{cite.Lee2011
+]pdfTeX warning (ext4): destination with the same identifier (name{cite.Lee2009
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 \bibitem{Lee2011}
+l.62 \bibitem{Lee2009}
                       pdfTeX warning (ext4): destination with the same identifi
-er (name{cite.Murray1994}) has been already used, duplicate ignored
+er (name{cite.Lee2011}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 \bibitem{Murray1994}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{cite.Mahony2012}) has been already used, duplicate ignored
+l.67 \bibitem{Lee2011}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{cite.Mahony2012}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.71 \bibitem{Mahony2012}
@@ -1968,23 +1874,23 @@ tifier (name{cite.Tang2014}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.109 \bibitem{Tang2014}
-                        ) [38]
+                        ) [36]
 runsystem(makeindex mscThesis.idx)...executed (allowed).
 
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.ind)
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [39
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [37
 
 
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [40
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [38
 
 
-]) [41]
+]) [39]
 \tf@thm=\write14
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 159.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 159.
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.aux
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\abstract.aux)
@@ -1993,11 +1899,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux)
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 159.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 159.
 Package rerunfilecheck Info: File `mscThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7312887BCA3CC257D06AC6A123578C9A;3184.
+(rerunfilecheck)             Checksum: 94A5E1FC24C6D4A60CBE33DFB9FF5D16;3274.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2008,16 +1915,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 13159 strings out of 493921
- 192264 string characters out of 3144882
- 413817 words of memory out of 3000000
- 15848 multiletter control sequences out of 15000+200000
- 18999 words of font info for 71 fonts, out of 3000000 for 9000
+ 13474 strings out of 493921
+ 197724 string characters out of 3144882
+ 422171 words of memory out of 3000000
+ 16142 multiletter control sequences out of 15000+200000
+ 19168 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 45i,17n,94p,800b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,17n,94p,817b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public
 /amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/
@@ -2042,14 +1949,15 @@ sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type
 fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9.510
 5/xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/euler/euf
-m10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsf
-onts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mscThesis.pdf (57 pages, 878625 bytes).
+s (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt8
+.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfont
+s/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/
+public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xela
+tex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mscThesis.pdf (55 pages, 882736 bytes).
 PDF statistics:
- 961 PDF objects out of 1000 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
- 423 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 991 PDF objects out of 1000 (max. 8388607)
+ 265 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 

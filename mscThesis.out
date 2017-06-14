@@ -12,38 +12,40 @@
 \BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 12
 \BOOKMARK [0][-]{chapter.3}{Geometric Control Design}{}% 13
 \BOOKMARK [1][-]{section.3.1}{Backstepping Control}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.1.1}{Quadrotor Attitude Tracking}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.2}{Load Attitude Tracking}{section.3.1}% 16
-\BOOKMARK [2][-]{subsection.3.1.3}{Load Position Tracking}{section.3.1}% 17
-\BOOKMARK [1][-]{section.3.2}{Parameter- and State Estimation}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.3}{Summary}{chapter.3}% 19
-\BOOKMARK [0][-]{chapter.4}{Experiments and Results}{}% 20
-\BOOKMARK [1][-]{section.4.1}{Experiments}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.1.1}{LQR Control}{section.4.1}% 22
-\BOOKMARK [2][-]{subsection.4.1.2}{Performance Criteria}{section.4.1}% 23
-\BOOKMARK [2][-]{subsection.4.1.3}{Case A}{section.4.1}% 24
-\BOOKMARK [2][-]{subsection.4.1.4}{Case B}{section.4.1}% 25
-\BOOKMARK [2][-]{subsection.4.1.5}{Case C}{section.4.1}% 26
-\BOOKMARK [1][-]{section.4.2}{Command Filtering}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.3}{Results}{chapter.4}% 28
-\BOOKMARK [2][-]{subsection.4.3.1}{Case A}{section.4.3}% 29
-\BOOKMARK [2][-]{subsection.4.3.2}{Case B}{section.4.3}% 30
-\BOOKMARK [2][-]{subsection.4.3.3}{Case C}{section.4.3}% 31
-\BOOKMARK [1][-]{section.4.4}{Conclusion}{chapter.4}% 32
-\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 33
-\BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.2}{Recommendations for Future Work}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.2.1}{Modeling Constraints}{section.5.2}% 36
-\BOOKMARK [2][-]{subsection.5.2.2}{Hybrid Modeling}{section.5.2}% 37
-\BOOKMARK [2][-]{subsection.5.2.3}{Trajectory Generation}{section.5.2}% 38
-\BOOKMARK [3][-]{section*.33}{Minimum Snap Trajectory Generation}{subsection.5.2.3}% 39
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 40
-\BOOKMARK [1][-]{section.A.1}{Derivation of LQR controller}{appendix.A}% 41
-\BOOKMARK [2][-]{subsection.A.1.1}{Modeling}{section.A.1}% 42
-\BOOKMARK [2][-]{subsection.A.1.2}{Controller}{section.A.1}% 43
-\BOOKMARK [1][-]{section.A.2}{Derivation of Equations of motion}{appendix.A}% 44
-\BOOKMARK [2][-]{subsection.A.2.1}{Load Dynamics}{section.A.2}% 45
-\BOOKMARK [1][-]{section.A.3}{An appendix section}{appendix.A}% 46
-\BOOKMARK [2][-]{subsection.A.3.1}{A MatlabListing}{section.A.3}% 47
-\BOOKMARK [0][-]{section*.34}{Bibliography}{}% 48
-\BOOKMARK [0][-]{section*.35}{Acronyms}{}% 49
+\BOOKMARK [1][-]{section.3.2}{Configuration Errors}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Quadrotor Attitude Tracking}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Load Attitude Tracking}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{Load Position Tracking}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{Parameter- and State Estimation}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.7}{Summary}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Experiments and Results}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Setup}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.1.1}{Command Filtering}{section.4.1}% 23
+\BOOKMARK [1][-]{section.4.2}{Experiments}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Performance Criteria}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.2}{Case A}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.3}{Case B}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.4}{Case C}{section.4.2}% 28
+\BOOKMARK [1][-]{section.4.3}{Results}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{Case A}{section.4.3}% 30
+\BOOKMARK [2][-]{subsection.4.3.2}{Case B}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.3}{Case C}{section.4.3}% 32
+\BOOKMARK [1][-]{section.4.4}{Conclusion}{chapter.4}% 33
+\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 34
+\BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.2}{Recommendations for Future Work}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.2.1}{Modeling Constraints}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.2}{Hybrid Modeling}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.3}{Trajectory Generation}{section.5.2}% 39
+\BOOKMARK [3][-]{section*.34}{Minimum Snap Trajectory Generation}{subsection.5.2.3}% 40
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 41
+\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 42
+\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 43
+\BOOKMARK [1][-]{section.A.2}{Derivation of LQR controller}{appendix.A}% 44
+\BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 45
+\BOOKMARK [2][-]{subsection.A.2.2}{Controller}{section.A.2}% 46
+\BOOKMARK [1][-]{section.A.3}{MATLAB code}{appendix.A}% 47
+\BOOKMARK [2][-]{subsection.A.3.1}{A MatlabListing}{section.A.3}% 48
+\BOOKMARK [0][-]{section*.35}{Bibliography}{}% 49
+\BOOKMARK [1][-]{section.A.4}{Figures}{section*.35}% 50
+\BOOKMARK [0][-]{section*.36}{Acronyms}{}% 51

@@ -1,6 +1,9 @@
 \chapter{Dynamic Model} \label{ch:model}
 
 %ADD in this section etc
+In Section \ref{sec:mod.QRLmod} the model dynamics of the \a{qr}-Load system are obtained by describing the dynamics on nonlinear manifolds, with the concepts of differential geometry. 
+
+
 %In order to obtain an mathematical model various assumptions are made to simplify the dynamics, this is 
 A mathematical model of the system needs to be derived in order to simulate and study the effects of Geometric Control. 
 The assumptions that are applied to simplify the model are discussed in Section \ref{sec:mod.assum}.
@@ -185,7 +188,7 @@ The fundamental object of differential geometry a manifold. A manifold is a math
 %ADD 
 %An Introduction to Differentiable Manifolds is given by \cite{Boothby2003}. 
 
-A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ \mathbb{S}^2 $ is represented as a sphere, with a tangent space at point $ x $, denoted by $ T_x\mathbb{S}^2 $. Taking the derivative at a point on a manifold is equivalent to a tangent vector at that point. Meaning that derivatives are conceptually equivalent to an infinitesimally short tangent vector. 
+A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves that pass through that point. In Figure \ref{fig:mod.tspace} the manifold $ \mathbb{S}^2 $ represents as a sphere, with a tangent space at point $ x $, denoted by $ T_x\mathbb{S}^2 $. Taking the derivative at a point on a manifold is equivalent to a tangent vector at that point. Meaning that derivatives are conceptually equivalent to an infinitesimally short tangent vector. 
 \begin{figure}[h!]
 	\centering
 	%ADD fig sphere with tangent bundle at x
@@ -198,7 +201,7 @@ A differentiable manifold is a smooth and continuous manifold and is locally sim
 \subparagraph{Configuration Spaces}
 Rotation matrices are used to provide a global representation of the attitude of a rigid body, by mapping a representation of vectors expressed in \BF to a representation expressed in \IF \cite{Chaturvedi2011,Murray1994}. 
 The configuration of the \a{qr} attitude is a rotation matrix $ R $ in the Special Orthogonal Group $ SO(3) $ defined as
-\begin{equation}\label{key}
+\begin{equation}\label{eq:SO3}
 SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}|RR^T=I_{3\times3}, det(R)=1\right\rbrace 
 \end{equation}
 
@@ -208,23 +211,28 @@ SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}|RR^T=I_{3\times3}, det(R
 $ SO(3) $ is the group of all rotations about the origin of a 3-D Euclidean space, which preserves the origin, Euclidean distance and orientation.
 Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation. The elements of \textit{Lie Algebra} $ \mathfrak{so}(3) $, a property associated with $ SO(3) $, are the elements of the tangent space of $ SO(3) $ at the identity element, see Figure \ref{fig:mod.so3}. 
 These elements define the relation between the rotation $ R $ and its derivative $ \dot{R} $, such that
-\begin{equation}\label{key}
+\begin{equation}\label{eq:Rdot}
 \dot{R} = R\hat{\Omega}
 \end{equation}
-$ \mathfrak{so}(3) $ is defined as
-\begin{equation}\label{key}
-\mathfrak{so}(3) \triangleq \left\lbrace U\in \mathbb{R}^{3\times 3}|U^T=-U\right\rbrace
+For $ n\in \mathbb{N} $, $ \mathfrak{so}(3) $ is is the vector space of skew-symmetric matrices in $ \mathbb{R}^{n\times n} $ and defined as
+\begin{equation}\label{eq:so3}
+\mathfrak{so}(n) \triangleq \left\lbrace S\in \mathbb{R}^{n\times n}|S^T=-S\right\rbrace
 \end{equation}
 
-Where a mapping from the angular velocity vector $ \Omega\in\mathbb{R}^3 $ to $ \hat{\Omega}\in\mathfrak{so}(3) $ is defined as \cite{Murray1994}
+The linear map $ \hat{\cdot}:\mathbb{R}^3\rightarrow\mathfrak{so}(3) $ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices. $ \cdot^\vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $ denotes the inverse isomorphism. The mapping between the body angular velocity vector $ \Omega\in\mathbb{R}^3 $ and  $ \hat{\Omega}\in\mathfrak{so}(3) $ can be written as
 \begin{equation}\label{eq:mod.hatOmega}
 \hat{\Omega}=\begin{bmatrix}
 0&-\Omega_3&\Omega_2\\
 \Omega_3&0&-\Omega_1\\
 -\Omega_2&\Omega_1&0
-\end{bmatrix}
+\end{bmatrix},
+\quad
+\begin{bmatrix}
+0&-\Omega_3&\Omega_2\\
+\Omega_3&0&-\Omega_1\\
+-\Omega_2&\Omega_1&0
+\end{bmatrix}^\vee = \Omega
 \end{equation}
-The hat map $ \hat{\cdot}:\mathbb{R}^3\rightarrow \mathfrak{so}(3)$ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices.
 
 The configuration space of the load is represented on a 2-sphere, defined as
 \begin{equation}\label{key}
@@ -240,12 +248,12 @@ The configuration space of the load is represented on a 2-sphere, defined as
 where $ \omega $ is the angular velocity of the suspended load.
 
 \section{Quadrotor-Load Model}	\label{sec:mod.QRLmod}
-In this section the model dynamics of the \a{qr}-Load system are obtained by describing the dynamics on nonlinear manifolds, with the concepts of differential geometry. 
-
-%ADD Nogmaals!
-The focus lies on the subsystem where the cable tension is considered to be non-zero. 
-
-The Quadrotor-Load model is shown in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF.
+The Quadrotor-Load model is shown in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF. The focus lies on the subsystem where the cable tension is considered to be non-zero. The position of the \a{qr} and Load are related by
+\begin{equation}\label{eq:xQ2xL}
+x_Q=x_L-Lq
+\end{equation}
+where \lsymb{$ x_Q $}{Position of the  of the \a{qr} CoM} is the position of the \a{com}, \lsymb{$ x_L $}{Position of the load} is the position of the load, and \lsymb{$ L $}{Length of the cable} is the length of the cable.
+%The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body displacements. 
 
 \begin{figure}[h!]
 	\centering
@@ -253,25 +261,18 @@ The Quadrotor-Load model is shown in Figure \ref{fig:QRLmodel}, where the unit v
 	\caption{Quadrotor-Load model representation\label{fig:QRLmodel}}
 \end{figure}		
 
-The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body displacements. 
-
-Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. Which means that the motion of a rigid body can be described by a translation of the \acf{com} and a rotation about the \a{com}. 
-
 Dynamics and optimal control problems for rigid bodies are studied in \cite{Lee2008}, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. 
 
-The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, described in Euclidean space \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $ respectively. Whereas the configuration of the load can also be described by its location and attitude, described in Euclidean space \lsymb{$ x_L $}{Position of the \a{qr} CM}$\in \mathbb{R}^3 $ and on a two-sphere $ q\in \mathbb{S}^2 $.
+Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. 
+%Which means that the motion of a rigid body can be described by a translation of the \acf{com} and a rotation about the \a{com}. 
+The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, which are described in Euclidean space $x_Q\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $, respectively. 
+The configuration of the load can also be described by its location and attitude, described in Euclidean space $x_L\in \mathbb{R}^3 $ and on a two-sphere $ q\in \mathbb{S}^2 $.
 
-The position of the \a{qr} and Load are related by
-\begin{equation}\label{eq:xQ2xL}
-x_Q=x_L-Lq
-\end{equation}
-where \lsymb{$ L $}{Length of the cable} is the length of the cable.
-
-The attitude kinematics equation is given by
+The \a{qr} attitude kinematics equation is given by
 \begin{equation}\label{key}
 \dot{R}=R\hat{\Omega}
 \end{equation}
-where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, defined in Equation \ref{eq:mod.hatOmega}.
+where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, see Equation \ref{eq:mod.hatOmega}.
 %\begin{equation}\label{key}
 %\hat{\Omega}=\begin{bmatrix}
 %0&-\Omega_3&\Omega_2\\
@@ -280,22 +281,16 @@ where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body 
 %\end{bmatrix}
 %\end{equation}
 
-\paragraph{Variations on manifolds}
-
-%ADD
-Looking at the variations on manifolds\\
-This is different from traditional mechanics
-
 %LOAD ATTITUDE DYNAMICS
 To develop the Euler-Lagrange equations for mechanical systems that evolve on a Lie group, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is used, which is based on Hamilton's principle. 
-
+	
 %ADD Hamilton's principle uitleg?
 
 The action integral is defined as
 \begin{equation}\label{eq:actionintegral}
 S=\int_{t_1}^{t_2}\mathcal{L}dt
 \end{equation}
-where $\mathcal{L}=\mathcal{T}-\mathcal{U} $ is the Lagrangian of the system, where $\mathcal{T},\mathcal{U}$ are the kinetic and potential energy, respectively. Hamilton's principle of least action states that the path a conservative mechanical system takes between two configurations at time $ t_1 $ and $ t_2 $, is the one for which Equation \ref{eq:actionintegral} is an extremum, stated as
+where $\mathcal{L}=\mathcal{T}-\mathcal{U} $ is the Lagrangian of the system, where $\mathcal{T},\mathcal{U}$ are the kinetic and potential energy, respectively. Hamilton's principle of least action states that the path a conservative mechanical system takes between two configurations $ q_1 $ and $ q_2 $ at time $ t_1 $ and $ t_2 $, is the one for which Equation \ref{eq:actionintegral} is an extremum, stated as
 \begin{equation}\label{eq:HamPr}
 \delta S=\int_{t_1}^{t_2}\delta\mathcal{L}dt=0
 \end{equation}
@@ -310,44 +305,100 @@ where $ \delta W $ is the virtual work. Equation \ref{eq:HamPrNon} is applied to
 \end{equation}
 
 
-***************************************\\
+\paragraph{Variations in energy}
 
-***************************************\\
-Rigid Body Attitude Dynamics evolve on $ SE(3) $.
-\begin{align}\label{eq:eomrigidbody}
-%CHECK waar komt deze equation vandaan?
-J\dot{\Omega}+\Omega\times J\Omega &= mg\rho\times R^Te_3+u\\ 
-\dot{R} &= R\hat{\Omega}
-\end{align}
-***************************************\\
+%ADD
+Looking at the variations on manifolds\\
+This is different from traditional mechanics
 
-
-***************************************\\
-The equations of motion for a rigid body with configuration $ SE(3) $ are given by the \textit{Newton-Euler equations} \cite{Murray1994}:
+%ADD kinetic energy
 \begin{equation}\label{key}
-\begin{bmatrix}
-	mI&0\\
-	0&\mathcal{I}
-\end{bmatrix}
-\begin{bmatrix}
-	\dot{v}^b\\
-	\dot{\omega}^b
-\end{bmatrix}+
-\begin{bmatrix}
-	\omega^b\times mv^b\\
-	\omega^b\times\mathcal{I}\omega^b
-\end{bmatrix}=F^b
+\mathcal{T}
 \end{equation}
-where $ m $ is the mass of the body, $ \mathcal{I} $ is the inertia tensor, and $ V^b=(v^b,\omega^b) $ and $ F^b $ represent the instantaneous body velocity and applied body wrench.
-***************************************\\
+
+%ADD potential energy
+\begin{equation}\label{key}
+\mathcal{U}
+\end{equation}
+
+%ADD
+%We approximate the variation in kinetic energy using the first-order Taylor approximation
+\begin{equation}\label{key}
+\delta\mathcal{T}
+\end{equation}
+
+%ADD
+%We approximate the variation in potential energy using the first-order Taylor approximation
+\begin{equation}\label{key}
+\delta\mathcal{U}
+\end{equation}
+
+Terms of virtual work; thrust working on \a{qr}'s \a{com}
+\begin{equation}\label{key}
+\delta W_1
+\end{equation}
+
+The quadrotor is the only rigid body in the subsystem and is acted on by moment M, with associated virtual work:
+\begin{equation}\label{key}
+\delta W_2
+\end{equation}
+
+Eqs. 21 - 24 allow us to rearrange Eq. 14 as variations in
+each generalized coordinate:
+\begin{equation}\label{key}
+\delta S
+\end{equation}
+
+$ \delta R $ and $ \delta q $ vary on manifolds. Variations can be described as
+\begin{equation}\label{key}
+\begin{aligned}
+\delta R&=\\
+\delta q&=
+\end{aligned}
+\end{equation}
+
+From Equation \ref{eq:CF} the following variations can be obtained
+\begin{equation}\label{key}
+\begin{aligned}
+\delta \dot{q}&=\\
+\delta \dot{R}&=\\
+\delta \hat{\Omega}&=\\
+&=\\
+&=\\
+\delta\Omega&=
+\end{aligned}
+\end{equation}
 
 
-***************************************\\
-The load dynamics evolve on $\mathbb{S}^2 $.
-Based on \cite{Lee2011}.
+%CHECK nodig?
+%***************************************\\
+%Rigid Body Attitude Dynamics evolve on $ SE(3) $.
+%\begin{align}\label{eq:eomrigidbody}
+%%CHECK waar komt deze equation vandaan?
+%J\dot{\Omega}+\Omega\times J\Omega &= mg\rho\times R^Te_3+u\\ 
+%\dot{R} &= R\hat{\Omega}
+%\end{align}
+%***************************************\\
 
-***************************************\\
-%\subsection{Quadrotor Modeling}	
+%CHECK standard newton euler
+%***************************************\\
+%The equations of motion for a rigid body with configuration $ SE(3) $ are given by the \textit{Newton-Euler equations} \cite{Murray1994}:
+%\begin{equation}\label{key}
+%\begin{bmatrix}
+%	mI&0\\
+%	0&\mathcal{I}
+%\end{bmatrix}
+%\begin{bmatrix}
+%	\dot{v}^b\\
+%	\dot{\omega}^b
+%\end{bmatrix}+
+%\begin{bmatrix}
+%	\omega^b\times mv^b\\
+%	\omega^b\times\mathcal{I}\omega^b
+%\end{bmatrix}=F^b
+%\end{equation}
+%where $ m $ is the mass of the body, $ \mathcal{I} $ is the inertia tensor, and $ V^b=(v^b,\omega^b) $ and $ F^b $ represent the instantaneous body velocity and applied body wrench.
+%***************************************\\
 
 
 \section{Classical Modeling}\label{sec:mod.clas}
@@ -452,6 +503,7 @@ Closed-loop full-attitude dynamics evolve on the non- Euclidean manifold SO3 x R
 duced-attitude dynamics evolve on the non-Euclidean mani- fold S2 x R3. Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be assessed using standard Lyapunov methods. In ad- dition, the LaSalle invariance result and related Lyapunov results apply to closed-loop vector fields defined on these
 manifolds. However, since the manifolds SO132 and S2 are compact, the radial unboundedness assumption cannot be satisfied; consequently, global asymptotic stability cannot fol- low from a Lyapunov analysis on Euclidean spaces [40], and therefore must be analyzed in alternative ways [19]–[23].\cite[p.43]{Chaturvedi2011}
 
+%HOeft waarschijnlijk niet eens een section te zijn, kan kort en bondig
 \section{Summary}
 
 ***************************************\\

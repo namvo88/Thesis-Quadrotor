@@ -10,14 +10,21 @@ R.~P.~K. Jain and T.~Keviczky, ``{MSc Thesis: Transportation of Cable Suspended
   Load using Unmanned Aerial Vehicles: A Real-time Model Predictive Control
   approach},'' 2015.
 
-\bibitem{Lee2008}
-T.~Lee, {\em {Computational Geometric Mechanics and Control of Rigid Bodies}}.
-\newblock PhD thesis, The University of Michigan, 2008.
+\bibitem{Lee2010}
+T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
+  Quadrotor UAV on SE(3)},'' {\em 49th IEEE Conference on Decision and
+  Control}, no.~3, pp.~5420--5425, 2010.
 
 \bibitem{Goodarzi2013a}
 F.~Goodarzi, D.~Lee, and T.~Lee, ``{Geometric nonlinear PID control of a
   quadrotor UAV on SE (3)},'' {\em Control Conference (ECC), 2013 European},
   pp.~3845--3850, 2013.
+
+\bibitem{Sreenath2013a}
+K.~Sreenath, N.~Michael, and V.~Kumar, ``{Trajectory generation and control of
+  a quadrotor with a cable-suspended load - A differentially-flat hybrid
+  system},'' in {\em Proceedings - IEEE International Conference on Robotics
+  and Automation}, pp.~4888--4895, 2013.
 
 \bibitem{Sreenath2013b}
 K.~Sreenath, T.~Lee, and V.~Kumar, ``{Geometric control and differential
@@ -25,24 +32,10 @@ K.~Sreenath, T.~Lee, and V.~Kumar, ``{Geometric control and differential
   Proceedings of the IEEE Conference on Decision and Control}, pp.~2269--2274,
   2013.
 
-\bibitem{Tang2015}
-S.~Tang and V.~Kumar, ``{Mixed Integer Quadratic Program Trajectory Generation
-  for a Quadrotor with a Cable-Suspended Payload},'' {\em IEEE International
-  Conference on Robotics and Automation (ICRA)}, pp.~2216--2222, 2015.
-
-\bibitem{Boothby2003}
-W.~M. Boothby, {\em {An Introduction to Differentiable Manifolds and Riemannian
-  Geometry}}.
-\newblock 2003.
-
-\bibitem{Bullo2005}
-F.~Bullo and A.~D. Lewis, {\em {Geometric control of mechanical systems:
-  modeling, analysis, and design for simple mechanical control systems}}.
-\newblock Springer, 2005.
-
-\bibitem{Jurdjevic1997}
-V.~Jurdjevic, {\em {Geometric Control Theory}}.
-\newblock Cambridge: Cambridge University Press, 1997.
+\bibitem{Tang2014}
+S.~Tang, ``{Aggressive Maneuvering of a Quadrotor with a Cable-Suspended
+  Payload},'' tech. rep., University of Pennsylvania Philadelphia,
+  Pennsylvania, 2014.
 
 \bibitem{Chaturvedi2011}
 N.~Chaturvedi, A.~Sanyal, and N.~McClamroch, ``{Rigid-Body Attitude Control},''
@@ -52,6 +45,10 @@ N.~Chaturvedi, A.~Sanyal, and N.~McClamroch, ``{Rigid-Body Attitude Control},''
 R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
   Robotic Manipulation}}, vol.~29.
 \newblock 1994.
+
+\bibitem{Lee2008}
+T.~Lee, {\em {Computational Geometric Mechanics and Control of Rigid Bodies}}.
+\newblock PhD thesis, The University of Michigan, 2008.
 
 \bibitem{Lee2005}
 T.~L.~T. Lee, N.~McClamroch, and M.~Leok, ``{A lie group variational integrator
@@ -73,25 +70,26 @@ R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
   Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
   Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
 
+\bibitem{Bullo2005}
+F.~Bullo and A.~D. Lewis, {\em {Geometric control of mechanical systems:
+  modeling, analysis, and design for simple mechanical control systems}}.
+\newblock Springer, 2005.
+
+\bibitem{Jurdjevic1997}
+V.~Jurdjevic, {\em {Geometric Control Theory}}.
+\newblock Cambridge: Cambridge University Press, 1997.
+
 \bibitem{Gillula2010}
 J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
   safe maneuvers using reachable sets: Autonomous quadrotor aerobatics in
   theory and practice},'' in {\em Proceedings - IEEE International Conference
   on Robotics and Automation}, pp.~1649--1654, 2010.
 
-\bibitem{Lee2010}
-T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
-  Quadrotor UAV on SE(3)},'' {\em 49th IEEE Conference on Decision and
-  Control}, no.~3, pp.~5420--5425, 2010.
-
-\bibitem{Mellinger2011}
-D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
-  for quadrotors},'' in {\em Proceedings - IEEE International Conference on
-  Robotics and Automation}, pp.~2520--2525, 2011.
-
-\bibitem{Goodarzi2015b}
-F.~A. Goodarzi, ``{Geometric Nonlinear Controls for Multiple Cooperative
-  Quadrotor UAVs Transporting a Rigid Body},'' no.~December 2009, 2015.
+\bibitem{Sreenath2013c}
+K.~Sreenath, {Taeyoung Lee}, and V.~Kumar, ``{Geometric control and
+  differential flatness of a quadrotor UAV with a cable-suspended load},'' in
+  {\em 52nd IEEE Conference on Decision and Control}, pp.~2269--2274, IEEE, dec
+  2013.
 
 \bibitem{Lee2010c}
 T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a
@@ -106,9 +104,9 @@ V.~Djapic, J.~Farrell, and W.~Dong, ``{Land vehicle control using a command
   filtered backstepping approach},'' {\em Proceedings of the American Control
   Conference}, pp.~2461--2466, 2008.
 
-\bibitem{Tang2014}
-S.~Tang, ``{Aggressive Maneuvering of a Quadrotor with a Cable-Suspended
-  Payload},'' tech. rep., University of Pennsylvania Philadelphia,
-  Pennsylvania, 2014.
+\bibitem{Mellinger2011}
+D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
+  for quadrotors},'' in {\em Proceedings - IEEE International Conference on
+  Robotics and Automation}, pp.~2520--2525, 2011.
 
 \end{thebibliography}

@@ -1,13 +1,42 @@
 \chapter{Conclusions and Future Work}\label{ch:conclusion}
+%ADD in this section etc
+
 \section{Summary and Conclusions}
+The report starts with an introduction to the subject.
+The aim is described and the motivation for this research is given.
+
+In the following chapter
+A short introduction of the concepts of differential geometry
+
+Next, the nonlinear geometric control design is explained.
+Backstepping is explained
+
+Experiments are defined.
+Testing the nonlinear Geometric Controller
+To compare with a common linear controller, \a{lqr} control is used to compare
+Results are,
+
+The conclusions we could extract from the experiments is that
 
 \section{Recommendations for Future Work}\label{ch:future}
-% DONT make it look like literature survey. Based on details, show what I learned. What could be interesting next. What is missing for the next steps.
-***************************************\\
-Model Validation; now it's estimation/copied from other work\\ 
-System Identification
+% DONT make it look like literature survey. Based on details, show what I have learned. What could be interesting next. What is missing for the next steps.
 
-***************************************\\
+\subsection{Investigate Implementation}
+Lack of time: no implementation possible. In order to realize this, one needs to investigate the subjects described in this section.
+
+Can in be implemented in terms of computational power? Can this be run on on-board processor?
+Problem is already partly simplified by command filter. Quantification and comparison between implemented \a{mpc} and Geometric Control.
+
+Model identification and validation. Now it is an estimation and/or taken from other literature.
+
+%CHECK wat is dit precies?
+%Computational Geometric Mechanics and Control\\
+%\cite{Lee2008}
+%Computation algorithms must be developed which preserve the geometric properties of a mechanical system.\\
+%Robust and careful numerical implementation of geometric control theory to complex engineering systems.\\
+%Provides nontrivial maneuvers that are globally valid on a nonlinear configuration manifold.
+
+
 \subsection{Modeling Constraints}
 There are several techniques to handle input saturation, the most popular ones are anti-windup techniques. Back-calculation is such a method for PID to activate the integrator, is this possible for NL control?
 
@@ -31,3 +60,4 @@ Is able to include constraints in \a{QP}.
 \cite{Mellinger2011}
 
 Obstacle avoidance
+

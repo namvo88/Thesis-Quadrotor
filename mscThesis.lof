@@ -1,22 +1,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Quadrotor model representation\relax }}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Quadrotor with Load model representation\relax }}{6}{figure.caption.10}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces A manifold locally resembles a Euclidean space\relax }}{9}{figure.caption.14}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces \relax }}{9}{figure.caption.15}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Configuration Space of a 2-link arm\relax }}{10}{figure.caption.18}
-\contentsline {figure}{\numberline {2-6}{\ignorespaces Quadrotor-Load model representation\relax }}{11}{figure.caption.20}
-\contentsline {figure}{\numberline {2-7}{\ignorespaces Quadrotor-Load model representation\relax }}{13}{figure.caption.21}
-\contentsline {figure}{\numberline {2-8}{\ignorespaces \relax }}{14}{figure.caption.22}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Quadrotor model representation\relax }}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Quadrotor with Load model representation\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Configuration Space of a 2-link arm\relax }}{8}{figure.caption.11}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces A manifold locally resembles a Euclidean space\relax }}{9}{figure.caption.13}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces \relax }}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {2-6}{\ignorespaces Quadrotor-Load model representation\relax }}{10}{figure.caption.16}
+\contentsline {figure}{\numberline {2-7}{\ignorespaces Quadrotor-Load model representation\relax }}{13}{figure.caption.19}
+\contentsline {figure}{\numberline {2-8}{\ignorespaces \relax }}{13}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Backstepping Control representation of the QR \relax }}{18}{figure.caption.23}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Backstepping Control representation of the QR-Load system\relax }}{18}{figure.caption.24}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces \relax }}{20}{figure.caption.25}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces \relax }}{21}{figure.caption.26}
-\contentsline {figure}{\numberline {3-5}{\ignorespaces \relax }}{21}{figure.caption.27}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Backstepping Control representation of the QR \relax }}{16}{figure.caption.21}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Backstepping Control representation of the QR-Load system\relax }}{16}{figure.caption.22}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces \relax }}{18}{figure.caption.23}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces \relax }}{19}{figure.caption.24}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces \relax }}{19}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{23}{figure.caption.30}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Representation of the command filter\relax }}{25}{figure.caption.32}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Cases of which the performance could be evaluated \relax }}{26}{figure.caption.33}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{21}{figure.caption.28}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Representation of the command filter\relax }}{23}{figure.caption.30}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Cases of which the performance could be evaluated \relax }}{24}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Simulink Command Filter\relax }}{29}{figure.caption.33}

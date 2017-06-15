@@ -34,18 +34,19 @@
 \BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 34
 \BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}% 35
 \BOOKMARK [1][-]{section.5.2}{Recommendations for Future Work}{chapter.5}% 36
-\BOOKMARK [2][-]{subsection.5.2.1}{Modeling Constraints}{section.5.2}% 37
-\BOOKMARK [2][-]{subsection.5.2.2}{Hybrid Modeling}{section.5.2}% 38
-\BOOKMARK [2][-]{subsection.5.2.3}{Trajectory Generation}{section.5.2}% 39
-\BOOKMARK [3][-]{section*.34}{Minimum Snap Trajectory Generation}{subsection.5.2.3}% 40
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 41
-\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 42
-\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 43
-\BOOKMARK [1][-]{section.A.2}{Derivation of LQR controller}{appendix.A}% 44
-\BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 45
-\BOOKMARK [2][-]{subsection.A.2.2}{Controller}{section.A.2}% 46
-\BOOKMARK [1][-]{section.A.3}{MATLAB code}{appendix.A}% 47
-\BOOKMARK [2][-]{subsection.A.3.1}{A MatlabListing}{section.A.3}% 48
-\BOOKMARK [0][-]{section*.35}{Bibliography}{}% 49
-\BOOKMARK [1][-]{section.A.4}{Figures}{section*.35}% 50
-\BOOKMARK [0][-]{section*.36}{Acronyms}{}% 51
+\BOOKMARK [2][-]{subsection.5.2.1}{Investigate Implementation}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.2}{Modeling Constraints}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.3}{Hybrid Modeling}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.4}{Trajectory Generation}{section.5.2}% 40
+\BOOKMARK [3][-]{section*.32}{Minimum Snap Trajectory Generation}{subsection.5.2.4}% 41
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 42
+\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 43
+\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 44
+\BOOKMARK [1][-]{section.A.2}{Derivation of LQR controller}{appendix.A}% 45
+\BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 46
+\BOOKMARK [2][-]{subsection.A.2.2}{Controller}{section.A.2}% 47
+\BOOKMARK [1][-]{section.A.3}{Figures}{appendix.A}% 48
+\BOOKMARK [1][-]{section.A.4}{MATLAB code}{appendix.A}% 49
+\BOOKMARK [2][-]{subsection.A.4.1}{A MatlabListing}{section.A.4}% 50
+\BOOKMARK [0][-]{section*.34}{Bibliography}{}% 51
+\BOOKMARK [0][-]{section*.35}{Acronyms}{}% 52

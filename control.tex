@@ -1,5 +1,8 @@
 \chapter{Geometric Control Design} \label{ch:control}
-%ADD intro: in this chapter
+%ADD intro: in this section etc
+
+%ADD deze references introduceren
+\cite{Bullo2005,Jurdjevic1997}
 
 Geometric Control Theory explores the application of differential geometric techniques to systems control. The objective is to express both the dynamics and its control inputs on manifolds instead of on local charts.
 Geometric control theory is the study of how the geometry of the state space influences controls problems. This includes local properties like curvature, and global properties like the number of `holes’ in the space (sphere vs doughnut).
@@ -18,7 +21,7 @@ In contrast to hybrid control systems \cite{Gillula2010}, \textbf{complicated re
 
 \section{Backstepping Control}
 A backstepping approach, or cascade control, is a Lyapunov based technique to design the control of nonlinear dynamical systems, while ensuring Lyapunov stability. The principle is to create a cascaded structure by starting with a stable system as a base, then "stepping back" from the base to add a control loop around it that stabilizes the added subsystem. This is repeated until the the final external control is reached.
-The control law is designed by using states as virtual control signals. Each outer loop outputs a virtual control input for the inner loop in order to control the outer loop.
+The control law is designed by using states as virtual control signals. Each loop outputs a virtual command signal, denoted by subscript $ c $, for the inner loop to track in order to control the outer loop.
 
 
 %***************************************\\
@@ -66,11 +69,11 @@ A backstepping control approach is common for \a{qr}s \cite{bibid} and can be se
 Because the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s of the \a{qr}-Load system. Therefore, different flight modes are specified in which parts of the \a{DOF}s are controlled. The same backstepping approach allows different flight modes that are defined as follows
 \begin{outline}
 \1 QR Attitude Controlled Mode 
-\2 Track a QR attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $
+\2 Track a desired QR attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $
 \1 Load Attitude Controlled Mode 
-\2 Track a load attitude command $ q_d(t) $
+\2 Track a desired load attitude command $ q_d(t) $
 \1 Load Position Controlled Mode
-\2 Track a load position $ x_{L,d}(t) $
+\2 Track a desired load position $ x_{L,d}(t) $
 \end{outline}
 
 \begin{figure}[h!]

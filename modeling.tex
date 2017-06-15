@@ -1,35 +1,18 @@
 \chapter{Dynamic Model} \label{ch:model}
 
-%ADD intro: in this chapter
-
-%ADD INTRO 
-
-The dynamics of the \a{qr}-Load system are described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. Opposed to the classical modeling techniques, it is also possible to describe the system's configuration space as a differentiable manifold using the tools of differential geometry. \\
-
-Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. The motion of a rigid body can be described by a translation of the \acf{cm} and a rotation about the \a{cm}. The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body displacements. 
-
-To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 sets of Euler angles, which can lead to ambiguity. In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce.
-
-%ADD iets over manifolds
-An Introduction to Differentiable Manifolds is given by \cite{Boothby2003}
-
-%ADD deze references introduceren
-\cite{Bullo2005}
-\cite{Jurdjevic1997}
-
-
-***************************************\\
-%CHECK wat is dit precies?
-Computational Geometric Mechanics and Control\\
-Computation algorithms must be developed which preserve the geometric properties of a mechanical system.\\
-Robust and careful numerical implementation of geometric control theory to complex engineering systems.\\
-Provides nontrivial maneuvers that are globally valid on a nonlinear configuration manifold.
-
-***************************************\\
-
-\section{Modeling Assumptions} 
+%ADD in this section etc
+%In order to obtain an mathematical model various assumptions are made to simplify the dynamics, this is 
 A mathematical model of the system needs to be derived in order to simulate and study the effects of Geometric Control. 
-The following assumptions are applied to simplify the model.\\
+The assumptions that are applied to simplify the model are discussed in Section \ref{sec:mod.assum}.
+
+In Section \ref{sec:mod.geometric} an introduction is given about Geometric Mechanics, which is a modern description of the classical mechanics from the perspective of Differential Geometry. Differential Geometry is a discipline in mathematics that studies manifolds and their geometric properties, using the tools of calculus. Geometric Mechanics is used to model the \a{qr}-Load system, which is described in Section \ref{sec:mod.QRLmod}.
+
+To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 possible sets of Euler angles and many different conventions are used, which leads to ambiguity. The definition of Euler angles is not unique and a sequence of rotations is not commutative. Therefore, Euler angles are never expressed in terms of the external frame, or in terms of the co-moving rotated body frame, but in a mixture.
+
+In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce. 
+
+\section{Modeling Assumptions}\label{sec:mod.assum} 
+
 
 	%CHECK intermediate frame. nodig?
 The \a{qr} model representation is shown in Figure \ref{fig:mod.model}. Three Cartesian coordinate frames are defined:\v{5}
@@ -78,8 +61,8 @@ f\\M_\phi\\M_\theta\\M_\psi
 \end{bmatrix}=
 \begin{bmatrix}
 b&b&b&b\\
-0&-Lb&0&Lb\\
-Lb&0&-Lb&0\\
+0&-lb&0&lb\\
+lb&0&-lb&0\\
 -d&d&-d&d\\
 \end{bmatrix}
 \begin{bmatrix}
@@ -89,14 +72,21 @@ Lb&0&-Lb&0\\
 \omega_4^2\\
 \end{bmatrix}
 \end{equation}
-where $ L $ is the cable length and $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, resp. 
+where \lsymb{$ l $}{Distance from the rotor to the QR CoM} is the distance from the rotor to the \a{qr}'s \a{com} and $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, resp. 
 
 Table \ref{tab:mod.assumptions} shows the most common assumptions that are used for modeling the \a{qr}, simplifying the complexity of the model.
+
+***************************************\\
+Bart: Refer to table 2-2?\\
+Nam: Wat bedoel je?
+
+***************************************\\
 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|p{\textwidth}|}
 		\hline
+		\textbf{Modeling assumptions Quadrotor model}\\
 %		\tabitem The rotation of the Earth does not affect the flight of the \a{qr}\\
 		\tabitem The structure of the \a{qr} is rigid and symmetric. \\
 		\hspace{4mm} Elastic deformations and shock (sudden accelerations) of the \a{qr} are ignored.\\										
@@ -113,16 +103,8 @@ Table \ref{tab:mod.assumptions} shows the most common assumptions that are used 
 		\hspace{4mm} the propeller speed. \\
 %		Such that $ F_i = b\omega_i^2$ and $ M_{i} = d\omega_i^2$, where \lsymb{$ \omega_i $}{Angular velocity of rotor $ i $ around its axis, $ i=\{1,2,3,4\} $} is the rotor speed.\\
 		\hline
-	\end{tabular}
-	\caption{Modeling assumptions Quadrotor model}
-	\label{tab:mod.assumptions}
-\end{table}
-
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{|p{\textwidth}|}
-		\hline
-		\tabitem The cable is modeled as a rigid and massless cable. \\
+		\textbf{Modeling assumptions Quadrotor-Load model}\\
+				\tabitem The cable is modeled as a rigid and massless cable. \\
 		\tabitem The cable is connected to a friction-less joint at the origin of the body-fixed. \\
 		\tabitem The tension in the cable is considered to be non-zero.\\
 		\hspace{4mm} This implies that the QR-Load subsystem, consisting of a separate \a{qr} and Load\\
@@ -133,38 +115,60 @@ Table \ref{tab:mod.assumptions} shows the most common assumptions that are used 
 		\hspace{4mm} Details Assumption 2\\
 		\hline
 	\end{tabular}
-	\caption{Modeling assumptions Quadrotor+Load model}
-	\label{tab:mod.assumptionsQRL}
+	\caption{Modeling assumptions}
+	\label{tab:mod.assumptions}
 \end{table}
+
+%\begin{table}[h!]
+%	\centering
+%	\begin{tabular}{|p{\textwidth}|}
+%		\hline
+%		\tabitem The cable is modeled as a rigid and massless cable. \\
+%		\tabitem The cable is connected to a friction-less joint at the origin of the body-fixed. \\
+%		\tabitem The tension in the cable is considered to be non-zero.\\
+%		\hspace{4mm} This implies that the QR-Load subsystem, consisting of a separate \a{qr} and Load\\
+%		\hspace{4mm} in free fall, is disregarded.\\		 
+%		\tabitem Aerodynamic effects acting on the load are neglected.\\
+%		\hspace{4mm} reference frame.\\
+%		\tabitem Assumption \\
+%		\hspace{4mm} Details Assumption 2\\
+%		\hline
+%	\end{tabular}
+%	\caption{Modeling assumptions Quadrotor-Load model}
+%	\label{tab:mod.assumptionsQRL}
+%\end{table}
 
 
 \section{Geometric Mechanics}\label{sec:mod.geometric}
+In Geometric Mechanics the configuration space of systems is a \textit{group manifold} instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces. It explores the geometric structure of a Lagrangian- or Hamiltonian system through the concepts of vector calculus, linear algebra, differential geometry, and non-linear control theory. Geometric mechanics provides fundamental insights into the nonlinear system mechanics and yields useful tools for dynamics and control theory.
 
-In this section an introduction is given about Geometric Mechanics, which is a modern description of the classical mechanics from the perspective of Differential Geometry, which is a discipline in mathematics that studies manifolds and their geometric properties, using the tools of calculus. Geometric Mechanics is used to model the \a{qr}-Load system, which is described in Section \ref{sec:mod.QRLmod}.
+Euler angles are kinematically singular since the transformation from their time rates of change to the angular velocity vector is not globally defined. Furthermore, when angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided.
 
-%ADD intro 
-In Geometric Mechanics the configuration space of systems is a \textit{group manifold} instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces. It explores the geometric structure of a Lagrangian- or Hamiltonian system through the concepts of vector calculus, linear algebra, differential geometry, and non-linear control theory. Geometric mechanics provides fundamental insights into the non-linear system mechanics and yields useful tools for dynamics and control theory.
+To illustrate the difference in configuration spaces, an example is given of a 2-link arm, where the configuration can be expressed by 2 coordinates, see in Figure \ref{fig:mod.armmanifold}. Figure \ref{fig:mod.armcartesian} represents the configuration space as a Cartesian space, where the same dots represent one of the many identical configurations. This shows that this representation suffers from singularities caused by multiple points in one representation being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a geometric shape called a \textit{torus}, a manifold where every configuration is mapped uniquely.
+\begin{figure}[h!]
+	\centering
+	%ADD figure Robot Arm
+	%ADD figure cartesian (q1,q2), with the red dot representing sam point
+	%ADD figure torus (q1,q2)
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{Configuration Space of a 2-link arm\label{fig:mod.armmanifold}}
+\end{figure}		
 
-
-***************************************\\
-Mechanics studies the dynamics of physical bodies acting under forces and potential fields. 
-In Lagrangian mechanics, the trajectories are obtained by finding the paths that minimize the integral of a Lagrangian over time, called the action integral. 
-Rigid body dynamics are characterized by Lagrangian/Hamiltonian dynamics. The dynamics of a Lagrangian system has unique geometric properties and these are exploited to obtain Euler-Lagrange equations. The resulting intrinsic form of the Euler-Lagrange equations are more compact than equations expressed in terms of local coordinates.
+%CHECK
+%Mechanics studies the dynamics of physical bodies acting under forces and potential fields. 
+%In Lagrangian mechanics, the trajectories are obtained by finding the paths that minimize the integral of a Lagrangian over time, called the action integral. 
+%Rigid body dynamics are characterized by Lagrangian/Hamiltonian dynamics. The dynamics of a Lagrangian system has unique geometric properties and these are exploited to obtain Euler-Lagrange equations. The resulting intrinsic form of the Euler-Lagrange equations are more compact than equations expressed in terms of local coordinates.
 
 
 %ADD PROS CONS
-Problems, singularities with Euler-Angles\\
-Other attitude representations, such as exponential coordinates, quaternions, or Euler
-angles, can also be used following standard descriptions, but each of the representations has a disadvantage
-of introducing an ambiguity or singularity.
-Why charts on $ SO(3) $ \url{https://en.wikipedia.org/wiki/Charts_on_SO(3)}\\
+%Problems, singularities with Euler-Angles\\
+%Other attitude representations, such as exponential coordinates, quaternions, or Euler
+%angles, can also be used following standard descriptions, but each of the representations has a disadvantage
+%of introducing an ambiguity or singularity.
+%Why charts on $ SO(3) $ \url{https://en.wikipedia.org/wiki/Charts_on_SO(3)}\\
 
-Euler Angles\\
-However, the definition of Euler angles is not unique and in the literature many different conventions are used. These conventions depend on the axes about which the rotations are carried out, and their sequence because rotations are not commutative. Therefore, Euler angles are never expressed in terms of the external frame, or in terms of the co-moving rotated body frame, but in a mixture. Other conventions (e.g., rotation matrix or quaternions) are used to avoid this problem.
-
-***************************************\\
-
-***************************************\\
 
 \paragraph{Manifolds}
 %ADD  manifolds
@@ -177,6 +181,9 @@ The fundamental object of differential geometry a manifold. A manifold is a math
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
 	\caption{A manifold locally resembles a Euclidean space\label{fig:mod.manifold}}
 \end{figure}
+
+%ADD 
+%An Introduction to Differentiable Manifolds is given by \cite{Boothby2003}. 
 
 A differentiable manifold is a smooth and continuous manifold and is locally similar enough to a linear space to allow to do calculus. One can define directions, tangent spaces, and differentiable functions on such a manifold. Each point of an n-dimensional differentiable manifold has a tangent space, which is an n-dimensional Euclidean space consisting of the tangent vectors of the curves through that point. In Figure \ref{fig:mod.tspace} the manifold $ \mathbb{S}^2 $ is represented as a sphere, with a tangent space at point $ x $, denoted by $ T_x\mathbb{S}^2 $. Taking the derivative at a point on a manifold is equivalent to a tangent vector at that point. Meaning that derivatives are conceptually equivalent to an infinitesimally short tangent vector. 
 \begin{figure}[h!]
@@ -232,27 +239,27 @@ The configuration space of the load is represented on a 2-sphere, defined as
 \end{equation}
 where $ \omega $ is the angular velocity of the suspended load.
 
-\paragraph{Local coordinates} Euler angles are kinematically singular since the transformation from their time rates of change to the angular velocity vector is not globally defined. Furthermore, when angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided.
-
-To illustrate the difference in configuration spaces, an example is given of a 2-link arm, where the configuration can be expressed by 2 coordinates, see in Figure \ref{fig:mod.armmanifold}. Figure \ref{fig:mod.armcartesian} represents the configuration space as a Cartesian space, where the same dots represent one of the many identical configurations. This shows that this representation suffers from singularities caused by multiple points in one representation being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a \textit{torus}, a manifold where every configuration is mapped uniquely onto the manifold.
-\begin{figure}[h!]
-	\centering
-	%ADD figure Robot Arm
-	%ADD figure cartesian (q1,q2), with the red dot representing sam point
-	%ADD figure torus (q1,q2)
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\caption{Configuration Space of a 2-link arm\label{fig:mod.armmanifold}}
-\end{figure}		
-
 \section{Quadrotor-Load Model}	\label{sec:mod.QRLmod}
+In this section the model dynamics of the \a{qr}-Load system are obtained by describing the dynamics on nonlinear manifolds, with the concepts of differential geometry. 
 
-In this section the model dynamics are obtained with the concepts of differential geometry. The dynamics of the \a{qr}-Load system can be described on nonlinear manifolds. The focus lies on the subsystem where the cable tension is considered to be non-zero. 
+%ADD Nogmaals!
+The focus lies on the subsystem where the cable tension is considered to be non-zero. 
 
 The Quadrotor-Load model is shown in Figure \ref{fig:QRLmodel}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF.
 
-The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, described in Euclidean space \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $ respectively. Whereas the configuration of the load can also be described by its location and attitude, described in Euclidean space \lsymb{$ x_L $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and on a two-sphere $ q\in \mathbb{S}^2 $.
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\caption{Quadrotor-Load model representation\label{fig:QRLmodel}}
+\end{figure}		
+
+The derived mathematical model is represented by a set of dynamic equations commonly used for rigid body displacements. 
+
+Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. Which means that the motion of a rigid body can be described by a translation of the \acf{com} and a rotation about the \a{com}. 
+
+Dynamics and optimal control problems for rigid bodies are studied in \cite{Lee2008}, incorporating their geometric features. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. 
+
+The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, described in Euclidean space \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM}$\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $ respectively. Whereas the configuration of the load can also be described by its location and attitude, described in Euclidean space \lsymb{$ x_L $}{Position of the \a{qr} CM}$\in \mathbb{R}^3 $ and on a two-sphere $ q\in \mathbb{S}^2 $.
 
 The position of the \a{qr} and Load are related by
 \begin{equation}\label{eq:xQ2xL}
@@ -264,7 +271,7 @@ The attitude kinematics equation is given by
 \begin{equation}\label{key}
 \dot{R}=R\hat{\Omega}
 \end{equation}
-where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, defined as Equation \ref{eq:mod.hatOmega}.
+where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body fixed frame, defined in Equation \ref{eq:mod.hatOmega}.
 %\begin{equation}\label{key}
 %\hat{\Omega}=\begin{bmatrix}
 %0&-\Omega_3&\Omega_2\\
@@ -276,25 +283,13 @@ where $ \Omega\in\mathbb{R}^3 $ is the angular velocity represented in the body 
 \paragraph{Variations on manifolds}
 
 %ADD
-***************************************\\
 Looking at the variations on manifolds\\
 This is different from traditional mechanics
 
-***************************************\\
-
-
-\begin{figure}[h!]
-	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-	\caption{Quadrotor-Load model representation\label{fig:QRLmodel}}
-\end{figure}		
-
-
-
-
 %LOAD ATTITUDE DYNAMICS
-
 To develop the Euler-Lagrange equations for mechanical systems that evolve on a Lie group, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is used, which is based on Hamilton's principle. 
+
+%ADD Hamilton's principle uitleg?
 
 The action integral is defined as
 \begin{equation}\label{eq:actionintegral}
@@ -355,7 +350,7 @@ Based on \cite{Lee2011}.
 %\subsection{Quadrotor Modeling}	
 
 
-\section{Classical Modeling}
+\section{Classical Modeling}\label{sec:mod.clas}
 
 %CHECK waarom dit? Per se nodig om LQR uit te leggen?
 This section describes the derivation of the model by using classical modeling techniques.

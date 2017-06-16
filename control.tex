@@ -132,7 +132,8 @@ e_R=\frac{1}{2}(R_d^TR-R^TR_d)^\vee
 
 %The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee2010c} 
 
-The tangent vectors $ \dot{R} $ and $ \dot{R}_d $ cannot be compared directly, since they do lie in the same space. They each are defined in their own tangent spaces, denoted by $ \dot{R} \in T_RSO(3)$ and $ \dot{R}_d \in T_{R_d}SO(3)$. In order to define an error function, $ \dot{R}_d $ is transformed into a vector on $ T_RSO(3) $. This can be done by an mathematical object that is called a \textit{connection}, it connects tangent spaces at different points.
+The tangent vectors $ \dot{R} $ and $ \dot{R}_d $ cannot be compared directly, since they do lie in the same space. They each are defined in their own tangent spaces, denoted by $ \dot{R} \in T_RSO(3)$ and $ \dot{R}_d \in T_{R_d}SO(3)$. In order to define an error function, $ \dot{R}_d $ is transformed into a vector on $ T_RSO(3) $. This can be done by an mathematical object that is called a \textit{transport map}, it connects tangent spaces at different points.
+%CHeck Bullo p536
 
 Considering the definitions of Equations \ref{eq:SO3} and \ref{eq:Rdot}, $ \dot{R}_d $ can be compared with $ \dot{R} $, by defining a connection as follows
 %CHECK R_d^T x R: is dat transformatie van TRdSO3 naar TRSO3? 
@@ -184,10 +185,9 @@ e_{\dot{q}} =\dot{q}-(q_d\times\dot{q}_d)\times q
 The tracking errors for position and velocity are defined as
 \begin{align}\label{key}
 e_x&=x-x_d\\
-e_v&=v-v_d\\
-\text{where, }v_d&=\dot{x}_d
+e_v&=v-v_d
 \end{align}
-where $ x_d(t) \in \mathbb{R}^3$ is a smooth desired load position.
+where $ v_d=\dot{x}_d $ and $ x_d(t) \in \mathbb{R}^3$ is a smooth desired load position.
 
 \section{Quadrotor Attitude Tracking}
 QR Attitude Controlled Mode is designed to control the attitude of the \a{qr} by tracking a desired \a{qr} attitude command $ R_d(t) $ and a heading direction $ b_{1_d}(t) $. The controller is shown in Figure \ref{fig:con.qrattloop}.

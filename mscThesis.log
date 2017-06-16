@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  16 JUN 2017 00:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  16 JUN 2017 19:30
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -944,6 +944,27 @@ LaTeX Warning: Label `key' multiply defined.
 
 LaTeX Warning: Label `key' multiply defined.
 
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux
 
 LaTeX Warning: Label `key' multiply defined.
@@ -1073,19 +1094,19 @@ LaTeX Warning: Label `Lee2009' multiply defined.
 LaTeX Warning: Label `Lee2011' multiply defined.
 
 
-LaTeX Warning: Label `Mahony2012' multiply defined.
-
-
 LaTeX Warning: Label `Bullo2005' multiply defined.
+
+
+LaTeX Warning: Label `Sreenath2013c' multiply defined.
+
+
+LaTeX Warning: Label `Mahony2012' multiply defined.
 
 
 LaTeX Warning: Label `Jurdjevic1997' multiply defined.
 
 
 LaTeX Warning: Label `Gillula2010' multiply defined.
-
-
-LaTeX Warning: Label `Sreenath2013c' multiply defined.
 
 
 LaTeX Warning: Label `Lee2010c' multiply defined.
@@ -1449,53 +1470,40 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 260.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [10] [11]
-
-LaTeX Warning: Reference `app:model' on page 12 undefined on input line 411.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
-
- []
-
-<./StyleStuff/qrmodelppt.png, id=606, 722.7pt x 542.025pt>
+ [10] [11] [12]
+<./StyleStuff/qrmodelppt.png, id=624, 722.7pt x 542.025pt>
 File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
 
 <use ./StyleStuff/qrmodelppt.png>
-Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 444.
+Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 468.
 (pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 452.
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 476.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12] [13 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png
->]
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+ [13 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 523--114
+Underfull \hbox (badness 10000) in paragraph at lines 547--114
 
  []
 
-[14] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex
+[14] [15] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex [16
+
+
+
+]
 Chapter 3.
 
-LaTeX Warning: Citation `Chaturvedi2011a' on page 15 undefined on input line 19
+LaTeX Warning: Citation `Chaturvedi2011a' on page 17 undefined on input line 19
 .
 
 File: ./StyleStuff/dcsc.png Graphic file (type png)
@@ -1507,23 +1515,19 @@ Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 64.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `bibid' on page 15 undefined on input line 67.
+LaTeX Warning: Citation `bibid' on page 17 undefined on input line 67.
 
-[15
-
-
-
-]
+[17]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 82.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [16] [17]
+ [18] [19]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 197.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [18]
+ [20]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
@@ -1539,7 +1543,7 @@ Underfull \hbox (badness 2359) in paragraph at lines 308--309
 osed loop track-ing er-ror
  []
 
-[19]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
@@ -1575,8 +1579,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 363--115
 
  []
 
-[20] [21] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.tex
-[22
+[22] [23] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup_results.tex
+[24
 
 
 
@@ -1586,7 +1590,7 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 37.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [23] [24pdfTeX warning (ext4): destination with the same identifier (name{equa
+ [25] [26pdfTeX warning (ext4): destination with the same identifier (name{equa
 tion.4.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1608,10 +1612,10 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 144.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [25]) [26]
+ [27]) [28]
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex
 Chapter 5.
-[27
+[29
 
 
 
@@ -1626,13 +1630,13 @@ Package acronym Warning: Acronym `QP' is not defined on input line 56.
 
 Package acronym Warning: Acronym `QP' is not defined on input line 60.
 
-) [28] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex
+) [30] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex
 Appendix A.
-[29
+[31
 
 
 
-] [30]
+] [32]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 158.
@@ -1646,13 +1650,13 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 169.
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m)) [31] [32
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m)) [33] [34
 
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [33
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [35
 
-]) [34]
+]) [36]
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bblpdfTeX warning (ext4)
 : destination with the same identifier (name{cite.Bangura2014}) has been alread
 y used, duplicate ignored
@@ -1709,7 +1713,7 @@ er (name{cite.Lee2005}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.53 \bibitem{Lee2005}
-                       [35
+                       [37
 
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{cite.Lee2009
@@ -1723,32 +1727,32 @@ er (name{cite.Lee2011}) has been already used, duplicate ignored
                    \relax 
 l.64 \bibitem{Lee2011}
                       pdfTeX warning (ext4): destination with the same identifi
-er (name{cite.Mahony2012}) has been already used, duplicate ignored
+er (name{cite.Bullo2005}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \bibitem{Mahony2012}
-                         pdfTeX warning (ext4): destination with the same ident
-ifier (name{cite.Bullo2005}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.73 \bibitem{Bullo2005}
+l.68 \bibitem{Bullo2005}
                         pdfTeX warning (ext4): destination with the same identi
-fier (name{cite.Jurdjevic1997}) has been already used, duplicate ignored
+fier (name{cite.Sreenath2013c}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 \bibitem{Jurdjevic1997}
+l.73 \bibitem{Sreenath2013c}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Mahony2012}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.79 \bibitem{Mahony2012}
+                         pdfTeX warning (ext4): destination with the same ident
+ifier (name{cite.Jurdjevic1997}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.84 \bibitem{Jurdjevic1997}
                             pdfTeX warning (ext4): destination with the same id
 entifier (name{cite.Gillula2010}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 \bibitem{Gillula2010}
+l.88 \bibitem{Gillula2010}
                           pdfTeX warning (ext4): destination with the same iden
-tifier (name{cite.Sreenath2013c}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.88 \bibitem{Sreenath2013c}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{cite.Lee2010c}) has been already used, duplicate ignored
+tifier (name{cite.Lee2010c}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.94 \bibitem{Lee2010c}
@@ -1767,20 +1771,20 @@ tifier (name{cite.Mellinger2011}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.107 \bibitem{Mellinger2011}
-                             ) [36]
+                             ) [38]
 runsystem(makeindex mscThesis.idx)...executed (allowed).
 
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.ind)
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [37
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [39
 
 
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [38
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [40
 
 
-]) [39]
+]) [41]
 \tf@thm=\write14
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
@@ -1796,15 +1800,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package rerunfilecheck Info: File `mscThesis.out' has not changed.
+(rerunfilecheck)             Checksum: 88A8E04F1287D7169DE7F18A71A4A4CC;3354.
 
-
-Package rerunfilecheck Warning: File `mscThesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mscThesis.out':
-(rerunfilecheck)             Before: 50AA13C5FD7D6A4DAB128EEC009FDA97;3354
-(rerunfilecheck)             After:  88A8E04F1287D7169DE7F18A71A4A4CC;3354.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1817,67 +1815,46 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 13512 strings out of 493921
- 198195 string characters out of 3144882
- 423125 words of memory out of 3000000
- 16160 multiletter control sequences out of 15000+200000
+ 13514 strings out of 493921
+ 198193 string characters out of 3144882
+ 423206 words of memory out of 3000000
+ 16164 multiletter control sequences out of 15000+200000
  19168 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  45i,17n,94p,901b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{equation.2.4.21} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.32} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.30} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.28} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.25} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.34} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.31} has been referenced but does not exist
-, replaced by a fixed one
-
-<C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/a
-msfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelat
-ex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9
-.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/
-MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/
-Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/pub
-lic/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts
-/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xela
-tex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9.
-5105/xelatex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmssb
-x10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/
-public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/
-xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt8.p
-fb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/
-euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/pu
-blic/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelate
-x/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mscThesis.pdf (55 pages, 894141 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/
+type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xel
+atex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86
+)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C
+:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xe
+latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
+MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:
+/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cms
+sbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9.510
+5/xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt8
+.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfont
+s/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/
+public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xela
+tex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mscThesis.pdf (57 pages, 899223 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
- 285 named destinations out of 1000 (max. 500000)
+ 1059 PDF objects out of 1200 (max. 8388607)
+ 283 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

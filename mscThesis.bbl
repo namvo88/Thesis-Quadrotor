@@ -65,15 +65,21 @@ T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Lagrangian mechanics and variational
 T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Stable Manifolds of Saddle Points for
   Pendulum Dynamics on S{\^{}}2 and SO(3)},'' p.~9, 2011.
 
-\bibitem{Mahony2012}
-R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
-  Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
-  Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
-
 \bibitem{Bullo2005}
 F.~Bullo and A.~D. Lewis, {\em {Geometric control of mechanical systems:
   modeling, analysis, and design for simple mechanical control systems}}.
 \newblock Springer, 2005.
+
+\bibitem{Sreenath2013c}
+K.~Sreenath, {Taeyoung Lee}, and V.~Kumar, ``{Geometric control and
+  differential flatness of a quadrotor UAV with a cable-suspended load},'' in
+  {\em 52nd IEEE Conference on Decision and Control}, pp.~2269--2274, IEEE, dec
+  2013.
+
+\bibitem{Mahony2012}
+R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
+  Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
+  Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
 
 \bibitem{Jurdjevic1997}
 V.~Jurdjevic, {\em {Geometric Control Theory}}.
@@ -84,12 +90,6 @@ J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
   safe maneuvers using reachable sets: Autonomous quadrotor aerobatics in
   theory and practice},'' in {\em Proceedings - IEEE International Conference
   on Robotics and Automation}, pp.~1649--1654, 2010.
-
-\bibitem{Sreenath2013c}
-K.~Sreenath, {Taeyoung Lee}, and V.~Kumar, ``{Geometric control and
-  differential flatness of a quadrotor UAV with a cable-suspended load},'' in
-  {\em 52nd IEEE Conference on Decision and Control}, pp.~2269--2274, IEEE, dec
-  2013.
 
 \bibitem{Lee2010c}
 T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a

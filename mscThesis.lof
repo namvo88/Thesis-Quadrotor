@@ -9,14 +9,14 @@
 \contentsline {figure}{\numberline {2-7}{\ignorespaces Quadrotor-Load model representation\relax }}{13}{figure.caption.18}
 \contentsline {figure}{\numberline {2-8}{\ignorespaces \relax }}{13}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Backstepping Control representation of the QR \relax }}{16}{figure.caption.20}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Backstepping Control representation of the QR-Load system\relax }}{16}{figure.caption.21}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Quadrotor Attitude Controller\relax }}{18}{figure.caption.22}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces \relax }}{19}{figure.caption.23}
-\contentsline {figure}{\numberline {3-5}{\ignorespaces \relax }}{19}{figure.caption.24}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Backstepping Control representation of the QR \relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Backstepping Control representation of the QR-Load system\relax }}{18}{figure.caption.21}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Quadrotor Attitude Controller\relax }}{20}{figure.caption.22}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces \relax }}{21}{figure.caption.23}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces \relax }}{21}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{23}{figure.caption.27}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Representation of the command filter\relax }}{25}{figure.caption.29}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{25}{figure.caption.27}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Representation of the command filter\relax }}{27}{figure.caption.29}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A-1}{\ignorespaces Simulink Command Filter\relax }}{31}{figure.caption.31}
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Simulink Command Filter\relax }}{33}{figure.caption.31}

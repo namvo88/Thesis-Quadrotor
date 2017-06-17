@@ -182,8 +182,9 @@ Performance  that can be evaluated for different cases can be specified by the f
 \subsection{Case A}
 %ADD 
 %Explain cases, why interesting and what can be expected?\\
-
+In this case a trajectory is generated in order to transport the load from the starting position along one direction in order to reach the final position, while maintaining the same hight. 
 From point A to point B
+The fast
 
 %ADD xdes
 %ADD inputs f M
@@ -198,6 +199,9 @@ From point A to point B
 \subsection{Case C}
 %ADD 
 %Explain cases, why interesting and what can be expected?\\
+In this case a trajectory is generated to test multiple disciplines. 
+The trajectory has the shape of a sine wave that varies in amplitude in the direction of the x-axis, while moving along the y-axis and going up and down in height.
+Different velocities are required to track the trajectory. While tracking the right \a{qr} attitude to reach these velocities, it can be expected to be harder for the controller to also maintain the desired height. 
 
 %CHECK nog nodig?
 %\begin{figure}[h!]

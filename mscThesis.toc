@@ -10,7 +10,7 @@
 \contentsline {subparagraph}{Configuration Spaces}{9}{section*.15}
 \contentsline {section}{\numberline {2-3}Quadrotor-Load Model}{10}{section.2.3}
 \contentsline {paragraph}{Euler-Lagrange}{11}{section*.17}
-\contentsline {section}{\numberline {2-4}Classical Modeling}{12}{section.2.4}
+\contentsline {section}{\numberline {2-4}Classical Modeling}{13}{section.2.4}
 \contentsline {section}{\numberline {2-5}Stability Analysis}{14}{section.2.5}
 \contentsline {section}{\numberline {2-6}Summary}{14}{section.2.6}
 \contentsline {chapter}{\numberline {3}Geometric Control Design}{17}{chapter.3}

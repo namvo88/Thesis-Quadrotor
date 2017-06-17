@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  16 JUN 2017 19:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  18 JUN 2017 01:07
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -1417,12 +1417,12 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 40.
 (pdftex.def)             Requested size: 298.75394pt x 94.85191pt.
  [6 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/dcsc.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 90--121
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 91--122
  [][] 
  []
 
@@ -1433,20 +1433,20 @@ Underfull \vbox (badness 5802) has occurred while \output is active []
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 156.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 157.
 (pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 157.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 158.
 (pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 158.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 159.
 (pdftex.def)             Requested size: 132.79747pt x 42.15921pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 184.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 185.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
 
@@ -1454,13 +1454,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 195.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 196.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 197.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 198.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-LaTeX Font Info:    Try loading font information for U+euf on input line 197.
+LaTeX Font Info:    Try loading font information for U+euf on input line 198.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1468,35 +1468,39 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 [8] [9]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 260.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 261.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
  [10] [11] [12]
-<./StyleStuff/qrmodelppt.png, id=624, 722.7pt x 542.025pt>
+<./StyleStuff/qrmodelppt.png, id=623, 722.7pt x 542.025pt>
 File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
 
 <use ./StyleStuff/qrmodelppt.png>
-Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 468.
+Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 481.
 (pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 476.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 489.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [13 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 547--114
+[14])
+Underfull \hbox (badness 10000) in paragraph at lines 560--114
 
  []
 
-[14] [15] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex [16
+[15] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex [16
 
 
 
@@ -1815,46 +1819,47 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 13514 strings out of 493921
- 198193 string characters out of 3144882
- 423206 words of memory out of 3000000
- 16164 multiletter control sequences out of 15000+200000
+ 13511 strings out of 493921
+ 198156 string characters out of 3144882
+ 423159 words of memory out of 3000000
+ 16162 multiletter control sequences out of 15000+200000
  19168 words of font info for 72 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  45i,17n,94p,901b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public
-/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/
-type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xel
-atex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2
-.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86
-)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C
+/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/ty
+pe1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xela
+tex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
 :/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xe
-latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.
-9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
-MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:
+mi9.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/x
+elatex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2
+.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)
+/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cms
-sbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9.510
-5/xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiK
-TeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt8
+s8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfo
+nts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/
+fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9.510
+5/xelatex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt12
 .pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfont
-s/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/
-public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xela
-tex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mscThesis.pdf (57 pages, 899223 bytes).
+s/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/publ
+ic/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+.5105/xelatex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mscThesis.pdf (57 pages, 908850 bytes).
 PDF statistics:
- 1059 PDF objects out of 1200 (max. 8388607)
- 283 named destinations out of 1000 (max. 500000)
+ 1061 PDF objects out of 1200 (max. 8388607)
+ 282 named destinations out of 1000 (max. 500000)
  447 words of extra memory for PDF output out of 10000 (max. 10000000)
 

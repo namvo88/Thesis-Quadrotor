@@ -38,15 +38,15 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{Modeling Constraints}{section.5.2}% 38
 \BOOKMARK [2][-]{subsection.5.2.3}{Hybrid Modeling}{section.5.2}% 39
 \BOOKMARK [2][-]{subsection.5.2.4}{Trajectory Generation}{section.5.2}% 40
-\BOOKMARK [3][-]{section*.30}{Minimum Snap Trajectory Generation}{subsection.5.2.4}% 41
+\BOOKMARK [3][-]{section*.39}{Minimum Snap Trajectory Generation}{subsection.5.2.4}% 41
 \BOOKMARK [0][-]{appendix.A}{Appendix}{}% 42
 \BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 43
 \BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 44
-\BOOKMARK [1][-]{section.A.2}{Derivation of LQR controller}{appendix.A}% 45
+\BOOKMARK [1][-]{section.A.2}{LQR controller}{appendix.A}% 45
 \BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 46
 \BOOKMARK [2][-]{subsection.A.2.2}{Controller}{section.A.2}% 47
 \BOOKMARK [1][-]{section.A.3}{Figures}{appendix.A}% 48
 \BOOKMARK [1][-]{section.A.4}{MATLAB code}{appendix.A}% 49
 \BOOKMARK [2][-]{subsection.A.4.1}{A MatlabListing}{section.A.4}% 50
-\BOOKMARK [0][-]{section*.32}{Bibliography}{}% 51
-\BOOKMARK [0][-]{section*.33}{Acronyms}{}% 52
+\BOOKMARK [0][-]{section*.41}{Bibliography}{}% 51
+\BOOKMARK [0][-]{section*.42}{Acronyms}{}% 52

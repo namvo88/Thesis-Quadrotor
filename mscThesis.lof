@@ -15,8 +15,14 @@
 \contentsline {figure}{\numberline {3-4}{\ignorespaces \relax }}{21}{figure.caption.23}
 \contentsline {figure}{\numberline {3-5}{\ignorespaces \relax }}{21}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{25}{figure.caption.27}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Representation of the command filter\relax }}{27}{figure.caption.29}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces LQR control design\relax }}{26}{figure.caption.29}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Representation of the command filter\relax }}{28}{figure.caption.32}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Desired Load Position Case A\relax }}{29}{figure.caption.33}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces Desired Load Position Case B\relax }}{29}{figure.caption.34}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Desired Load Position Case C\relax }}{29}{figure.caption.35}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces Results Nonlinear Geometric Control Case A \relax }}{30}{figure.caption.36}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces Results Nonlinear Geometric Control Case B \relax }}{31}{figure.caption.37}
+\contentsline {figure}{\numberline {4-8}{\ignorespaces Results Nonlinear Geometric Control Case C \relax }}{32}{figure.caption.38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A-1}{\ignorespaces Simulink Command Filter\relax }}{33}{figure.caption.31}
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Simulink Command Filter\relax }}{40}{figure.caption.40}

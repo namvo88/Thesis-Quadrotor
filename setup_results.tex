@@ -9,52 +9,84 @@ A conclusion is made based on the obtained results in Section \ref{set:set.res}.
 \section{Setup}\label{sec:set.setup}
 \paragraph{Model parameters}
 %ADD chosen model parameters 
-The simulations are developed using Matlab and Simulink, using the following system parameters.
-\begin{equation}\label{key}
-\begin{aligned}
-J&=\\
-m_Q&=\\
-\nonumber
-\end{aligned}
-\quad
-\begin{aligned}
-d&=\\
-c_{\tau f}&=\\
-\nonumber
-\end{aligned}
-\quad
-\begin{aligned}
-m_L&=\\
-l_L&=\\
-\nonumber
-\end{aligned}
-\end{equation}
+The simulations are developed using Matlab and Simulink, using the system parameters found in Table \ref{tab:set.par}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|ll|l|}
+		\hline
+		\textbf{Parameter}&\textbf{Value}&&\textbf{Description}\\
+		\hline
+		$ m_Q $&4.34& $ kg $&Quadrotor Mass\\
+		$ m_L $&0.1 &$ kg $&Load Mass\\
+		$ l $&0.315& $ m $&Arm length from \a{qr} \a{com} to rotor\\
+		$ L $&0.7 &$ m $& Cable Length\\
+		$ I_{xx} $&0.0820&$kgm^2 $&Quadrotor Inertia about x-axis\\
+		$ I_{yy} $&0.0845&$kgm^2 $&Quadrotor Inertia about y-axis\\
+		$ I_{zz} $&0.1377&$kgm^2 $&Quadrotor Inertia about z-axis\\
+		$ d $&&&Drag Constant\\
+		$ b $&&&Thrust Constant\\
+		$ c_{\tau_f} $&&& Constant	\\
+		\hline	
+	\end{tabular}
+	\caption{Modeling Parameters}
+	\label{tab:set.par}
+\end{table}
 
 \paragraph{LQR Control}
-\a{lqr} control is based on small angle assumption. Therefore, a traditional modeling method may represent the rotation matrix with a local coordinate system, for example with a Euler Angle parameterization. An \a{lqr} control design is based on a linearized model of the system. The control design is shown in Figure \ref{fig:set.lqr} and the derivation of the model can be found in Section \ref{app:lqr}.
+%ADD why LQR, what is good for / known for
+% tuning / easy tuning / 
+A \acf{lqr} controller is used to compare the performance of the nonlinear geometric controller. 
+\a{lqr} control uses an algorithm to obtain a state-feedback controller, minimizing a cost function depending on the states and weight factors. 
+%is widely used and known for its robustness, because small modeling errors still allow the optimization to be executed.
+
+An \a{lqr} design is shown in Figure \ref{fig:set.lqr}
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
 	\caption{LQR control design\label{fig:set.lqr}}
-\end{figure}		
+\end{figure}
 
-%ADD chosen parameters LQR
+\a{lqr} control is based on a small angle assumption. Therefore, a traditional modeling method may represent the rotation matrix with a local coordinate system, for example with an Euler Angle parameterization. 
+A continuous time linearized model of the system used in this controller is represented in the following form 
+\begin{align}\label{eq:ss}
+\mathbf{\dot{x} }&=A\mathbf{x}+Bu\\
+y&=C\mathbf{x}+Du
+\end{align}
+where 
+\begin{align}\label{eq:state}
+	\textbf{x}&=\begin{bmatrix}
+		\textbf{q}\\
+		\mathbf{\dot{q}}
+	\end{bmatrix}\\
+	\mathbf{q}&=\begin{bmatrix}
+		x&y&z&\phi&\theta&\psi&\phi_L&\theta_L
+	\end{bmatrix}^T\\
+	\mathbf{\dot{q}}&=\begin{bmatrix}
+		\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\phi}_L&\dot{\theta}_L
+	\end{bmatrix}^T\\
+	u&=\begin{bmatrix}
+		f&M_\phi&M_\theta&M_\psi
+	\end{bmatrix}^T
+\end{align}
+%DEFINE theta_L and phi_L
+The derivation of $ A, B, C, D, K $ can be found in Section \ref{app:lqr}. 
+
+Using \texttt{Matlab} command \texttt{lqr(A,B,Q,R)}, an optimal gain matrix $ K $ is calculated, such that the state-feedback law $ u=-K\mathbf{x} $ minimizes the quadratic cost function defined as
+\begin{equation}\label{key}
+J(u)=\int_{0}^{\infty}(\mathbf{x}^TQ\mathbf{x}+u^TRu)dt
+\end{equation}
+
 The tuning parameters of the \a{lqr} controller a chosen as follows
 \begin{equation}\label{key}
-A=\begin{bmatrix}
-content...
-\end{bmatrix}
+	\begin{aligned}
+	Q &= diag(10 10 100, 1 1 1, 1 1, 1 1 1, 1 1 1, 1 1)\\
+	R &= diag(0.044 1.56 1.56 1.56)
+	\end{aligned}
 \end{equation}
-\begin{equation}\label{key}
-B=\begin{bmatrix}
-content...
-\end{bmatrix}
-\end{equation}
-\begin{equation}\label{key}
-C=\begin{bmatrix}
-content...
-\end{bmatrix}
-\end{equation}
+where $ Q $ and $ R $ denote weight matrices that penalize the states and inputs in the cost function.
+
+
 
 where the state $ \mathbf{x} $ and input $ u $ are defined as 
 \begin{align}\label{eq:state}
@@ -75,25 +107,25 @@ f&M_\phi&M_\theta&M_\psi
 
 \paragraph{Geometric Control}
 %ADD chosen parameters GC
-The controller gains in Equations \ref{eq:con.M},\ref{eq:con.R},\ref{eq:con.q} are chosen to be
-\begin{equation}\label{key}
-\begin{aligned}
-k_R&=\\
-k_\Omega&=\\
-\end{aligned}
-\quad
-\begin{aligned}
-k_q&=\\
-k_\omega&=\\
-\end{aligned}
-\quad
-\begin{aligned}
-k_x&=\\
-k_v&=
-\nonumber
-\end{aligned}
-\end{equation}
+The chosen controller gains in Equations \ref{eq:con.M},\ref{eq:con.R},\ref{eq:con.q} can be found in Table \ref{tab:set.gains}.
 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Gain}&\textbf{Value}\\
+		\hline
+		$ k_R $&\\
+		$ k_\Omega $&\\
+		$ k_q $&\\
+		$ k_\omega $&\\
+		$ k_x $&\\
+		$ k_v $&\\	
+		\hline
+	\end{tabular}
+	\caption{Controller Gains}
+	\label{tab:set.gains}
+\end{table}
 
 \subsection{Command Filtering}
 %ADD Why is Command Filtering needed? 
@@ -125,19 +157,14 @@ This command filter is implemented to compute $ \dot{R}_c, \ddot{R}_c,\dot{q}_c,
 %CHECK
 %Examples from \cite{Farrell2008} and \cite{Djapic2008}. 
 
-***************************************\\
 %ADD Pro Con Command filter
-Easy implementation. Less computational effort.
-
-Less accurate, because filters high frequency signals.
-
-***************************************\\
+%Easy implementation. Less computational effort.
+%Less accurate, because filters high frequency signals.
 
 The load attitude controller generates a commanded QR attitude $ R_c $ and its derivative $ \dot{R}_c $. In the same fashion, the load position controller generates a commanded load attitude $ q_c $ and its derivative $ \dot{q}_c $. 
 
 The controllers are functions of these commanded signals and their derivatives. Instead of analytic differentiation of these signals, they are obtained by integration by applying a third order low pass filter to the original signals $ R_c^o $ and $ q_c^o $. 
 The state space implementation of this third order filter is \cite{Djapic2008}
-
 
 \begin{figure}[h!]
 	\centering
@@ -182,9 +209,19 @@ Performance  that can be evaluated for different cases can be specified by the f
 \subsection{Case A}
 %ADD 
 %Explain cases, why interesting and what can be expected?\\
-In this case a trajectory is generated in order to transport the load from the starting position along one direction in order to reach the final position, while maintaining the same hight. 
+In this case a smooth step-like trajectory is generated to transport the load from the starting position along one direction in order to reach the final position. 
+
+It will show if the system is fast enough to track the position.
+
 From point A to point B
 The fast
+
+\begin{figure}[h!]
+	\centering
+	\makebox[.49\textwidth][c]{\subfloat[][ \label{fig:}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.49\textwidth][c]{\subfloat[][ \label{fig:}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{Desired Load Position Case A\label{fig:set.caseA}}
+\end{figure}		
 
 %ADD xdes
 %ADD inputs f M
@@ -192,9 +229,15 @@ The fast
 %ADD 
 
 \subsection{Case B}
+
 %ADD 
 %Explain cases, why interesting and what can be expected?\\
-
+\begin{figure}[h!]
+	\centering
+	\makebox[.49\textwidth][c]{\subfloat[][ \label{fig:}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.49\textwidth][c]{\subfloat[][ \label{fig:}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{Desired Load Position Case B\label{fig:set.caseB}}
+\end{figure}		
 
 \subsection{Case C}
 %ADD 
@@ -209,16 +252,50 @@ Different velocities are required to track the trajectory. While tracking the ri
 %	\makebox[\textwidth][c]{\includegraphics[width=.2\paperwidth]{./StyleStuff/dcsc.png}}
 %	\caption{Cases of which the performance could be evaluated \label{fig:routes}}
 %\end{figure}
+\begin{figure}[h!]
+	\centering
+	\makebox[.49\textwidth][c]{\subfloat[][ \label{fig:}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.49\textwidth][c]{\subfloat[][ \label{fig:}]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}}
+	\caption{Desired Load Position Case C\label{fig:set.caseC}}
+\end{figure}		
+
 
 \section{Results}\label{set:set.res}
 \subsection{Case A}
-
+\begin{figure}[h!]
+	\centering
+	\makebox[.49\textwidth][c]{\subfloat[][Load position]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-xL29}}\label{fig:}}}	
+	\makebox[.49\textwidth][c]{\subfloat[][Load position error]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-exL29}}\label{fig:}}}	
+	\makebox[.49\textwidth][c]{\subfloat[][Load attitude error]{\includegraphics[width=.5\textwidth]{\dir{LPOSQRL-eq29}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][QR attitude error]{\includegraphics[width=.5\textwidth]{\dir{LPOSQRL-eR29}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][QR attitude error function $ \Psi_R $]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-PsiR29}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][Load attitude error function $ \Psi_q $]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-Psiq29}}\label{fig:}}}
+	\caption{Results Nonlinear Geometric Control Case A \label{fig:set.caseAres}}
+\end{figure}	
 
 \subsection{Case B}
-
+\begin{figure}[h!]
+	\centering
+	\makebox[.49\textwidth][c]{\subfloat[][Load position]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-xL29}}\label{fig:}}}	
+	\makebox[.49\textwidth][c]{\subfloat[][Load position error]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-exL29}}\label{fig:}}}	
+	\makebox[.49\textwidth][c]{\subfloat[][Load attitude error]{\includegraphics[width=.5\textwidth]{\dir{LPOSQRL-eq29}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][QR attitude error]{\includegraphics[width=.5\textwidth]{\dir{LPOSQRL-eR29}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][QR attitude error function $ \Psi_R $]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-PsiR29}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][Load attitude error function $ \Psi_q $]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-Psiq29}}\label{fig:}}}
+	\caption{Results Nonlinear Geometric Control Case B \label{fig:set.caseBres}}
+\end{figure}		
 
 \subsection{Case C}
-
+\begin{figure}[h!]
+	\centering
+	\makebox[.49\textwidth][c]{\subfloat[][Load position]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-xL28}}\label{fig:}}}	
+	\makebox[.49\textwidth][c]{\subfloat[][Load position error]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-exL28}}\label{fig:}}}	
+	\makebox[.49\textwidth][c]{\subfloat[][Load attitude error]{\includegraphics[width=.5\textwidth]{\dir{LPOSQRL-eq28}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][QR attitude error]{\includegraphics[width=.5\textwidth]{\dir{LPOSQRL-eR28}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][QR attitude error function $ \Psi_R $]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-PsiR28}}\label{fig:}}}
+	\makebox[.49\textwidth][c]{\subfloat[][Load attitude error function $ \Psi_q $]{\includegraphics[width=.45\textwidth]{\dir{LPOSQRL-Psiq28}}\label{fig:}}}
+	\caption{Results Nonlinear Geometric Control Case C \label{fig:set.caseCres}}
+\end{figure}	
 
 \section{Conclusion}\label{set:set.con}
 %CHECK 

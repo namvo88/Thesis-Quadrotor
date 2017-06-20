@@ -28,46 +28,189 @@ Applying the laws of motion to (\ref{eq:CM}) and inserting (\ref{eq:mod.xQ2xL}) 
 %ADD derivation of ddq (TANG2014)
 
 
-\section{Derivation of LQR controller}\label{app:lqr}
+\section{LQR controller}\label{app:lqr}
 
 \subsection{Modeling}
-From Newton's laws follows
-\begin{align}
-x_Q&=fRe_3-m_Qge_3-Tq\\
-x_L&=-m_Lge_3+Tq
+%From Newton's laws follows
+%\begin{align}
+%x_Q&=fRe_3-m_Qge_3-Tq\\
+%x_L&=-m_Lge_3+Tq
+%\end{align}
+%
+%$ x_Q $ and $ x_L $ are related by
+%\begin{equation}\label{key}
+%x_L = x_Q+Lq
+%\end{equation}
+
+%CHECK is dit nodig?
+% From Lagrangian equations of motion, 
+%
+%\begin{equation}\label{eq:app.QRpos}
+%\begin{aligned}
+%%ADD Not done yet
+%\ddot{x}&=\\
+%\ddot{y}&=\\
+%\ddot{z}&=
+%\end{aligned}
+%\end{equation}
+%
+%\begin{equation}\label{eq:app.QRatt}
+%\begin{aligned}
+%%ADD Not done yet
+%\ddot{\phi}&=\\
+%\ddot{\theta}&=\\
+%\ddot{\psi}&=
+%\end{aligned}
+%\end{equation}
+%
+%\begin{equation}\label{eq:app.Latt}
+%\begin{aligned}
+%%ADD Not done yet
+%\ddot{\phi}_L&=\\
+%\ddot{\theta}_L&=
+%\end{aligned}
+%\end{equation}
+%The second order system of ODEs can be transformed 
+The linearized model is written into a first order ODE of the form
+\begin{align}\label{eq:app.ss}
+\mathbf{\dot{x} }&=A\mathbf{x}+Bu\\
+y&=C\mathbf{x}+Du
 \end{align}
-
-$ x_Q $ and $ x_L $ are related by
+with the following state- and input vectors
 \begin{equation}\label{key}
-x_L = x_Q+Lq
-\end{equation}
-
-\begin{equation}\label{eq:app.QRpos}
 \begin{aligned}
-%ADD Not done yet
-\ddot{x}&=\\
-\ddot{y}&=\\
-\ddot{z}&=
+\textbf{x}&=\begin{bmatrix}
+\textbf{q}\\
+\mathbf{\dot{q}}
+\end{bmatrix}\\
+\mathbf{q}&=\begin{bmatrix}
+x&y&z&\phi&\theta&\psi&\phi_L&\theta_L
+\end{bmatrix}^T\\
+\mathbf{\dot{q}}&=\begin{bmatrix}
+\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\phi}_L&\dot{\theta}_L
+\end{bmatrix}^T\\
+u&=\begin{bmatrix}
+f&M_\phi&M_\theta&M_\psi
+\end{bmatrix}^T
 \end{aligned}
 \end{equation}
 
-\begin{equation}\label{eq:app.QRatt}
+The model is linearized about the hovering flight mode. All translational and rotational velocities are zero during hover. The positional states and the yaw angle do not affect the dynamics, and are set equal to zero. A thrust input $ u_1=g(mQ+mL) $ is required to maintain hover, and all other control inputs are set equal to zero. 
+The states and inputs in the equations of motion are substituted by an initial condition and a perturbation
+\begin{equation}\label{key}
+\mathbf{\dot{x}}\rightarrow\mathbf{\dot{x}}_0+\delta\mathbf{\dot{x}}, \quad \mathbf{{x}}\rightarrow\mathbf{{x}}_0+\delta\mathbf{{x}}, \quad u\rightarrow u_0+\delta u
+\end{equation}
+\begin{equation}\label{key}
 \begin{aligned}
-%ADD Not done yet
-\ddot{\phi}&=\\
-\ddot{\theta}&=\\
-\ddot{\psi}&=
+\mathbf{x}(0) &= \mathbf{0}\\
+u(0)&=\begin{bmatrix}
+g(m_Q+m_L) &0 &0& 0
+\end{bmatrix}^T
 \end{aligned}
 \end{equation}
-
-\begin{equation}\label{eq:app.Latt}
-\begin{aligned}
-%ADD Not done yet
-\ddot{\phi}_L&=\\
-\ddot{\theta}_L&=
-\end{aligned}
+The linearized equations of motion are rearranged into Equation \ref{eq:app.2ode} and substituted in Equation \ref{eq:app.ss}.
+\begin{equation}\label{eq:app.2ode}
+\begin{bmatrix}
+content...
+\end{bmatrix}
+\begin{bmatrix}
+		\delta \ddot{x} \\\delta\ddot{y}\\\delta\ddot{z}\\\delta\ddot{\phi}\\\delta\ddot{\theta}\\\delta\ddot{\psi}\\\delta\ddot{\phi}_L\\\delta\ddot{\theta}_L 
+		\end{bmatrix}+
+\begin{bmatrix}
+content...
+\end{bmatrix}
+\begin{bmatrix}
+		\delta {x} \\\delta{y}\\\delta{z}\\\delta{\phi}\\\delta{\theta}\\\delta{\psi}\\\delta{\phi}_L\\\delta{\theta}_L 
+\end{bmatrix}
+=
+\begin{bmatrix}
+content...
+\end{bmatrix}
+\begin{bmatrix}
+\delta u_1\\\delta u_2\\\delta u_3\\\delta u_4
+\end{bmatrix}
 \end{equation}
 
+\begin{lstlisting}
+LQRA =
+
+Columns 1 through 8
+
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0    9.7008         0         0    0.1092         0
+0         0         0         0   -9.9217         0         0    0.1117
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0    6.9291         0         0   -6.9291         0
+0         0         0         0    7.0870         0         0   -7.0870
+
+Columns 9 through 16
+
+1.0000         0         0         0         0         0         0         0
+0    1.0000         0         0         0         0         0         0
+0         0    1.0000         0         0         0         0         0
+0         0         0    1.0000         0         0         0         0
+0         0         0         0    1.0000         0         0         0
+0         0         0         0         0    1.0000         0         0
+0         0         0         0         0         0    1.0000         0
+0         0         0         0         0         0         0    1.0000
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+0         0         0         0         0         0         0         0
+\end{lstlisting}
+\begin{lstlisting}
+LQRB =
+
+0         0         0         0
+0         0         0         0
+0         0         0         0
+0         0         0         0
+0         0         0         0
+0         0         0         0
+0         0         0         0
+0         0         0         0
+0   -0.1591         0         0
+0         0   -0.1627         0
+0.2252         0         0         0
+0   12.1951         0         0
+0         0   11.8343         0
+0         0         0    7.2622
+0   10.0905         0         0
+0         0   10.3203         0
+\end{lstlisting}
+
+\texttt{Matlab} command \texttt{lqr(A,B,Q,R)} generates the following gain matrix $ K $
+\begin{lstlisting}
+K =
+
+Columns 1 through 8
+
+-0.0000   -0.0000   47.6731    0.0000   -0.0000    0.0000   -0.0000    0.0000
+3.1623    0.0000   -0.0000    7.5117    0.0000   -0.0000    2.6683   -0.0000
+-0.0000   -3.1623   -0.0000    0.0000    7.4605    0.0000   -0.0000    2.5448
+0.0000   -0.0000    0.0000   -0.0000    0.0000    1.0000    0.0000    0.0000
+
+Columns 9 through 16
+
+-0.0000   -0.0000   21.1202    0.0000    0.0000    0.0000   -0.0000   -0.0000
+2.7501    0.0000   -0.0000    1.4827    0.0000    0.0000    0.4376   -0.0000
+-0.0000   -2.7296    0.0000    0.0000    1.4631    0.0000   -0.0000    0.3949
+0.0000   -0.0000    0.0000    0.0000   -0.0000    1.1293   -0.0000    0.0000
+\end{lstlisting}
 
 
 
@@ -76,37 +219,40 @@ x_L = x_Q+Lq
 %	    \begin{equation}
 %	    ax = 
 %	    \begin{bmatrix}
-%	    (f*m*sin(\phi_q)*sin(\psi_q) + f*m_l*sin(\phi_q)*sin(\psi_q) - f*m_l*cos(\theta)^2*sin(\phi_q)*sin(\psi_q) + f*m*cos(\phi_q)*cos(\psi_q)*sin(\theta_q) + f*m_l*cos(\phi_q)*cos(\psi_q)*sin(\theta_q) + l*m*m_l*v_\theta^2*cos(\theta)*sin(\phi) + f*m_l*cos(\phi)^2*cos(\theta)^2*sin(\phi_q)*sin(\psi_q) + l*m*m_l*v_\phi^2*cos(\theta)^3*sin(\phi) - f*m_l*cos(\phi_q)*cos(\psi_q)*cos(\theta)^2*sin(\theta_q) + f*m_l*cos(\phi)^2*cos(\phi_q)*cos(\psi_q)*cos(\theta)^2*sin(\theta_q) + f*m_l*cos(\psi_q)*cos(\theta)*sin(\phi)*sin(\phi_q)*sin(\theta) + f*m_l*cos(\phi)*cos(\phi_q)*cos(\theta_q)*cos(\theta)^2*sin(\phi) - f*m_l*cos(\phi_q)*cos(\theta)*sin(\phi)*sin(\psi_q)*sin(\theta_q)*sin(\theta))/(m*(m + m_l))\\
-%	    (l*m*m_l*v_\theta^2*sin(\theta) - f*m_l*cos(\psi_q)*cos(\theta)^2*sin(\phi_q) - f*m*cos(\psi_q)*sin(\phi_q) + f*m*cos(\phi_q)*sin(\psi_q)*sin(\theta_q) + f*m_l*cos(\phi_q)*cos(\theta)^2*sin(\psi_q)*sin(\theta_q) + l*m*m_l*v_\phi^2*cos(\theta)^2*sin(\theta) + f*m_l*cos(\phi)*cos(\phi_q)*cos(\theta_q)*cos(\theta)*sin(\theta) - f*m_l*cos(\theta)*sin(\phi)*sin(\phi_q)*sin(\psi_q)*sin(\theta) - f*m_l*cos(\phi_q)*cos(\psi_q)*cos(\theta)*sin(\phi)*sin(\theta_q)*sin(\theta))/(m*(m + m_l))\\
-%	    -(g*m^2 + g*m*m_l - f*m*cos(\phi_q)*cos(\theta_q) - f*m_l*cos(\phi_q)*cos(\theta_q) + l*m*m_l*v_\theta^2*cos(\phi)*cos(\theta) + f*m_l*cos(\phi)^2*cos(\phi_q)*cos(\theta_q)*cos(\theta)^2 + l*m*m_l*v_\phi^2*cos(\phi)*cos(\theta)^3 + f*m_l*cos(\phi)*cos(\psi_q)*cos(\theta)*sin(\phi_q)*sin(\theta) - f*m_l*cos(\phi)*cos(\theta)^2*sin(\phi)*sin(\phi_q)*sin(\psi_q) - f*m_l*cos(\phi)*cos(\phi_q)*cos(\theta)*sin(\psi_q)*sin(\theta_q)*sin(\theta) - f*m_l*cos(\phi)*cos(\phi_q)*cos(\psi_q)*cos(\theta)^2*sin(\phi)*sin(\theta_q))/(m*(m + m_l))\\
-%	    (- l*m*cos(\theta)*sin(\theta)*v_\phi^2 + f*cos(\psi_q)*cos(\theta)*sin(\phi_q) - f*cos(\phi)*cos(\phi_q)*cos(\theta_q)*sin(\theta) - f*cos(\phi_q)*cos(\theta)*sin(\psi_q)*sin(\theta_q) + f*sin(\phi)*sin(\phi_q)*sin(\psi_q)*sin(\theta) + f*cos(\phi_q)*cos(\psi_q)*sin(\phi)*sin(\theta_q)*sin(\theta))/(l*m)\\
-%	    -(f*cos(\phi_q)*cos(\theta_q)*sin(\phi) + f*cos(\phi)*sin(\phi_q)*sin(\psi_q) - 2*l*m*v_\phi*v_\theta*sin(\theta) + f*cos(\phi)*cos(\phi_q)*cos(\psi_q)*sin(\theta_q))/(l*m*cos(theta))
+%	    f(ms_{\phi_q}s_{\psi_q}+ m_Ls_{\phi_q}s_{\psi_q} + mc_{\phi_q}c_{\psi_q}s_{\theta_q} + m_Lc_{\phi_q}c_{\psi_q}s_{\theta_q}- m_Lc_{\phi_q}c_{\psi_q}c_{\theta}^2s_{\theta_q} + m_Lc_{\phi}^2c_{\phi_q}c_{\psi_q}c_{\theta}^2s_{\theta_q} - m_Lc_{\theta}^2s_{\phi_q}s_{\psi_q}+ m_Lc_{\phi}^2c_{\theta}^2s_{\phi_q}s_{\psi_q}  + m_Lc_{\psi_q}c_{\theta}s_{\phi}s_{\phi_q}s_{\theta} + m_Lc_{\phi}c_{\phi_q}c_{\theta_q}c_{\theta}^2s_{\phi} - m_Lc_{\phi_q}c_{\theta}s_{\phi}s_{\psi_q}s_{\theta_q}s_{\theta})
+%	    
+%	    
+%	    (   + Lmm_Lv_\theta^2c_{\theta}s_{\phi} + Lmm_Lv_\phi^2c_{\theta}^3s_{\phi} )/(m(m + m_L))\\
+%	    \\
+%	    (Lmm_Lv_\theta^2s_{\theta} - fm_Lc_{\psi_q}c_{\theta}^2s_{\phi_q} - fmc_{\psi_q}s_{\phi_q} + fmc_{\phi_q}s_{\psi_q}s_{\theta_q} + fm_Lc_{\phi_q}c_{\theta}^2s_{\psi_q}s_{\theta_q} + Lmm_Lv_\phi^2c_{\theta}^2s_{\theta} + fm_Lc_{\phi}c_{\phi_q}c_{\theta_q}c_{\theta}s_{\theta} - fm_Lc_{\theta}s_{\phi}s_{\phi_q}s_{\psi_q}s_{\theta} - fm_Lc_{\phi_q}c_{\psi_q}c_{\theta}s_{\phi}s_{\theta_q}s_{\theta})/(m(m + m_L))\\
+%	    \\
+%	    -(gm^2 + gmm_L - fmc_{\phi_q}c_{\theta_q} - fm_Lc_{\phi_q}c_{\theta_q} + Lmm_Lv_\theta^2c_{\phi}c_{\theta} + fm_Lc_{\phi}^2c_{\phi_q}c_{\theta_q}c_{\theta}^2 + Lmm_Lv_\phi^2c_{\phi}c_{\theta}^3 + fm_Lc_{\phi}c_{\psi_q}c_{\theta}s_{\phi_q}s_{\theta} - fm_Lc_{\phi}c_{\theta}^2s_{\phi}s_{\phi_q}s_{\psi_q} - fm_Lc_{\phi}c_{\phi_q}c_{\theta}s_{\psi_q}s_{\theta_q}s_{\theta} - fm_Lc_{\phi}c_{\phi_q}c_{\psi_q}c_{\theta}^2s_{\phi}s_{\theta_q})/(m(m + m_L))\\
+%	    \\
+%	    (- Lmc_{\theta}s_{\theta}v_\phi^2 + fc_{\psi_q}c_{\theta}s_{\phi_q} - fc_{\phi}c_{\phi_q}c_{\theta_q}s_{\theta} - fc_{\phi_q}c_{\theta}s_{\psi_q}s_{\theta_q} + fs_{\phi}s_{\phi_q}s_{\psi_q}s_{\theta} + fc_{\phi_q}c_{\psi_q}s_{\phi}s_{\theta_q}s_{\theta})/(Lm)\\
+%	    \\
+%	    -(fc_{\phi_q}c_{\theta_q}s_{\phi} + fc_{\phi}s_{\phi_q}s_{\psi_q} - 2Lmv_\phi v_{\theta}s_{\theta} + fc_{\phi}c_{\phi_q}c_{\psi_q}s_{\theta_q})/(Lmc_{\theta})
 %	    \end{bmatrix}
 %	    \end{equation}	    
 %	    
 %	    ***************************************\\	
 
 \subsection{Controller}
-\begin{align}\label{eq:state}
-\textbf{x}&=\begin{bmatrix}
-\textbf{q}\\
-\mathbf{\dot{q}}
-\end{bmatrix}\\
-\mathbf{q}&=\begin{bmatrix}
-x&y&z&\phi&\theta&\psi&\theta_L&\psi_L
-\end{bmatrix}^T\\
-\mathbf{\dot{q}}&=\begin{bmatrix}
-\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\theta}_L&\dot{\psi}_L
-\end{bmatrix}^T\\
-u&=\begin{bmatrix}
-f&M_\phi&M_\theta&M_\psi
-\end{bmatrix}^T
-\end{align}
 
-\begin{align}\label{eq:ss}
-\mathbf{\dot{x} }&=A\mathbf{x}+Bu\\
-y&=C\mathbf{x}+Du
-\end{align}
+\begin{equation}\label{key}
+A=\begin{bmatrix}
+content...
+\end{bmatrix}
+\end{equation}
+\begin{equation}\label{key}
+B=\begin{bmatrix}
+content...
+\end{bmatrix}
+\end{equation}
+\begin{equation}\label{key}
+C=\begin{bmatrix}
+content...
+\end{bmatrix}
+\end{equation}
 
 %CHECK if needed?
 \begin{equation}\label{key}
@@ -114,42 +260,42 @@ y&=C\mathbf{x}+Du
 \end{equation}
 
 %ADD reference
-By linearizing Equations \ref{eq:app.QRpos},\ref{eq:app.QRatt},\ref{eq:app.Latt} follows
-\begin{align}\label{key}
-%CHECK this equations
-\ddot{x}&=-\frac{f}{m}\\
-\ddot{y}&=\\
-\ddot{z}&=
-\end{align}
+%By linearizing Equations \ref{eq:app.QRpos},\ref{eq:app.QRatt},\ref{eq:app.Latt} follows
+%\begin{align}\label{key}
+%%CHECK this equations
+%\ddot{x}&=-\frac{f}{m}\\
+%\ddot{y}&=\\
+%\ddot{z}&=
+%\end{align}
 
-The mathematical model is linearized around the following operating points
-\begin{align}\label{key}
-\bar{\mathbf{x}}&=\begin{bmatrix}\bar{x}&\bar{y}&\bar{z}&\textbf{0}_{1\times13}\end{bmatrix}^T\\
-\bar{\textbf{u}}&=\begin{bmatrix}
-(m_Q+m_L)g&0&0&0
-\end{bmatrix}^T
-\end{align}
+%The mathematical model is linearized around the following operating points
+%\begin{align}\label{key}
+%\bar{\mathbf{x}}&=\begin{bmatrix}\bar{x}&\bar{y}&\bar{z}&\textbf{0}_{1\times13}\end{bmatrix}^T\\
+%\bar{\textbf{u}}&=\begin{bmatrix}
+%(m_Q+m_L)g&0&0&0
+%\end{bmatrix}^T
+%\end{align}
 
 %CHECK are these asssumptions correct?
-Assuming small angles, the following holds
-\begin{align}\label{key}
-\text{for } \gamma &= \phi, \theta, \psi, \theta_L, \psi_L\\
-sin(\gamma)&\simeq \gamma\\
-cos(\gamma)&\simeq 1\\
-\dot{\gamma} &\simeq 0\\
-F &\simeq (m_Q+m_L)g
-\end{align}
+%Assuming small angles, the following holds
+%\begin{align}\label{key}
+%\text{for } \gamma &= \phi, \theta, \psi, \theta_L, \psi_L\\
+%sin(\gamma)&\simeq \gamma\\
+%cos(\gamma)&\simeq 1\\
+%\dot{\gamma} &\simeq 0\\
+%F &\simeq (m_Q+m_L)g
+%\end{align}
 
-\begin{equation}\label{key}
-A=\frac{\partial \textbf{f}(x,u)}{\partial x}\mid _{	x=\bar{x},u=\bar{u}	}
-\end{equation}
-\begin{equation}\label{key}
-B=\frac{\partial \textbf{f}(x,u)}{\partial u}\mid _{	x=\bar{x},u=\bar{u}	}
-\end{equation}
-
-\begin{equation}\label{key}
-u=-K\left[\textbf{x}_{des}(t)-\textbf{x}(t)\right] 
-\end{equation}
+%\begin{equation}\label{key}
+%A=\frac{\partial \textbf{f}(x,u)}{\partial x}\mid _{	x=\bar{x},u=\bar{u}	}
+%\end{equation}
+%\begin{equation}\label{key}
+%B=\frac{\partial \textbf{f}(x,u)}{\partial u}\mid _{	x=\bar{x},u=\bar{u}	}
+%\end{equation}
+%
+%\begin{equation}\label{key}
+%u=-K\left[\textbf{x}_{des}(t)-\textbf{x}(t)\right] 
+%\end{equation}
 
 
 \section{Figures}

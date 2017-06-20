@@ -2,24 +2,35 @@
 
 A Quadrotor is a type of Unmanned Aerial Vehicle that has received an increasing amount of attention recently with many applications including search and rescue, surveillance, supply of food and medicines as disaster relief and object manipulation in construction and transportation.
 
-An interesting control problem is the Load Position Tracking of a cable suspended load. The system is highly nonlinear and under-actuated. The load cannot be actuated directly and has a natural swing at the end of each Quadrotor movement. A Nonlinear Geometric Control approach allows differential geometric techniques to be applied to systems control, which can be defined on a smooth nonlinear configuration space. This creates a coordinate-free dynamic model, while avoiding the problem of singularities on local charts. 
+An interesting subproblem is the control of the position of a cable suspended load. The challenge is in the fact that the Quadrotor-Load system is highly nonlinear and under-actuated. The load cannot be controlled directly and has a natural swing at the end of each Quadrotor movement. 
+
+This thesis presents a Nonlinear Geometric Control approach for the position tracking of a cable suspended load. Geometric Control applies differential geometric techniques to systems modeling and control.
+The Quadrotor-Load system dynamics are modeled on so called manifolds, smooth nonlinear configuration geometric spaces. 
+Analyzing these geometric structures with the principles of differential geometry allows the system to be modeled in an unambiguous coordinate-free dynamic fashion, while avoiding the problem of singularities that would occur on local charts. 
+
+A Nonlinear Geometric Control design is based on the geometric properties of the system. A backstepping approach allows different controller to control different flight modes, which are accountable for the Quadrotor attitude, Load attitude and Load position, in a cascaded structure. 
+
+Different cases are tested to investigate the possibilities and limitations of Nonlinear Geometric Control. A Linear Quadratic Regulator is derived to compare control performance. Simulations of both the linear and nonlinear controller are presented. 
+%ADD Results show
+Results show that....
 
 
-***************************************\\
-Intro about GC.. 
-Reasons to consider GC..
+%
+%***************************************\\
+%Intro about GC.. 
+%Reasons to consider GC..
+%
+%***************************************\\
+%Where simple linear control methods are restricted to small angle movements, nonlinear control methods allow more aggressive and faster movements.  The goal of the project is to investigate the effects on load position tracking performance when the system is modeled and controlled via a Nonlinear Geometric Control approach.
+%
+%
+%***************************************\\
+%The Quadrotor-Load system is modeled in a compact and coordinate-free fashion which allows the inherent geometric properties of the system to be controlled. 
+%%BOVENSTAAND IS VAAG?
 
-***************************************\\
-Where simple linear control methods are restricted to small angle movements, nonlinear control methods allow more aggressive and faster movements.  The goal of the project is to investigate the effects on load position tracking performance when the system is modeled and controlled via a Nonlinear Geometric Control approach.
-
-
-***************************************\\
-The Quadrotor-Load system is modeled in a compact and coordinate-free fashion which allows the inherent geometric properties of the system to be controlled. 
-%BOVENSTAAND IS VAAG?
-
-
-The main goal of this thesis is to research the effects on a cable-suspended load transportation using quadrotors, by involving complex or aggressive maneuvering through implementation of Non-Linear Geometric Control.
-Where linear control methods are restricted to small angle movement, non-linear control methods allow more aggressive movements. 
+%
+%The main goal of this thesis is to research the effects on a cable-suspended load transportation using quadrotors, by involving complex or aggressive maneuvering through implementation of Non-Linear Geometric Control.
+%Where linear control methods are restricted to small angle movement, non-linear control methods allow more aggressive movements. 
 
 %
 %		The main goal of this literature study is to review researches that have been done regarding the possibilities of manipulation and transportation of cable-suspended loads using quadrotors, possibly involving complex or aggressive maneuvering. Where linear control methods are restricted to small angle movement, non-linear control methods allow more aggressive movements, but are subject to complex 
@@ -37,14 +48,14 @@ Where linear control methods are restricted to small angle movement, non-linear 
 %
 %***************************************\\
 
-Furthermore, the studied control techniques are explained and their advantages are addressed. Several trajectory generation approaches and the related optimization techniques are studied. Their applications, with different purposes such as obstacle avoidance, time-optimal and swing-free trajectory planning are explained. The survey is concluded with a discussion about finding a suitable
-***************************************\\
-Define suitable
-
-***************************************\\
-control design to achieve the quadrotor-assisted task involving manipulation of a cable-suspended load.
-
-***************************************\\
+%Furthermore, the studied control techniques are explained and their advantages are addressed. Several trajectory generation approaches and the related optimization techniques are studied. Their applications, with different purposes such as obstacle avoidance, time-optimal and swing-free trajectory planning are explained. The survey is concluded with a discussion about finding a suitable
+%***************************************\\
+%Define suitable
+%
+%***************************************\\
+%control design to achieve the quadrotor-assisted task involving manipulation of a cable-suspended load.
+%
+%***************************************\\
 
 
 		

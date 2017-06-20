@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  18 JUN 2017 01:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  20 JUN 2017 23:48
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -591,7 +591,102 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks47
 \enit@inbox=\box37
 \enitdp@description=\count156
+) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mcode.sty
+-- Package: `mcode' 2.7 <2015/11/11> --
+Package: mcode 2015/11/11 2.7
+ - settings optimized for display (colour formating)
+ - line numbering enabled
+ - literate programming (character replacements) enabled
+ - automatic line breaking enabled (careful, buggy!)
+ - framed listings
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+\lbreakdots=\box38
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 230.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+))
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\nomencl\nomencl.sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen169
@@ -620,7 +715,7 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count158
-\mult@box=\box38
+\mult@box=\box39
 \multicol@leftmargin=\dimen171
 \c@unbalance=\count159
 \c@collectmore=\count160
@@ -633,13 +728,12 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \postmulticols=\dimen175
 \multicolsep=\skip91
 \multicolbaselineskip=\skip92
-\partial@page=\box39
-\last@line=\box40
-\mult@rightbox=\box41
-\mult@grightbox=\box42
-\mult@gfirstbox=\box43
-\mult@firstbox=\box44
-\@tempa=\box45
+\partial@page=\box40
+\last@line=\box41
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
 \@tempa=\box46
 \@tempa=\box47
 \@tempa=\box48
@@ -656,13 +750,14 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box59
 \@tempa=\box60
 \@tempa=\box61
+\@tempa=\box62
 \c@columnbadness=\count164
 \c@finalcolumnbadness=\count165
 \last@try=\dimen176
 \multicolovershoot=\dimen177
 \multicolundershoot=\dimen178
-\mult@nat@firstbox=\box62
-\colbreak@box=\box63
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
 \multicol@sort@counter=\count166
 ))
 \mscThesis@idxfile=\write8
@@ -896,6 +991,81 @@ Now handling font encoding U ...
 ... no UTF-8 mapping file for font encoding U
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+)
    defining Unicode char U+00A9 (decimal 169)
    defining Unicode char U+00AA (decimal 170)
    defining Unicode char U+00AE (decimal 174)
@@ -1004,7 +1174,7 @@ LaTeX Warning: Label `key' multiply defined.
 LaTeX Warning: Label `key' multiply defined.
 
 
-LaTeX Warning: Label `key' multiply defined.
+LaTeX Warning: Label `eq:state' multiply defined.
 
 
 LaTeX Warning: Label `key' multiply defined.
@@ -1013,10 +1183,145 @@ LaTeX Warning: Label `key' multiply defined.
 LaTeX Warning: Label `key' multiply defined.
 
 
-LaTeX Warning: Label `key' multiply defined.
+LaTeX Warning: Label `fig:' multiply defined.
 
 
-LaTeX Warning: Label `key' multiply defined.
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
 
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.aux
@@ -1027,7 +1332,13 @@ LaTeX Warning: Label `key' multiply defined.
 LaTeX Warning: Label `key' multiply defined.
 
 
-LaTeX Warning: Label `eq:state' multiply defined.
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
 
 
 LaTeX Warning: Label `key' multiply defined.
@@ -1121,22 +1432,29 @@ LaTeX Warning: Label `Djapic2008' multiply defined.
 LaTeX Warning: Label `Mellinger2011' multiply defined.
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-\AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring ON on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 80.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 80.
+\AtBeginShipoutBox=\box65
+Package hyperref Info: Link coloring ON on input line 80.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\hyperref\nameref.sty
 "
@@ -1148,9 +1466,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count171
 )
-LaTeX Info: Redefining \ref on input line 77.
-LaTeX Info: Redefining \pageref on input line 77.
-LaTeX Info: Redefining \nameref on input line 77.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
  (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.out)
 \@outlinefile=\write10
@@ -1160,7 +1478,7 @@ LaTeX Info: Redefining \nameref on input line 77.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count172
 \scratchdimen=\dimen192
-\scratchbox=\box65
+\scratchbox=\box66
 \nofMPsegments=\count173
 \nofMParguments=\count174
 \everyMPshowfont=\toks52
@@ -1206,7 +1524,7 @@ Package epstopdf Info: Source file: <example_titlefig.eps>
 (epstopdf)                    size: 87521 bytes
 (epstopdf)             Command: <epstopdf --outfile=example_titlefig-eps-conver
 ted-to.pdf example_titlefig.eps>
-(epstopdf)             \includegraphics on input line 83.
+(epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
 <example_titlefig-eps-converted-to.pdf, id=211, 450.68375pt x 354.32375pt>
@@ -1214,7 +1532,7 @@ File: example_titlefig-eps-converted-to.pdf Graphic file (type pdf)
 
 <use example_titlefig-eps-converted-to.pdf>
 Package pdftex.def Info: example_titlefig-eps-converted-to.pdf used on input li
-ne 83.
+ne 86.
 (pdftex.def)             Requested size: 455.24408pt x 357.92903pt.
 Package epstopdf Info: Source file: <StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
 
@@ -1226,7 +1544,7 @@ converted-to.pdf>
 (epstopdf)                    size: 15594 bytes
 (epstopdf)             Command: <epstopdf --outfile=StyleStuff/TUD_DCSC_bies_wh
 ite_A4_ENG-eps-converted-to.pdf StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
-(epstopdf)             \includegraphics on input line 83.
+(epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
 <StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf, id=212, 615.29875p
@@ -1236,7 +1554,7 @@ type pdf)
 
 <use StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf>
 Package pdftex.def Info: StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to
-.pdf used on input line 83.
+.pdf used on input line 86.
 (pdftex.def)             Requested size: 615.29724pt x 105.39348pt.
 
 Overfull \hbox (17.78937pt too wide) has occurred while \output is active
@@ -1254,17 +1572,17 @@ t/Thesis-Quadrotor/StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf>
 pdf>] [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+LaTeX Font Info:    Try loading font information for U+msa on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+LaTeX Font Info:    Try loading font information for U+msb on input line 86.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (29.00462pt too wide) in paragraph at lines 83--83
+Overfull \hbox (29.00462pt too wide) in paragraph at lines 86--86
  [] 
  []
 
@@ -1272,12 +1590,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83  \maketitle
+l.86  \maketitle
                  [1] <./StyleStuff/ALTEN.png, id=245, 2007.5pt x 3365.57375pt>
 File: ./StyleStuff/ALTEN.png Graphic file (type png)
 
 <use ./StyleStuff/ALTEN.png>
-Package pdftex.def Info: ./StyleStuff/ALTEN.png used on input line 83.
+Package pdftex.def Info: ./StyleStuff/ALTEN.png used on input line 86.
 (pdftex.def)             Requested size: 50.91028pt x 85.35826pt.
 Package epstopdf Info: Source file: <StyleStuff/tud.eps>
 (epstopdf)                    date: 2004-09-30 22:41:36
@@ -1287,7 +1605,7 @@ Package epstopdf Info: Source file: <StyleStuff/tud.eps>
 (epstopdf)                    size: 7382 bytes
 (epstopdf)             Command: <epstopdf --outfile=StyleStuff/tud-eps-converte
 d-to.pdf StyleStuff/tud.eps>
-(epstopdf)             \includegraphics on input line 83.
+(epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
 <StyleStuff/tud-eps-converted-to.pdf, id=247, 140.525pt x 77.28876pt>
@@ -1295,34 +1613,27 @@ File: StyleStuff/tud-eps-converted-to.pdf Graphic file (type pdf)
 
 <use StyleStuff/tud-eps-converted-to.pdf>
 Package pdftex.def Info: StyleStuff/tud-eps-converted-to.pdf used on input line
- 83.
+ 86.
 (pdftex.def)             Requested size: 140.52464pt x 77.28856pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
-
-("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83  \maketitle
+l.86  \maketitle
                  [2 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/ALT
 EN.png> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/tud-eps-convert
 ed-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
 
  []
 
@@ -1333,19 +1644,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--83
 ] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\abstract.tex [5
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+] [6
 
- []
-
-[6]) [7
-
+])
+[7
 
 
 ] [8
 
-] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.toc
-[9]
+] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.toc [9]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 56.
@@ -1406,7 +1713,7 @@ Chapter 2.
 
 
 
-] <./StyleStuff/dcsc.png, id=491, 227.6505pt x 72.27pt>
+] <./StyleStuff/dcsc.png, id=508, 227.6505pt x 72.27pt>
 File: ./StyleStuff/dcsc.png Graphic file (type png)
 
 <use ./StyleStuff/dcsc.png>
@@ -1471,7 +1778,7 @@ File: ./StyleStuff/dcsc.png Graphic file (type png)
 Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 261.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
  [10] [11] [12]
-<./StyleStuff/qrmodelppt.png, id=623, 722.7pt x 542.025pt>
+<./StyleStuff/qrmodelppt.png, id=640, 722.7pt x 542.025pt>
 File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
 
 <use ./StyleStuff/qrmodelppt.png>
@@ -1496,7 +1803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 551--552
  []
 
 [14])
-Underfull \hbox (badness 10000) in paragraph at lines 560--114
+Underfull \hbox (badness 10000) in paragraph at lines 560--117
 
  []
 
@@ -1573,13 +1880,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 359--360
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 363--115
+Underfull \hbox (badness 10000) in paragraph at lines 363--118
 []\OT1/cmr/m/n/10.95 Model based. What if an-a-lyt-i-cal model is not ac-cu-rat
 e?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--115
+Underfull \hbox (badness 10000) in paragraph at lines 363--118
 
  []
 
@@ -1590,77 +1897,300 @@ Underfull \hbox (badness 10000) in paragraph at lines 363--115
 
 ]
 Chapter 4.
+Package acronym Info: Label `acro:lqr' newly defined as it shall be overridden
+although it is yet undefined on input line 39.
+[25]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 37.
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 46.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [25] [26pdfTeX warning (ext4): destination with the same identifier (name{equa
-tion.4.1.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.132 L
-       ess accurate, because filters high frequency signals.pdfTeX warning (ext
-4): destination with the same identifier (name{equation.4.1.8}) has been alread
-y used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.132 L
-       ess accurate, because filters high frequency signals.]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
-
- []
-
+ [26]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 144.
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 171.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [27]) [28]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex
-Chapter 5.
-[29
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[27] [28]
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 221.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 222.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 237.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 238.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 257.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+File: ./StyleStuff/dcsc.png Graphic file (type png)
+ <use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 258.
+(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-xL29.png, id=840, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-xL29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-xL29.png used on input line 267.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-exL29.png, id=841, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-exL29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-exL29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-exL29.png used on input line 268.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-eq29.png, id=842, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eq29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eq29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eq29.png used on input line 269.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-eR29.png, id=843, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eR29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eR29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eR29.png used on input line 270.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-PsiR29.png, id=844, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-PsiR29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-PsiR29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-PsiR29.png used on input line 271.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-Psiq29.png, id=845, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-Psiq29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-Psiq29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-Psiq29.png used on input line 272.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+ [29]
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-xL29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-xL29.png used on input line 279.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-exL29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-exL29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-exL29.png used on input line 280.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eq29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eq29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eq29.png used on input line 281.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eR29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eR29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eR29.png used on input line 282.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-PsiR29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-PsiR29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-PsiR29.png used on input line 283.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-Psiq29.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-Psiq29.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-Psiq29.png used on input line 284.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+ [30 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL29.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Co
+de/NamMatlab/QRL/MatlabImages/LPOSQRL-exL29.png (PNG copy)> <C:/Users/Nam/Docum
+ents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-eq29.png (PNG
+ copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabI
+mages/LPOSQRL-eR29.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor
+-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-PsiR29.png (PNG copy)> <C:/Users/Nam/D
+ocuments/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-Psiq29.pn
+g (PNG copy)>]
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-xL28.png, id=866, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL28.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-xL28.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-xL28.png used on input line 291.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-exL28.png, id=867, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-exL28.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-exL28.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-exL28.png used on input line 292.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-eq28.png, id=868, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eq28.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eq28.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eq28.png used on input line 293.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-eR28.png, id=869, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eR28.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eR28.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eR28.png used on input line 294.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-PsiR28.png, id=870, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-PsiR28.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-PsiR28.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-PsiR28.png used on input line 295.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-Psiq28.png, id=871, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-Psiq28.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-Psiq28.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-Psiq28.png used on input line 296.
+(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL28.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Co
+de/NamMatlab/QRL/MatlabImages/LPOSQRL-exL28.png (PNG copy)> <C:/Users/Nam/Docum
+ents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-eq28.png (PNG
+ copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabI
+mages/LPOSQRL-eR28.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor
+-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-PsiR28.png (PNG copy)> <C:/Users/Nam/D
+ocuments/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-Psiq28.pn
+g (PNG copy)>] [33] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex
+ [34
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
+Chapter 5.
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
 
 
-Package acronym Warning: Acronym `QP' is not defined on input line 56.
+Package acronym Warning: Acronym `QP' is not defined on input line 59.
 
 
-Package acronym Warning: Acronym `QP' is not defined on input line 60.
+Package acronym Warning: Acronym `QP' is not defined on input line 63.
 
-) [30] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex
+) [36] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex
 Appendix A.
-[31
+[37
 
 
 
-] [32]
+] [38] [39]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 158.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 304.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 162.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 308.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 166.
+(Font)              using `OT1/cmss/bx/n' instead on input line 312.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 169.
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m)) [33] [34
+nput line 315.
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 6.
+
+("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\psnfss\ts1pcr.fd"
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+))) [40] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [41
 
 
-]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [35
 
-]) [36]
+]) [42]
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bblpdfTeX warning (ext4)
 : destination with the same identifier (name{cite.Bangura2014}) has been alread
 y used, duplicate ignored
@@ -1717,7 +2247,7 @@ er (name{cite.Lee2005}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.53 \bibitem{Lee2005}
-                       [37
+                       [43
 
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{cite.Lee2009
@@ -1775,23 +2305,23 @@ tifier (name{cite.Mellinger2011}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.107 \bibitem{Mellinger2011}
-                             ) [38]
+                             ) [44]
 runsystem(makeindex mscThesis.idx)...executed (allowed).
 
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.ind)
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [39
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [45
 
 
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [40
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [46
 
 
-]) [41]
+]) [47]
 \tf@thm=\write14
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.aux
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\abstract.aux)
@@ -1802,10 +2332,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `mscThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 88A8E04F1287D7169DE7F18A71A4A4CC;3354.
+(rerunfilecheck)             Checksum: 7C11091CCE2719B3C8EF967D94A9631E;3340.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1816,50 +2346,53 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 13511 strings out of 493921
- 198156 string characters out of 3144882
- 423159 words of memory out of 3000000
- 16162 multiletter control sequences out of 15000+200000
- 19168 words of font info for 72 fonts, out of 3000000 for 9000
+ 14331 strings out of 493921
+ 214053 string characters out of 3144882
+ 563634 words of memory out of 3000000
+ 16844 multiletter control sequences out of 15000+200000
+ 20532 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 45i,17n,94p,901b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public
-/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/ty
-pe1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xela
-tex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.
-9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
-:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cm
-mi9.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/x
-elatex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2
-.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)
-/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cms
-s8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfo
-nts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/
-fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9.510
-5/xelatex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKT
-eX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt12
-.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfont
-s/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/publ
-ic/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9
-.5105/xelatex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mscThesis.pdf (57 pages, 908850 bytes).
+ 45i,17n,94p,901b,1936s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/enc/dvips/fontname/8r.e
+nc} <C:\Users\Nam\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1095.pk><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/typ
+e1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex
+/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9.
+5105/xelatex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:
+/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfo
+nts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xe
+latex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2
+.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)
+/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmss1
+0.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfon
+ts/cm/cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/pub
+lic/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105
+/xelatex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTe
+X 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
+x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/
+cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/publi
+c/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/t
+ype1/public/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/x
+elatex/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9.5105/xelatex/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on mscThesis.pdf (63 pages, 1140968 bytes).
 PDF statistics:
- 1061 PDF objects out of 1200 (max. 8388607)
- 282 named destinations out of 1000 (max. 500000)
- 447 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1241 PDF objects out of 1440 (max. 8388607)
+ 385 named destinations out of 1000 (max. 500000)
+ 507 words of extra memory for PDF output out of 10000 (max. 10000000)
 

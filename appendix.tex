@@ -79,15 +79,18 @@ y&=C\mathbf{x}+Du
 with the following state- and input vectors
 \begin{equation}\label{key}
 \begin{aligned}
-\textbf{x}&=\begin{bmatrix}
-\textbf{q}\\
-\mathbf{\dot{q}}
-\end{bmatrix}\\
-\mathbf{q}&=\begin{bmatrix}
-x&y&z&\phi&\theta&\psi&\phi_L&\theta_L
-\end{bmatrix}^T\\
-\mathbf{\dot{q}}&=\begin{bmatrix}
-\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\phi}_L&\dot{\theta}_L
+%\textbf{x}&=\begin{bmatrix}
+%\textbf{q}\\
+%\mathbf{\dot{q}}
+%\end{bmatrix}\\
+%\mathbf{q}&=\begin{bmatrix}
+%x&y&z&\phi&\theta&\psi&\phi_L&\theta_L
+%\end{bmatrix}^T\\
+%\mathbf{\dot{q}}&=\begin{bmatrix}
+%\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\phi}_L&\dot{\theta}_L
+%\end{bmatrix}^T\\
+\mathbf{x}&=\begin{bmatrix}
+x&y&z&\phi&\theta&\psi&\phi_L&\theta_L&\dot{x}&\dot{y}&\dot{z}&\dot{\phi}&\dot{\theta}&\dot{\psi}&\dot{\phi}_L&\dot{\theta}_L
 \end{bmatrix}^T\\
 u&=\begin{bmatrix}
 f&M_\phi&M_\theta&M_\psi
@@ -131,91 +134,39 @@ content...
 \end{bmatrix}
 \end{equation}
 
+%ADD LQRA
 \begin{lstlisting}
 LQRA =
 
-Columns 1 through 8
-
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0    9.7008         0         0    0.1092         0
-0         0         0         0   -9.9217         0         0    0.1117
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0    6.9291         0         0   -6.9291         0
-0         0         0         0    7.0870         0         0   -7.0870
-
-Columns 9 through 16
-
-1.0000         0         0         0         0         0         0         0
-0    1.0000         0         0         0         0         0         0
-0         0    1.0000         0         0         0         0         0
-0         0         0    1.0000         0         0         0         0
-0         0         0         0    1.0000         0         0         0
-0         0         0         0         0    1.0000         0         0
-0         0         0         0         0         0    1.0000         0
-0         0         0         0         0         0         0    1.0000
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
-0         0         0         0         0         0         0         0
 \end{lstlisting}
+%ADD LQRB
 \begin{lstlisting}
 LQRB =
 
-0         0         0         0
-0         0         0         0
-0         0         0         0
-0         0         0         0
-0         0         0         0
-0         0         0         0
-0         0         0         0
-0         0         0         0
-0   -0.1591         0         0
-0         0   -0.1627         0
-0.2252         0         0         0
-0   12.1951         0         0
-0         0   11.8343         0
-0         0         0    7.2622
-0   10.0905         0         0
-0         0   10.3203         0
 \end{lstlisting}
-
-\texttt{Matlab} command \texttt{lqr(A,B,Q,R)} generates the following gain matrix $ K $
+The tuning parameters of the \a{lqr} controller a chosen as follows
+%TEST different values LQR
+\begin{equation}\label{key}
+\begin{aligned}
+Q &= diag\begin{pmatrix}
+10 &10 &100,& 1& 1& 1, &1& 1,& 1& 1 &1,& 1& 1& 1,& 1& 1
+\end{pmatrix}\\
+R &= diag\begin{pmatrix}
+0.044, &1.56,& 1.56, &1.56
+\end{pmatrix}
+\end{aligned}
+\end{equation}
+\texttt{Matlab} command \texttt{lqr(LQRA,LQRB,Q,R)} generates the following gain matrix $ K $
+%ADD K
 \begin{lstlisting}
 K =
 
-Columns 1 through 8
-
--0.0000   -0.0000   47.6731    0.0000   -0.0000    0.0000   -0.0000    0.0000
-3.1623    0.0000   -0.0000    7.5117    0.0000   -0.0000    2.6683   -0.0000
--0.0000   -3.1623   -0.0000    0.0000    7.4605    0.0000   -0.0000    2.5448
-0.0000   -0.0000    0.0000   -0.0000    0.0000    1.0000    0.0000    0.0000
-
-Columns 9 through 16
-
--0.0000   -0.0000   21.1202    0.0000    0.0000    0.0000   -0.0000   -0.0000
-2.7501    0.0000   -0.0000    1.4827    0.0000    0.0000    0.4376   -0.0000
--0.0000   -2.7296    0.0000    0.0000    1.4631    0.0000   -0.0000    0.3949
-0.0000   -0.0000    0.0000    0.0000   -0.0000    1.1293   -0.0000    0.0000
 \end{lstlisting}
 
 
 
 
-%	    ***************************************\\
+%CHECK useful? Praveen EOM
 %	    \begin{equation}
 %	    ax = 
 %	    \begin{bmatrix}
@@ -236,68 +187,6 @@ Columns 9 through 16
 %	    
 %	    ***************************************\\	
 
-\subsection{Controller}
-
-\begin{equation}\label{key}
-A=\begin{bmatrix}
-content...
-\end{bmatrix}
-\end{equation}
-\begin{equation}\label{key}
-B=\begin{bmatrix}
-content...
-\end{bmatrix}
-\end{equation}
-\begin{equation}\label{key}
-C=\begin{bmatrix}
-content...
-\end{bmatrix}
-\end{equation}
-
-%CHECK if needed?
-\begin{equation}\label{key}
-\mathbf{\dot{x}}=\textbf{f}(\mathbf{x,u})
-\end{equation}
-
-%ADD reference
-%By linearizing Equations \ref{eq:app.QRpos},\ref{eq:app.QRatt},\ref{eq:app.Latt} follows
-%\begin{align}\label{key}
-%%CHECK this equations
-%\ddot{x}&=-\frac{f}{m}\\
-%\ddot{y}&=\\
-%\ddot{z}&=
-%\end{align}
-
-%The mathematical model is linearized around the following operating points
-%\begin{align}\label{key}
-%\bar{\mathbf{x}}&=\begin{bmatrix}\bar{x}&\bar{y}&\bar{z}&\textbf{0}_{1\times13}\end{bmatrix}^T\\
-%\bar{\textbf{u}}&=\begin{bmatrix}
-%(m_Q+m_L)g&0&0&0
-%\end{bmatrix}^T
-%\end{align}
-
-%CHECK are these asssumptions correct?
-%Assuming small angles, the following holds
-%\begin{align}\label{key}
-%\text{for } \gamma &= \phi, \theta, \psi, \theta_L, \psi_L\\
-%sin(\gamma)&\simeq \gamma\\
-%cos(\gamma)&\simeq 1\\
-%\dot{\gamma} &\simeq 0\\
-%F &\simeq (m_Q+m_L)g
-%\end{align}
-
-%\begin{equation}\label{key}
-%A=\frac{\partial \textbf{f}(x,u)}{\partial x}\mid _{	x=\bar{x},u=\bar{u}	}
-%\end{equation}
-%\begin{equation}\label{key}
-%B=\frac{\partial \textbf{f}(x,u)}{\partial u}\mid _{	x=\bar{x},u=\bar{u}	}
-%\end{equation}
-%
-%\begin{equation}\label{key}
-%u=-K\left[\textbf{x}_{des}(t)-\textbf{x}(t)\right] 
-%\end{equation}
-
-
 \section{Figures}
 \begin{figure}[h!]
 	\centering
@@ -306,9 +195,6 @@ content...
 \end{figure}		
 
 \section{\texttt{MATLAB} code}
-\begin{equation}\label{key}
-Test equation
-\end{equation}
 \subsection{A \matlab Listing}
 
 \lstset{language=matlab}

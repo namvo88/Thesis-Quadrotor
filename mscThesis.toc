@@ -25,34 +25,32 @@
 \contentsline {section}{\numberline {4-1}Setup}{25}{section.4.1}
 \contentsline {paragraph}{Model parameters}{25}{section*.25}
 \contentsline {paragraph}{LQR Control}{25}{section*.27}
-\contentsline {paragraph}{Geometric Control}{27}{section*.30}
+\contentsline {paragraph}{Geometric Control}{26}{section*.30}
 \contentsline {subsection}{\numberline {4-1-1}Command Filtering}{27}{subsection.4.1.1}
-\contentsline {section}{\numberline {4-2}Experiments}{28}{section.4.2}
-\contentsline {subsection}{\numberline {4-2-1}Performance Criteria}{28}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4-2-2}Case A}{29}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4-2-3}Case B}{29}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4-2-4}Case C}{29}{subsection.4.2.4}
-\contentsline {section}{\numberline {4-3}Results}{30}{section.4.3}
-\contentsline {subsection}{\numberline {4-3-1}Case A}{30}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4-3-2}Case B}{31}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4-3-3}Case C}{32}{subsection.4.3.3}
-\contentsline {section}{\numberline {4-4}Conclusion}{33}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{35}{chapter.5}
-\contentsline {section}{\numberline {5-1}Summary and Conclusions}{35}{section.5.1}
-\contentsline {section}{\numberline {5-2}Recommendations for Future Work}{35}{section.5.2}
-\contentsline {subsection}{\numberline {5-2-1}Investigate Implementation}{35}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5-2-2}Modeling Constraints}{36}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5-2-3}Hybrid Modeling}{36}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5-2-4}Trajectory Generation}{36}{subsection.5.2.4}
-\contentsline {subsubsection}{Minimum Snap Trajectory Generation}{36}{section*.39}
-\contentsline {chapter}{\numberline {A}Appendix}{37}{appendix.A}
-\contentsline {section}{\numberline {A-1}Derivation of Equations of motion}{37}{section.A.1}
-\contentsline {subsection}{\numberline {A-1-1}Load Dynamics}{37}{subsection.A.1.1}
-\contentsline {section}{\numberline {A-2}LQR controller}{37}{section.A.2}
-\contentsline {subsection}{\numberline {A-2-1}Modeling}{37}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A-2-2}Controller}{39}{subsection.A.2.2}
-\contentsline {section}{\numberline {A-3}Figures}{40}{section.A.3}
-\contentsline {section}{\numberline {A-4}\texttt {MATLAB} code}{40}{section.A.4}
-\contentsline {subsection}{\numberline {A-4-1}A \textsc {Matlab}Listing}{40}{subsection.A.4.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{43}{section*.41}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{46}{section*.42}
+\contentsline {section}{\numberline {4-2}Experiments}{27}{section.4.2}
+\contentsline {subsection}{\numberline {4-2-1}Case A}{28}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4-2-2}Case B}{28}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4-2-3}Case C}{28}{subsection.4.2.3}
+\contentsline {section}{\numberline {4-3}Results}{29}{section.4.3}
+\contentsline {subsection}{\numberline {4-3-1}Case A}{29}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4-3-2}Case B}{29}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4-3-3}Case C}{29}{subsection.4.3.3}
+\contentsline {section}{\numberline {4-4}Conclusion}{29}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{33}{chapter.5}
+\contentsline {section}{\numberline {5-1}Summary and Conclusions}{33}{section.5.1}
+\contentsline {section}{\numberline {5-2}Recommendations for Future Work}{33}{section.5.2}
+\contentsline {subsection}{\numberline {5-2-1}Investigate Implementation}{33}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5-2-2}Modeling Constraints}{34}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5-2-3}Hybrid Modeling}{34}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5-2-4}Trajectory Generation}{34}{subsection.5.2.4}
+\contentsline {subsubsection}{Minimum Snap Trajectory Generation}{34}{section*.39}
+\contentsline {chapter}{\numberline {A}Appendix}{35}{appendix.A}
+\contentsline {section}{\numberline {A-1}Derivation of Equations of motion}{35}{section.A.1}
+\contentsline {subsection}{\numberline {A-1-1}Load Dynamics}{35}{subsection.A.1.1}
+\contentsline {section}{\numberline {A-2}LQR controller}{35}{section.A.2}
+\contentsline {subsection}{\numberline {A-2-1}Modeling}{35}{subsection.A.2.1}
+\contentsline {section}{\numberline {A-3}Figures}{36}{section.A.3}
+\contentsline {section}{\numberline {A-4}\texttt {MATLAB} code}{36}{section.A.4}
+\contentsline {subsection}{\numberline {A-4-1}A \textsc {Matlab}Listing}{36}{subsection.A.4.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{41}{section*.41}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{44}{section*.42}

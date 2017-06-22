@@ -37,7 +37,7 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{Modeling Constraints}{section.5.2}% 37
 \BOOKMARK [2][-]{subsection.5.2.3}{Hybrid Modeling}{section.5.2}% 38
 \BOOKMARK [2][-]{subsection.5.2.4}{Trajectory Generation}{section.5.2}% 39
-\BOOKMARK [3][-]{section*.39}{Minimum Snap Trajectory Generation}{subsection.5.2.4}% 40
+\BOOKMARK [3][-]{section*.36}{Minimum Snap Trajectory Generation}{subsection.5.2.4}% 40
 \BOOKMARK [0][-]{appendix.A}{Appendix}{}% 41
 \BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 42
 \BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 43
@@ -46,5 +46,5 @@
 \BOOKMARK [1][-]{section.A.3}{Figures}{appendix.A}% 46
 \BOOKMARK [1][-]{section.A.4}{MATLAB code}{appendix.A}% 47
 \BOOKMARK [2][-]{subsection.A.4.1}{A MatlabListing}{section.A.4}% 48
-\BOOKMARK [0][-]{section*.41}{Bibliography}{}% 49
-\BOOKMARK [0][-]{section*.42}{Acronyms}{}% 50
+\BOOKMARK [0][-]{section*.38}{Bibliography}{}% 49
+\BOOKMARK [0][-]{section*.39}{Acronyms}{}% 50

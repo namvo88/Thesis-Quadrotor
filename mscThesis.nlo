@@ -1,5 +1,5 @@
-\nomenclatureentry{c $ \{\mathcal {B}\} $@[{$ \{\mathcal {B}\} $}]\begingroup \MakeUppercase Body Frame\nomeqref {2-0}|nompageref}{5}
-\nomenclatureentry{c $ \{\mathbf {b}_1,\mathbf {b}_2,\mathbf {b}_3\} $@[{$ \{\mathbf {b}_1,\mathbf {b}_2,\mathbf {b}_3\} $}]\begingroup \MakeUppercase Unit vectors along the axes of $ \{\mathcal {B}\} $\nomeqref {2-0}|nompageref}{5}
+\nomenclatureentry{c $ \{\mathcal {B}\} $@[{$ \{\mathcal {B}\} $}]\begingroup \MakeUppercase Body Frame\nomeqref {2-0}|nompageref}{6}
+\nomenclatureentry{c $ \{\mathbf {b}_1,\mathbf {b}_2,\mathbf {b}_3\} $@[{$ \{\mathbf {b}_1,\mathbf {b}_2,\mathbf {b}_3\} $}]\begingroup \MakeUppercase Unit vectors along the axes of $ \{\mathcal {B}\} $\nomeqref {2-0}|nompageref}{6}
 \nomenclatureentry{c $ \{\mathcal {I} \}$@[{$ \{\mathcal {I} \}$}]\begingroup \MakeUppercase Inertial World Frame\nomeqref {2-0}|nompageref}{6}
 \nomenclatureentry{c $ \{\mathbf {e}_1,\mathbf {e}_2,\mathbf {e}_3\} $@[{$ \{\mathbf {e}_1,\mathbf {e}_2,\mathbf {e}_3\} $}]\begingroup \MakeUppercase Unit vectors along the axes of $ \{\mathcal {I}\} $\nomeqref {2-0}|nompageref}{6}
 \nomenclatureentry{c $ \{\mathcal {C} \}$@[{$ \{\mathcal {C} \}$}]\begingroup \MakeUppercase Intermediary Frame\nomeqref {2-0}|nompageref}{6}
@@ -17,7 +17,7 @@
 \nomenclatureentry{c $ x_L $@[{$ x_L $}]\begingroup \MakeUppercase Position of the load\nomeqref {2-10}|nompageref}{10}
 \nomenclatureentry{c $ L $@[{$ L $}]\begingroup \MakeUppercase Length of the cable\nomeqref {2-10}|nompageref}{10}
 \nomenclatureentry{c $ g $@[{$ g $}]\begingroup \MakeUppercase Gravitation constant\nomeqref {2-18}|nompageref}{11}
-\nomenclatureentry{c $ \epsilon $@[{$ \epsilon $}]\begingroup \MakeUppercase Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $\nomeqref {3-12}|nompageref}{20}
-\nomenclatureentry{c $ \lambda _M(\cdot ) $@[{$ \lambda _M(\cdot ) $}]\begingroup \MakeUppercase Maximum eigenvalue\nomeqref {3-16}|nompageref}{20}
+\nomenclatureentry{c $ \epsilon $@[{$ \epsilon $}]\begingroup \MakeUppercase Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $\nomeqref {3-12}|nompageref}{18}
+\nomenclatureentry{c $ \lambda _M(\cdot ) $@[{$ \lambda _M(\cdot ) $}]\begingroup \MakeUppercase Maximum eigenvalue\nomeqref {3-16}|nompageref}{18}
 \nomenclatureentry{c $ x_{CM} $@[{$ x_{CM} $}]\begingroup \MakeUppercase Position \lsymb {$ CM $}{Center of Mass} of \a {qr}-Load system\nomeqref {A-0}|nompageref}{35}
 \nomenclatureentry{c CM@[{CM}]\begingroup \MakeUppercase Center of Mass\nomeqref {A-9}|nompageref}{43}

@@ -4,8 +4,10 @@
 %ADD deze references introduceren
 \cite{Bullo2005,Jurdjevic1997}
 
-Geometric Control Theory explores the application of differential geometric techniques to systems control. The objective is to express both the dynamics and its control inputs on manifolds instead of on local charts.
-Geometric control theory is the study of how the geometry of the state space influences controls problems. This includes local properties like curvature, and global properties like the number of `holes’ in the space (sphere vs doughnut).
+Geometric Control Theory is the study of how the geometry of the state space influences controls problems. This is used to explore the application of differential geometric control techniques. 
+The objective is to express both the dynamics and control inputs on manifolds instead of on local charts.
+This results in nonlinear control that can be almost globally defined, in contrast with linear control is designed locally.
+%This includes local properties like curvature, and global properties like the number of 'holes' in the space (sphere vs doughnut).
 
 %ADD this is useful because .. In contrast with existing linear control systems with linearized dynamics. Benchmark with Linear Control\\
 %ADD Singularities in representing complex maneuvers. complex maneuvers, could contain large angles, linear control problem. Fundamental restriction in tracking nontrivial trajectories
@@ -372,7 +374,9 @@ Furthermore, there exist constants $ \alpha_q,\beta_q>0 $ such that
 \Psi_q(q(t),q_d(t)) \leq min\left\lbrace 2,\alpha_qe^{-\beta_qt}\right\rbrace 
 \end{equation}
 
-\section{Parameter- and State Estimation}
+\section{Parameter- and State Estimation}\label{sec:con.par}
+The controllers assume that all states 
+
 %ADD Justify choice of parameters. Up to what level can we push the system? Where can we find more info about domain of attractions.
 How to choose parameters and how to select gains for errors\\
 
@@ -390,10 +394,20 @@ Model based. What if analytical model is not accurate?
 
 What parameters must be 
 
+\section{Stability Analysis}\label{sec:con.sta}
+Lyapunov Analysis on SO3 x R3 and S2 x R3
+Closed-loop full-attitude dynamics evolve on the non- Euclidean manifold SO3 x R3. 
+Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be assessed using standard Lyapunov methods. 
+In addition, the LaSalle invariance result and related Lyapunov results apply to closed-loop vector fields defined on these manifolds. 
+However, since the manifolds SO3 and S2 are compact, the radial unboundedness assumption cannot be satisfied; 
+consequently, global asymptotic stability cannot follow from a Lyapunov analysis on Euclidean spaces [40], and therefore must be analyzed in alternative ways [19]–[23].\cite[p.43]{Chaturvedi2011}
+
+\cite{Chaturvedi2011} summarizes global results on attitude control and stabilization for a rigid body using continuous time- invariant feedback. The analysis uses methods of geomet- ric mechanics based on the geometry of the special orthogonal group SO3 and the two-sphere S2.
+
 
 
 %HOeft waarschijnlijk niet eens een section te zijn, kan kort en bondig
-\section{Summary}
+\section*{Summary}
 
 %ADD What is Geometric Control? Differences between other control
 Control design is based on Nonlinear Geometric Control.

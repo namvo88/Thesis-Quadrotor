@@ -10,6 +10,10 @@ R.~P.~K. Jain and T.~Keviczky, ``{MSc Thesis: Transportation of Cable Suspended
   Load using Unmanned Aerial Vehicles: A Real-time Model Predictive Control
   approach},'' 2015.
 
+\bibitem{Sadr2014}
+S.~Sadr, S.~Ali, A.~Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and
+  Control of a Quadrotor with Swing Load},''
+
 \bibitem{Lee2010}
 T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
   Quadrotor UAV on SE(3)},'' {\em 49th IEEE Conference on Decision and
@@ -90,10 +94,6 @@ J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
   safe maneuvers using reachable sets: Autonomous quadrotor aerobatics in
   theory and practice},'' in {\em Proceedings - IEEE International Conference
   on Robotics and Automation}, pp.~1649--1654, 2010.
-
-\bibitem{Lee2010c}
-T.~Lee, M.~Leok, and N.~McClamroch, ``{Control of complex maneuvers for a
-  quadrotor UAV using geometric methods on SE (3)},'' {\em arXiv}, 2010.
 
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered

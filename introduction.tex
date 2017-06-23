@@ -3,39 +3,30 @@ A \acf{qr} is a type of \acf{uav} that has received an increasing amount of atte
 
 The inspiration for this research is build upon the idea of creating a system of multiple autonomous \a{qr}s for a cooperative towing task. The advantage of such a system for object manipulation is the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
 
-***************************************\\
-Bart: suggestion: creating a system of multiple autonomous QRs?\\
-Nam: Zin aangepast.
-
-***************************************\\
-
 Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load. This cooperation can be executed in many ways, but this research focuses on \a{qr}s with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated. Possible objectives are minimizing the oscillations of the load during or after motion, minimizing the time to position the load, trajectory tracking, trajectory generation and obstacle avoidance.
 
-***************************************\\
-Bart: Suggestion place under motivation of research inspiration, this forms a nice bridge.\\
-Nam: Ik heb dit juist naar boven geplaatst. The inspiration ..... single robot. 
-
-***************************************\\
 \newpage
 \section{Aim and Motivation}\label{sec:int.motivation}
 The aim is to control the position of a suspended load using a \a{qr}. Before considering multiple \a{qr}s, it is important to investigate the possibilities of a single \a{qr} with load system. Hence, in this research a single \a{qr} is considered for the transportation of a cable suspended load, which will exert additional forces and torques on the \a{qr}. This is a challenging control problem in the fact that the \a{qr} system is under-actuated. Adding a suspended load will add extra \a{DOF}s and oscillations of the load occur at the end of every movement. 
 
-***************************************\\
-Bart: Suggestion: Since QRs with suspended load are scarcely investigated it is important to investigate a single QR first before the multiple QRs can be considered.\\
-Nam: Zie boven
-
-***************************************\\
 The system can be divided into two subsystems. The first subsystem is where the cable tension is non-zero and the distance between the \a{qr} and the load is defined by the cable length. Both \a{qr} and load are coupled as one system. The second subsystem is where the cable tension is zero, such that the \a{qr} and load in free fall are two separate decoupled systems. This research focuses on the first subsystem, such that the cable tension is non-zero. In order to control both subsystems, hybrid control must be applied, which is considered out of the scope of this research.
 
-Former work on \a{qr} attitude- and position control often rely on linear control methods such as \acs{pid}\cite{bibid}, \a{mpc} \cite{Bangura2014} and \a{lqr} control \cite{bibid}. The dynamics are linearized around an equilibrium point, describing the system dynamics by a set of linear differential equations. 
+Former work on attitude control of \a{qr} and/or load often relies on linear control methods such as \acs{pid}\cite{bibid}, \a{mpc} \cite{Bangura2014} and \a{lqr} control \cite{bibid}. The dynamics are linearized around an equilibrium point, describing the system dynamics by a set of linear differential equations. 
 %ADD references to pid and lqr controllers qr attitude
 The control of a \a{qr}-Load system is a very specific case and scarcely investigated. Former work includes \a{mpc} \cite{PraveenThesis} and \a{lqr}\cite{bibid} control approaches, where an optimal control strategy is used to minimize the swing of the load. 
 %ADD what more former work?
 
 The reason that linear control near an equilibrium state is commonly applied, is partly to avoid difficulties that come with modeling and controlling the non-linearities of the system. Nonlinear control systems are often governed by nonlinear differential equations and are able to represent the dynamics in a more realistic manner. However, linear control limits the system to small angle movements, as the optimization will not allow large angles that deviate to far from the linearized point. For applications that require fast aggressive maneuvers, this type of modeling and control will not be sufficient.
 
-A possible nonlinear control approach is \acs{nmpc}, which is a variant of \a{mpc} that uses a nonlinear dynamical system to predict the required inputs. While these problems are convex in linear \a{mpc}, in nonlinear \a{mpc} they are not convex anymore. This poses challenges for both \a{nmpc} stability theory and numerical solution.
+Nonlinear control approaches to minimize the load swing includes a Model Based Algorithm controller applied by \cite{Sadr2014}. For the same purpose \acs{nmpc} is tested, which is a variant of \a{mpc} that uses a nonlinear dynamical system to predict the required inputs. While these optimization problems are convex in linear \a{mpc}, in nonlinear \a{mpc} they are not convex anymore, which poses challenges for both \a{nmpc} stability theory and numerical solution. 
 %ADD what more former work?
+
+%BART
+%***************************************\\
+%Bart: These problems. Which problems in the previous sentence are you referring to?
+%Nam: optimization problems
+%
+%***************************************\\
 
 %ADD Reason to consider Geometric Control 
 Nonlinear Geometric Control is a nonlinear model based control technique based on a modeling approach involving the concepts of differential geometry. This results in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties.
@@ -64,12 +55,23 @@ Limited to subsystem where the tension of the cable is non-zero.
 In this first chapter, a brief introduction of the subject is given and the problem is described. This is followed by discussing the aim, motivation and contributions of this thesis for this research. The organization of the report is as follows.
 %\item Chapter \ref{ch:model}\\
 
-In Chapter \ref{ch:model} the dynamics of the \a{qr}-Load system is described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. Opposed to the classical modeling techniques, it is also possible to describe the system's configuration space as a differentiable manifold using the tools of differential geometry. Geometric Mechanics is used to understand and derive the equations of motion of a system in order to allow its analysis and design. 
+In Chapter \ref{ch:model} the dynamics of the \a{qr}-Load system is described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. 
+Geometric Mechanics is used to understand and derive the equations of motion of the system in order to allow analysis and controller design. 
+The system configuration space is described on a differentiable manifold using the tools of Differential geometry, creating a compact, unambiguous and coordinate-free model.
+opposed to classical modeling techniques, where the system dynamics evolve in a three dimensional space using the tools of Euclidean geometry. 
+
+%BART
+%***************************************\\
+%bart: Also possible? declare a bit more.
+%It's not some coincidence you're describing differential geometry.
+%Actually, it's one of the key stones of geometric control, thus your thesis.
+%
+%***************************************\\
 
 %\item Chapter \ref{ch:control}\\
 The system dynamics are represented on nonlinear manifolds and this allows nonlinear geometric controllers to be designed on these same manifolds. The control design is presented in Chapter \ref{ch:control}. The controller has a cascaded structure, where the different control loops are accountable for different flight modes. 
 
-Different tracking objectives can be defined in order to test the performance of both an \a{lqr} control design and a nonlinear Geometric Control design. 
+Different tracking objectives are defined in order to compare the performance between an \a{lqr} control design and a nonlinear Geometric Control design. 
 Chapter \ref{ch:results} describes the experiments that are done to investigate the abilities and performance of a nonlinear Geometric Control design. 
 The results and findings are presented and discussed.
 

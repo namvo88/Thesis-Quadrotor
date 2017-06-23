@@ -1322,8 +1322,8 @@ Readers:       \hfill \underline{ \hspace{7cm} }\\
 \cfoot{}
 }
 %--------------------------------------------------------------------------------------
-\lfoot[\scriptsize \textsf{\mscname}]{\scriptsize \textsf{M.Sc. thesis}}
-\rfoot[\scriptsize \textsf{M.Sc. thesis}]{\scriptsize \textsf{\mscname}}
+\lfoot[\scriptsize \textsf{\mscname}]{\scriptsize \textsf{M.Sc. Thesis}}
+\rfoot[\scriptsize \textsf{M.Sc. Thesis}]{\scriptsize \textsf{\mscname}}
 %--------------------------------------------------------------------------------------
 \sloppy
 \endinput

@@ -3,7 +3,8 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: modeling.aux
 A level-1 auxiliary file: control.aux
-A level-1 auxiliary file: setup_results.aux
+A level-1 auxiliary file: setup.aux
+A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: conclusion.aux
 A level-1 auxiliary file: appendix.aux
 The style file: ieeetr.bst
@@ -13,6 +14,10 @@ Illegal, another \bibdata command---line 54 of file mscThesis.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: glossary.aux
 Database file #1: library.bib
+Repeated entry---line 1606 of file library.bib
+ : @article{Sadr2014
+ :                  ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 2736 of file library.bib
  : @article{Chaturvedi2011
  :                        ,
@@ -23,7 +28,10 @@ Repeated entry---line 2904 of file library.bib
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "bibid"
 Warning--I didn't find a database entry for "Chaturvedi2011a"
+Warning--I didn't find a database entry for "Lee21010"
+Warning--empty journal in Sadr2014
+Warning--empty year in Sadr2014
 Warning--empty publisher in Murray1994
 Warning--empty journal in Lee2011
 Warning--empty journal in Farrell2008
-(There were 3 error messages)
+(There were 4 error messages)

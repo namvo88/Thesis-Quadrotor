@@ -12,7 +12,9 @@ In Section \ref{sec:mod.geometric} an introduction is given about Geometric Mech
 
 To derive the equations of motions traditional modeling methods often parameterize the rotations in a local coordinate system. Euler angles are commonly used, however these coordinates might result in singularities. Furthermore, there are 24 possible sets of Euler angles and many different conventions are used, which leads to ambiguity. The definition of Euler angles is not unique and a sequence of rotations is not commutative. Therefore, Euler angles are never expressed in terms of the external frame, or in terms of the co-moving rotated body frame, but in a mixture.
 
-In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{2-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce. 
+In order to avoid these complexities, the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{two-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This leads to a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce. 
+
+Section \ref{sec:mod.clas}
 
 \section{Modeling Assumptions}\label{sec:mod.assum} 
 
@@ -41,7 +43,11 @@ The \a{qr} model representation is shown in Figure \ref{fig:mod.model}. Three Ca
 	\caption{Quadrotor with Load model representation\label{fig:mod.modelQRL}}
 \end{figure}	
 
-The position of the body frame is described by a vector evolving on $ \mathbb{R}^3 $, and is represented with respect to the inertial frame. The orientation, also called attitude, of the body frame with respect to the inertial frame evolves on a nonlinear space, for which several methods exist to describe this, such as \textit{Euler Angles}, quaternions or rotation matrices. 
+%BART
+%***************************************\\
+%This is a bit a dead end. I expect something after thsi. FOr example and evaluation of these methods and then the one you are using.
+%
+%***************************************\\
 
 %CHECK is dit wel nodig?
 The complex dynamics of the rotors and their interactions with drag and thrust forces are represented by a simplified model. 
@@ -76,15 +82,9 @@ lb&0&-lb&0\\
 \omega_4^2\\
 \end{bmatrix}
 \end{equation}
-where \lsymb{$ l $}{Distance from the rotor to the QR CoM} is the distance from the rotor to the \a{qr}'s \a{com} and $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, resp. 
+where \lsymb{$ l $}{Distance from the rotor to the QR CoM} is the distance from the rotor to the \a{qr}'s \a{com} and $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, respectively. 
 
 Table \ref{tab:mod.assumptions} shows the most common assumptions that are used for modeling the \a{qr}, simplifying the complexity of the model.
-
-***************************************\\
-Bart: Refer to table 2-2?\\
-Nam: Wat bedoel je?
-
-***************************************\\
 
 \begin{table}[h!]
 	\centering
@@ -210,6 +210,10 @@ SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}|RR^T=I_{3\times3}, det(R
 %The configuration manifold for combined translational and rotational motion of a rigid body is the special Euclidean group $ SE(3) $, which is a semi-direct product of $ SO(3) $ and $ \mathbb{R}^3 $.
 
 $ SO(3) $ is the group of all rotations about the origin of a 3-D Euclidean space, which preserves the origin, Euclidean distance and orientation.
+Several methods exist to describe rotations, such as \textit{Euler Angles}, quaternions or rotation matrices. 
+The main disadvantages of Euler angles are that some functions have singularities and they are a less accurate measure for the integration of incremental changes in attitude over time, compared to other methods. 
+In Geometric Mechanics the rotations are expressed in rotation matrices to avoid these problems. 
+
 Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation. The elements of \textit{Lie Algebra} $ \mathfrak{so}(3) $, a property associated with $ SO(3) $, are the elements of the tangent space of $ SO(3) $ at the identity element, see Figure \ref{fig:mod.so3}. 
 These elements define the relation between the rotation $ R $ and its derivative $ \dot{R} $, such that
 \begin{equation}\label{eq:Rdot}
@@ -266,12 +270,15 @@ Dynamics and optimal control problems for rigid bodies are studied in \cite{Lee2
 
 Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. 
 %Which means that the motion of a rigid body can be described by a translation of the \acf{com} and a rotation about the \a{com}. 
-The configuration of the \a{qr} can be described by the location of its \a{com} and its attitude, which are described in Euclidean space $x_Q\in \mathbb{R}^3 $ and in a nonlinear space $R\in SO(3) $, respectively. 
+%The position of \BF is described by a vector evolving on $ \mathbb{R}^3 $, and is represented with respect to \IF.  
+The configuration of the \a{qr} can be described by the location of its \a{com}, which is described in Euclidean space $x_Q\in \mathbb{R}^3 $ with respect to \IF and by the orientation of \BF, also called attitude, with respect to \IF described in a nonlinear space $R\in SO(3) $.
 The configuration of the load can also be described by its location and attitude, described in Euclidean space $x_L\in \mathbb{R}^3 $ and on a two-sphere $ q\in \mathbb{S}^2 $.
 
 
+
+
 %LOAD ATTITUDE DYNAMICS
-To develop the Euler-Lagrange equations for mechanical systems that evolve on a Lie group, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is used. 
+To develop the Euler-Lagrange equations for mechanical systems that evolve on manifolds, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is used. 
 
 %ADD Hamilton's principle uitleg?
 The basic idea is the variations of the curves that are e	
@@ -451,7 +458,7 @@ NEEDED??
 
 When assuming small angle maneuvers, \textit{Euler-angles} can be used to locally parameterize the orientation of the body-fixed reference coordinate frame with respect to the inertial reference coordinate frame. Simple linear controllers are often based on a linearized dynamical model, applying this small angles assumption. 
 
-From Newton's law follows
+The following equations of motion follow from Newton's law.
 \begin{equation}\label{eq:newton}
 \begin{aligned}
 \dot{x}_Q &= v_Q\\
@@ -460,14 +467,14 @@ m_Q\dot{v}_Q &=fRe_3-m_Qge_3-Tq\\
 m_L\dot{v}_L &=-m_Lge_3+Tq
 \end{aligned}
 \end{equation}
+where $ x_Q = x_L-Lq $.
 %which gives the following equation, derived in Section \ref{sec.app:loaddyn},
 %\begin{equation}\label{key}
 %%CHECK whether equation is correct
 %(m_Q+m_L)(\dot{v}_L+ge_3)=fRe_3-m_QL\ddot{q}
 %\end{equation}
 
-
-Because the Euler-Angles are used, a function is required that maps a vector of the Z-X-Y Euler angles to its rotation matrix $ R\in SO(3) $, which is denoted as \cite{Mahony2012}
+Because Euler-Angles are used, a function is required that maps a vector of the Z-X-Y Euler angles to its rotation matrix $ R\in SO(3) $, which is denoted as \cite{Mahony2012}
 \begin{equation}\label{key}
 R_{312}({\phi},{\theta},{\psi})=\begin{bmatrix}
 c_{\psi}c_{\theta}-s_{\phi}s_{\psi}s_{\theta}&-c_{\phi}s_{\psi}&c_{\psi}s_{\theta}+c_{\theta}s_{\phi}s_{\psi}\\
@@ -534,27 +541,14 @@ Differentiating Equation (\ref{eq:mod.xQ2xL}) and (\ref{eq:q}) gives
 \ddot{\phi} &=\tilde{\tau}_{\phi}
 \end{align}
 
-\section{Stability Analysis}
-Lyapunov Analysis on SO3 x R3 and S2 x R3
-Closed-loop full-attitude dynamics evolve on the non- Euclidean manifold SO3 x R3, while closed-loop re-
-duced-attitude dynamics evolve on the non-Euclidean mani- fold S2 x R3. Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be assessed using standard Lyapunov methods. In ad- dition, the LaSalle invariance result and related Lyapunov results apply to closed-loop vector fields defined on these
-manifolds. However, since the manifolds SO132 and S2 are compact, the radial unboundedness assumption cannot be satisfied; consequently, global asymptotic stability cannot fol- low from a Lyapunov analysis on Euclidean spaces [40], and therefore must be analyzed in alternative ways [19]–[23].\cite[p.43]{Chaturvedi2011}
+\section*{Summary}
 
-%HOeft waarschijnlijk niet eens een section te zijn, kan kort en bondig
-\section{Summary}
-
-***************************************\\
-Compact, unambiguous, globally defined, 
+Geometric Mechanics/Lie Groups/Lie Algebra is used in order to represent the dynamics of the system onto the nonlinear configuration manifold $ SE(3) $\\
 
 Pro/Cons of Classical Modeling Techniques vs Geometric Modeling\\
 
+Compact, unambiguous, globally defined, 
+
 Linearized model/State Space model vs. Geometric modeling\\
 
-
-Geometric Mechanics/Lie Groups/Lie Algebra is used in order to represent the dynamics of the system onto the nonlinear configuration manifold $ SE(3) $\\
-Advantage of this method is\\
-Enables to model on \\
-That type of control is discussed in the next chapter
-
-
-***************************************\\
+In the next chapter nonlinear geometric control is discussed, which is based on the geometric representation of the model. 

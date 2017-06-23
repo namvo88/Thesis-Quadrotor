@@ -1339,7 +1339,7 @@
 }
 %--------------------------------------------------------------------------------------
 \lfoot[\scriptsize \textsf{\mscname}]{\scriptsize \textsf{Literature Survey}}  % \textsf{Literature Survey} replaces
-\rfoot[\scriptsize \textsf{Literature Survey}]{\scriptsize \textsf{\mscname}}  % \textsf{M.Sc. thesis}
+\rfoot[\scriptsize \textsf{Literature Survey}]{\scriptsize \textsf{\mscname}}  % \textsf{M.Sc. Thesis}
 %--------------------------------------------------------------------------------------
 \sloppy
 \endinput

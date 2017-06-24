@@ -104,4 +104,9 @@ D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
   for quadrotors},'' in {\em Proceedings - IEEE International Conference on
   Robotics and Automation}, pp.~2520--2525, 2011.
 
+\bibitem{Tang2015}
+S.~Tang and V.~Kumar, ``{Mixed Integer Quadratic Program Trajectory Generation
+  for a Quadrotor with a Cable-Suspended Payload},'' {\em IEEE International
+  Conference on Robotics and Automation (ICRA)}, pp.~2216--2222, 2015.
+
 \end{thebibliography}

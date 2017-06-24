@@ -2,48 +2,54 @@
 %ADD in this section etc
 
 \section{Summary and Conclusions}
-The report starts with an introduction to the subject.
+This report starts by introducing the subject.
 The aim is described and the motivation for this research is given.
 
-In the following chapter
-A short introduction of the concepts of differential geometry
+After the main introduction, the concepts of Geometric Mechanics are introduced. 
+Instead of the trivial Euclidean spaces defined by Cartesian coordinates, the configuration space of the model is described on nonlinear manifolds.
+This approach is used to obtain a model through the tools of Differential Geometry. 
 
-Next, the nonlinear geometric control design is explained.
-Backstepping is explained
+Based on the geometric model, a nonlinear geometric control design is discussed.  
+A backstepping approach, allows different \a{DOF}s of the under-actuated system to be controlled in a cascaded structure. 
+The geometric control is based on 
+ are functions
+of error functions defined on nonlinear manifolds.
+by Differential Geometry. 
 
-Experiments are defined.
+Next, the experiment is defined. The nonlinear controller is used to track desired load trajectories in different situations. The nonlinear performance is compared to an \a{lqr} control 
 Testing the nonlinear Geometric Controller
 To compare with a common linear controller, \a{lqr} control is used to compare
 Results are,
 
-The conclusions we could extract from the experiments is that
+The conclusions that can be extracted from the experiments is that 
 
 \section{Recommendations for Future Work}\label{ch:future}
 % DONT make it look like literature survey. Based on details, show what I have learned. What could be interesting next. What is missing for the next steps.
 
 \subsection{Investigate Implementation}
-Lack of time: no implementation possible. 
-In order to realize this, one needs to investigate the subjects
+%Lack of time: no implementation possible. 
+%In order to realize this, one needs to investigate the subjects
 
-Can in be implemented in terms of computational power? Can this be run on on-board processor?
-Problem is already partly simplified by command filter. Quantification and comparison between implemented \a{mpc} and Geometric Control.
-
-Model identification and validation. Now it is an estimation and/or taken from other literature.
-
-How to deal with noise?
-
-The control is designed assuming continuous-time control. In a real-time application the control of the \a{qr} is limited to its bandwidth. 
-%ADD reference Lee, digital geometric control
-
-%CHECK wat is dit precies?
+\paragraph{Digital Control} The concept of Geometric Control is shown under the assumption of continuous-time control. 
+However, an analysis must be done in the discrete-time domain for the implementation of a real-time application. This must verify whether it is feasible to run the controller on an on-board processor on a \a{qr}. The control performance could be limited by the bandwidth of either the discretized control system or the wireless communication.
+It must be investigated whether the control system is still able to deal with the fast dynamics that are required for aggressive maneuvering. 
+Continuous-time Euler-Lagrange equations could be found by minimizing the action integral, which is a function of the Lagrangian. In a similar procedure the discrete-time Euler-Lagrange can be obtained, by minimizing te summation of a discrete Lagrangian, which is demonstrated in \cite{Lee2008}. 
+%ADD reference Lee, digital geometric control. computed
 %Computational Geometric Mechanics and Control\\
 %\cite{Lee2008}
 %Computation algorithms must be developed which preserve the geometric properties of a mechanical system.\\
-%Robust and careful numerical implementation of geometric control theory to complex engineering systems.\\
-%Provides nontrivial maneuvers that are globally valid on a nonlinear configuration manifold.
 
+\paragraph{Model identification and validation}
+In this thesis the model parameters are either obtained from examples in literature or arbitrarily chosen. In practice, identification and validation of the \a{qr} model and rotor dynamics is required.
+The mathematical model requires inclusion of the masses, inertia matrix and lengths of the \a{qr}, as well as the drag and thrust constants of the rotors, that are very unlikely to be identical.
 
-\subsection{Modeling Constraints}
+As a theoretical extension the influence of model mismatches could be simulated.
+
+\paragraph{Robustness}
+The control in this thesis assumes perfect state feedback. In practice the controller depends on visual feedback or data obtained from an on-board inertial measurement unit. Unlike in simulations, this data will contain noise, uncertainties and possibly drift. 
+Based on a nonlinear geometric approach for a \a{qr} without load, \cite{Goodarzi2013a} includes uncertainties in the translational dynamics and rotational dynamics to prove the robustness against unstructured uncertainties. This work could be extended to a \a{qr}-Load system to investigate the effects of non-perfect. 
+
+%\subsection{Modeling Constraints}
 
 %CHECK is dit uberhaupt nodig
 %There are several techniques to handle input saturation, the most popular ones are anti-windup techniques. Back-calculation is such a method for PID to activate the integrator, is this possible for NL control?
@@ -55,24 +61,13 @@ The control is designed assuming continuous-time control. In a real-time applica
 %Model Uncertainties
 %\cite{Goodarzi2013a} includes uncertainties in the translational dynamics and rotational dynamics. Out of the scope, might be interesting.
 
+\subsection{Minimum Snap Trajectory Generation}
+The trajectories described in Section \ref{sec:set.traj} were arbitrarily generated by hand to test the performance of the controller in different situations. 
+Whenever more complex trajectories are desired, or when an optimal trajectory is required, this approach is no longer efficient and too complex to solve by hand.
+A recommended extension to this thesis is the automatic generation of a trajectory. 
+This can be done as presented by \cite{Mellinger2011} and applied in \cite{Tang2014,Tang2015}, where a \acs{qp} problem is solved by minimizing the second derivative of the acceleration (snap),  guaranteeing a smooth optimal trajectory. The \a{qp} allows inclusion of input constraints and other requirements. 
+It is proven that the system is \textit{differential flat}, meaning that all states and inputs can be expressed in terms of only four states and their derivatives. This property is used to transform the high-dimensional optimization problem into a four-dimensional problem.
+
 \subsection{Hybrid System}
-Hybrid control allows the controller to switch between the two subsystems that define the system in both 
-the.  
-
-such that the 
-Switching between several flight modes yields autonomous acrobatic maneuvers. Robust to switching conditions ***why?\\
-\cite{Tang2014}
-
-\subsection{Trajectory Generation}
-\subsubsection{Minimum Snap Trajectory Generation}
-
-Trajectory can be generated by solving a \a{qp} via minimum snap generation.
-
-Problem in smaller 4-D space instead of 12-D, with help of differential flatness. Explain differential flatness and its usefulness.
-
-Is able to include constraints in \a{qp}.
-
-\cite{Mellinger2011}
-
-Obstacle avoidance
-
+This thesis is only focused on the subsystem where the tension in the cable is non-zero. A possible extension is to apply hybrid control, such that the controller is able to switch between two subsystem models whenever the cable tension switches between zero and non-zero. 
+A trajectory generation method that accounts for the switching dynamics of the hybrid system is presented in \cite{Tang2014}. 

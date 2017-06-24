@@ -148,15 +148,15 @@ In Geometric Mechanics the configuration space of systems is a \textit{group man
 
 Euler angles are kinematically singular since the transformation from their time rates of change to the angular velocity vector is not globally defined. Furthermore, when angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. Local coordinates often require symbolic computational tools due to complexity of multi-body systems. Hence, the error is rather written as the required rotation to get from the current to a desired orientation. As a result, the equations of motion and the control systems can be developed on a configuration manifold in a coordinate-free, compact, unambiguous manner, while singularities of local parameterization are avoided.
 
-To illustrate the difference in configuration spaces, an example is given of a 2-link arm, where the configuration can be expressed by 2 coordinates, see in Figure \ref{fig:mod.armmanifold}. Figure \ref{fig:mod.armcartesian} represents the configuration space as a Cartesian space, where the same dots represent one of the many identical configurations. This shows that this representation suffers from singularities caused by multiple points in one representation being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a geometric shape called a \textit{torus}, a manifold where every configuration is mapped uniquely.
+To illustrate the difference in configuration spaces, an example is given of a simple 2-link arm, where the configuration can be expressed by 2 coordinates, see Figure \ref{fig:mod.arm}. Figure \ref{fig:mod.armcartesian} represents the configuration space in a Cartesian coordinate system, where the same markers represent identical configurations. This shows that this representation suffers from singularities where multiple points in one representation are being mapped onto a single point in another representation. Figure \ref{fig:mod.armtorus} shows the configuration space as a geometric shape called a \textit{torus}, a manifold where every configuration is mapped uniquely.
 \begin{figure}[h!]
 	\centering
 	%ADD figure Robot Arm
 	%ADD figure cartesian (q1,q2), with the red dot representing sam point
 	%ADD figure torus (q1,q2)
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
-	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/dcsc.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.arm}]{\includegraphics[width=.35\textwidth]{./StyleStuff/robotarm.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armcartesian}]{\includegraphics[width=.35\textwidth]{./StyleStuff/armcartesian.png}}}
+	\makebox[.3\textwidth][c]{\subfloat[][\label{fig:mod.armtorus}]{\includegraphics[width=.3\textwidth]{./StyleStuff/torus.png}}}
 	\caption{Configuration Space of a 2-link arm\label{fig:mod.armmanifold}}
 \end{figure}		
 
@@ -182,7 +182,7 @@ The fundamental object of differential geometry a manifold. A manifold is a math
 	%ADD figure of local space on manifold to cartesian space. Sphere onto R2
 	%CHECK \url{https://en.wikipedia.org/wiki/Differentiable_manifold}
 	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/manifold.png}}
 	\caption{A manifold locally resembles a Euclidean space\label{fig:mod.manifold}}
 \end{figure}
 

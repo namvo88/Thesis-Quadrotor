@@ -33,17 +33,15 @@
 \BOOKMARK [1][-]{section.6.1}{Summary and Conclusions}{chapter.6}% 33
 \BOOKMARK [1][-]{section.6.2}{Recommendations for Future Work}{chapter.6}% 34
 \BOOKMARK [2][-]{subsection.6.2.1}{Investigate Implementation}{section.6.2}% 35
-\BOOKMARK [2][-]{subsection.6.2.2}{Modeling Constraints}{section.6.2}% 36
+\BOOKMARK [2][-]{subsection.6.2.2}{Minimum Snap Trajectory Generation}{section.6.2}% 36
 \BOOKMARK [2][-]{subsection.6.2.3}{Hybrid System}{section.6.2}% 37
-\BOOKMARK [2][-]{subsection.6.2.4}{Trajectory Generation}{section.6.2}% 38
-\BOOKMARK [3][-]{section*.38}{Minimum Snap Trajectory Generation}{subsection.6.2.4}% 39
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 40
-\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 41
-\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 42
-\BOOKMARK [1][-]{section.A.2}{LQR controller}{appendix.A}% 43
-\BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 44
-\BOOKMARK [1][-]{section.A.3}{Figures}{appendix.A}% 45
-\BOOKMARK [1][-]{section.A.4}{MATLAB code}{appendix.A}% 46
-\BOOKMARK [2][-]{subsection.A.4.1}{A MatlabListing}{section.A.4}% 47
-\BOOKMARK [0][-]{section*.40}{Bibliography}{}% 48
-\BOOKMARK [0][-]{section*.41}{Acronyms}{}% 49
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 38
+\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 39
+\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 40
+\BOOKMARK [1][-]{section.A.2}{LQR controller}{appendix.A}% 41
+\BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 42
+\BOOKMARK [1][-]{section.A.3}{Figures}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.4}{MATLAB code}{appendix.A}% 44
+\BOOKMARK [2][-]{subsection.A.4.1}{A MatlabListing}{section.A.4}% 45
+\BOOKMARK [0][-]{section*.42}{Bibliography}{}% 46
+\BOOKMARK [0][-]{section*.43}{Acronyms}{}% 47

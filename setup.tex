@@ -1,33 +1,20 @@
 \chapter{Experiment}\label{ch:setup}
-
-
-
 The experimental procedure is explained in Section \ref{sec:set.proc}. 
-
-It is explained 
-
- experimental way the performance of the controllers can be compared.
-
-In order to investigate the possibilities of nonlinear geometric control
+Here will be discussed what experiments can be done in order to investigate the possibilities of nonlinear geometric control.
+In addition a comparison will be made between the performances of the nonlinear geometric controller and a linear \a{lqr} controller.
 
 The controllers are tested for their ability to track a desired load trajectory. 
-
-The shape
-of the trajectory 
-can test 
-performance in different situations
-
-Section \ref{sec:set.traj} presents different trajectories for the controller to follow.
+Section \ref{sec:set.traj} presents trajectories that create situations with different challenges.
+It is discussed what could be expected from these experiments, and in what way a comparison can be made between the performance of the controllers.
 
 In Section \ref{sec:set.setup} the experimental setup is discussed. 
-The model parameters for the \a{qr}-Load is presented, as well as the controller parameters for both the nonlinear Geometric controller and \a{lqr} controller.
+The model parameters for the \a{qr}-Load are presented, as well as the controller parameters for both the nonlinear Geometric controller and \a{lqr} controller.
 The notion of a backstepping command filter is made to illustrate its use in the experiments.
 % are presented and for comparison of 
 %The experiments are done with two 
 %model- and controller parameters are presented.
-
-The trajectory tracking experiments are explained and discussed in Section \ref{sec:set.traj}. 
-The results of the experiments are presented and discussed, and final conclusions are made in Chapter \ref{ch.results}.
+%The trajectory tracking experiments are explained and discussed in Section \ref{sec:set.traj}. 
+%The results of the experiments are presented and discussed, and final conclusions are made in Chapter \ref{ch.results}.
 
 %ADD 1 wat brengt mij tot keuzse trajectories 
 %ADD 2 trajectories
@@ -53,8 +40,6 @@ The results of the experiments are presented and discussed, and final conclusion
 \section{Procedure}\label{sec:set.proc}
 Performance of both \a{lqr} control and a Nonlinear Geometric Control is evaluated by comparing their ability to track a load trajectory with minimal error. 
 However, in linear control small angles of both load and \a{qr} are assumed. As a result, the linearized model does not allow direct reference tracking of the load position. This fact illustrates an important difference between the use of a linear and a nonlinear model. 
-
-\cite{Goodarzi2013a} includes uncertainties in the translational dynamics and rotational dynamics. Out of the scope, might be interesting.
 
 The experiments done for \a{lqr} will apply reference tracking for the \a{qr} position, assuming that  a de
 

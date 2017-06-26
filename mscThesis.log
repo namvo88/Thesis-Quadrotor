@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  25 JUN 2017 01:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.13)  26 JUN 2017 03:00
 entering extended mode
 **mscThesis.tex
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.tex
@@ -1123,19 +1123,13 @@ LaTeX Warning: Label `key' multiply defined.
 
 LaTeX Warning: Label `key' multiply defined.
 
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
-
-LaTeX Warning: Label `key' multiply defined.
-
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.aux
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
 
 LaTeX Warning: Label `key' multiply defined.
 
@@ -1226,6 +1220,36 @@ LaTeX Warning: Label `sub@fig:' multiply defined.
 LaTeX Warning: Label `fig:' multiply defined.
 
 
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
 LaTeX Warning: Label `sub@fig:' multiply defined.
 
 
@@ -1245,6 +1269,21 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
 
 ) (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.aux)
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.aux
@@ -1262,6 +1301,18 @@ LaTeX Warning: Label `key' multiply defined.
 
 
 LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `key' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
 
 )
 
@@ -1426,7 +1477,7 @@ ted-to.pdf example_titlefig.eps>
 (epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<example_titlefig-eps-converted-to.pdf, id=191, 450.68375pt x 354.32375pt>
+<example_titlefig-eps-converted-to.pdf, id=183, 450.68375pt x 354.32375pt>
 File: example_titlefig-eps-converted-to.pdf Graphic file (type pdf)
 
 <use example_titlefig-eps-converted-to.pdf>
@@ -1446,7 +1497,7 @@ ite_A4_ENG-eps-converted-to.pdf StyleStuff/TUD_DCSC_bies_white_A4_ENG.eps>
 (epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf, id=192, 615.29875p
+<StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf, id=184, 615.29875p
 t x 105.39375pt>
 File: StyleStuff/TUD_DCSC_bies_white_A4_ENG-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1490,7 +1541,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.89  \maketitle
-                 [1] <./StyleStuff/ALTEN.png, id=225, 2007.5pt x 3365.57375pt>
+                 [1] <./StyleStuff/ALTEN.png, id=217, 2007.5pt x 3365.57375pt>
 File: ./StyleStuff/ALTEN.png Graphic file (type png)
 
 <use ./StyleStuff/ALTEN.png>
@@ -1507,7 +1558,7 @@ d-to.pdf StyleStuff/tud.eps>
 (epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<StyleStuff/tud-eps-converted-to.pdf, id=227, 140.525pt x 77.28876pt>
+<StyleStuff/tud-eps-converted-to.pdf, id=219, 140.525pt x 77.28876pt>
 File: StyleStuff/tud-eps-converted-to.pdf Graphic file (type pdf)
 
 <use StyleStuff/tud-eps-converted-to.pdf>
@@ -1612,61 +1663,50 @@ Package acronym Warning: Acronym `nmpc' is not defined on input line 21.
 
 ]
 Chapter 2.
-[5] <./StyleStuff/dcsc.png, id=477, 227.6505pt x 72.27pt>
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 36.
-(pdftex.def)             Requested size: 298.75394pt x 94.85191pt.
-File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 42.
-(pdftex.def)             Requested size: 298.75394pt x 94.85191pt.
- [6 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/dcsc.png>]
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 91--122
- [][] 
- []
-
-[7] <./StyleStuff/robotarm.png, id=506, 722.7pt x 542.025pt>
+[5] <./StyleStuff/robotarm.png, id=461, 722.7pt x 542.025pt>
 File: ./StyleStuff/robotarm.png Graphic file (type png)
 
 <use ./StyleStuff/robotarm.png>
-Package pdftex.def Info: ./StyleStuff/robotarm.png used on input line 157.
-(pdftex.def)             Requested size: 154.9315pt x 116.194pt.
+Package pdftex.def Info: ./StyleStuff/robotarm.png used on input line 29.
+(pdftex.def)             Requested size: 154.9315pt x 122.29343pt.
 
-<./StyleStuff/armcartesian.png, id=507, 722.7pt x 542.025pt>
+<./StyleStuff/armcartesian.png, id=463, 722.7pt x 542.025pt>
 File: ./StyleStuff/armcartesian.png Graphic file (type png)
 
 <use ./StyleStuff/armcartesian.png>
-Package pdftex.def Info: ./StyleStuff/armcartesian.png used on input line 158.
-(pdftex.def)             Requested size: 154.9315pt x 116.194pt.
+Package pdftex.def Info: ./StyleStuff/armcartesian.png used on input line 30.
+(pdftex.def)             Requested size: 199.19283pt x 131.29616pt.
 
-<./StyleStuff/torus.png, id=508, 722.7pt x 542.025pt>
+<./StyleStuff/torus.png, id=465, 722.7pt x 542.025pt>
 File: ./StyleStuff/torus.png Graphic file (type png)
 
 <use ./StyleStuff/torus.png>
-Package pdftex.def Info: ./StyleStuff/torus.png used on input line 159.
-(pdftex.def)             Requested size: 132.79747pt x 99.59485pt.
+Package pdftex.def Info: ./StyleStuff/torus.png used on input line 31.
+(pdftex.def)             Requested size: 165.99515pt x 137.56833pt.
 
-<./StyleStuff/manifold.png, id=510, 722.7pt x 542.025pt>
+<./StyleStuff/manifold.png, id=468, 722.7pt x 542.025pt>
 File: ./StyleStuff/manifold.png Graphic file (type png)
 
 <use ./StyleStuff/manifold.png>
-Package pdftex.def Info: ./StyleStuff/manifold.png used on input line 185.
+Package pdftex.def Info: ./StyleStuff/manifold.png used on input line 48.
 (pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 196.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 198.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-LaTeX Font Info:    Try loading font information for U+euf on input line 198.
+<./StyleStuff/tangent.png, id=470, 722.7pt x 542.025pt>
+File: ./StyleStuff/tangent.png Graphic file (type png)
+
+<use ./StyleStuff/tangent.png>
+Package pdftex.def Info: ./StyleStuff/tangent.png used on input line 64.
+(pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
+
+<./StyleStuff/so3.png, id=471, 722.7pt x 542.025pt>
+File: ./StyleStuff/so3.png Graphic file (type png)
+ <use ./StyleStuff/so3.png>
+Package pdftex.def Info: ./StyleStuff/so3.png used on input line 66.
+(pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
+LaTeX Font Info:    Try loading font information for U+euf on input line 66.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1674,154 +1714,134 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/robotarm.png> <C:/Us
+[6 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/robotarm.png> <C:/Us
 ers/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/armcartesian.png> <C:/Users/N
-am/Documents/Git/Thesis-Quadrotor/StyleStuff/torus.png>] [9 <C:/Users/Nam/Docum
-ents/Git/Thesis-Quadrotor/StyleStuff/manifold.png>]
-File: ./StyleStuff/dcsc.png Graphic file (type png)
+am/Documents/Git/Thesis-Quadrotor/StyleStuff/torus.png>] [7 <C:/Users/Nam/Docum
+ents/Git/Thesis-Quadrotor/StyleStuff/manifold.png> <C:/Users/Nam/Documents/Git/
+Thesis-Quadrotor/StyleStuff/tangent.png> <C:/Users/Nam/Documents/Git/Thesis-Qua
+drotor/StyleStuff/so3.png>]
+<./StyleStuff/qrmodel.png, id=514, 722.7pt x 542.025pt>
+File: ./StyleStuff/qrmodel.png Graphic file (type png)
 
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 265.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [10] [11] [12]
-<./StyleStuff/qrmodelppt.png, id=614, 722.7pt x 542.025pt>
-File: ./StyleStuff/qrmodelppt.png Graphic file (type png)
-
-<use ./StyleStuff/qrmodelppt.png>
-Package pdftex.def Info: ./StyleStuff/qrmodelppt.png used on input line 488.
-(pdftex.def)             Requested size: 199.19283pt x 149.39229pt.
+<use ./StyleStuff/qrmodel.png>
+Package pdftex.def Info: ./StyleStuff/qrmodel.png used on input line 139.
+(pdftex.def)             Requested size: 298.75394pt x 224.06776pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 496.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+[8]
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 190--221
+ [][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+<./StyleStuff/qrlmodel.png, id=541, 722.7pt x 542.025pt>
+File: ./StyleStuff/qrlmodel.png Graphic file (type png)
+
+<use ./StyleStuff/qrlmodel.png>
+Package pdftex.def Info: ./StyleStuff/qrlmodel.png used on input line 253.
+(pdftex.def)             Requested size: 298.75394pt x 224.06776pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodel.png>]
+[10 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrlmodel.png>]
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 441--443
 
  []
 
-[14 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/qrmodelppt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 552--553
-
- []
-
-) [15] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex [16
+) [13] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\control.tex [14
 
 
 
 ]
 Chapter 3.
 
-LaTeX Warning: Citation `Chaturvedi2011a' on page 17 undefined on input line 21
+LaTeX Warning: Citation `Chaturvedi2011a' on page 15 undefined on input line 25
 .
 
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 65.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
+[15] <./StyleStuff/backstepQR2.png, id=641, 722.7pt x 542.025pt>
+File: ./StyleStuff/backstepQR2.png Graphic file (type png)
+
+<use ./StyleStuff/backstepQR2.png>
+Package pdftex.def Info: ./StyleStuff/backstepQR2.png used on input line 88.
+(pdftex.def)             Requested size: 420.5197pt x 166.3879pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Citation `bibid' on page 17 undefined on input line 68.
-
-[17]
-
-LaTeX Warning: Citation `Lee21010' on page 18 undefined on input line 84.
-
-File: ./StyleStuff/dcsc.png Graphic file (type png)
-<use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 89.
-(pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
- [18] [19] [20]
-Underfull \hbox (badness 2359) in paragraph at lines 357--358
+[16] [17 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/backstepQR2.pn
+g>] [18] [19]
+Underfull \hbox (badness 2359) in paragraph at lines 360--361
 []\OT1/cmr/m/n/10.95 It is proven in [[]] that the zero equi-lib-rium of the cl
 osed loop track-ing er-ror
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
-
- []
-
-[22]) [23] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup.tex [24
+[20]) [21] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\setup.tex [22
 
 
 
 ]
 Chapter 4.
-[25]
+[23]
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-xLdes40.png, id=779, 578.6418pt x 434.1018pt>
+OSQRL-xLdes40.png, id=765, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xLdes40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdes40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xLdes40.png used on input line 67.
+tlab/QRL/MatlabImages/LPOSQRL-xLdes40.png used on input line 68.
 (pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-xLdesplot40.png, id=780, 578.6418pt x 434.1018pt>
+OSQRL-xLdesplot40.png, id=766, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xLdesplot40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdesplot40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xLdesplot40.png used on input line 68.
+tlab/QRL/MatlabImages/LPOSQRL-xLdesplot40.png used on input line 69.
 (pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-xLdes41.png, id=782, 578.6418pt x 434.1018pt>
+OSQRL-xLdes41.png, id=768, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xLdes41.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdes41.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xLdes41.png used on input line 82.
+tlab/QRL/MatlabImages/LPOSQRL-xLdes41.png used on input line 83.
 (pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-xLdesplot41.png, id=783, 578.6418pt x 434.1018pt>
+OSQRL-xLdesplot41.png, id=769, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xLdesplot41.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdesplot41.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xLdesplot41.png used on input line 83.
+tlab/QRL/MatlabImages/LPOSQRL-xLdesplot41.png used on input line 84.
 (pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+[24 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdes40.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-
 Code/NamMatlab/QRL/MatlabImages/LPOSQRL-xLdesplot40.png (PNG copy)>]
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
@@ -1830,7 +1850,7 @@ es/LPOSQRL-xLdes41.png Graphic file (type png)
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdes41.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xLdes41.png used on input line 98.
+tlab/QRL/MatlabImages/LPOSQRL-xLdes41.png used on input line 99.
 (pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xLdesplot41.png Graphic file (type png)
@@ -1838,240 +1858,140 @@ es/LPOSQRL-xLdesplot41.png Graphic file (type png)
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xLdesplot41.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xLdesplot41.png used on input line 99.
+tlab/QRL/MatlabImages/LPOSQRL-xLdesplot41.png used on input line 100.
 (pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package acronym Info: Label `acro:lqr' newly defined as it shall be overridden
-although it is yet undefined on input line 134.
+although it is yet undefined on input line 135.
+<./StyleStuff/dcsc.png, id=787, 227.6505pt x 72.27pt>
 File: ./StyleStuff/dcsc.png Graphic file (type png)
+
 <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 138.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 139.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[27 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-xLdes41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-
-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-xLdesplot41.png (PNG copy)>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28]
+ [25 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xLdes41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor
+-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-xLdesplot41.png (PNG copy)>] [26 <C:/U
+sers/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/dcsc.png>]
 File: ./StyleStuff/dcsc.png Graphic file (type png)
  <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 245.
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 246.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
-) [29]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\results.tex [30
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [27] [28] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\results.tex
+Chapter 5.
+[29
 
 
 
 ]
-Chapter 5.
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LQ
+R-xL40.png, id=849, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LQR-xL40.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LQR-xL40.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LQR-xL40.png used on input line 22.
+(pdftex.def)             Requested size: 232.3905pt x 174.33977pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LQ
+R-exL40.png, id=850, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LQR-exL40.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LQR-exL40.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LQR-exL40.png used on input line 23.
+(pdftex.def)             Requested size: 232.3905pt x 174.33977pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-xL40.png, id=855, 578.6418pt x 434.1018pt>
+OSQRL-xL40.png, id=851, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xL40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-xL40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xL40.png used on input line 10.
+tlab/QRL/MatlabImages/LPOSQRL-xL40.png used on input line 30.
 (pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-exL40.png, id=856, 578.6418pt x 434.1018pt>
+OSQRL-exL40.png, id=852, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-exL40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-exL40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-exL40.png used on input line 11.
+tlab/QRL/MatlabImages/LPOSQRL-exL40.png used on input line 31.
 (pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-eR40.png, id=857, 578.6418pt x 434.1018pt>
+OSQRL-eR40.png, id=853, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-eR40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-eR40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-eR40.png used on input line 12.
+tlab/QRL/MatlabImages/LPOSQRL-eR40.png used on input line 32.
 (pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-eq40.png, id=858, 578.6418pt x 434.1018pt>
+OSQRL-eq40.png, id=854, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-eq40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-eq40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-eq40.png used on input line 13.
+tlab/QRL/MatlabImages/LPOSQRL-eq40.png used on input line 33.
 (pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-PsiR40.png, id=859, 578.6418pt x 434.1018pt>
+OSQRL-PsiR40.png, id=855, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-PsiR40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-PsiR40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-PsiR40.png used on input line 14.
+tlab/QRL/MatlabImages/LPOSQRL-PsiR40.png used on input line 34.
 (pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
 
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-Psiq40.png, id=860, 578.6418pt x 434.1018pt>
+OSQRL-Psiq40.png, id=856, 578.6418pt x 434.1018pt>
 File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-Psiq40.png Graphic file (type png)
 
 <use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
 s/LPOSQRL-Psiq40.png>
 Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-Psiq40.png used on input line 15.
+tlab/QRL/MatlabImages/LPOSQRL-Psiq40.png used on input line 35.
 (pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[30 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LQR-xL40.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/Na
+mMatlab/QRL/MatlabImages/LQR-exL40.png (PNG copy)>]
 
-<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-xL41.png, id=862, 578.6418pt x 434.1018pt>
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-xL41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-xL41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xL41.png used on input line 24.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-
-<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-exL41.png, id=863, 578.6418pt x 434.1018pt>
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-exL41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-exL41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-exL41.png used on input line 25.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-
-<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-eq41.png, id=864, 578.6418pt x 434.1018pt>
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-eq41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-eq41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-eq41.png used on input line 26.
-(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
-
-<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-eR41.png, id=865, 578.6418pt x 434.1018pt>
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-eR41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-eR41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-eR41.png used on input line 27.
-(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
-
-<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-PsiR41.png, id=866, 578.6418pt x 434.1018pt>
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-PsiR41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-PsiR41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-PsiR41.png used on input line 28.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-
-<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-Psiq41.png, id=867, 578.6418pt x 434.1018pt>
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-Psiq41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-Psiq41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-Psiq41.png used on input line 29.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-xL41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-xL41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-xL41.png used on input line 39.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-exL41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-exL41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-exL41.png used on input line 40.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-eq41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-eq41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-eq41.png used on input line 41.
-(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-eR41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-eR41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-eR41.png used on input line 42.
-(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-PsiR41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-PsiR41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-PsiR41.png used on input line 43.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
-es/LPOSQRL-Psiq41.png Graphic file (type png)
-
-<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
-s/LPOSQRL-Psiq41.png>
-Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
-tlab/QRL/MatlabImages/LPOSQRL-Psiq41.png used on input line 44.
-(pdftex.def)             Requested size: 199.19283pt x 149.4341pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[31]
-
-LaTeX Warning: Text page 32 contains only floats.
+LaTeX Warning: Text page 31 contains only floats.
 
 
 Underfull \vbox (badness 4060) has occurred while \output is active []
 
- [32 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+ [31 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
 es/LPOSQRL-xL40.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Co
 de/NamMatlab/QRL/MatlabImages/LPOSQRL-exL40.png (PNG copy)> <C:/Users/Nam/Docum
 ents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-eR40.png (PNG
@@ -2079,61 +1999,254 @@ ents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-eR40.png (PNG
 mages/LPOSQRL-eq40.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor
 -Code/NamMatlab/QRL/MatlabImages/LPOSQRL-PsiR40.png (PNG copy)> <C:/Users/Nam/D
 ocuments/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-Psiq40.pn
-g (PNG copy)>]) [33 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab
-/QRL/MatlabImages/LPOSQRL-xL41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thes
-is-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-exL41.png (PNG copy)> <C:/
-Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQR
-L-eq41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMat
-lab/QRL/MatlabImages/LPOSQRL-eR41.png (PNG copy)> <C:/Users/Nam/Documents/Git/T
-hesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-PsiR41.png (PNG copy)> 
+g (PNG copy)>]
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/dc
+sc.png, id=873, 227.6505pt x 72.27pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 45.
+(pdftex.def)             Requested size: 232.3905pt x 73.77725pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 46.
+(pdftex.def)             Requested size: 232.3905pt x 73.77725pt.
+ [32 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png>]
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 60.
+(pdftex.def)             Requested size: 221.32687pt x 70.265pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 61.
+(pdftex.def)             Requested size: 221.32687pt x 70.265pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 62.
+(pdftex.def)             Requested size: 221.32687pt x 70.265pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 63.
+(pdftex.def)             Requested size: 221.32687pt x 70.265pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 64.
+(pdftex.def)             Requested size: 221.32687pt x 70.265pt.
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/dcsc.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/dcsc.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/dcsc.png used on input line 65.
+(pdftex.def)             Requested size: 221.32687pt x 70.265pt.
+ [33]
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LQ
+R-xL41.png, id=895, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LQR-xL41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LQR-xL41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LQR-xL41.png used on input line 76.
+(pdftex.def)             Requested size: 232.3905pt x 174.33977pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LQ
+R-exL41.png, id=896, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LQR-exL41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LQR-exL41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LQR-exL41.png used on input line 77.
+(pdftex.def)             Requested size: 232.3905pt x 174.33977pt.
+
 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
-OSQRL-Psiq41.png (PNG copy)>] [34]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.tex
+OSQRL-xL41.png, id=897, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-xL41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-xL41.png used on input line 84.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-exL41.png, id=898, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-exL41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-exL41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-exL41.png used on input line 85.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-eq41.png, id=899, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eq41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eq41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eq41.png used on input line 86.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-eR41.png, id=900, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-eR41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-eR41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-eR41.png used on input line 87.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-PsiR41.png, id=901, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-PsiR41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-PsiR41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-PsiR41.png used on input line 88.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+<C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LP
+OSQRL-Psiq41.png, id=902, 578.6418pt x 434.1018pt>
+File: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-Psiq41.png Graphic file (type png)
+
+<use C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LPOSQRL-Psiq41.png>
+Package pdftex.def Info: C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMa
+tlab/QRL/MatlabImages/LPOSQRL-Psiq41.png used on input line 89.
+(pdftex.def)             Requested size: 221.32687pt x 166.04008pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImage
+s/LQR-xL41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/Na
+mMatlab/QRL/MatlabImages/LQR-exL41.png (PNG copy)>]
+
+LaTeX Warning: Text page 35 contains only floats.
+
+
+Underfull \vbox (badness 4060) has occurred while \output is active []
+
+ [35 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImag
+es/LPOSQRL-xL41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Co
+de/NamMatlab/QRL/MatlabImages/LPOSQRL-exL41.png (PNG copy)> <C:/Users/Nam/Docum
+ents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-eq41.png (PNG
+ copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabI
+mages/LPOSQRL-eR41.png (PNG copy)> <C:/Users/Nam/Documents/Git/Thesis-Quadrotor
+-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-PsiR41.png (PNG copy)> <C:/Users/Nam/D
+ocuments/Git/Thesis-Quadrotor-Code/NamMatlab/QRL/MatlabImages/LPOSQRL-Psiq41.pn
+g (PNG copy)>]) [36] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\conclusion.te
+x
 Chapter 6.
-[35
-
-
-
-]) [36] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex
-Appendix A.
 [37
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+[38]) [39] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\appendix.tex [40
+
+
+
+]
+Appendix A.
+[41] [42]
+File: ./StyleStuff/qrmodel.png Graphic file (type png)
+ <use ./StyleStuff/qrmodel.png>
+Package pdftex.def Info: ./StyleStuff/qrmodel.png used on input line 261.
+(pdftex.def)             Requested size: 221.32687pt x 165.99142pt.
+
+<./StyleStuff/angles.png, id=997, 722.7pt x 542.025pt>
+File: ./StyleStuff/angles.png Graphic file (type png)
+
+<use ./StyleStuff/angles.png>
+Package pdftex.def Info: ./StyleStuff/angles.png used on input line 262.
+(pdftex.def)             Requested size: 221.32687pt x 165.99142pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: ./StyleStuff/dcsc.png Graphic file (type png)
- <use ./StyleStuff/dcsc.png>
-Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 193.
+<use ./StyleStuff/dcsc.png>
+Package pdftex.def Info: ./StyleStuff/dcsc.png used on input line 313.
 (pdftex.def)             Requested size: 199.19283pt x 63.23828pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 197.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 317.
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 198.
+(Font)              using `OT1/cmss/bx/n' instead on input line 318.
 
+[43]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 201.
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m [38]
+nput line 321.
+ (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\test.m
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9.5105\xelatex\tex\latex\psnfss\ts1pcr.fd"
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)))
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 136.
-[39] [40
+))) [44 <C:/Users/Nam/Documents/Git/Thesis-Quadrotor/StyleStuff/angles.png>]
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [45
 
 
-] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bbl [41
 
-])
-[42] (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bblpdfTeX warning (
-ext4): destination with the same identifier (name{cite.Bangura2014}) has been a
-lready used, duplicate ignored
+]) [46]
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.bblpdfTeX warning (ext4)
+: destination with the same identifier (name{cite.Bangura2014}) has been alread
+y used, duplicate ignored
 <to be read again> 
                    \relax 
 l.3 \bibitem{Bangura2014}
@@ -2192,7 +2305,7 @@ er (name{cite.Lee2005}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.57 \bibitem{Lee2005}
-                       [43
+                       [47
 
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{cite.Lee2009
@@ -2245,20 +2358,20 @@ dentifier (name{cite.Tang2015}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.107 \bibitem{Tang2015}
-                        ) [44]
+                        ) [48]
 runsystem(makeindex mscThesis.idx)...executed (allowed).
 
 
 (C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.ind)
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [45
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\mscThesis.nls) [49
 
 
 
 ]
-(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [46
+(C:\Users\Nam\Documents\Git\Thesis-Quadrotor\glossary.tex [50
 
 
-]) [47]
+]) [51]
 \tf@thm=\write14
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
@@ -2276,7 +2389,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `mscThesis.out' has not changed.
-(rerunfilecheck)             Checksum: 35CE23218CFF19C28F65B67104974A0A;2950.
+(rerunfilecheck)             Checksum: E81CF1EB0D45ADE9A21CD24DCBBFFD53;2801.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2290,13 +2403,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 14324 strings out of 493921
- 215687 string characters out of 3144882
- 435337 words of memory out of 3000000
- 16902 multiletter control sequences out of 15000+200000
- 20532 words of font info for 77 fonts, out of 3000000 for 9000
+ 14389 strings out of 493921
+ 218440 string characters out of 3144882
+ 435347 words of memory out of 3000000
+ 16948 multiletter control sequences out of 15000+200000
+ 19915 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 45i,16n,94p,901b,2428s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,16n,94p,901b,1899s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/enc/dvips/fontname/8r.e
 nc} <C:\Users\Nam\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
 crm1095.pk><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/public/a
@@ -2330,9 +2443,9 @@ c/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9.5105/xelatex/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9.
 5105/xelatex/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (
 x86)/MiKTeX 2.9.5105/xelatex/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on mscThesis.pdf (63 pages, 1759102 bytes).
+Output written on mscThesis.pdf (67 pages, 2439541 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 306 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1215 PDF objects out of 1440 (max. 8388607)
+ 318 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
 

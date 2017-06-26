@@ -1,7 +1,7 @@
 \chapter{Appendix}
 
 \section{Derivation of Equations of motion}
-\subsection{Load Dynamics}\label{sec.app:loaddyn}
+\subsection{Load Dynamics}\label{sec:app.loaddyn}
 %PROOF prop.3 Sreenath2013a. Also Sreenath2013b?
 %DEFINE e_3 / R / f 
 
@@ -186,6 +186,126 @@ K =
 %	    \end{equation}	    
 %	    
 %	    ***************************************\\	
+
+\section{Classical Modeling}\label{sec:mod.clas}
+
+%CHECK waarom dit? Per se nodig om LQR uit te leggen?
+This section describes the derivation of the model by using classical modeling techniques.\\
+NEEDED??
+
+
+%CHECK is deze reference nog relevant?
+%Reference \ref{app:model}
+
+When assuming small angle maneuvers, \textit{Euler-angles} can be used to locally parameterize the orientation of the body-fixed reference coordinate frame with respect to the inertial reference coordinate frame. Simple linear controllers are often based on a linearized dynamical model, applying this small angles assumption. 
+
+The following equations of motion follow from Newton's law.
+\begin{equation}\label{eq:newton}
+\begin{aligned}
+\dot{x}_Q &= v_Q\\
+m_Q\dot{v}_Q &=fRe_3-m_Qge_3-Tq\\
+\dot{x}_L &= v_L\\
+m_L\dot{v}_L &=-m_Lge_3+Tq
+\end{aligned}
+\end{equation}
+where $ x_Q = x_L-Lq $. $ T $ is the cable tension, defined by $ T=|f| q $, where $ |f| = m_L\dot{v}_L $ is the magnitude of the force.
+%which gives the following equation, derived in Section \ref{sec.app:loaddyn},
+%\begin{equation}\label{key}
+%%CHECK whether equation is correct
+%(m_Q+m_L)(\dot{v}_L+ge_3)=fRe_3-m_QL\ddot{q}
+%\end{equation}
+
+Because Euler-Angles are used, a function is required that maps a vector of the Z-X-Y Euler angles to its rotation matrix $ R\in SO(3) $, which is denoted as \cite{Mahony2012}
+\begin{equation}\label{key}
+R_{ZXY}({\phi},{\theta},{\psi})=\begin{bmatrix}
+c_{\psi}c_{\theta}-s_{\phi}s_{\psi}s_{\theta}&-c_{\phi}s_{\psi}&c_{\psi}s_{\theta}+c_{\theta}s_{\phi}s_{\psi}\\
+c_{\theta}s_{\psi}+c_{\psi}s_{\phi}s_{\theta}&c_{\phi}c_{\psi}&s_{\psi}s_{\theta}-c_{\psi}c_{\theta}s_{\phi}\\
+-c_{\phi}s_{\theta}&s_{\phi}&c_{\phi}c_{\theta}
+\end{bmatrix}
+\end{equation}
+The Z-X-Y Euler angles rotate \BF, as can be seen in Figure \ref{fig:app.model}. The first rotation by yaw angle $ \psi $ is around the z-axis of \IF. Next is the rotation by roll angle $ \phi $, and the last rotation is by pitch angle $ \theta $.
+%\begin{figure}[h!]
+%	\centering
+%	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/qrmodel.png}}
+%	\caption{Quadrotor-Load model representation\label{fig:mod.modelQRtrad}}
+%\end{figure}
+
+The unit vector $ q $ from the \a{qr} to the load is represented in \BF. Define $ \phi_L $ as the rotation of the load around the z-axis, measured from $ \vec{b}_1 $, and $ \theta_L $ is the angle between the cable and the z-axis of \BF, see Figure \ref{fig:app.angles}.
+The Cartesian coordinates can be retrieved through
+\begin{equation}\label{eq:app.xL2xQ}
+x_L = x_Q+qL
+\end{equation}
+where
+\begin{equation}\label{eq:app.q}
+q=
+\begin{bmatrix}
+s_{\theta_L}c_{\phi_L}\\
+s_{\theta_L}s_{\phi_L}\\
+-c_{\theta_L}
+\end{bmatrix}
+\end{equation}
+%\begin{figure}[h!]
+%	\centering
+%	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/angles.png}}
+%	\caption{Load angles \label{fig:app.angles}}
+%\end{figure}	
+
+%\begin{figure}[h!]
+%	\centering
+%	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/qrmodel.png}}
+%	\caption{Quadrotor model representation\label{fig:mod.model}}
+%\end{figure}	
+
+\begin{figure}[h!]
+	\centering
+	\makebox[.65\textwidth][c]{\subfloat[][Quadrotor model representation \label{fig:app.model}]{\includegraphics[width=.5\textwidth]{./StyleStuff/qrmodel.png}}}
+	\makebox[.34\textwidth][c]{\subfloat[][Load angles  \label{fig:app.angles}]{\includegraphics[width=.5\textwidth]{./StyleStuff/angles.png}}}
+	\caption{Model representation\label{fig:}}
+\end{figure}		
+
+%\begin{equation}\label{eq:q}
+%		q=-R_{\psi_L}R_{\theta_L}e_3=\begin{bmatrix}
+%		s_{\theta_L}c_{\psi_L}\\s_{\theta_L}s_{\psi_L}\\-c_{\theta_L}
+%		\end{bmatrix}
+%\begin{align}
+%q=\begin{bmatrix}
+%s_{\theta_L}c_{\phi_L}\\
+%s_{\theta_L}s_{\phi_L}\\
+%c_{\theta_L}
+%\end{bmatrix}
+%\dot{q}&=\begin{bmatrix}
+%s_{\theta_L}c_{\psi_L}\\
+%s_{\theta_L}s_{\psi_L}\\
+%c_{\theta_L}
+%\end{bmatrix}\\
+%\end{align}
+%\end{equation}  
+Differentiating Equation \ref{eq:app.xL2xQ} and \ref{eq:app.q} gives
+\begin{equation}\label{key}
+\begin{aligned}
+\ddot{x}_L&=\ddot{x}_Q+\ddot{q}L\\
+\ddot{q}&=\begin{bmatrix}
+\ddot{\theta}_Lc_{\theta_L}c_{\phi_L}-\ddot{\phi}_Ls_{\theta_L}s_{\phi_L}-\dot{\phi}_L^2s_{\theta_L}c_{\phi_L}-\dot{\theta}_L^2s_{\theta_L}c_{\phi_L}-2\dot{\theta}_L\dot{\phi}_Lc_{\theta_L}s_{\phi_L}\\
+\ddot{\theta}_Lc_{\theta_L}s_{\phi_L}+\ddot{\phi}_Ls_{\theta_L}c_{\phi_L}-\dot{\phi}_L^2s_{\theta_L}s_{\phi_L}-\dot{\theta}_L^2s_{\theta_L}s_{\phi_L}+2\dot{\theta}_L\dot{\phi}_Lc_{\theta_L}c_{\phi_L}\\
+\ddot{\theta}_Ls_{\theta_L}+\dot{\theta}_L^2 c_{\theta_L}\\
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{key}
+\begin{aligned}
+\ddot{x}_Q&=\frac{1}{m_Q}(f(c_{\psi}s_{\theta}+c_{\theta}s_{\phi}s_{\psi})-Ts_{\theta_L}c_{\psi_L})\\
+\ddot{y}_Q&=\frac{1}{m_Q}(f(s_{\psi}s_{\theta}-c_{\psi}c_{\theta}s_{\phi})-Ts_{\theta_L}s_{\psi_L})\\
+\ddot{z}_Q&=\frac{1}{m_Q}(f(c_{\phi}c_{\theta})-Tc_{\theta_L})-g\\
+\end{aligned}
+\end{equation}
+
+%\begin{align}\label{key}
+%%CHECK wat is hier de bedoeling van? Checken in Garcia of literatuur?
+%\ddot{\psi}&=\tilde{\tau}_{\psi}\\
+%\ddot{\theta}&=\tilde{\tau}_{\theta}\\
+%\ddot{\phi} &=\tilde{\tau}_{\phi}
+%\end{align}
 
 \section{Figures}
 \begin{figure}[h!]

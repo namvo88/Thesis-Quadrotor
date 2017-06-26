@@ -4,53 +4,53 @@
 \contentsline {section}{\numberline {1-1}Aim and Motivation}{2}{section.1.1}
 \contentsline {section}{\numberline {1-2}Organization of the Report}{3}{section.1.2}
 \contentsline {chapter}{\numberline {2}Dynamic Model}{5}{chapter.2}
-\contentsline {section}{\numberline {2-1}Modeling Assumptions}{5}{section.2.1}
-\contentsline {section}{\numberline {2-2}Geometric Mechanics}{7}{section.2.2}
-\contentsline {paragraph}{Manifolds}{8}{section*.12}
-\contentsline {subparagraph}{Configuration Spaces}{9}{section*.15}
-\contentsline {section}{\numberline {2-3}Quadrotor-Load Model}{10}{section.2.3}
-\contentsline {paragraph}{Euler-Lagrange}{11}{section*.17}
-\contentsline {section}{\numberline {2-4}Classical Modeling}{13}{section.2.4}
-\contentsline {chapter}{\numberline {3}Geometric Control Design}{17}{chapter.3}
-\contentsline {section}{\numberline {3-1}Backstepping Control}{17}{section.3.1}
-\contentsline {section}{\numberline {3-2}Configuration Errors}{19}{section.3.2}
-\contentsline {section}{\numberline {3-3}Quadrotor Attitude Tracking}{20}{section.3.3}
-\contentsline {section}{\numberline {3-4}Load Attitude Tracking}{21}{section.3.4}
-\contentsline {section}{\numberline {3-5}Load Position Tracking}{22}{section.3.5}
-\contentsline {section}{\numberline {3-6}Parameter- and State Estimation}{22}{section.3.6}
-\contentsline {section}{\numberline {3-7}Stability Analysis}{23}{section.3.7}
-\contentsline {chapter}{\numberline {4}Experiment}{25}{chapter.4}
-\contentsline {section}{\numberline {4-1}Procedure}{25}{section.4.1}
-\contentsline {section}{\numberline {4-2}Trajectories}{26}{section.4.2}
-\contentsline {subsection}{\numberline {4-2-1}Case A}{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4-2-2}Case B}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4-2-3}Case C}{26}{subsection.4.2.3}
-\contentsline {section}{\numberline {4-3}Setup}{27}{section.4.3}
-\contentsline {paragraph}{Model parameters}{27}{section*.27}
-\contentsline {paragraph}{LQR Control}{27}{section*.29}
-\contentsline {paragraph}{Geometric Control}{28}{section*.32}
-\contentsline {subsection}{\numberline {4-3-1}Command Filtering}{29}{subsection.4.3.1}
-\contentsline {chapter}{\numberline {5}Results}{31}{chapter.5}
-\contentsline {section}{\numberline {5-1}Case A}{31}{section.5.1}
-\contentsline {section}{\numberline {5-2}Case B}{31}{section.5.2}
-\contentsline {section}{\numberline {5-3}Case C}{31}{section.5.3}
-\contentsline {section}{\numberline {5-4}Conclusion}{31}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{35}{chapter.6}
-\contentsline {section}{\numberline {6-1}Summary and Conclusions}{35}{section.6.1}
-\contentsline {section}{\numberline {6-2}Recommendations for Future Work}{35}{section.6.2}
-\contentsline {subsection}{\numberline {6-2-1}Investigate Implementation}{35}{subsection.6.2.1}
-\contentsline {paragraph}{Digital Control}{35}{section*.38}
-\contentsline {paragraph}{Model identification and validation}{36}{section*.39}
-\contentsline {paragraph}{Robustness}{36}{section*.40}
-\contentsline {subsection}{\numberline {6-2-2}Minimum Snap Trajectory Generation}{36}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6-2-3}Hybrid System}{36}{subsection.6.2.3}
-\contentsline {chapter}{\numberline {A}Appendix}{37}{appendix.A}
-\contentsline {section}{\numberline {A-1}Derivation of Equations of motion}{37}{section.A.1}
-\contentsline {subsection}{\numberline {A-1-1}Load Dynamics}{37}{subsection.A.1.1}
-\contentsline {section}{\numberline {A-2}LQR controller}{37}{section.A.2}
-\contentsline {subsection}{\numberline {A-2-1}Modeling}{37}{subsection.A.2.1}
-\contentsline {section}{\numberline {A-3}Figures}{38}{section.A.3}
-\contentsline {section}{\numberline {A-4}\texttt {MATLAB} code}{38}{section.A.4}
-\contentsline {subsection}{\numberline {A-4-1}A \textsc {Matlab}Listing}{38}{subsection.A.4.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{43}{section*.42}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{46}{section*.43}
+\contentsline {section}{\numberline {2-1}Geometric Mechanics}{5}{section.2.1}
+\contentsline {paragraph}{Manifolds}{6}{section*.9}
+\contentsline {subparagraph}{Configuration Spaces}{7}{section*.12}
+\contentsline {section}{\numberline {2-2}Modeling Assumptions}{8}{section.2.2}
+\contentsline {section}{\numberline {2-3}Quadrotor-Load Model}{9}{section.2.3}
+\contentsline {paragraph}{Euler-Lagrange}{11}{section*.16}
+\contentsline {chapter}{\numberline {3}Control Design}{15}{chapter.3}
+\contentsline {section}{\numberline {3-1}Nonlinear Geometric Control}{15}{section.3.1}
+\contentsline {paragraph}{Backstepping Control}{16}{section*.18}
+\contentsline {paragraph}{Configuration Errors}{17}{section*.20}
+\contentsline {section}{\numberline {3-2}Quadrotor Attitude Tracking}{18}{section.3.2}
+\contentsline {section}{\numberline {3-3}Load Attitude Tracking}{19}{section.3.3}
+\contentsline {section}{\numberline {3-4}Load Position Tracking}{20}{section.3.4}
+\contentsline {section}{\numberline {3-5}Stability Analysis}{21}{section.3.5}
+\contentsline {chapter}{\numberline {4}Experiment}{23}{chapter.4}
+\contentsline {section}{\numberline {4-1}Procedure}{23}{section.4.1}
+\contentsline {section}{\numberline {4-2}Trajectories}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4-2-1}Case A}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4-2-2}Case B}{24}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4-2-3}Case C}{24}{subsection.4.2.3}
+\contentsline {section}{\numberline {4-3}Setup}{25}{section.4.3}
+\contentsline {paragraph}{Model parameters}{25}{section*.25}
+\contentsline {paragraph}{LQR Control}{26}{section*.27}
+\contentsline {paragraph}{Geometric Control}{27}{section*.30}
+\contentsline {subsection}{\numberline {4-3-1}Command Filtering}{27}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Results}{29}{chapter.5}
+\contentsline {section}{\numberline {5-1}Case A}{30}{section.5.1}
+\contentsline {section}{\numberline {5-2}Case B}{32}{section.5.2}
+\contentsline {section}{\numberline {5-3}Case C}{34}{section.5.3}
+\contentsline {section}{\numberline {5-4}Conclusion}{36}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{37}{chapter.6}
+\contentsline {section}{\numberline {6-1}Summary and Conclusions}{37}{section.6.1}
+\contentsline {section}{\numberline {6-2}Recommendations for Future Work}{37}{section.6.2}
+\contentsline {subsection}{\numberline {6-2-1}Investigate Implementation}{37}{subsection.6.2.1}
+\contentsline {paragraph}{Digital Control}{37}{section*.39}
+\contentsline {paragraph}{Model identification and validation}{38}{section*.40}
+\contentsline {paragraph}{Robustness}{38}{section*.41}
+\contentsline {subsection}{\numberline {6-2-2}Minimum Snap Trajectory Generation}{38}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6-2-3}Hybrid System}{39}{subsection.6.2.3}
+\contentsline {chapter}{\numberline {A}Appendix}{41}{appendix.A}
+\contentsline {section}{\numberline {A-1}Derivation of Equations of motion}{41}{section.A.1}
+\contentsline {subsection}{\numberline {A-1-1}Load Dynamics}{41}{subsection.A.1.1}
+\contentsline {section}{\numberline {A-2}LQR controller}{41}{section.A.2}
+\contentsline {subsection}{\numberline {A-2-1}Modeling}{41}{subsection.A.2.1}
+\contentsline {section}{\numberline {A-3}Classical Modeling}{42}{section.A.3}
+\contentsline {section}{\numberline {A-4}Figures}{44}{section.A.4}
+\contentsline {section}{\numberline {A-5}\texttt {MATLAB} code}{44}{section.A.5}
+\contentsline {subsection}{\numberline {A-5-1}A \textsc {Matlab}Listing}{44}{subsection.A.5.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{47}{section*.44}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{50}{section*.45}

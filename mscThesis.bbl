@@ -1,10 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Bangura2014}
-M.~Bangura and R.~Mahony, ``{Real-time model predictive control for
-  quadrotors},'' in {\em IFAC Proceedings Volumes (IFAC-PapersOnline)},
-  vol.~19, pp.~11773--11780, 2014.
-
 \bibitem{PraveenThesis}
 R.~P.~K. Jain and T.~Keviczky, ``{MSc Thesis: Transportation of Cable Suspended
   Load using Unmanned Aerial Vehicles: A Real-time Model Predictive Control
@@ -12,7 +7,8 @@ R.~P.~K. Jain and T.~Keviczky, ``{MSc Thesis: Transportation of Cable Suspended
 
 \bibitem{Sadr2014}
 S.~Sadr, S.~Ali, A.~Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and
-  Control of a Quadrotor with Swing Load},''
+  Control of a Quadrotor with Swing Load},'' {\em Journal of Robotics, Hindawi
+  Publishing Corporation}, vol.~2014.
 
 \bibitem{Lee2010}
 T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
@@ -42,8 +38,8 @@ S.~Tang, ``{Aggressive Maneuvering of a Quadrotor with a Cable-Suspended
   Pennsylvania, 2014.
 
 \bibitem{Chaturvedi2011}
-N.~Chaturvedi, ``{Attitude control},'' {\em IEEE Control Systems}, vol.~31,
-  no.~3, pp.~30--51, 2011.
+N.~Chaturvedi, ``{Rigid-Body Attitude Control},'' {\em IEEE Control Systems},
+  vol.~31, no.~3, pp.~30--51, 2011.
 
 \bibitem{Murray1994}
 R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
@@ -80,20 +76,16 @@ K.~Sreenath, {Taeyoung Lee}, and V.~Kumar, ``{Geometric control and
   {\em 52nd IEEE Conference on Decision and Control}, pp.~2269--2274, IEEE, dec
   2013.
 
-\bibitem{Mahony2012}
-R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
-  Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
-  Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
-
-\bibitem{Jurdjevic1997}
-V.~Jurdjevic, {\em {Geometric Control Theory}}.
-\newblock Cambridge: Cambridge University Press, 1997.
-
 \bibitem{Gillula2010}
 J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
   safe maneuvers using reachable sets: Autonomous quadrotor aerobatics in
   theory and practice},'' in {\em Proceedings - IEEE International Conference
   on Robotics and Automation}, pp.~1649--1654, 2010.
+
+\bibitem{Mahony2012}
+R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
+  Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
+  Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
 
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered

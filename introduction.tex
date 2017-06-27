@@ -11,39 +11,40 @@ The aim is to control the position of a suspended load using a \a{qr}. Before co
 
 The system can be divided into two subsystems. The first subsystem is where the cable tension is non-zero and the distance between the \a{qr} and the load is defined by the cable length. Both \a{qr} and load are coupled as one system. The second subsystem is where the cable tension is zero, such that the \a{qr} and load in free fall are two separate decoupled systems. This research focuses on the first subsystem, such that the cable tension is non-zero. In order to control both subsystems, hybrid control must be applied, which is considered out of the scope of this research.
 
-Former work on attitude control of \a{qr} and/or load often relies on linear control methods such as \acs{pid}\cite{bibid}, \a{mpc} \cite{Bangura2014} and \a{lqr} control \cite{bibid}. The dynamics are linearized around an equilibrium point, describing the system dynamics by a set of linear differential equations. 
-%ADD references to pid and lqr controllers qr attitude
-The control of a \a{qr}-Load system is a very specific case and scarcely investigated. Former work includes \a{mpc} \cite{PraveenThesis} and \a{lqr}\cite{bibid} control approaches, where an optimal control strategy is used to minimize the swing of the load. 
+%ADD cite MPC \cite{Bangura2014}
+%ADD cite PID LQR?
+Former work on attitude control of \a{qr} and/or load often relies on linear control methods such as \acs{pid}, \a{mpc} and \a{lqr} control. The dynamics are linearized around an equilibrium point, describing the system dynamics by a set of linear differential equations. 
+The control of a \a{qr}-Load system is a very specific case and scarcely investigated. Former work includes \a{mpc} \cite{PraveenThesis} and \a{lqr} control approaches, where an optimal control strategy is used to minimize the swing of the load. 
 %ADD what more former work?
+%ADD cite lqr
+%ADD sadr?
 
-The reason that linear control near an equilibrium state is commonly applied, is partly to avoid difficulties that come with modeling and controlling the non-linearities of the system. Nonlinear control systems are often governed by nonlinear differential equations and are able to represent the dynamics in a more realistic manner. However, linear control limits the system to small angle movements, as the optimization will not allow large angles that deviate to far from the linearized point. For applications that require fast aggressive maneuvers, this type of modeling and control will not be sufficient.
-
-Nonlinear control approaches to minimize the load swing includes a Model Based Algorithm controller applied by \cite{Sadr2014}. For the same purpose \acs{nmpc} is tested, which is a variant of \a{mpc} that uses a nonlinear dynamical system to predict the required inputs. While these optimization problems are convex in linear \a{mpc}, in nonlinear \a{mpc} they are not convex anymore, which poses challenges for both \a{nmpc} stability theory and numerical solution. 
+The reason that linear control near an equilibrium state is commonly applied, is partly to avoid difficulties that come with modeling and controlling the non-linearities of the system. However, linear control limits the system to small angle movements, as the optimization will not allow large angles that deviate to far from the linearized point. For applications that require fast aggressive maneuvers, this type of modeling and control will not be sufficient. 
+Nonlinear control systems are often governed by nonlinear differential equations and are able to represent the dynamics in a more realistic manner. Nonlinear control approaches to minimize the load swing includes a Model Based Algorithm controller applied by \cite{Sadr2014}. 
+%For the same purpose \acs{nmpc} is tested, which is a variant of \a{mpc} that uses a nonlinear dynamical system to predict the required inputs. While these optimization problems are convex in linear \a{mpc}, in nonlinear \a{mpc} they are not convex anymore, which poses challenges for both \a{nmpc} stability theory and numerical solution. 
 %ADD what more former work?
-
 %BART
 %***************************************\\
 %Bart: These problems. Which problems in the previous sentence are you referring to?
 %Nam: optimization problems
 %
 %***************************************\\
-
 %ADD Reason to consider Geometric Control 
+
 Nonlinear Geometric Control is a nonlinear model based control technique based on a modeling approach involving the concepts of differential geometry. This results in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties.
 
 Former work includes a nonlinear geometric control of a \a{qr} \cite{Lee2010,Goodarzi2013a} and nonlinear geometric control of the load position, load attitude and \a{qr} attitude of a \a{qr}-Load system \cite{Sreenath2013a,Sreenath2013b,Tang2014}.
-Geometric Control for the control of \a{qr} systems is used less frequently, despite the advantageous properties of differential geometry. 
+Nonlinear Geometric Control for \a{qr} systems is rarely found in literature, despite the advantageous properties of differential geometry. 
 
 %ADD MOTIVATION
-This motivates to investigate the possibilities and limitations of the less used nonlinear Geometric Control design, and compare this to a commonly used linear control strategy.
-The question is which advantages or disadvantages this nonlinear approach has compared to a linear approach, in terms of stability and performance.
+This motivates to investigate the possibilities and limitations of a rarely used nonlinear Geometric Control approach, and to investigate the performance of a load transportation maneuver, when compared to a commonly used linear control strategy.
 
-%A controller is designed a priori to guarantee global asymptotic stability. 
-%Unlike a \a{mpc} approach, the 
+Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of the control design.
+It is possible to investigate which advantages or disadvantages this nonlinear approach has compared to a linear approach, in terms of stability and performance.
 
 %ADD Contributions in this thesis
 
-Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of control design.
+
 
 System consists of two sub-systems
 Limited to subsystem where the tension of the cable is non-zero. 

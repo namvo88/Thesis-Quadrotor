@@ -12,7 +12,7 @@ m_Q(x_Q-x_{CM})+m_L(x_L-x_{CM})&=0\\
 (m_Q+m_L)x_{CM}&=m_Qx_Q+m_Lx_L
 \end{split}
 \end{align}
-Applying the laws of motion to (\ref{eq:CM}) and inserting (\ref{eq:mod.xQ2xL}) gives the 
+Applying Newton's laws of motion to (\ref{eq:CM}) and inserting (\ref{eq:mod.xQ2xL}) gives the 
 \begin{align}\label{key}
 \begin{split}
 (m_Q+m_L)\ddot{x}_{CM}&=fRe_3 - (m_Q+m_L)ge_3\\
@@ -26,7 +26,7 @@ Applying the laws of motion to (\ref{eq:CM}) and inserting (\ref{eq:mod.xQ2xL}) 
 \end{align}
 
 %ADD derivation of ddq (TANG2014)
-
+Here comes the derivation of $ \ddot{q} $, obtained by geometric mechanics.
 
 \section{LQR controller}\label{app:lqr}
 
@@ -188,16 +188,16 @@ K =
 %	    ***************************************\\	
 
 \section{Classical Modeling}\label{sec:mod.clas}
-
-%CHECK waarom dit? Per se nodig om LQR uit te leggen?
-This section describes the derivation of the model by using classical modeling techniques.\\
-NEEDED??
-
-
-%CHECK is deze reference nog relevant?
-%Reference \ref{app:model}
+This section describes the derivation of the model by using classical modeling techniques.
 
 When assuming small angle maneuvers, \textit{Euler-angles} can be used to locally parameterize the orientation of the body-fixed reference coordinate frame with respect to the inertial reference coordinate frame. Simple linear controllers are often based on a linearized dynamical model, applying this small angles assumption. 
+
+\begin{figure}[h!]
+	\centering
+	\makebox[.65\textwidth][c]{\subfloat[][Quadrotor model representation \label{fig:app.model}]{\includegraphics[width=.5\textwidth]{./StyleStuff/qrmodel.png}}}
+	\makebox[.34\textwidth][c]{\subfloat[][Load angles  \label{fig:app.angles}]{\includegraphics[width=.5\textwidth]{./StyleStuff/angles.png}}}
+	\caption{Model representation\label{fig:}}
+\end{figure}		
 
 The following equations of motion follow from Newton's law.
 \begin{equation}\label{eq:newton}
@@ -256,12 +256,7 @@ s_{\theta_L}s_{\phi_L}\\
 %	\caption{Quadrotor model representation\label{fig:mod.model}}
 %\end{figure}	
 
-\begin{figure}[h!]
-	\centering
-	\makebox[.65\textwidth][c]{\subfloat[][Quadrotor model representation \label{fig:app.model}]{\includegraphics[width=.5\textwidth]{./StyleStuff/qrmodel.png}}}
-	\makebox[.34\textwidth][c]{\subfloat[][Load angles  \label{fig:app.angles}]{\includegraphics[width=.5\textwidth]{./StyleStuff/angles.png}}}
-	\caption{Model representation\label{fig:}}
-\end{figure}		
+
 
 %\begin{equation}\label{eq:q}
 %		q=-R_{\psi_L}R_{\theta_L}e_3=\begin{bmatrix}

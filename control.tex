@@ -11,6 +11,13 @@ The controllers that are designed for the control of the different flight modes,
 %deze references introduceren
 %\cite{Bullo2005,Jurdjevic1997}
 
+
+***************************************\\
+%BART
+bart: Descibe just as in chapter 2 what we are going to read in the next sections
+
+***************************************\\
+
 \section{Nonlinear Geometric Control}\label{sec:con.nlgc}
 Many control systems are developed for the standard form of ordinary differential equations, namely $ \dot{x}=f(x,u) $, where the state and the control input are denoted by $ x $ and $ u $. It is assumed that the state and the control input lie in Euclidean spaces, and the system equations are defined in terms of smooth functions between Euclidean spaces. However, for many interesting mechanical systems, the configuration space cannot be expressed globally as a Euclidean space.
 
@@ -364,7 +371,7 @@ It is proven in \cite{Sreenath2013c} that the zero equilibrium of the closed loo
 \begin{equation}
 \parallel e_{x}(0)\parallel^2<e_{x_{max}}
 \end{equation}
-where $ e_{x_{max}} $ and $ \psi_1 $ are fixed constants. 
+where $ e_{x_{max}} $ and $ \psi_1 $ are fixed design depended constants. 
 
 The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \ref{eq:dom5} and the following equation
 \begin{equation}
@@ -378,6 +385,10 @@ Furthermore, there exist constants $ \alpha_q,\beta_q>0 $ such that
 \end{equation}
 
 \section{Stability Analysis}\label{sec:con.sta}
+
+Normally Lyapunov Analysis is 
+
+
 Lyapunov Analysis on SO3 x R3 and S2 x R3
 Closed-loop full-attitude dynamics evolve on the non- Euclidean manifold SO3 x R3. 
 Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be assessed using standard Lyapunov methods. 
@@ -388,6 +399,18 @@ consequently, global asymptotic stability cannot follow from a Lyapunov analysis
 \cite{Chaturvedi2011} summarizes global results on attitude control and stabilization for a rigid body using continuous time- invariant feedback. The analysis uses methods of geometric mechanics based on the geometry of the special orthogonal group SO3 and the two-sphere S2.
 
 
+***************************************\\
+%BART 
+Bart: Ok, but what are you doing with this? Does this relate to backstepping?
+
+***************************************\\
+
+
+***************************************\\
+%BART
+Bart: Does this include a part about tuning of the controller?
+
+***************************************\\
 
 %HOeft waarschijnlijk niet eens een section te zijn, kan kort en bondig
 \section*{Summary}

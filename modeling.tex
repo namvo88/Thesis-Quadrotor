@@ -58,28 +58,35 @@ This illustrates the concept of the relation between $ v $, the derivative of $ 
 \end{figure}		
 
 \subparagraph{Geometric Configuration Spaces}
-Rotation matrices are used to provide a global representation of the attitude of a rigid body, by mapping a representation of vectors expressed in \BF to a representation expressed in \IF \cite{Chaturvedi2011,Murray1994}. 
-The configuration of the \a{qr} attitude is a rotation matrix $ R $ in the Special Orthogonal Group $ SO(3) $ defined as
+Several methods exist to describe rotations, such as \textit{Euler Angles}, quaternions or rotation matrices. 
+The main disadvantages of Euler angles are that some functions have singularities and they are a less accurate measure for the integration of incremental changes in attitude over time, compared to other methods. 
+To avoid these problems, in Geometric Mechanics the rotations are expressed in rotation matrices to provide a global representation of the attitude of a rigid body, by mapping a representation of vectors expressed in \BF to a representation expressed in \IF \cite{Chaturvedi2011,Murray1994}.
+ 
+The configuration of the \a{qr} attitude is expressed in a rotation matrix $ R $ in the Special Orthogonal Group $ SO(3) $ defined as
 \begin{equation}\label{eq:SO3}
 SO(3) \triangleq \left\lbrace R\in\mathbb{R}^{3\times3}|RR^T=I_{3\times3}, det(R)=1\right\rbrace 
 \end{equation}
+where $ SO(3) $ is the group of all rotations about the origin of a 3-D Euclidean space, which preserves the origin, Euclidean distance and orientation.
 
-$ SO(3) $ is the group of all rotations about the origin of a 3-D Euclidean space, which preserves the origin, Euclidean distance and orientation.
-Several methods exist to describe rotations, such as \textit{Euler Angles}, quaternions or rotation matrices. 
-The main disadvantages of Euler angles are that some functions have singularities and they are a less accurate measure for the integration of incremental changes in attitude over time, compared to other methods. 
-In Geometric Mechanics the rotations are expressed in rotation matrices to avoid these problems. 
-
-Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation. The elements of \textit{Lie Algebra} $ \mathfrak{so}(3) $, a property associated with $ SO(3) $, are the elements of the tangent space of $ SO(3) $ at the identity element, see Figure \ref{fig:mod.so3}. 
+Every rotation has a unique inverse rotation and the identity map satisfies the definition of a rotation. The elements of \textit{Lie Algebra} $ \mathfrak{so}(3) $, a property associated with $ SO(3) $, are the elements of the \textit{tangent space} of $ SO(3) $ at the identity element, see Figure \ref{fig:mod.so3}. 
 These elements define the relation between the rotation $ R $ and its derivative $ \dot{R} $, such that
 \begin{equation}\label{eq:Rdot}
 \dot{R} = R\hat{\Omega}
 \end{equation}
-For $ n\in \mathbb{N} $, $ \mathfrak{so}(3) $ is is the vector space of skew-symmetric matrices in $ \mathbb{R}^{n\times n} $ and defined as
+For $ n\in \mathbb{N} $, $ \mathfrak{so}(n) $ is is the vector space of skew-symmetric matrices in $ \mathbb{R}^{n\times n} $ and defined as
 \begin{equation}\label{eq:so3}
 \mathfrak{so}(n) \triangleq \left\lbrace S\in \mathbb{R}^{n\times n}|S^T=-S\right\rbrace
 \end{equation}
 
-The linear map $ \hat{\cdot}:\mathbb{R}^3\rightarrow\mathfrak{so}(3) $ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices. $ \cdot^\vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $ denotes the inverse isomorphism. The mapping between the body angular velocity vector $ \Omega\in\mathbb{R}^3 $ and  $ \hat{\Omega}\in\mathfrak{so}(3) $ can be written as
+The hat map $ \wedge:\mathbb{R}^3\rightarrow\mathfrak{so}(3) $ is an isomorphism between $ \mathbb{R}^3 $ and the set of $ 3\times 3 $ skew symmetric matrices, such that $ \hat{x}y=x\times y $ for any $ x,y \in \mathbb{R}^3 $. The vee map $ \vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $, and is the inverse isomorphism of the hat map. Several properties of the hat map are
+\begin{eqnarray}
+\hat{x}y=x\times y=-y\times x=-\hat{y}x,\\
+tr[A\hat{x}]=\frac{1}{2}tr[\hat{x}(A-A^T)]=-x^T(A-A^T)^\vee,\\
+\hat{x}A+A^T\hat{x}=(\{tr[A]I_{3\times 3}-A\}x)^\wedge,\\
+R\hat{x}R^T=(Rx)^\wedge,
+\end{eqnarray}
+for any $ x,y\in\mathbb{R}^3, A\in\mathbb{R}^{3\times 3} $, and $ R\in SO(3) $.
+The mapping between the body angular velocity vector $ \Omega\in\mathbb{R}^3 $ and  $ \hat{\Omega}\in\mathfrak{so}(3) $ is written as
 \begin{equation}\label{eq:mod.hatOmega}
 \hat{\Omega}=\begin{bmatrix}
 0&-\Omega_3&\Omega_2\\
@@ -94,19 +101,22 @@ The linear map $ \hat{\cdot}:\mathbb{R}^3\rightarrow\mathfrak{so}(3) $ is an iso
 \end{bmatrix}^\vee = \Omega
 \end{equation}
 
-The configuration space of the load is represented on a \textit{two-sphere}, defined as
+The load attitude is expressed as a unit vector $ q $, which points from \BF to the load. The configuration space is a \textit{two-sphere} $\mathbb{S}^2 $ defined as
 \begin{equation}\label{key}
 \mathbb{S}^2 \triangleq \left\lbrace q\in\mathbb{R}^{3}|q\cdot q=1\right\rbrace 
 \end{equation}
-%\begin{equation}\label{key}
-%\mathbb{S}^2 \triangleq \left\lbrace (x_1, x_2, x_3)\in\mathbb{R}^{3}| \parallel (x_1, x_2, x_3)\parallel=1\right\rbrace 
-%\end{equation}
-%ADD sphere - tangent space - perpendicular : angular velocity
-such that,
+The plane tangent to the sphere at $ q $ is the tangent space
 \begin{equation}\label{key}
-\dot{q} = \omega\times q
+T_q\mathbb{S}^2 \simeq \left\lbrace \omega\in\mathbb{R}^{3}|q\cdot\omega=0\right\rbrace 
 \end{equation}
+
+%ADD sphere - tangent space - perpendicular : angular velocity
 where $ \omega $ is the angular velocity of the suspended load.
+%, such that
+%\begin{equation}\label{key}
+%\dot{q} = \omega\times q
+%\end{equation}
+
 
 \section{Modeling Assumptions}\label{sec:mod.assum} 
 
@@ -171,13 +181,13 @@ lb&0&-lb&0\\
 \end{equation}
 where \lsymb{$ l $}{Distance from the rotor to the QR CM} is the distance from the rotor to the \a{qr}'s \a{cm} and $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, respectively. 
 
-Table \ref{tab:mod.assumptions} shows the assumptions that are used for modeling the \a{qr}, simplifying the complexity of the model.
+Table \ref{tab:mod.assumptions} shows the assumptions that are used for modeling the \a{qr}-Load system, simplifying the complexity of the model.
 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|p{\textwidth}|}
-		\hline
-		\textbf{Modeling assumptions Quadrotor model}\\
+		\hline 		\vspace{0.1mm}
+		\textbf{Modeling assumptions Quadrotor model}\\ 	\vspace{0.1mm}		
 		%		\tabitem The rotation of the Earth does not affect the flight of the \a{qr}\\
 		\tabitem The structure of the \a{qr} is rigid and symmetric. \\
 		\hspace{4mm} Elastic deformations and shock (sudden accelerations) of the \a{qr} are ignored.\\										
@@ -193,8 +203,8 @@ Table \ref{tab:mod.assumptions} shows the assumptions that are used for modeling
 		\hspace{4mm} Thrust force $ F_i $ and moment \lsymb{$ M_{i} $}{Drag moment generated by each propellor} of each propeller is proportional to the square of \\
 		\hspace{4mm} the propeller speed. \\
 		%		Such that $ F_i = b\omega_i^2$ and $ M_{i} = d\omega_i^2$, where \lsymb{$ \omega_i $}{Angular velocity of rotor $ i $ around its axis, $ i=\{1,2,3,4\} $} is the rotor speed.\\
-		\hline
-		\textbf{Modeling assumptions Quadrotor-Load model}\\
+		\hline 		\vspace{0.1mm}		
+		\textbf{Modeling assumptions Quadrotor-Load model}\\ 	\vspace{0.1mm}		
 		\tabitem The cable is modeled as a rigid and massless cable. \\
 		\tabitem The cable is connected to a friction-less joint at the origin of the body-fixed. \\
 		\tabitem The tension in the cable is considered to be non-zero.\\
@@ -232,12 +242,12 @@ Table \ref{tab:mod.assumptions} shows the assumptions that are used for modeling
 
 \section{Quadrotor-Load Model}	\label{sec:mod.QRLmod}
 The Quadrotor-Load model consists of two subsystems, the first where the cable tension is zero, and the second where the cable tension is non-zero.
-In this research, the focus is only on the subsystem where the cable tension is non-zero, and the other subsystem is disregarded.
-The QR-Load model is shown in Figure \ref{fig:mod.modelQRL}, where the unit vector \lsymb{$ q$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF. The position of the \a{qr} and Load are related by
+In this research, the focus is only on the subsystem where the cable tension is non-zero.
+The QR-Load model is shown in Figure \ref{fig:mod.modelQRL}, where the unit vector \lsymb{$ q\in\mathbb{S}^2$}{Unit vector from \a{qr} to Load} gives the direction from the \a{qr} to the Load expressed in \BF. The position of the \a{qr} and Load are related by
 \begin{equation}\label{eq:mod.xQ2xL}
 x_Q=x_L-Lq
 \end{equation}
-where \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM} is the position of the \a{qr}'s \a{cm}, \lsymb{$ x_L $}{Position of the load} is the position of the load, and \lsymb{$ L $}{Length of the cable} is the length of the cable.
+where \lsymb{$ x_Q \in\mathbb{R}^3$}{Position of the \a{qr} CM} is the position of the \a{qr}'s \a{cm}, \lsymb{$ x_L\in\mathbb{R}^3 $}{Position of the load} is the position of the load, and \lsymb{$ L $}{Length of the cable} is the length of the cable.
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/qrlmodel.png}}
@@ -245,7 +255,8 @@ where \lsymb{$ x_Q $}{Position of the  of the \a{qr} CM} is the position of the 
 \end{figure}	
 
 Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. 
-Dynamics and optimal control problems for rigid bodies are studied, and their geometric features are incorporated in \cite{Lee2008}. The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. 
+Rigid body dynamics and optimal control problems are studied, and their geometric features are incorporated in \cite{Lee2008}. 
+The focus lies on obtaining geometric properties of the dynamics of rigid bodies, how their configuration can be described and how these geometric properties are utilized in control system analysis and design. 
 
 %Which means that the motion of a rigid body can be described by a translation of the \acf{com} and a rotation about the \a{com}. 
 %The position of \BF is described by a vector evolving on $ \mathbb{R}^3 $, and is represented with respect to \IF.  
@@ -255,13 +266,8 @@ The configuration of the load can be described by its location $x_L\in \mathbb{R
 %In order to avoid these complexities, 
 To conclude, all the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{two-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This results in a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce. 
 
-%LOAD ATTITUDE DYNAMICS
 To develop the Euler-Lagrange equations for mechanical systems that evolve on manifolds, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is applied. 
-
-%ADD Hamilton's principle uitleg?
-The basic idea is to analyze the variations of the curves that are e	
-
-
+The basic idea is to express the variations of the curves evolving on $ \mathbb{S}^2 $ and $ SO(3) $ in terms of the Lie Algebra $ \mathfrak{so}(3) $, see Equations \ref{eq:mod.var}.  
 This approach is based on Hamilton's principle, which states that the evolution of a physical system is a solution of the functional equation given by
 \begin{equation}\label{key}
 \frac{\delta S}{\delta \mathbf{x}(t)}=0
@@ -304,7 +310,7 @@ The kinetic energy $ \mathcal{T} $ and the potential energy $ \mathcal{U} $ for 
 \mathcal{U}&=m_Qgx_Q\cdot e_3+m_Lgx_L\cdot e_3
 \end{aligned}
 \end{equation}
-where \lsymb{$ J $}{Inertia tensor of \a{qr}} is the inertia tensor of the \a{qr}, and \lsymb{$ g $}{Gravitation constant} is the gravity constant.\\
+where \lsymb{$ J\in\mathbb{R}^{3\times 3} $}{Inertia tensor of \a{qr}} is the inertia tensor of the \a{qr}, and \lsymb{$ g $}{Gravitation constant} is the gravity constant.\\
 The energy can be rewritten in terms of $ q $ and $ x_L $, by substituting Equation \ref{eq:mod.xQ2xL}, giving
 \begin{align}\label{key}
 \mathcal{T}&=\frac{1}{2}(m_Q+m_L)\dot{x}_L\cdot\dot{x}_L -m_QL\dot{x}_L\cdot\dot{q} + \frac{1}{2}m_QL^2\dot{q}\cdot\dot{q}+\frac{1}{2}\Omega \cdot J\cdot\Omega\\
@@ -358,7 +364,7 @@ While $ x_L,\dot{x}_L $ vary on $ \mathbb{R}^3 $, Equation \ref{eq:Sfinal} is al
 \end{aligned}
 \end{equation}
 The following variations follow from differentiation,
-\begin{equation}\label{key}
+\begin{equation}\label{eq:mod.var}
 \begin{aligned}
 \delta \dot{q}&=\dot{\xi}\times q+\xi\times\dot{q},\\
 \delta \dot{R}&=\dot{R}\hat{\eta}+R\hat{\dot{\eta}},\\
@@ -412,17 +418,17 @@ These variations are substituted into Equation \ref{eq:Sfinal}, allowing it to b
 &\int_{t_1}^{t_2}(\Omega^TJ \cdot \delta\Omega+M\cdot(R^T\delta R))dt
 \end{aligned}
 \end{equation}
-After setting each variation to 0, and rearranging, the following equations of motion for the \a{qr}-Load system is found.
-\begin{equation}\label{eq:mod.eom}
-\begin{aligned}
+After rearranging and setting each variation to 0, the following equations of motion for the \a{qr}-Load system are found.
+%\begin{eqnarray}\label{eq:mod.eom}
+\begin{align}
 \frac{d}{dt} x_L &=\dot{x}_L\\
 (m_Q+m_L)(\ddot{x}_L+ge_3)&=(q\cdot fRe_3-m_QL(\dot{q}\cdot\dot{q}))q\\
 \dot{q}&=\omega\times q\\
-m_QL\dot{\omega}&=-q\times fRe_3\\
-\dot{R}&=R\hat{\Omega}\\
-J\dot{\Omega}+\Omega\times J\Omega&= M
-\end{aligned}
-\end{equation}
+m_QL\dot{\omega}&=-q\times fRe_3\\ \label{eq:mod.R}
+J\dot{\Omega}+\Omega\times J\Omega&= M\\ \label{eq:mod.attitude}
+\dot{R}&=R\hat{\Omega}
+\end{align}
+%\end{eqnarray}
 %\begin{equation}\label{key}
 %\hat{\Omega}=\begin{bmatrix}
 %0&-\Omega_3&\Omega_2\\
@@ -432,10 +438,8 @@ J\dot{\Omega}+\Omega\times J\Omega&= M
 %\end{equation}
 
 \section*{Summary}
-In this chapter, the dynamical model of the Quadrotor-Load system is derived.
+In this chapter, the dynamical model of the Quadrotor-Load system was derived.
 %using a Geometric Mechanics modeling approach.
-A basic understanding of Geometric Mechanics is given in order to understand the difference between a Geometric model and a model obtained through classical modeling approaches.
+The motivation to use Geometric Mechanics and a basic understanding of its concepts are given in order to understand the difference between a Nonlinear Geometric model and a model obtained with classical modeling approaches.
 
-Geometric Mechanics allows a compact, unambiguous representation of the model dynamics.
-
-With the tools of differential geometry, the system dynamics are defined on nonlinear configuration manifolds, which results in a globally defined representation of the model. This dynamical model is used for a nonlinear geometric control design, which is discussed in the next chapter.
+With the tools of differential geometry, the system dynamics are expressed on nonlinear configuration manifolds, which results in a globally defined, compact, unambiguous representation of the model. This dynamical model is used for a nonlinear geometric control approach, which is discussed in the next chapter.

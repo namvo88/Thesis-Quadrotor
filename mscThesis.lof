@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor model representation\relax }}{9}{figure.caption.12}
 \contentsline {figure}{\numberline {2-5}{\ignorespaces Quadrotor with Load model representation\relax }}{11}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \cite {Sreenath2013c}\relax }}{17}{figure.caption.17}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4-1}{\ignorespaces Desired Load Position Case A\relax }}{24}{figure.caption.20}
 \contentsline {figure}{\numberline {4-2}{\ignorespaces Desired Load Position Case C\relax }}{25}{figure.caption.21}

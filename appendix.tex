@@ -302,18 +302,52 @@ Differentiating Equation \ref{eq:app.xL2xQ} and \ref{eq:app.q} gives
 %\ddot{\phi} &=\tilde{\tau}_{\phi}
 %\end{align}
 
+\section{Derivation Error dynamics}\label{sec:app.error}
+Recall the angular velocity tracking error $ e_\Omega $, from this follows
+\begin{equation}\label{eq:app.eOmega}
+\begin{aligned}
+e_\Omega&=\Omega-R^TR_d\Omega_d,\\
+\hat{e}_\Omega&=\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR
+\end{aligned}
+\end{equation}
+Equation \ref{eq:app.eOmega} is used to derive the attitude velocity error $ \dot{e}_R $ as follows
+\begin{equation}\label{key}
+\begin{aligned}
+e_R&=\frac{1}{2}(R_d^TR-R^TR_d)^\vee,\\
+\dot{e}_R&=\frac{1}{2}(\dot{R}_d^TR+R_d^T\dot{R}-\dot{R}^TR_d-R^T\dot{R}_d)^\vee\\
+&=\frac{1}{2}((R_d\hat{\Omega}_d)^TR+R_d^T(R\hat{\Omega})-(R\hat{\Omega})^TR_d-R^T(R_d\hat{\Omega}_d))^\vee\\
+&=\frac{1}{2}(-\hat{\Omega}_dR_d^TR+R_d^TR\hat{\Omega}+\hat{\Omega}R^TR_d-R^TR_d\hat{\Omega}_d)^\vee\\
+&=\frac{1}{2}(R_d^TR(\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR)+(\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR)R^TR_d)^\vee\\
+&=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee\\
+&=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega
+\end{aligned}
+\end{equation}
+It can be shown that $ \parallel C(R_d^TR)\parallel_2\leq 1 $ for any $ R_d^TR\in SO(3) $.\\ 
+From that follows $ \parallel\dot{e}_R\parallel\leq\parallel e_\Omega \parallel $.
+
+\begin{equation}\label{key}
+\begin{aligned}
+\dot{e}_\Omega&=\dot{\Omega}-\dot{R}^TR_d\Omega_d-R^T\dot{R}_d\Omega_d-R^TR_d\dot{\Omega}_d\\
+&=\dot{\Omega}-(R\hat{\Omega})^TR_d\Omega_d-R^T({R}_d\hat{\Omega}_d)\Omega_d-R^TR_d\dot{\Omega}_d\\
+&=\dot{\Omega}+\hat{\Omega}R^TR_d\Omega_d-R^T({R}_d\hat{\Omega}_d)\Omega_d-R^TR_d\dot{\Omega}_d\\
+&=J^{-1}(-\Omega\times J\Omega + M)+\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d
+\end{aligned}
+\end{equation}
+where $\hat{\Omega}_d\Omega_d=\Omega_d \times \Omega_d=0  $.
+
 \section{Figures}
+%CHECK nodig?
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
 	\caption{Simulink Command Filter\label{fig:app.CF}}
 \end{figure}		
 
-\section{\texttt{MATLAB} code}
-\subsection{A \matlab Listing}
-
-\lstset{language=matlab}
-\lstinputlisting{test.m}
+%\section{\texttt{MATLAB} code}
+%\subsection{A \matlab Listing}
+%
+%\lstset{language=matlab}
+%\lstinputlisting{test.m}
 
 %    \subsection{An appendix subsection with C++ Listing}
 %

@@ -250,7 +250,7 @@ x_Q=x_L-Lq
 where \lsymb{$ x_Q \in\mathbb{R}^3$}{Position of the \a{qr} CM} is the position of the \a{qr}'s \a{cm}, \lsymb{$ x_L\in\mathbb{R}^3 $}{Position of the load} is the position of the load, and \lsymb{$ L $}{Length of the cable} is the length of the cable.
 \begin{figure}[h!]
 	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/qrlmodel.png}}
+	\makebox[\textwidth][c]{\includegraphics[width=.35\paperwidth]{./StyleStuff/qrlmodel.png}}
 	\caption{Quadrotor with Load model representation\label{fig:mod.modelQRL}}
 \end{figure}	
 
@@ -266,7 +266,7 @@ The configuration of the load can be described by its location $x_L\in \mathbb{R
 %In order to avoid these complexities, 
 To conclude, all the dynamics of the \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{two-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $. This results in a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that Euler angles normally introduce. 
 
-To develop the Euler-Lagrange equations for mechanical systems that evolve on manifolds, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is applied. 
+\paragraph{Euler-Lagrange} To develop the Euler-Lagrange equations for mechanical systems that evolve on manifolds, an approach developed by \cite{Lee2008,Lee2005,Lee2009,Lee2011} is applied. 
 The basic idea is to express the variations of the curves evolving on $ \mathbb{S}^2 $ and $ SO(3) $ in terms of the Lie Algebra $ \mathfrak{so}(3) $, see Equations \ref{eq:mod.var}.  
 This approach is based on Hamilton's principle, which states that the evolution of a physical system is a solution of the functional equation given by
 \begin{equation}\label{key}
@@ -316,7 +316,7 @@ The energy can be rewritten in terms of $ q $ and $ x_L $, by substituting Equat
 \mathcal{T}&=\frac{1}{2}(m_Q+m_L)\dot{x}_L\cdot\dot{x}_L -m_QL\dot{x}_L\cdot\dot{q} + \frac{1}{2}m_QL^2\dot{q}\cdot\dot{q}+\frac{1}{2}\Omega \cdot J\cdot\Omega\\
 \mathcal{U}&=(m_Q+m_L)gx_L\cdot e_3-m_QgLq\cdot e_3
 \end{align}
-The variations of $ \mathcal{T} $ and $ \mathcal{U} $ are approximated by a first-order Taylor approximation, which results in
+\paragraph{Variations} The variations of $ \mathcal{T} $ and $ \mathcal{U} $ are approximated by a first-order Taylor approximation, which results in
 \begin{equation}\label{eq:mod.T}
 %ADD
 \begin{aligned}
@@ -357,7 +357,7 @@ The variations in energy and the virtual work can be substituted into Equation \
 \delta S = \int_{t_1}^{t_2}(\delta W_1+\delta W_2+\delta\mathcal{T}-\delta\mathcal{U})dt
 \end{equation}
 While $ x_L,\dot{x}_L $ vary on $ \mathbb{R}^3 $, Equation \ref{eq:Sfinal} is also a function of variations on manifolds, where $ \delta R $ is a variation on $ SO(3) $ and $ \delta q $ is a variation on $ \mathbb{S}^2 $. These so called infinitesimal variations are obtained required as shown in  \cite{Lee2005,Lee2011,Bullo2005,Sreenath2013c}. 
-\begin{equation}\label{key}
+\begin{equation}\label{eq:mod.varRq}
 \begin{aligned}
 \delta R&=R\hat{\eta}\in T_RSO(3)&\text{, where } \eta\in\mathbb{R}^3,\hat{\eta}\in\mathfrak{so}(3)\\
 \delta q&=\xi\times q \in T_q\mathbb{S}^2&\text{, where }\xi\in\mathbb{R}^3,\xi\cdot q=0
@@ -418,15 +418,15 @@ These variations are substituted into Equation \ref{eq:Sfinal}, allowing it to b
 &\int_{t_1}^{t_2}(\Omega^TJ \cdot \delta\Omega+M\cdot(R^T\delta R))dt
 \end{aligned}
 \end{equation}
-After rearranging and setting each variation to 0, the following equations of motion for the \a{qr}-Load system are found.
+After rearranging and setting each variation to 0, the following equations of motion for the \a{qr}-Load system are found. Where, Equations \ref{eq:mod.attitude} and \ref{eq:mod.R} 
 %\begin{eqnarray}\label{eq:mod.eom}
 \begin{align}
 \frac{d}{dt} x_L &=\dot{x}_L\\
 (m_Q+m_L)(\ddot{x}_L+ge_3)&=(q\cdot fRe_3-m_QL(\dot{q}\cdot\dot{q}))q\\
 \dot{q}&=\omega\times q\\
-m_QL\dot{\omega}&=-q\times fRe_3\\ \label{eq:mod.R}
-J\dot{\Omega}+\Omega\times J\Omega&= M\\ \label{eq:mod.attitude}
-\dot{R}&=R\hat{\Omega}
+m_QL\dot{\omega}&=-q\times fRe_3\\
+\dot{R}&=R\hat{\Omega} \label{eq:mod.R}\\ 
+J\dot{\Omega}+\Omega\times J\Omega&= M \label{eq:mod.attitude}
 \end{align}
 %\end{eqnarray}
 %\begin{equation}\label{key}

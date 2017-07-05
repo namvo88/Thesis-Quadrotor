@@ -9,13 +9,15 @@
 \contentsline {subparagraph}{Geometric Configuration Spaces}{7}{section*.11}
 \contentsline {section}{\numberline {2-2}Modeling Assumptions}{8}{section.2.2}
 \contentsline {section}{\numberline {2-3}Quadrotor-Load Model}{10}{section.2.3}
+\contentsline {paragraph}{Euler-Lagrange}{11}{section*.15}
+\contentsline {paragraph}{Variations}{12}{section*.16}
 \contentsline {chapter}{\numberline {3}Control Design}{15}{chapter.3}
 \contentsline {section}{\numberline {3-1}Nonlinear Geometric Control}{15}{section.3.1}
-\contentsline {paragraph}{Backstepping Control}{16}{section*.16}
-\contentsline {paragraph}{Configuration Errors}{17}{section*.18}
-\contentsline {section}{\numberline {3-2}Quadrotor Attitude Tracking}{18}{section.3.2}
-\contentsline {section}{\numberline {3-3}Load Attitude Tracking}{19}{section.3.3}
-\contentsline {section}{\numberline {3-4}Load Position Tracking}{20}{section.3.4}
+\contentsline {paragraph}{Backstepping Control}{16}{section*.18}
+\contentsline {paragraph}{Configuration Errors}{17}{section*.20}
+\contentsline {section}{\numberline {3-2}Quadrotor Attitude Tracking}{19}{section.3.2}
+\contentsline {section}{\numberline {3-3}Load Attitude Tracking}{20}{section.3.3}
+\contentsline {section}{\numberline {3-4}Load Position Tracking}{21}{section.3.4}
 \contentsline {section}{\numberline {3-5}Stability Analysis}{21}{section.3.5}
 \contentsline {chapter}{\numberline {4}Experiment}{23}{chapter.4}
 \contentsline {section}{\numberline {4-1}Procedure}{23}{section.4.1}
@@ -24,10 +26,10 @@
 \contentsline {subsection}{\numberline {4-2-2}Case B}{24}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4-2-3}Case C}{25}{subsection.4.2.3}
 \contentsline {section}{\numberline {4-3}Setup}{25}{section.4.3}
-\contentsline {paragraph}{Model parameters}{25}{section*.22}
-\contentsline {paragraph}{LQR Control}{26}{section*.24}
-\contentsline {paragraph}{Geometric Control}{26}{section*.27}
-\contentsline {paragraph}{Command Filtering}{26}{section*.29}
+\contentsline {paragraph}{Model parameters}{25}{section*.25}
+\contentsline {paragraph}{LQR Control}{26}{section*.27}
+\contentsline {paragraph}{Geometric Control}{26}{section*.30}
+\contentsline {paragraph}{Command Filtering}{26}{section*.32}
 \contentsline {chapter}{\numberline {5}Results}{29}{chapter.5}
 \contentsline {section}{\numberline {5-1}Case A}{30}{section.5.1}
 \contentsline {section}{\numberline {5-2}Case B}{33}{section.5.2}
@@ -37,9 +39,9 @@
 \contentsline {section}{\numberline {6-1}Summary and Conclusions}{39}{section.6.1}
 \contentsline {section}{\numberline {6-2}Recommendations for Future Work}{39}{section.6.2}
 \contentsline {subsection}{\numberline {6-2-1}Investigate Implementation}{39}{subsection.6.2.1}
-\contentsline {paragraph}{Digital Control}{39}{section*.36}
-\contentsline {paragraph}{Model identification and validation}{40}{section*.37}
-\contentsline {paragraph}{Robustness}{40}{section*.38}
+\contentsline {paragraph}{Digital Control}{39}{section*.39}
+\contentsline {paragraph}{Model identification and validation}{40}{section*.40}
+\contentsline {paragraph}{Robustness}{40}{section*.41}
 \contentsline {subsection}{\numberline {6-2-2}Minimum Snap Trajectory Generation}{40}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6-2-3}Hybrid System}{41}{subsection.6.2.3}
 \contentsline {chapter}{\numberline {A}Appendix}{43}{appendix.A}
@@ -48,8 +50,7 @@
 \contentsline {section}{\numberline {A-2}LQR controller}{43}{section.A.2}
 \contentsline {subsection}{\numberline {A-2-1}Modeling}{43}{subsection.A.2.1}
 \contentsline {section}{\numberline {A-3}Classical Modeling}{44}{section.A.3}
-\contentsline {section}{\numberline {A-4}Figures}{46}{section.A.4}
-\contentsline {section}{\numberline {A-5}\texttt {MATLAB} code}{46}{section.A.5}
-\contentsline {subsection}{\numberline {A-5-1}A \textsc {Matlab}Listing}{46}{subsection.A.5.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{47}{section*.41}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{51}{section*.42}
+\contentsline {section}{\numberline {A-4}Derivation Error dynamics}{46}{section.A.4}
+\contentsline {section}{\numberline {A-5}Figures}{47}{section.A.5}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliography}{49}{section*.44}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{53}{section*.45}

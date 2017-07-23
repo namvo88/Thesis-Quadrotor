@@ -142,10 +142,13 @@ Observations: there exist constants $ \alpha_q,\beta_q>0 $ such that
 %CHECK
 %What is its value of nonlinear control compared to linear control
 
-Near the equilibrium configuration, the \a{lqr} controller is able to reduce the swing.
+Near the equilibrium configuration, the \a{lqr} controller is able to reduce the swing. In fast trajectories however, the shortcomings of the \a{lqr} controller become evident. 
 
 The nonlinear geometric controller depends on feed forward terms that are obtained from the desired trajectories. 
 Trajectory generation approaches exist that are able to generate the required desired position, velocity and acceleration by 
 however it is possible to compute these with trajectory generating algorithms too.
 
 The controllers are functions of the computed tracking references $ q_c, R_c $ and their derivatives. These terms are approximated by a command filter, which means that the accuracy decreases because high frequency terms are filtered.
+
+%ADD conclusie 
+% over parameter keuze in controllers. Arbitrair, maar wellicht later wel van belang

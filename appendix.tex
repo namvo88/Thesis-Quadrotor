@@ -303,27 +303,36 @@ Differentiating Equation \ref{eq:app.xL2xQ} and \ref{eq:app.q} gives
 %\end{align}
 
 \section{Derivation Error dynamics}\label{sec:app.error}
-Recall the angular velocity tracking error $ e_\Omega $, from this follows
+\subsection{Quadrotor Attitude}
+From the angular velocity tracking error $ e_\Omega $ follows
 \begin{equation}\label{eq:app.eOmega}
 \begin{aligned}
 e_\Omega&=\Omega-R^TR_d\Omega_d,\\
 \hat{e}_\Omega&=\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR
 \end{aligned}
 \end{equation}
-Equation \ref{eq:app.eOmega} is used to derive the attitude velocity error $ \dot{e}_R $ as follows
+
+The attitude tracking and its time derivative is given by
 \begin{equation}\label{key}
 \begin{aligned}
 e_R&=\frac{1}{2}(R_d^TR-R^TR_d)^\vee,\\
 \dot{e}_R&=\frac{1}{2}(\dot{R}_d^TR+R_d^T\dot{R}-\dot{R}^TR_d-R^T\dot{R}_d)^\vee\\
 &=\frac{1}{2}((R_d\hat{\Omega}_d)^TR+R_d^T(R\hat{\Omega})-(R\hat{\Omega})^TR_d-R^T(R_d\hat{\Omega}_d))^\vee\\
 &=\frac{1}{2}(-\hat{\Omega}_dR_d^TR+R_d^TR\hat{\Omega}+\hat{\Omega}R^TR_d-R^TR_d\hat{\Omega}_d)^\vee\\
-&=\frac{1}{2}(R_d^TR(\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR)+(\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR)R^TR_d)^\vee\\
-&=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee\\
+&=\frac{1}{2}(R_d^TR(\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR)+(\hat{\Omega}-R^TR_d\hat{\Omega}_dR_d^TR)R^TR_d)^\vee
+%&=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee\\
+%&=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega
+\end{aligned}
+\end{equation}
+
+Equation \ref{eq:app.eOmega} is substituted and Equation \ref{eq:mod.hattrace} is used to rewrite the time derivative of $ e_R $ as follows
+%rewrite the attitude velocity error $ \dot{e}_R $ as follows
+\begin{equation}\label{key}
+\begin{aligned}
+\dot{e}_R&=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee\\
 &=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega
 \end{aligned}
 \end{equation}
-It can be shown that $ \parallel C(R_d^TR)\parallel_2\leq 1 $ for any $ R_d^TR\in SO(3) $.\\ 
-From that follows $ \parallel\dot{e}_R\parallel\leq\parallel e_\Omega \parallel $.
 
 \begin{equation}\label{key}
 \begin{aligned}

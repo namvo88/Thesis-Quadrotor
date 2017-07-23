@@ -207,9 +207,9 @@ From Equations \ref{eq:con.eR} and \ref{eq:con.eOmega}, the derivative of the at
 
 Similar to Equation \ref{eq:mod.R}, the kinematics equation for the desired attitude can be written as
 \begin{equation}\label{eq:con.dotRd}
-\dot{R}_d=R_d\hat{\Omega}_d \text{, and so } \hat{\Omega}_d=R_d^T\dot{R}_d
+\dot{R}_d=R_d\hat{\Omega}_d \text{ and } \hat{\Omega}_d=R_d^T\dot{R}_d
 \end{equation}
-The definition of the desired angular acceleration $ \dot{\Omega}_d $ can then be defined as follows
+The desired angular acceleration $ \dot{\Omega}_d $ can then be defined as follows
 \begin{equation}\label{key}
 \begin{aligned}
 \dot{\hat{\Omega}}_d&=(\dot{R}_d^T\dot{R}_d)+(R_d^T\ddot{R}_d)\\
@@ -242,11 +242,20 @@ In \cite{Sreenath2013b}, Equation \ref{eq:con.M} is defined as
 M = -\frac{1}{\epsilon^2}k_Re_R-\frac{1}{\epsilon}k_\Omega e_\Omega+\Omega\times J\Omega-J(\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d)
 \end{equation}
 where \lsymb{$ \epsilon $}{Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $} is a parameter to enable rapid exponential convergence of the attitude- and angular velocity error functions, such that $ 0<\epsilon<1 $.\\
-%%ADD waarom?
-%%CHECK waar moet dit
-%It can be shown that $ \parallel\dot{e}_R\parallel\leq\parallel e_\Omega \parallel  $ for all $ R^T_dR\in SO(3) $.
+
+Equation \ref{eq:app.eOmega} is substituted and Equation \ref{eq:mod.hattrace} is used to rewrite the time derivative of $ e_R $ as follows
+ %rewrite the attitude velocity error $ \dot{e}_R $ as follows
+ \begin{equation}\label{key}
+ \begin{aligned}
+ \dot{e}_R&=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee\\
+ &=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega
+ \end{aligned}
+ \end{equation}
+It can be shown that $ \parallel\dot{e}_R\parallel\leq\parallel e_\Omega \parallel  $ for all $ R^T_dR\in SO(3) $.
  
-A stability analysis of the controller is presented in \cite{Lee2010} and it is proven that the zero equilibrium of the closed loop tracking error $ (e_R,e_\Omega)=(0,0) $ is exponentially stable, if the initial conditions satisfy
+A stability analysis of the controller is presented in \cite{Lee2010} and it is proven that 
+
+the zero equilibrium of the closed loop tracking error $ (e_R,e_\Omega)=(0,0) $ is exponentially stable, if the initial conditions satisfy
 \begin{equation}\label{eq:dom1}
 \Psi_R(R(0),R_d(0))<2
 \end{equation}

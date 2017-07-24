@@ -20,7 +20,11 @@ nam: please check
 ***************************************\\
 
 \section{Nonlinear Geometric Control}\label{sec:con.nlgc}
-Many control systems are developed for the standard form of ordinary differential equations, namely $ \dot{x}=f(x,u) $, where the state and the control input are denoted by $ x $ and $ u $. It is assumed that the state and the control input lie in Euclidean spaces, and the system equations are defined in terms of smooth functions between Euclidean spaces. However, for many mechanical systems, the configuration space can only be expressed locally as a Euclidean space. In order to express the configuration space globally, a nonlinear space is required. A dynamical model on this nonlinear space is obtained in the previous chapter.
+Many control systems are developed for the standard form of ordinary differential equations
+\begin{equation}\label{key}
+ \dot{x}=f(x,u) 
+\end{equation}
+where the state and the control input are denoted by $ x $ and $ u $. It is assumed that the state and the control input lie in Euclidean spaces, and the system equations are defined in terms of smooth functions between Euclidean spaces. However, for many mechanical systems, the configuration space can only be expressed locally as a Euclidean space. In order to express the configuration space globally, a nonlinear space is required. A dynamical model on this nonlinear space is obtained in the previous chapter.
 
 Geometric Control Theory is the study on how geometry of the state space influences controls problems. 
 In control systems engineering, the underlying geometric features of a dynamic system are often not considered carefully. 
@@ -28,11 +32,9 @@ Differential geometric control techniques utilize these geometric properties for
 The objective is to express both the system dynamics and control inputs on manifolds instead of local charts. 
 In contrast to locally defined linear control, nonlinear geometric control can be defined almost globally, avoiding singularities that occur in the representation of large angles and complex maneuvering.
 
-Global nonlinear dynamics of various classes of closed loop attitude control systems have been studied in recent years \cite{Chaturvedi2011a}.
-In contrast to hybrid control systems \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally.
+In contrast to hybrid control systems \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally. Global nonlinear dynamics of various classes of closed loop attitude control systems have been studied in recent years \cite{Chaturvedi2011a}. 
 
-
-\paragraph{Backstepping Control}\label{sec:con.back}
+\section{Backstepping Control}\label{sec:con.back}
 A backstepping approach, or cascade control, is a Lyapunov based technique to design the control of nonlinear dynamical systems and ensures Lyapunov stability. 
 This approach is commonly used for the control of \a{qr}s \cite{Mahony2012} and will also be used in this research for the control of the load trajectory tracking problem.\\
 The basic principle is to create a cascaded structure by starting with a stable system as a base, then "stepping back" from this base to add a control loop around it that stabilizes the new system and enables the control of another state. 
@@ -101,32 +103,32 @@ where the subscript $d $ denotes a desired tracking reference, and the subscript
 
 The design of the controllers for the \a{qr} attitude can be found in \cite{Lee2010}, and the controllers of load attitude- and position this can be found in \cite{Sreenath2013c}. Thorough stability analyses are presented in either references. For a deeper understanding of Lyapunov stability analysis in geometric control, the reader can refer to \cite{Bullo2005}.
 
-\paragraph{Configuration Errors}\label{sec:con.errors}
-The control system for a trajectory tracking problem requires state feedback and a measure of errors defined by a difference between the desired and current states.
-The system dynamics evolve on nonlinear manifolds that describe the configuration spaces for the \a{qr} attitude $ \in SO(3) $ and the load attitude $ \in \mathbb{S}^2 $. 
-Tracking errors functions are defined on these same manifolds, as shown in \cite{Bullo2005}, and form the basis of the controllers that must stabilize the \a{qr}-Load system.
+\section{Error Functions}\label{sec:con.configerr}
+The control of a trajectory tracking problem requires state feedback and a measure of the error defining the difference between the current states and the desired states.
+Since the system dynamics evolve on nonlinear manifolds, which describe the configuration spaces of the \a{qr} attitude $ \in SO(3) $ and the load attitude $ \in \mathbb{S}^2 $, error functions can also be defined on these same manifolds \cite{Bullo2005}. 
+These functions play a role in the definition of the potential function for the closed-loop system and form the basis for both stabilizing and tracking controllers of the \a{qr}-Load system.
 %Likewise, the tracking errors $ \Psi_R:SO(3)\times SO(3)\rightarrow\mathbb{R} $ and $ \Psi_q:\mathbb{S}^2\times \mathbb{S}^2\rightarrow\mathbb{R} $ are expressed on these manifolds. 
 %an for the purpose of control design. 
 %The derivation of the error functions can be found in \cite{Bullo2005}.
- 
 %CHECK 
 %\cite{Maithripala2006}
-
 %CHECK
 %Attitude control systems naturally evolve on nonlinear configuration spaces such as $ \mathbb{S}^2 $ and $ SO(3) $. 
 %Attitude tracking control is developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
-Recall that $ R $ is the rotation matrix to describe the \a{qr} attitude, and $ R_d $ is the desired rotation matrix. To describe the relative rotation from the body frame to the desired frame, the attitude error is denoted as $ R^T_dR $. 
-The \a{qr} attitude error function $ \Psi_R $ on $ SO(3) $ is chosen to be \cite{Lee2010c}
+\subsection*{Quadrotor Attitude Error}
+Recall that $ R $ is the rotation matrix to describe the \a{qr} attitude, and $ R_d $ is the desired rotation matrix. To describe the relative rotation from the body frame to the desired frame, an \textit{attitude error} is defined as $ R^T_dR $. 
+Based on this attitude error, the \textit{tracking error function} $ \Psi_R $ on $ SO(3) $ is chosen to be 
 \begin{equation}\label{eq:psiR}
 \Psi_R(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
 \end{equation}
 such that $ \Psi_R $ is locally positive-definite about $ R^T_dR=I $ within the region where the rotation angle between $ R $ and $ R_d $ is less than $ 180^\circ $. 
-It can be shown that this region where $ \Psi_R<2 $ almost covers $ SO(3) $.
+It can be shown that this region where $ \Psi_R<2 $ almost covers $ SO(3) $ \cite{Lee2010c}.\\
 %ADD explain
 % instead of comparing all elements of rotation matrix. PsiR is a measure for the error
 %ADD 
 %(physical) Meaning of the error functions
-Equation \ref{eq:mod.varRq} states that the variation of the rotation matrix is expressed as $ \delta R = R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $. Such that with Equation \ref{eq:mod.hatvee}, the derivative of Equation \ref{eq:psiR} is given by 
+%Equation  states that the variation of the rotation matrix is expressed as $ \delta R = R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $.
+Using Equation \ref{eq:mod.hatvee} and \ref{eq:mod.varRq}, the derivative of the tracking error function $ \Psi_R $ with respect to R along the direction of $ \delta R=R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $ is given by
 \begin{equation}\label{key}
 \begin{aligned}
 \mathbf{D}_R\Psi(R,R_d)\cdot R\hat{\eta}&=-\frac{1}{2}tr[R_d^TR\hat{\eta}]\\
@@ -137,28 +139,28 @@ Equation \ref{eq:mod.varRq} states that the variation of the rotation matrix is 
 %\texttt{\begin{equation}\label{key}
 %\mathbf{D}_R\Psi(R,R_d)\cdot R\hat{\eta}=
 %\end{equation}}
-where the \textit{vee map} $ ^\vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $ is the inverse of the \textit{hat map} defined in Section \ref{sec:mod.geometric}. 
-From this derivative, the attitude tracking error $ e_R $ is obtained 
+where the \textit{vee map} $ ^\vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $ is the inverse of the \textit{hat map} defined in Section \ref{sec:mod.geometric}. From this equation, the \a{qr} attitude tracking error $ e_R \in \mathbb{R}^3$ is chosen as 
 \begin{equation}\label{eq:con.eR}
 e_R=\frac{1}{2}(R_d^TR-R^TR_d)^\vee
 \end{equation}
 %The tracking error functions on $ TSO(3) $, the tangent space of $ SO(3) $, are defined as
 %The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee2010c} 
-It is important to note that the tangent vectors $ \dot{R} $ and $ \dot{R}_d $ cannot be compared directly, since they do not lie in the same space. $ \dot{R} $ and $ \dot{R}_d $ are expressed in their own tangent spaces, denoted by $ T_RSO(3)$ and $ T_{R_d}SO(3)$, respectively. For this reason, $ \dot{R}_d $ is transformed into a vector on $ T_RSO(3) $ to compare it with $ \dot{R} $. This is done by an mathematical object called a \textit{transport map}, which enables the comparison of velocities living in different spaces. See Figure \ref{fig:con.transport}, where two curves $ R(t), R_d(t)$ evolve on manifold $ SO(3) $, such that transport map $ \mathcal{T}(R,R_d):T_{R_d}SO(3)\mapsto T_RSO(3) $ allows comparison of $ \dot{R} $ and $ \dot{R}_d $.
+It is important to note that $ \dot{R} $ and $ \dot{R}_d $ cannot be compared directly, since they do not lie in the same space. $ \dot{R} $ and $ \dot{R}_d $ are expressed in their own tangent spaces, denoted by $ T_RSO(3)$ and $ T_{R_d}SO(3)$, respectively. For this reason, $ \dot{R}_d $ must be transformed into a vector on $ T_RSO(3) $ to allow comparison with $ \dot{R} $. This is achieved with a mathematical object called a \textit{transport map}, 
+which enables the comparison of tangent vectors living in different spaces, by defining a velocity error. 
+In Figure \ref{fig:con.transport}, two curves $ R(t) $ and $R_d(t)$ evolve on manifold $ SO(3) $. Transport map $ \mathcal{T}(R,R_d):T_{R_d}SO(3)\mapsto T_RSO(3) $ allows comparison of the velocity curves $ \dot{R} $ and $ \dot{R}_d $.
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/transport.png}}
 	\caption{Transport map $ \mathcal{T}(R,R_d) $\label{fig:con.transport}}
 \end{figure}		
+%The tracking error $ \Psi_R $ and the transport map $ \mathcal{T}(R,R_d) $ allow the definition of error between velocity curves.
 
-%BUllo p536 transport maps
-%BULLO Bullo p555 tracking error
-%Substituting Equations \ref{eq:SO3} and \ref{eq:Rdot} into 
-The comparison of the two tangent vectors is needed to calculate the error of body angular velocity $ \Omega $. This is derived from the velocity error that corresponds to the transport map $ \mathcal{T}(R,Rd)$, which is defined as
-\begin{equation}\label{key}
+The time derivative of the tracking error function is defined by the tracking error function $ \Psi_R $, the transport map $ \mathcal{T}(R,R_d)  $ and the velocity error curve $ \dot{e} $. Where $ \dot{e} $ is a vector field along $ R $, which defines
+the velocity error between $ R $ and $ R_d $, and is defined as
+\begin{equation}\label{eq:con.dote}
 \dot{e}=\dot{R}-\dot{R}_d(R_d^TR)
 \end{equation}
-This can be rewritten as follows
+This equation can be rewritten to obtain the angular velocity tracking error, as follows
 \begin{equation}\label{key}
 \begin{aligned}
 \dot{R}-\dot{R}_d(R_d^TR) &=R\hat{\Omega}-R_d\hat{\Omega}_d(R_d^TR) \\
@@ -171,25 +173,27 @@ From this follows the angular velocity tracking error $ e_{\Omega} $ in \BF, whi
 \begin{align}\label{eq:con.eOmega}
 e_\Omega&=\Omega- R^TR_d\Omega_d
 \end{align}
-Similar to the form of Equation \ref{eq:mod.R}, $ e_\Omega $ is the angular velocity vector of the relative rotation matrix $ R_d^TR $, represented in \BF. 
-It can be shown that the following equation holds
+Similar to the form of Equation \ref{eq:mod.R}, $ e_\Omega $ represents the angular velocity vector of the relative rotation matrix $ R_d^TR $, represented in \BF. Hence, it can be shown that the following equation holds
 \begin{equation}\label{key}
 \frac{d}{dt}(R^T_dR)=(R_d^TR)\hat{e}_\Omega
 \end{equation}
 
-Next, the load attitude error function is expressed on $ \mathbb{S}^2 $ and represents the distance from the direction $ q $ to the desired direction $ q_d $. 
-This is given by 
+\subsection*{Load Attitude Error}
+The error between the load attitude $ q $ and the desired load attitude $ q_d $ is defined by the error function $ q_d^Tq $. Based on the error function, the tracking error function $ \Psi_q $ on $ \mathbb{S}^2 $ is chosen to be
 \begin{equation}\label{eq:psiq}
 \Psi_q=1-q_d^Tq
 \end{equation}
+The derivative of the tracking error function $ \Psi_q $ gives the load attitude error function $ e_q $ as follows
+\begin{equation}\label{eq:con.eq}
+e_q=\hat{q}^2q_d
+\end{equation}
+Again, a \textit{transport map} is used for a comparison between the tangent vectors on tangent spaces $ T_q\mathbb{S}^2$ and $ T_{q_d}\mathbb{S}^2$. Using the tracking error $ \Psi_q $ and the transport map $ \mathcal{T}_{\mathcal{S}^2}(q,q_d) $ the load angular velocity error function is defined as
+\begin{equation}\label{eq:con.edq}
+e_{\dot{q}}=\dot{q}-(q_d\times\dot{q}_d)\times q
+\end{equation}
 
-In the same fashion a \textit{transport map} is used for a comparison between the tangent vectors on tangent spaces $ T_q\mathbb{S}^2$ and $ T_{q_d}\mathbb{S}^2$. This results in the following error functions on $ T\mathbb{S}^2 $
-\begin{align}
-e_q&=\hat{q}^2q_d\label{eq:con.eq}\\
-e_{\dot{q}}&=\dot{q}-(q_d\times\dot{q}_d)\times q\label{eq:con.edq}
-\end{align}
-
-The tracking errors for position and velocity are defined as
+\subsection*{Load Position Error}
+The tracking errors for the load position and load velocity are defined as
 \begin{align}\label{key}
 e_x&=x-x_d\\
 e_v&=v-v_d
@@ -227,55 +231,58 @@ By substituting Equation \ref{eq:mod.qratt} follows
 \begin{equation}\label{eq:con.dOmega}
 \dot{e}_\Omega=J^{-1}(-\Omega\times J\Omega + M)+\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d
 \end{equation}
-
-Now the control input $ M $ can be defined as a proportional term, a derivative term and a canceling term, as follows \cite{Sreenath2013c}
+From this, the control input $ M $ is defined \cite{Lee2010c}, and consists of a proportional term, a derivative term and a canceling term, as follows
 \begin{equation}\label{eq:con.M}
 M = -k_Re_R-k_\Omega e_\Omega+\Omega\times J\Omega-J(\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d)
 \end{equation}
-such that Equation \ref{eq:con.deOmega} is reduced to
-\begin{equation}\label{eq:con.JdeOmega}
-J\dot{e}_\Omega=-k_Re_R-k_\Omega e_\Omega
-\end{equation}
-for any positive constants $ k_R, k_\Omega $.
-In \cite{Sreenath2013b}, Equation \ref{eq:con.M} is defined as
+Rapid exponential convergence of the attitude error function and angular velocity error function can be achieved by adding
+the parameter \lsymb{$ \epsilon $}{Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $} to
+Equation \ref{eq:con.M}, where $ 0<\epsilon<1 $ \cite{Sreenath2013c}
 \begin{equation}\label{eq:con.Meps}
 M = -\frac{1}{\epsilon^2}k_Re_R-\frac{1}{\epsilon}k_\Omega e_\Omega+\Omega\times J\Omega-J(\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d)
 \end{equation}
-where \lsymb{$ \epsilon $}{Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $} is a parameter to enable rapid exponential convergence of the attitude- and angular velocity error functions, such that $ 0<\epsilon<1 $.\\
+such that Equation \ref{eq:con.Meps} is reduced to
+\begin{equation}\label{eq:con.JdeOmega}
+J\dot{e}_\Omega=-\frac{1}{\epsilon^2}k_Re_R-\frac{1}{\epsilon}k_\Omega e_\Omega
+\end{equation} 
+for any positive constants $ k_R, k_\Omega $.\\
+% and where \lsymb{$ \epsilon $}{Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $} is the parameter to enable rapid exponential convergence of the attitude- and angular velocity error functions, such that $ 0<\epsilon<1 $ \cite{Sreenath2013c}
+%such that Equation \ref{eq:con.deOmega} is reduced to
+%\begin{equation}\label{eq:con.JdeOmega}
+%J\dot{e}_\Omega=-k_Re_R-k_\Omega e_\Omega
+%\end{equation}
+%for any positive constants $ k_R, k_\Omega $.\\
 
-Equation \ref{eq:app.eOmega} is substituted and Equation \ref{eq:mod.hattrace} is used to rewrite the time derivative of $ e_R $ as follows
+Equation \ref{eq:mod.hattrace} is used to rewrite the time derivative of $ e_R $ as follows
  %rewrite the attitude velocity error $ \dot{e}_R $ as follows
- \begin{equation}\label{key}
+ \begin{equation}\label{eq:con.deR}
  \begin{aligned}
  \dot{e}_R&=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee\\
- &=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega
+ &=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega 
  \end{aligned}
  \end{equation}
-It can be shown that $ \parallel\dot{e}_R\parallel\leq\parallel e_\Omega \parallel  $ for all $ R^T_dR\in SO(3) $.
- 
-A stability analysis of the controller is presented in \cite{Lee2010} and it is proven that 
-
-the zero equilibrium of the closed loop tracking error $ (e_R,e_\Omega)=(0,0) $ is exponentially stable, if the initial conditions satisfy
+where $ \parallel C(R_d^TR)\parallel_2\leq 1 $, such that $ \parallel\dot{e}_R\parallel\leq\parallel e_\Omega \parallel  $ for all $ R^T_dR\in SO(3) $. Equations \ref{eq:con.JdeOmega} and \ref{eq:con.deR}
+are used in a stability analysis of the controller, and it is proven in \cite{Lee2010} 
+that the zero equilibrium of the closed loop tracking error $ (e_R,e_\Omega)=(0,0) $ is exponentially stable, if the initial conditions satisfy
 \begin{equation}\label{eq:dom1}
 \Psi_R(R(0),R_d(0))<2
 \end{equation}
 \begin{equation}\label{eq:dom2}
 \parallel e_\Omega(0)\parallel^2<\frac{2}{\lambda_M(J)}\frac{k_R}{\epsilon^2}(2-\Psi_R(R(0),R_d(0)))
 \end{equation}
-where \lsymb{$ \lambda_M(\cdot) $}{Maximum eigenvalue} denotes the maximum eigenvalue. The domain of attraction is defined by Equations \ref{eq:dom1} and \ref{eq:dom2}. \\
+where \lsymb{$ \lambda_M(\cdot) $}{Maximum eigenvalue} denotes the maximum eigenvalue. \\
 Furthermore, there exist constants $ \alpha_R,\beta_R>0 $ such that
-\begin{equation}\label{eq:con.PsiRconv}
+\begin{equation}\label{eq:con.proofPsiR}
 \Psi_R(R(t),R_d(t)) \leq min\left\lbrace 2,\alpha_Re^{-\beta_Rt}\right\rbrace 
 \end{equation}
-%ADD explain that error function will be asymptoticallly stable for right parameters. larger region of attraction
+%T is defined by Equations . 
+Equations \ref{eq:dom1} and \ref{eq:dom2} contain the parameters that enable tuning of the controller and determine the domain of attraction. 
 
+Note that the tracking of the \a{qr} attitude does not require any specification of the thrust magnitude $ f $. During this flight mode, the translational motion can only be controlled partially, which makes this flight mode suitable for attitude maneuvers with short time periods.
 %CHECK what this is about
 %Asymptotic tracking of the quadrotor attitude does not require specification of the thrust magnitude. As an auxiliary problem, the thrust magnitude can be chosen in many different ways to achieve an additional translational motion objective. For example, it can be used to asymptotically track a quadrotor altitude command [28]. Since the translational motion of the quadrotor UAV can only be partially controlled; this flight mode is most suitable for short time periods where an attitude maneuver is to be completed. \cite{Goodarzi2015b}
 
-%CHECK waar moet dit?
-\begin{equation}\label{key}
-J\dot{e}_\Omega=-\frac{1}{\epsilon^2}k_Re_R-\frac{1}{\epsilon}k_\Omega e_\Omega
-\end{equation} 
+
 
 \subsection{Load Attitude Tracking}\label{sec:con.loadatt}
 
@@ -305,7 +312,7 @@ where $ b_{3c} \in \mathbb{S}^2 $ is defined by
 \begin{equation}\label{eq:con.b3c}
 b_{3c}=\frac{F}{||F||}
 \end{equation}
-Such that $ F $ in Equation \ref{eq:con.b3c} is defined by a normal component $ F_n $, $ F_{pd} $ and $ F_{ff}$
+Such that $ F $ in Equation \ref{eq:con.b3c} is defined by a normal component $ F_n $, a proportional-derivative component $ F_{pd} $ and feedforward control force $ F_{ff}$
 \begin{equation}\label{key}
 F=F_n-F_{pd}-F_{ff}
 \end{equation}
@@ -341,7 +348,7 @@ It is proven in \cite{Sreenath2013c} that the zero equilibrium of the closed loo
 
 The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \ref{eq:dom3} and \ref{eq:dom4}.
 Furthermore, there exist constants $ \alpha_q,\beta_q>0 $ such that
-\begin{equation}\label{eq:con.Psiqconv}
+\begin{equation}\label{eq:con.proofPsiq}
 \Psi_q(q(t),q_d(t)) \leq min\left\lbrace 2,\alpha_qe^{-\beta_qt}\right\rbrace 
 \end{equation}
 
@@ -371,7 +378,11 @@ F_n=(A\cdot q)q
 %\end{figure}		
 
 %CHECK error function will be asymptoticallly stable for right parameters? 
-It is proven in \cite{Sreenath2013c} that the zero equilibrium of the closed loop tracking error $ (e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable, if the initial conditions satisfy
+If the initial conditions in Equations \ref{eq:dom1}, \ref{eq:dom2}, \ref{eq:dom3} and \ref{eq:dom4} are satisfied, it is shown that 
+It is proven in \cite{Sreenath2013c} that 
+the zero equilibrium of the closed loop tracking error $ (e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable
+
+%CHECK dit hoort bij domain of attraction
 \begin{equation}\label{eq:dom5}
 \Psi_q(q(0),q_c(0))<\psi_1<1
 \end{equation}
@@ -385,11 +396,6 @@ The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \
 \parallel e_{\dot{q}}(0)\parallel^2<\frac{2}{m_QL}{k_q}(\psi_1-\Psi_q(q(0),q_d(0)))
 \end{equation}
 
-
-Furthermore, there exist constants $ \alpha_q,\beta_q>0 $ such that
-\begin{equation}\label{key}
-\Psi_q(q(t),q_d(t)) \leq min\left\lbrace 2,\alpha_qe^{-\beta_qt}\right\rbrace 
-\end{equation}
 
 \section{Stability Analysis}\label{sec:con.sta}
 

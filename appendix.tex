@@ -312,10 +312,15 @@ e_\Omega&=\Omega-R^TR_d\Omega_d,\\
 \end{aligned}
 \end{equation}
 
-The attitude tracking and its time derivative is given by
+The attitude tracking error is given by
 \begin{equation}\label{key}
 \begin{aligned}
-e_R&=\frac{1}{2}(R_d^TR-R^TR_d)^\vee,\\
+e_R=\frac{1}{2}(R_d^TR-R^TR_d)^\vee
+\end{aligned}
+\end{equation}
+where its time derivative is given by
+\begin{equation}\label{key}
+\begin{aligned}
 \dot{e}_R&=\frac{1}{2}(\dot{R}_d^TR+R_d^T\dot{R}-\dot{R}^TR_d-R^T\dot{R}_d)^\vee\\
 &=\frac{1}{2}((R_d\hat{\Omega}_d)^TR+R_d^T(R\hat{\Omega})-(R\hat{\Omega})^TR_d-R^T(R_d\hat{\Omega}_d))^\vee\\
 &=\frac{1}{2}(-\hat{\Omega}_dR_d^TR+R_d^TR\hat{\Omega}+\hat{\Omega}R^TR_d-R^TR_d\hat{\Omega}_d)^\vee\\
@@ -324,16 +329,22 @@ e_R&=\frac{1}{2}(R_d^TR-R^TR_d)^\vee,\\
 %&=\frac{1}{2}(tr[R^TR_d]I-R^TR_d)e_\Omega \equiv C(R_d^TR)e_\Omega
 \end{aligned}
 \end{equation}
-
+which can be rewritten by substituting Equation \ref{eq:app.eOmega} as follows
+\begin{equation}\label{key}
+\dot{e}_R=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee
+\end{equation}
+The time derivative of the angular velocity tracking error $ e_\Omega $ is given by
 \begin{equation}\label{key}
 \begin{aligned}
 \dot{e}_\Omega&=\dot{\Omega}-\dot{R}^TR_d\Omega_d-R^T\dot{R}_d\Omega_d-R^TR_d\dot{\Omega}_d\\
 &=\dot{\Omega}-(R\hat{\Omega})^TR_d\Omega_d-R^T({R}_d\hat{\Omega}_d)\Omega_d-R^TR_d\dot{\Omega}_d\\
-&=\dot{\Omega}+\hat{\Omega}R^TR_d\Omega_d-R^T({R}_d\hat{\Omega}_d)\Omega_d-R^TR_d\dot{\Omega}_d\\
-&=J^{-1}(-\Omega\times J\Omega + M)+\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d
+&=\dot{\Omega}+\hat{\Omega}R^TR_d\Omega_d-R^T({R}_d\hat{\Omega}_d)\Omega_d-R^TR_d\dot{\Omega}_d
 \end{aligned}
 \end{equation}
-where $\hat{\Omega}_d\Omega_d=\Omega_d \times \Omega_d=0  $.
+where $\hat{\Omega}_d\Omega_d=\Omega_d \times \Omega_d=0  $. Substituting Equation \ref{eq:mod.qratt} results in 
+\begin{equation}\label{key}
+\dot{e}_\Omega=J^{-1}(-\Omega\times J\Omega + M)+\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d
+\end{equation}
 
 \section{Figures}
 %CHECK nodig?

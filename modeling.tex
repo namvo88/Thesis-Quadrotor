@@ -199,14 +199,15 @@ The \a{qr} model representation is shown in Figure \ref{fig:mod.model}. Two Cart
 \end{itemize}
 such that \IF is fixed to earth and the axis of \BF, $ \mathbf{b}_1$ and $\mathbf{b}_2 $ coincide with the arms of the \a{qr}.
 
-Considering the properties of the system, the \a{qr} is described as a rigid body with six degrees of freedom, driven by forces and moments. 
+%Considering the properties of the system, t
+The \a{qr} is described as a rigid body with six degrees of freedom, driven by the system inputs: the total upward force $ f $ and the moments $ M=\begin{bmatrix}	M_\phi&M_\theta&M_\psi	\end{bmatrix}^T $ around the body axes. 
 %Which means that the motion of a rigid body can be described by a translation of the \acf{com} and a rotation about the \a{com}. 
 %The position of \BF is described by a vector evolving on $ \mathbb{R}^3 $, and is represented with respect to \IF.  
-The configuration of the \a{qr} can be described by the location of the \a{qr}s \a{cm}, $x_Q\in \mathbb{R}^3 $, described in the Euclidean space w.r.t. \IF and by the \textit{attitude} which is the orientation of \BF w.r.t. \IF evolving on a nonlinear space, described by a rotation matrix $R\in SO(3) $. The dynamics of the \a{qr} can be expressed on $ SE(3) $, which is the group of \textit{rigid displacements} in $ \mathbb{R}^3 $. A rigid displacement describes both the rotation and the position of \BF relative to \IF. \\
+The configuration of the \a{qr} can be described by 1) the location of the \a{qr}'s \acf{cm}, $x_Q\in \mathbb{R}^3 $, described in the Euclidean space w.r.t. \IF, and 2) the \textit{attitude} which is the orientation of \BF w.r.t. \IF evolving on a nonlinear space, described by a rotation matrix $R\in SO(3) $. The dynamics of a rigid body can be expressed on the manifold $ SE(3) $, which is the group of \textit{rigid displacements} in $ \mathbb{R}^3 $. A rigid displacement describes both the rotation and the position of \BF relative to \IF.
 
 \begin{figure}[h!]
 	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/qrmodel2.png}}
+	\makebox[\textwidth][c]{\includegraphics[width=.45\paperwidth]{./StyleStuff/qrmodel2.png}}
 	\caption{Quadrotor model representation\label{fig:mod.model}}
 \end{figure}	
 
@@ -243,7 +244,8 @@ lb&0&-lb&0\\
 \omega_4^2\\
 \end{bmatrix}
 \end{equation}
-where \lsymb{$ l $}{Distance from the rotor to the QR CM} is the distance from the rotor to the \a{qr}'s \acf{cm} and $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, respectively. 
+where \lsymb{$ l $}{Distance from the rotor to the \a{qr} \a{cm}} is the distance from the rotor to the \a{qr}'s \a{cm}, $ d $ is the drag factor and $ b $ is the thrust factor. 
+% $ M_\phi, M_\theta, M_\psi $ denote the moments around the $ x, y, z $-axis in \BF, respectively. 
 
 \section{Quadrotor-Load Model}	\label{sec:mod.QRLmod}
 The total Quadrotor-Load model consists of two subsystems, 1) where the cable tension is zero, and 2) where the cable tension is non-zero.
@@ -252,7 +254,7 @@ The QR-Load model is shown in Figure \ref{fig:mod.modelQRL}. The unit vector \ls
 \begin{equation}\label{eq:mod.xQ2xL}
 x_Q=x_L-Lq
 \end{equation}
-where \lsymb{$ x_Q \in\mathbb{R}^3$}{Position of the \a{qr} CM} is the position of the \a{qr}'s \a{cm} expressed in \IF, \lsymb{$ x_L\in\mathbb{R}^3 $}{Position of the load} is the position of the load expressed in \IF, and \lsymb{$ L $}{Length of the cable} is the length of the cable.
+where \lsymb{$ x_Q \in\mathbb{R}^3$}{Position of the \a{qr} \a{cm}} is the position of the \a{qr}'s \a{cm} expressed in \IF, \lsymb{$ x_L\in\mathbb{R}^3 $}{Position of the load} is the position of the load expressed in \IF, and \lsymb{$ L $}{Length of the cable} is the length of the cable.
 \begin{figure}[h!]
 	\centering
 	\makebox[\textwidth][c]{\includegraphics[width=.35\paperwidth]{./StyleStuff/qrlmodel.png}}
@@ -345,11 +347,11 @@ The variations in energy and the virtual work can be substituted into Equation \
 \begin{equation}\label{eq:Sfinal}
 \delta S = \int_{t_1}^{t_2}(\delta W_1+\delta W_2+\delta\mathcal{T}-\delta\mathcal{U})dt
 \end{equation}
-While $ x_L,\dot{x}_L $ vary on $ \mathbb{R}^3 $, Equation \ref{eq:Sfinal} is also a function of variations on manifolds, where $ \delta R $ is a variation on $ SO(3) $ and $ \delta q $ is a variation on $ \mathbb{S}^2 $. These so called infinitesimal variations are obtained as shown in  \cite{Lee2005,Lee2011,Bullo2005,Sreenath2013c}. 
+While $ x_L,\dot{x}_L $ vary on $ \mathbb{R}^3 $, Equation \ref{eq:Sfinal} is also a function of variations on manifolds, where $ \delta R $ is a variation on $ SO(3) $ and $ \delta q $ is a variation on $ \mathbb{S}^2 $. These so called infinitesimal variations define how the curves on the manifold "vary", and are obtained as shown in  \cite{Sreenath2013c,Lee2007,Lee2005,Lee2011,Bullo2005}. 
 \begin{equation}\label{eq:mod.varRq}
 \begin{aligned}
-\delta R&=R\hat{\eta}\in T_RSO(3)&\text{, where } \eta\in\mathbb{R}^3,\hat{\eta}\in\mathfrak{so}(3)\\
-\delta q&=\xi\times q \in T_q\mathbb{S}^2&\text{, where }\xi\in\mathbb{R}^3,\xi\cdot q=0
+\delta R=R\hat{\eta}\in T_RSO(3)&\text{, where } \eta\in\mathbb{R}^3,\hat{\eta}\in\mathfrak{so}(3)\\
+\delta q=\xi\times q \in T_q\mathbb{S}^2&\text{, where }\xi\in\mathbb{R}^3,\xi\cdot q=0
 \end{aligned}
 \end{equation}
 The following variations follow from differentiation,
@@ -406,9 +408,9 @@ m_QL\dot{\omega}&=-q\times fRe_3\label{eq:mod.loadatt}\\
 \dot{R}&=R\hat{\Omega} \label{eq:mod.R}\\ 
 J\dot{\Omega}+\Omega\times J\Omega&= M \label{eq:mod.qratt}
 \end{align}
-where Equations \ref{eq:mod.loadpos} and \ref{eq:mod.loadatt} are the load position and attitude dynamics, and Equation \ref{eq:mod.qratt} are the \a{qr} attitude dynamics.\\
+where Equations \ref{eq:mod.loadpos} and \ref{eq:mod.loadatt} are the load position and attitude dynamics, and Equation \ref{eq:mod.qratt} represents the \a{qr} attitude dynamics.
 
-The dynamics of the complete \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{two-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $, which are all smooth  manifolds. This results in a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that normally are introduced by Euler angles . \\
+The dynamics of the complete \a{qr}-Load system can be globally expressed on the Special Orthogonal Group $SO(3)$, \textit{two-sphere} $ \mathbb{S}^2 $ and Special Euclidean Group $ SE(3) $, which are all smooth  manifolds. This results in a compact notation of the equations of motion, making the large amount of trigonometric functions unnecessary, that normally are introduced by Euler angles.
 
 %\end{eqnarray}
 %\begin{equation}\label{key}

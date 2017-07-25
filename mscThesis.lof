@@ -3,11 +3,11 @@
 \contentsline {figure}{\numberline {2-1}{\ignorespaces Configuration Space of a 2-link arm\relax }}{6}{figure.caption.7}
 \contentsline {figure}{\numberline {2-2}{\ignorespaces A manifold locally resembles a Euclidean space\relax }}{7}{figure.caption.9}
 \contentsline {figure}{\numberline {2-3}{\ignorespaces Tangent Spaces on different manifolds\relax }}{7}{figure.caption.10}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor model representation\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor model representation\relax }}{10}{figure.caption.14}
 \contentsline {figure}{\numberline {2-5}{\ignorespaces Quadrotor with Load model representation\relax }}{11}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \cite {Sreenath2013c}\relax }}{17}{figure.caption.20}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Transport map $ \mathcal {T}(R,R_d) $\relax }}{18}{figure.caption.22}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Transport map $ \mathcal {T}(q,r) $\relax }}{17}{figure.caption.21}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \cite {Sreenath2013c}\relax }}{19}{figure.caption.24}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4-1}{\ignorespaces Desired Load Position Case A\relax }}{26}{figure.caption.26}
 \contentsline {figure}{\numberline {4-2}{\ignorespaces Desired Load Position Case C\relax }}{27}{figure.caption.27}

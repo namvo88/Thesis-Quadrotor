@@ -1,12 +1,29 @@
 \chapter{Control Design} \label{ch:control}
 %ADD intro: in this section etc
-Section \ref{sec:con.nlgc} introduces the concepts of Nonlinear Geometric Control, and the control design structure is discussed. 
-The required control inputs are calculated by defining the tracking errors on nonlinear manifolds similar to the configuration spaces of the system dynamics.
+Section \ref{sec:con.nlgc} introduces Nonlinear Geometric Control and concepts of geometric properties that are used for analysis and control design.  
+%In the previous chapter, 
+The configuration spaces of the system dynamics were expressed on nonlinear manifolds, in the previous chapter.
+In Section \ref{sec:con.configerr}, error functions and geometric mappings are defined on these same nonlinear manifolds in order to measure the error between current and desired states. 
+
+A backstepping control approach is applied to stabilize the system, despite the under-actuated nature of the system.
+This control design allows multiple controllers to operate in a cascaded structure, which results in the possibility to track a load position, while stabilizing the system.
+The control design with its different flight modes and the corresponding controllers, are defined and explained in Section \ref{sec:con.back}.
+
+%controlling different states,
+%which enables the control of different states, 
+%resulting in the 
+%stabilizing the system and tracking control
+%control of the load position tracking problem.
+%Controllers are designed to obtain the required control inputs to stabilize the system
+%are calculated by defining 
 
 %For the control of the different flight modes, the controllers are designed on the nonlinear geometric space, 
 %being functions of the earlier described tracking errors. 
 %Different flight modes are necessary to control the under-actuated system. 
-A backstepping control approach is applied for the control of the load position tracking problem, allowing different controllers to operate in a cascaded structure. The controllers that are designed for each flight mode, are discussed in Section \ref{sec:con.track}. 
+
+%, allowing different controllers . 
+%Several flight modes are defined to control the under-actuated system
+%The controllers that are designed for each flight mode, are discussed in Section \ref{sec:con.back}. 
 
 %ADD 
 %deze references introduceren
@@ -32,12 +49,125 @@ Differential geometric control techniques utilize these geometric properties for
 The objective is to express both the system dynamics and control inputs on manifolds instead of local charts. 
 In contrast to locally defined linear control, nonlinear geometric control can be defined almost globally, avoiding singularities that occur in the representation of large angles and complex maneuvering.
 
-In contrast to hybrid control systems \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally. Global nonlinear dynamics of various classes of closed loop attitude control systems have been studied in recent years \cite{Chaturvedi2011a}. 
+The design of the controllers for the \a{qr} attitude can be found in \cite{Lee2010}, and the controllers of load attitude- and position this can be found in \cite{Sreenath2013c}. Thorough stability analyses are presented in these references. For a deeper understanding of Lyapunov stability analysis in geometric control, the reader should refer to \cite{Bullo2005}.
+In contrast to hybrid control systems \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally. A study on global nonlinear dynamics of various classes of closed loop attitude control systems can be found in \cite{Chaturvedi2011a}. 
+
+\subsection{Error Functions}\label{sec:con.configerr}
+The control of a trajectory tracking problem requires state feedback to define tracking errors, a measure of the difference between the current states and the desired states.
+Since the closed-loop system dynamics evolve on nonlinear manifolds, which describe the configuration space of the \a{qr} attitude $ \in SO(3) $ and the load attitude $ \in \mathbb{S}^2 $, 
+error functions are defined on these same manifolds \cite{Bullo2005}. 
+These functions play a role in the definition of the potential function for the closed-loop system and form the basis for both stabilizing and tracking controllers of the \a{qr}-Load system.
+%Likewise, the tracking errors $ \Psi_R:SO(3)\times SO(3)\rightarrow\mathbb{R} $ and $ \Psi_q:\mathbb{S}^2\times \mathbb{S}^2\rightarrow\mathbb{R} $ are expressed on these manifolds. 
+%an for the purpose of control design. 
+%The derivation of the error functions can be found in \cite{Bullo2005}.
+%CHECK 
+%\cite{Maithripala2006}
+%CHECK
+%Attitude control systems naturally evolve on nonlinear configuration spaces such as $ \mathbb{S}^2 $ and $ SO(3) $. 
+%Attitude tracking control is developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
+\subsubsection*{Quadrotor Attitude Error}
+Recall that $ R $ is the rotation matrix to describe the \a{qr} attitude, and $ R_d $ is the desired rotation matrix. To describe the relative rotation from the body frame to the desired frame, an \textit{attitude error} is defined as $ R^T_dR $. 
+Based on this attitude error, the \textit{tracking error function} $ \Psi_R $ on $ SO(3) $ is chosen to be 
+\begin{equation}\label{eq:psiR}
+\Psi_R(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
+\end{equation}
+such that $ \Psi_R $ is locally positive-definite about $ R^T_dR=I $ within the region where the rotation angle between $ R $ and $ R_d $ is less than $ 180^\circ $. 
+It can be shown that this region where $ \Psi_R<2 $ almost covers $ SO(3) $ \cite{Lee2010c}.\\
+%ADD explain
+% instead of comparing all elements of rotation matrix. PsiR is a measure for the error
+%ADD 
+%(physical) Meaning of the error functions
+%Equation  states that the variation of the rotation matrix is expressed as $ \delta R = R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $.
+Using Equation \ref{eq:mod.hatvee} and \ref{eq:mod.varRq}, the derivative of the tracking error function $ \Psi_R $ with respect to R along the direction of $ \delta R=R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $ is given by
+\begin{equation}\label{key}
+\begin{aligned}
+\mathbf{D}_R\Psi(R,R_d)\cdot R\hat{\eta}&=-\frac{1}{2}tr[R_d^TR\hat{\eta}]\\
+&=\frac{1}{2}(R^T_dR-R^TR_d)^\vee\cdot\eta
+\end{aligned}
+\end{equation}
+%By applying Equation \ref
+%\texttt{\begin{equation}\label{key}
+%\mathbf{D}_R\Psi(R,R_d)\cdot R\hat{\eta}=
+%\end{equation}}
+where the \textit{vee map} $ ^\vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $ is the inverse of the \textit{hat map} defined in Section \ref{sec:mod.geometric}. From this equation, the \a{qr} \textit{attitude tracking error} $ e_R \in \mathbb{R}^3$ is chosen as 
+\begin{equation}\label{eq:con.eR}
+e_R=\frac{1}{2}(R_d^TR-R^TR_d)^\vee
+\end{equation}
+%The tracking error functions on $ TSO(3) $, the tangent space of $ SO(3) $, are defined as
+%The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee2010c} 
+It is important to note that $ \dot{R} $ and $ \dot{R}_d $ cannot be compared directly, since they do not lie in the same space. $ \dot{R} $ and $ \dot{R}_d $ are expressed in their own tangent spaces, denoted by $ T_RSO(3)$ and $ T_{R_d}SO(3)$, respectively. For this reason, $ \dot{R}_d $ must be transformed into a vector on $ T_RSO(3) $ to allow comparison with $ \dot{R} $. This is achieved with a mathematical object called a \textit{transport map}, 
+which enables the comparison of tangent vectors living in different spaces, by defining a velocity error. 
+In Figure \ref{fig:con.transport}, two curves $ R(t) $ and $R_d(t)$ evolve on manifold $ SO(3) $. 
+Assume that at $ t=t_0 $, $ R(t_0)=q$ and $R_d(t_0)=r$.
+Transport map $ \mathcal{T}(q,r):T_{r}SO(3)\mapsto T_qSO(3) $ allows comparison of the velocity curves $ \dot{R} $ and $ \dot{R}_d $.
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/transport.png}}
+	\caption{Transport map $ \mathcal{T}(q,r) $\label{fig:con.transport}}
+\end{figure}		
+%The tracking error $ \Psi_R $ and the transport map $ \mathcal{T}(q,r) $ allow the definition of error between velocity curves.
+
+%The time derivative of the tracking error function is defined by the tracking error function $ \Psi_R $, the transport map $ \mathcal{T}(q,r)  $ and the velocity error curve $ \dot{e} $. 
+% $ \dot{e} $ is a function of the transport map $ \mathcal{T}(q,r)  $. 
+%Where 
+The \textit{velocity error} $ \dot{e} $ is a vector field along $ R $ corresponding to the transport map.
+% $ \mathcal{T}(q,r) $. 
+It defines the velocity error between the curves $ R$ and $ R_d$, and is defined as
+\begin{equation}\label{eq:con.dote}
+\dot{e}=\dot{R}-\dot{R}_d(R_d^TR)
+\end{equation}
+This equation is rewritten to obtain the angular velocity tracking error, as follows
+\begin{equation}\label{key}
+\begin{aligned}
+\dot{R}-\dot{R}_d(R_d^TR) &=R\hat{\Omega}-R_d\hat{\Omega}_d(R_d^TR) \\
+&=R(\Omega)^\wedge-(RR^T)R_d\hat{\Omega}_dR_d^TR\\
+&=R(\Omega)^\wedge-R(R^TR_d{\Omega}_d)^\wedge \\
+&=R(\Omega-R^TR_d{\Omega}_d)^\wedge 
+\end{aligned}
+\end{equation}
+The angular \textit{velocity tracking error} $ e_{\Omega} $ expressed in \BF  is defined as
+\begin{align}\label{eq:con.eOmega}
+e_\Omega&=\Omega- R^TR_d\Omega_d
+\end{align}
+Similar to the form of Equation \ref{eq:mod.R}, $ e_\Omega $ represents the angular velocity vector of the relative rotation matrix $ R_d^TR $, represented in \BF. Hence, it can be shown that the following equation holds
+\begin{equation}\label{key}
+\frac{d}{dt}(R^T_dR)=(R_d^TR)\hat{e}_\Omega
+\end{equation}
+
+\subsubsection*{Load Attitude Error}
+The load attitude dynamics evolve on $ \mathbb{S}^2 $ and its tangent space $ T\mathbb{S}^2 $, where the error of the load attitude is described in a similar approach.
+The error between the load attitude $ q $ and the desired load attitude $ q_d $ is defined by the error function $ q_d^Tq $. Based on the error function, the tracking error function $ \Psi_q $ on $ \mathbb{S}^2 $ is chosen to be
+\begin{equation}\label{eq:psiq}
+\Psi_q=1-q_d^Tq
+\end{equation}
+The derivative of the tracking error function $ \Psi_q $ gives the load attitude error function $ e_q $ as follows
+\begin{equation}\label{eq:con.eq}
+e_q=\hat{q}^2q_d
+\end{equation}
+Again, a \textit{transport map} is used for a comparison between the tangent vectors on different tangent spaces.
+%$ T_q\mathbb{S}^2$ and $ T_{q_d}\mathbb{S}^2$. 
+Using the tracking error $ \Psi_q $ and the transport map $ \mathcal{T}_{\mathbb{S}^2} $, the load angular velocity error function is defined as
+\begin{equation}\label{eq:con.edq}
+e_{\dot{q}}=\dot{q}-(q_d\times\dot{q}_d)\times q
+\end{equation}
+
+\subsubsection*{Load Position Error}
+The tracking errors for the load position and load velocity are defined as
+\begin{align}\label{key}
+e_x&=x-x_d\\
+e_v&=v-v_d
+\end{align}
+where $ v_d=\dot{x}_d $. Furthermore, $ x_d(t) \in \mathbb{R}^3$ must be a smooth twice-differentiable load trajectory, such that the transport maps are well defined.
 
 \section{Backstepping Control}\label{sec:con.back}
-A backstepping approach, or cascade control, is a Lyapunov based technique to design the control of nonlinear dynamical systems and ensures Lyapunov stability. 
+ 
+%, or cascade control, 
+Backstepping is a Lyapunov based control technique for the stabilization of nonlinear dynamical systems. 
+%and ensures Lyapunov stability. 
 This approach is commonly used for the control of \a{qr}s \cite{Mahony2012} and will also be used in this research for the control of the load trajectory tracking problem.\\
-The basic principle is to create a cascaded structure by starting with a stable system as a base, then "stepping back" from this base to add a control loop around it that stabilizes the new system and enables the control of another state. 
+The basic principle is to create a cascaded structure by starting with a stable system as a base. A control loop is added around it, by stepping back" from this base. 
+This loop contains a control law that defines a change of coordinates, which allows control of a new state, while stabilizing the inner structure.
+%it that stabilizes the new system and enables the control of another state. 
 This is repeated until the final external control is reached, see Figure \ref{fig:con.loop}.
 The control law is designed by using states as virtual control signals. 
 Each loop computes a virtual command signal for the adjacent inner loop. 
@@ -80,20 +210,23 @@ And the last controller determines which $ q_c $ is needed to follow the desired
 %The backstepping approach determines how to stabilize the {\displaystyle \mathbf {x} } \mathbf {x}  subsystem using {\displaystyle z_{1}} z_{1}, and then proceeds with determining how to make the next state {\displaystyle z_{2}} z_{2} drive {\displaystyle z_{1}} z_{1} to the control required to stabilize {\displaystyle \mathbf {x} } \mathbf {x} . Hence, the process "steps backward" from {\displaystyle \mathbf {x} } \mathbf {x}  out of the strict-feedback form system until the ultimate control {\displaystyle u} u is designed.
 %***************************************\\
 
-Because the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s of the \a{qr}-Load system simultaneously. The backstepping approach allows control of different flight modes in which parts of the \a{DOF}s are controlled. The flight modes and their functions are defined in order, from the most inner loop to the most outer loop, as follows
+Since the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s of the \a{qr}-Load system simultaneously. The backstepping approach allows control of different flight modes in which a combination of \a{DOF}s are controlled. The flight modes and their functions are defined below in order, from the most inner loop to the most outer loop.
 \begin{outline}
-\1 QR Attitude Controlled Mode 
-\2 Track a desired QR attitude $ R_d(t) $ and a heading direction $ b_{1_d}(t) $
-\2 Give a desired input $ M $ for system
-\1 Load Attitude Controlled Mode 
-\2 Track a desired load attitude command $ q_d(t) $
-\2 Give a computed \a{qr} attitude $ R_c $ for the \a{qr} attitude controller (instead of $ R_d(t) $)
-\1 Load Position Controlled Mode
-\2 Track a desired load position $ x_{L,d}(t) $
-\2 Give a computed load attitude $ q_c $ for the load attitude controller (instead of $q_d(t) $)
+	\1 QR Attitude Controlled Mode 
+	\2 Track a desired QR attitude $ R_d(t) $ or commanded signal $ R_c(t) $ and a heading direction $ b_{1_d}(t) $
+	\2 Give a desired input $ M $ to the \a{qr}-Load system
+	\1 Load Attitude Controlled Mode 
+	\2 Track a desired load attitude $ q_d(t) $ or commanded signal $ q_c(t) $
+	\2 Give a computed \a{qr} attitude $ R_c $ to the \a{qr} attitude controller
+	\2 Give a desired input $ f $ to the \a{qr}-Load system	
+	\1 Load Position Controlled Mode
+	\2 Track a desired load position $ x_{L,d}(t) $
+	\2 Give a computed load attitude $ q_c $ to the load attitude controller
+	\2 Give a desired input $ f $ to the \a{qr}-Load system		
 \end{outline}
-where the subscript $d $ denotes a desired tracking reference, and the subscript $ c $ denotes a computed value that is calculated as a tracking reference. The difference in this notation is whether the signal is a predefined desired signal, or a signal computed by a controller.
-
+where the subscript $d $ denotes a desired tracking reference, and the subscript $ c $ denotes a computed tracking reference, calculated by the controllers. 
+More detailed derivations of the equations in the following sections can be found in Section \ref{sec:app.error}.
+%value that is calculated as a . The difference in this notation is whether the signal is a predefined desired signal, or a signal computed by a controller.
 %The controller that is used in this research is shown in Figure \ref{fig:con.loop}. The lowest levels have the highest bandwidth and are in control of the rotor rotational speeds $ \omega_i $, the total force $ f $ and moments $ M $. The next level controls the load attitude $ q $, and the top level controls the load position $ x_L $. 
 \begin{figure}[h!]
 	\centering
@@ -101,109 +234,9 @@ where the subscript $d $ denotes a desired tracking reference, and the subscript
 	\caption{Nonlinear Geometric Control Loop of the QR-Load system \cite{Sreenath2013c}\label{fig:con.loop}}
 \end{figure}	
 
-The design of the controllers for the \a{qr} attitude can be found in \cite{Lee2010}, and the controllers of load attitude- and position this can be found in \cite{Sreenath2013c}. Thorough stability analyses are presented in either references. For a deeper understanding of Lyapunov stability analysis in geometric control, the reader can refer to \cite{Bullo2005}.
-
-\section{Error Functions}\label{sec:con.configerr}
-The control of a trajectory tracking problem requires state feedback and a measure of the error defining the difference between the current states and the desired states.
-Since the system dynamics evolve on nonlinear manifolds, which describe the configuration spaces of the \a{qr} attitude $ \in SO(3) $ and the load attitude $ \in \mathbb{S}^2 $, error functions can also be defined on these same manifolds \cite{Bullo2005}. 
-These functions play a role in the definition of the potential function for the closed-loop system and form the basis for both stabilizing and tracking controllers of the \a{qr}-Load system.
-%Likewise, the tracking errors $ \Psi_R:SO(3)\times SO(3)\rightarrow\mathbb{R} $ and $ \Psi_q:\mathbb{S}^2\times \mathbb{S}^2\rightarrow\mathbb{R} $ are expressed on these manifolds. 
-%an for the purpose of control design. 
-%The derivation of the error functions can be found in \cite{Bullo2005}.
-%CHECK 
-%\cite{Maithripala2006}
-%CHECK
-%Attitude control systems naturally evolve on nonlinear configuration spaces such as $ \mathbb{S}^2 $ and $ SO(3) $. 
-%Attitude tracking control is developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
-\subsection*{Quadrotor Attitude Error}
-Recall that $ R $ is the rotation matrix to describe the \a{qr} attitude, and $ R_d $ is the desired rotation matrix. To describe the relative rotation from the body frame to the desired frame, an \textit{attitude error} is defined as $ R^T_dR $. 
-Based on this attitude error, the \textit{tracking error function} $ \Psi_R $ on $ SO(3) $ is chosen to be 
-\begin{equation}\label{eq:psiR}
-\Psi_R(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
-\end{equation}
-such that $ \Psi_R $ is locally positive-definite about $ R^T_dR=I $ within the region where the rotation angle between $ R $ and $ R_d $ is less than $ 180^\circ $. 
-It can be shown that this region where $ \Psi_R<2 $ almost covers $ SO(3) $ \cite{Lee2010c}.\\
-%ADD explain
-% instead of comparing all elements of rotation matrix. PsiR is a measure for the error
-%ADD 
-%(physical) Meaning of the error functions
-%Equation  states that the variation of the rotation matrix is expressed as $ \delta R = R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $.
-Using Equation \ref{eq:mod.hatvee} and \ref{eq:mod.varRq}, the derivative of the tracking error function $ \Psi_R $ with respect to R along the direction of $ \delta R=R\hat{\eta} $ for $ \eta\in\mathbb{R}^3 $ is given by
-\begin{equation}\label{key}
-\begin{aligned}
-\mathbf{D}_R\Psi(R,R_d)\cdot R\hat{\eta}&=-\frac{1}{2}tr[R_d^TR\hat{\eta}]\\
-&=\frac{1}{2}(R^T_dR-R^TR_d)^\vee\cdot\eta
-\end{aligned}
-\end{equation}
-%By applying Equation \ref
-%\texttt{\begin{equation}\label{key}
-%\mathbf{D}_R\Psi(R,R_d)\cdot R\hat{\eta}=
-%\end{equation}}
-where the \textit{vee map} $ ^\vee:\mathfrak{so}(3)\rightarrow\mathbb{R}^3 $ is the inverse of the \textit{hat map} defined in Section \ref{sec:mod.geometric}. From this equation, the \a{qr} attitude tracking error $ e_R \in \mathbb{R}^3$ is chosen as 
-\begin{equation}\label{eq:con.eR}
-e_R=\frac{1}{2}(R_d^TR-R^TR_d)^\vee
-\end{equation}
-%The tracking error functions on $ TSO(3) $, the tangent space of $ SO(3) $, are defined as
-%The attitude and angular velocity tracking error should be carefully chosen as they evolve on the tangent bundle of  $ SO(3) $. \cite{Lee2010c} 
-It is important to note that $ \dot{R} $ and $ \dot{R}_d $ cannot be compared directly, since they do not lie in the same space. $ \dot{R} $ and $ \dot{R}_d $ are expressed in their own tangent spaces, denoted by $ T_RSO(3)$ and $ T_{R_d}SO(3)$, respectively. For this reason, $ \dot{R}_d $ must be transformed into a vector on $ T_RSO(3) $ to allow comparison with $ \dot{R} $. This is achieved with a mathematical object called a \textit{transport map}, 
-which enables the comparison of tangent vectors living in different spaces, by defining a velocity error. 
-In Figure \ref{fig:con.transport}, two curves $ R(t) $ and $R_d(t)$ evolve on manifold $ SO(3) $. Transport map $ \mathcal{T}(R,R_d):T_{R_d}SO(3)\mapsto T_RSO(3) $ allows comparison of the velocity curves $ \dot{R} $ and $ \dot{R}_d $.
-\begin{figure}[h!]
-	\centering
-	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/transport.png}}
-	\caption{Transport map $ \mathcal{T}(R,R_d) $\label{fig:con.transport}}
-\end{figure}		
-%The tracking error $ \Psi_R $ and the transport map $ \mathcal{T}(R,R_d) $ allow the definition of error between velocity curves.
-
-The time derivative of the tracking error function is defined by the tracking error function $ \Psi_R $, the transport map $ \mathcal{T}(R,R_d)  $ and the velocity error curve $ \dot{e} $. Where $ \dot{e} $ is a vector field along $ R $, which defines
-the velocity error between $ R $ and $ R_d $, and is defined as
-\begin{equation}\label{eq:con.dote}
-\dot{e}=\dot{R}-\dot{R}_d(R_d^TR)
-\end{equation}
-This equation can be rewritten to obtain the angular velocity tracking error, as follows
-\begin{equation}\label{key}
-\begin{aligned}
-\dot{R}-\dot{R}_d(R_d^TR) &=R\hat{\Omega}-R_d\hat{\Omega}_d(R_d^TR) \\
-&=R(\Omega)^\wedge-(RR^T)R_d\hat{\Omega}_dR_d^TR\\
-&=R(\Omega)^\wedge-R(R^TR_d{\Omega}_d)^\wedge \\
-&=R(\Omega-R^TR_d{\Omega}_d)^\wedge 
-\end{aligned}
-\end{equation}
-From this follows the angular velocity tracking error $ e_{\Omega} $ in \BF, which  is defined as
-\begin{align}\label{eq:con.eOmega}
-e_\Omega&=\Omega- R^TR_d\Omega_d
-\end{align}
-Similar to the form of Equation \ref{eq:mod.R}, $ e_\Omega $ represents the angular velocity vector of the relative rotation matrix $ R_d^TR $, represented in \BF. Hence, it can be shown that the following equation holds
-\begin{equation}\label{key}
-\frac{d}{dt}(R^T_dR)=(R_d^TR)\hat{e}_\Omega
-\end{equation}
-
-\subsection*{Load Attitude Error}
-The error between the load attitude $ q $ and the desired load attitude $ q_d $ is defined by the error function $ q_d^Tq $. Based on the error function, the tracking error function $ \Psi_q $ on $ \mathbb{S}^2 $ is chosen to be
-\begin{equation}\label{eq:psiq}
-\Psi_q=1-q_d^Tq
-\end{equation}
-The derivative of the tracking error function $ \Psi_q $ gives the load attitude error function $ e_q $ as follows
-\begin{equation}\label{eq:con.eq}
-e_q=\hat{q}^2q_d
-\end{equation}
-Again, a \textit{transport map} is used for a comparison between the tangent vectors on tangent spaces $ T_q\mathbb{S}^2$ and $ T_{q_d}\mathbb{S}^2$. Using the tracking error $ \Psi_q $ and the transport map $ \mathcal{T}_{\mathcal{S}^2}(q,q_d) $ the load angular velocity error function is defined as
-\begin{equation}\label{eq:con.edq}
-e_{\dot{q}}=\dot{q}-(q_d\times\dot{q}_d)\times q
-\end{equation}
-
-\subsection*{Load Position Error}
-The tracking errors for the load position and load velocity are defined as
-\begin{align}\label{key}
-e_x&=x-x_d\\
-e_v&=v-v_d
-\end{align}
-where $ v_d=\dot{x}_d $ and $ x_d(t) \in \mathbb{R}^3$ is a smooth desired load position.
-
-\section{Tracking modes}\label{sec:con.track}
 \subsection{Quadrotor Attitude Tracking}\label{sec:con.qratt}
-The QR Attitude Controlled Mode is designed to control the \a{qr} attitude by tracking a smooth desired \a{qr} attitude command $ R_d(t) $.
-This is done by controlling the earlier obtained error dynamics of $ e_R $ and $ e_\Omega $. The derivations of the equations in this section can be found in Section \ref{sec:app.error}.\\
+The \a{qr} Attitude Controlled Mode is designed to control the \a{qr} attitude by tracking a smooth desired \a{qr} attitude $ R_d(t) $.  
+This is done by controlling the earlier obtained error dynamics of $ e_R $ and $ e_\Omega $. \\
 From Equations \ref{eq:con.eR} and \ref{eq:con.eOmega}, the derivative of the attitude tracking error $ e_R $ can be written as
 \begin{equation}\label{key}
 \dot{e}_R=\frac{1}{2}(R_d^TR\hat{e}_\Omega+\hat{e}_\Omega R^TR_d)^\vee
@@ -252,7 +285,6 @@ for any positive constants $ k_R, k_\Omega $.\\
 %J\dot{e}_\Omega=-k_Re_R-k_\Omega e_\Omega
 %\end{equation}
 %for any positive constants $ k_R, k_\Omega $.\\
-
 Equation \ref{eq:mod.hattrace} is used to rewrite the time derivative of $ e_R $ as follows
  %rewrite the attitude velocity error $ \dot{e}_R $ as follows
  \begin{equation}\label{eq:con.deR}
@@ -293,52 +325,66 @@ Note that the tracking of the \a{qr} attitude does not require any specification
 %u=mL^2(-k_qq_d\times q-k_{\omega}\omega-\frac{g}{L}q\times e_3)
 %\end{equation}
 
-
 %ADD Dependent of what values? 	How to choose parameters.
 
-%\begin{figure}[h!]
-%	\centering
-%	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-%	\caption{\label{fig:con.loadattloop}}
-%\end{figure}		
-
-The Load Attitude Controlled Mode tracks a desired load attitude $ q_d $ by calculating a command signal for the \a{qr} attitude, defined as
+The Load Attitude Controlled Mode is designed to track a desired load attitude $ q_d $.
+%Note that
+In order to influence the load dynamics, see Equation \ref{eq:mod.loadatt}, the load attitude controller calculates a computed \a{qr} attitude $ R_c $ for the \a{qr} attitude controller, such that
+$ R_d $ is replaced by $ R_c $, where $ R_c $ is defined as
 \begin{equation}\label{eq:con.R}
 R_c = \begin{bmatrix}
 b_{1c}; b_{3c}\times b_{1c};b_{3c}
 \end{bmatrix}
 \end{equation}
-where $ b_{3c} \in \mathbb{S}^2 $ is defined by 
+And $ \Omega_d $ is replaced by $ \Omega_c $, where $ \Omega_c $ is defined by
+\begin{equation}\label{key}
+\hat{\Omega}_c=R_c^T\dot{R}_c
+\end{equation}
+which will influence the \a{qr} attitude dynamics, see Equation \ref{eq:mod.qratt}.\\
+$ b_{3c} \in \mathbb{S}^2 $ is the third column of $ R_c $ and is defined by a normalization of $ F $,
 \begin{equation}\label{eq:con.b3c}
 b_{3c}=\frac{F}{||F||}
 \end{equation}
-Such that $ F $ in Equation \ref{eq:con.b3c} is defined by a normal component $ F_n $, a proportional-derivative component $ F_{pd} $ and feedforward control force $ F_{ff}$
+where $F $ is defined by a normal component $ F_n $, a proportional-derivative component $ F_{pd} $ and feedforward control force $ F_{ff}$
 \begin{equation}\label{key}
 F=F_n-F_{pd}-F_{ff}
 \end{equation}
- Control forces for a system evolving on $ \mathbb{S}^2 $, are derived in \cite{Bullo2005}. 
- This results in a proportional-derivative force $ F_{pd} $ and a feed forward force $ F_{ff} $, that are functions of Equations \ref{eq:con.eq} and \ref{eq:con.edq}. The following terms are obtained
+% Control forces for a system  are derived . 
+The inclusion of $ F_n $ ensures that $ b_{3c} $ is always well defined. $ F_n $ is defined as
+\begin{equation}\label{eq:con.Fn}
+F_n=-(q_d\cdot q)q
+\end{equation}
+ A closed-loop energy function evolving on $ \mathbb{S}^2 $ is derived in \cite{Bullo2005}, which defines the control forces $ F_{pd} $ and $ F_{ff} $
+%  that are functions of the error functions $ e_q $ and $ e_{\dot{q}}$. 
+% The control forces are defined as
+ as follows
 \begin{equation}\label{key}
 \begin{aligned}
-F_{pd}&=-k_P\hat{q}^2q_d-k_D(\dot{q}-(q_d\times\dot{q}_d\times q)\\
+F_{pd}&=-k_P\hat{q}^2q_d-k_D(\dot{q}-(q_d\times\dot{q}_d)\times q)\\
 &=-k_qe_q-k_\omega e_{\dot{q}}
 \end{aligned}
 \end{equation}
+for positive constants $ k_q, k_\omega $.\\
 \begin{equation}\label{key}
 F_{ff}=m_QL\langle\langle q,q_d\times\dot{q}_d\rangle\rangle_{\mathbb{R}^3}(q\times \dot{q})+m_QL(q_d\times \ddot{q}_d)\times q
 \end{equation}
-The unit vector $ b_{1c} $ is defined as \cite{Lee2010d}
+The unit vector $ b_{1c} $ is the first column of $ R_c $ and is constructed by a normalizing the projection of $ b_{1d} $ onto the plane normal to $ b_{3c} $. Defining $ b_{1c}\in\mathbb{S}^2$ orthogonal to  $ b_{3c}$ guarantees that $ R_c \in SO(3) $ \cite{Lee2010c}.
+This is defined as 
 \begin{equation}\label{key}
 b_{1c}=-\frac{1}{||b_{3c}\times b_{1d}||}(b_{3c}\times(b_{3c}\times b_{1d}))
 \end{equation}
-where $ b_{1d}\in \mathbb{S}^2 $ is chosen, not parallel to $ b_{3c} $.
-The total upward thrust is defined as
-\begin{equation}\label{key}
+where $ b_{1d}\in \mathbb{S}^2 $ is chosen, not parallel to $ b_{3c} $.\\
+The control input $ f $ is defined as
+\begin{equation}\label{eq:con.fLoadatt}
 f=F\cdot Re_3
 \end{equation}
+And the control input $ M $ is defined as
+\begin{equation}\label{eq:con.MLoadatt}
+M = -\frac{1}{\epsilon^2}k_Re_R-\frac{1}{\epsilon}k_\Omega e_\Omega+\Omega\times J\Omega-J(\hat{\Omega}R^TR_c\Omega_c-R^TR_c\dot{\Omega}_c)
+\end{equation} 
 
 %ADD explain that error function will be asymptoticallly stable for right parameters. larger region of attraction
-It is proven in \cite{Sreenath2013c} that the zero equilibrium of the closed loop tracking error $ (e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0) $ is exponentially stable, if the initial conditions satisfy
+It is proven in \cite{Sreenath2013c} and \cite[Lemma 11.23]{Bullo2005} that the zero equilibrium of the closed loop tracking error $ (e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0) $ is exponentially stable, if the initial conditions satisfy
 \begin{equation}\label{eq:dom3}
 \Psi_q(q(0),q_d(0))<2
 \end{equation}
@@ -346,19 +392,15 @@ It is proven in \cite{Sreenath2013c} that the zero equilibrium of the closed loo
 \parallel e_{\dot{q}}(0)\parallel^2<\frac{2}{m_QL}{k_R}(2-\Psi_q(q(0),q_d(0)))
 \end{equation}
 
-The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \ref{eq:dom3} and \ref{eq:dom4}.
+The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \ref{eq:dom3} and \ref{eq:dom4}. Equation \ref{eq:dom3} states that the initial load attitude error should be less than $ 180^\circ $, which means that the controller achieves almost-global exponential convergence for load attitude $ q $.
 Furthermore, there exist constants $ \alpha_q,\beta_q>0 $ such that
 \begin{equation}\label{eq:con.proofPsiq}
 \Psi_q(q(t),q_d(t)) \leq min\left\lbrace 2,\alpha_qe^{-\beta_qt}\right\rbrace 
 \end{equation}
 
 \subsection{Load Position Tracking}\label{sec:con.loadpos}
-
-%CHECK nodig?
-%Explain how $ f $ and $ \vec{b_{1_d}} $ is obtained from $ x_d(t) $?\\
-
-Tracks load position reference. Outputs load attitude reference.
-
+The Load Position Controlled Mode is designed to track a desired load position $ x_{L,d} $. The load position controller calculates a computed load attitude $ q_c$ for the load attitude controller. $ R_d $ and $ q_d $ are replaced by $ R_c $ and $ q_c $, respectively.\\
+The computed load attitude is defined as
 \begin{equation}\label{eq:con.q}
 q_c = - \frac{A}{||A||}
 \end{equation}
@@ -366,22 +408,13 @@ where
 \begin{equation}\label{key}
 A = -k_xe_x-k_ve_v+(m_Q+m_L)(\ddot{x}_{L,d}+ge_3)+m_QL(\dot{q}\cdot\dot{q})q
 \end{equation}
-with $ e_x=x_L-x_{L,d} $ and $ e_v=\dot{x}_L-\dot{x}_{L,d} $.
-Furthermore, $ F_n $ is redefined as
+%with $ e_x=x_L-x_{L,d} $ and $ e_v=\dot{x}_L-\dot{x}_{L,d} $.
+Furthermore, Equation \ref{eq:con.Fn} is redefined as
 \begin{equation}\label{key}
 F_n=(A\cdot q)q
 \end{equation}
-%\begin{figure}[h!]
-%	\centering
-%	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/dcsc.png}}
-%	\caption{\label{fig:con.loadposloop}}
-%\end{figure}		
 
-%CHECK error function will be asymptoticallly stable for right parameters? 
-If the initial conditions in Equations \ref{eq:dom1}, \ref{eq:dom2}, \ref{eq:dom3} and \ref{eq:dom4} are satisfied, it is shown that 
-It is proven in \cite{Sreenath2013c} that 
-the zero equilibrium of the closed loop tracking error $ (e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable
-
+It is proven in \cite{Sreenath2013c} that the zero equilibrium of the closed loop tracking error $ (e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable, if the initial conditions satisfy
 %CHECK dit hoort bij domain of attraction
 \begin{equation}\label{eq:dom5}
 \Psi_q(q(0),q_c(0))<\psi_1<1
@@ -396,64 +429,70 @@ The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \
 \parallel e_{\dot{q}}(0)\parallel^2<\frac{2}{m_QL}{k_q}(\psi_1-\Psi_q(q(0),q_d(0)))
 \end{equation}
 
+The control inputs $ f $ and $ M $ are again defined by Equations \ref{eq:con.fLoadatt} and \ref{eq:con.MLoadatt}, respectively.
 
-\section{Stability Analysis}\label{sec:con.sta}
-
-Normally Lyapunov Analysis is 
-
-
-Lyapunov Analysis on SO3 x R3 and S2 x R3
-
-Closed-loop full-attitude dynamics evolve on the non-Euclidean manifold $ SO(3) \times \mathbb{R}^3 $. 
-Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be assessed using standard Lyapunov methods. In addition, the LaSalle invariance result and related Lyapunov results apply to closed-loop vector fields defined on these manifolds. 
-
-However, since the manifolds $ SO(3) $ and $ \mathbb{S}^2 $ are compact, the radial unboundedness assumption cannot be satisfied; consequently, global asymptotic stability cannot follow from a Lyapunov analysis on Euclidean spaces [40], and therefore must be analyzed in alternative ways [19]–[23].\cite[p.43]{Chaturvedi2011}
-
-[40]:
-[19]:
-[20]:
-[21]:
-[22]:
-[23]:
-
-
-\cite{Chaturvedi2011} summarizes global results on attitude control and stabilization for a rigid body using continuous time- invariant feedback. The analysis uses methods of geometric mechanics based on the geometry of the special orthogonal group $ SO(3) $ and the two-sphere $ \mathbb{S}^2 $.
-
-%ADD 
-%Justify choice of parameters. Up to what level can we push the system? Where can we find more info about domain of attractions.
-%How to choose parameters and how to select gains for errors
+%\section{Stability Analysis}\label{sec:con.sta}
+%
+%Normally Lyapunov Analysis is 
+%
+%
+%Lyapunov Analysis on SO3 x R3 and S2 x R3
+%
+%
+%
+%%In addition, the LaSalle invariance result and related Lyapunov results apply to closed-loop vector fields defined on these manifolds. 
+%
+%However, since the manifolds $ SO(3) $ and $ \mathbb{S}^2 $ are compact, the radial unboundedness assumption cannot be satisfied; consequently, global asymptotic stability cannot follow from a Lyapunov analysis on Euclidean spaces [40], and therefore must be analyzed in alternative ways [19]–[23].\cite[p.43]{Chaturvedi2011}
+%
+%[40]:
+%[19]:
+%[20]:
+%[21]:
+%[22]:
+%[23]:
+%
+%
+%\cite{Chaturvedi2011} summarizes global results on attitude control and stabilization for a rigid body using continuous time- invariant feedback. The analysis uses methods of geometric mechanics based on the geometry of the special orthogonal group $ SO(3) $ and the two-sphere $ \mathbb{S}^2 $.
+%
+%%ADD 
+%%Justify choice of parameters. Up to what level can we push the system? Where can we find more info about domain of attractions.
+%%How to choose parameters and how to select gains for errors
 
 ***************************************\\
 %BART 
+Betreft: Section \textit{Stability Analysis}\\
 Bart: Ok, but what are you doing with this? Does this relate to backstepping?\\
-Nam: Dit gaat over analyse die je normaal doet mbv Lyapunov om de stabiliteit aan te tonen. 
+Nam: Stukje over stability verwijderd. Verwerkt in de subsecties
+%Dit gaat over analyse die je normaal doet mbv Lyapunov om de stabiliteit aan te tonen. 
 
 ***************************************\\
 
 
 ***************************************\\
 %BART
+Betreft: Section \textit{Stability Analysis}\\
 Bart: Does this include a part about tuning of the controller?\\
 Nam: De stabiliteit hangt wel samen met de control parameters. De keuze hiervan is op dit moment arbitrair. De 'juiste' gains kiezen is wellicht zoals eerder besproken overbodig 
 
 ***************************************\\
 
-%HOeft waarschijnlijk niet eens een section te zijn, kan kort en bondig
 \section*{Summary}
-
-%ADD What is Geometric Control? Differences between other control
-In this chapter the control design based on Nonlinear Geometric Control was discussed.
-
-The main difference with other control techniques is that the tracking errors are also defined on manifolds, which allows the design of almost global defined controllers.
-
-Stability analysis is different from a Lyapunov analysis on Euclidean spaces.
+In this chapter, control design based on Nonlinear Geometric Control is discussed.
+%It is pointed out that 
+%The main difference 
+What is particular in this control technique, is the fact that error functions are defined on non-Euclidean manifolds, similar to the manifolds that describe the configuration space of the system.
+Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be determined by using standard Lyapunov methods. 
+Based on these error functions, controllers are designed in a backstepping approach, enabling both load position tracking and stabilization of the system.
+Using the geometric properties of the system allows the design of globally defined controllers that ensure almost-global stability.
+In order to test the control performance of a load position tracking objective, experiments are defined in the next chapter. 
+%Stability analysis is different from a Lyapunov analysis on Euclidean spaces.
 %This fact is 
 
 %ADD Why Geometric Control? Why is useful
 %PRO
 %The proposed control system is robust to switching conditions since each flight mode has almost global stability properties, and it is straightforward to design a complex maneuver of a QR. \cite{Lee2010c}
 
-In order to test the control performance of a load position tracking objective, experiments are defined in the next chapter. 
+
 
 
 

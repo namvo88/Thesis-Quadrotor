@@ -36,10 +36,11 @@
 \BOOKMARK [0][-]{appendix.A}{Appendix}{}% 36
 \BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 37
 \BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 38
-\BOOKMARK [1][-]{section.A.2}{LQR controller}{appendix.A}% 39
-\BOOKMARK [2][-]{subsection.A.2.1}{Modeling}{section.A.2}% 40
-\BOOKMARK [1][-]{section.A.3}{Classical Modeling}{appendix.A}% 41
-\BOOKMARK [1][-]{section.A.4}{Derivation Error dynamics}{appendix.A}% 42
-\BOOKMARK [2][-]{subsection.A.4.1}{Quadrotor Attitude}{section.A.4}% 43
-\BOOKMARK [1][-]{section.A.5}{Figures}{appendix.A}% 44
-\BOOKMARK [0][-]{section*.47}{Acronyms}{}% 45
+\BOOKMARK [1][-]{section.A.2}{Derivation Error dynamics}{appendix.A}% 39
+\BOOKMARK [2][-]{subsection.A.2.1}{Quadrotor Attitude}{section.A.2}% 40
+\BOOKMARK [2][-]{subsection.A.2.2}{Load Attitude}{section.A.2}% 41
+\BOOKMARK [1][-]{section.A.3}{LQR controller}{appendix.A}% 42
+\BOOKMARK [2][-]{subsection.A.3.1}{Modeling}{section.A.3}% 43
+\BOOKMARK [1][-]{section.A.4}{Classical Modeling}{appendix.A}% 44
+\BOOKMARK [1][-]{section.A.5}{Figures}{appendix.A}% 45
+\BOOKMARK [0][-]{section*.48}{Acronyms}{}% 46

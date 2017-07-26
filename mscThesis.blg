@@ -10,15 +10,15 @@ A level-1 auxiliary file: appendix.aux
 The style file: ieeetr.bst
 A level-1 auxiliary file: glossary.aux
 Database file #1: library.bib
-Repeated entry---line 979 of file library.bib
+Repeated entry---line 991 of file library.bib
  : @article{Sadr2014
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1933 of file library.bib
+Repeated entry---line 1945 of file library.bib
  : @article{Chaturvedi2011
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3013 of file library.bib
+Repeated entry---line 3025 of file library.bib
  : @book{Murray1994
  :                 ,
 I'm skipping whatever remains of this entry

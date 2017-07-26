@@ -101,11 +101,6 @@ R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
   Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
   Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
 
-\bibitem{Lee2010d}
-T.~Lee, M.~Leok, N.~H. Mcclamroch, and O.~C. Nov, ``{Control of Complex
-  Maneuvers for a Quadrotor UAV using Geometric Methods on SE ( 3 )},'' {\em
-  arXiv}, pp.~1--14, 2010.
-
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
   Backstepping},'' pp.~1923--1928, 2008.

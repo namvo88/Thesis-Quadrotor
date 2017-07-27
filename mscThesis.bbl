@@ -101,6 +101,11 @@ R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
   Estimation, and Control of Quadrotor},'' {\em IEEE Robotics {\&} Automation
   Magazine}, vol.~19, no.~3, pp.~20--32, 2012.
 
+\bibitem{Kanellakopoulos1991}
+I.~Kanellakopoulos, P.~V. Kokotovic, and A.~S. Morse, ``{Systematic Design of
+  Adaptive Controllers for Feedback Linearizable Systems},'' {\em IEEE
+  Transactions on Automatic Control}, vol.~36, no.~11, pp.~1241--1253, 1991.
+
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
   Backstepping},'' pp.~1923--1928, 2008.

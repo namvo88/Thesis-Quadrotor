@@ -165,23 +165,22 @@ where $ v_d=\dot{x}_d $. Furthermore, $ x_d(t) \in \mathbb{R}^3$ must be a smoot
 
 \newpage
 \section{Backstepping Control}\label{sec:con.back}
-A backstepping approach will be used in this research for the control of the load trajectory tracking problem, and is commonly used \a{qr} control\cite{Mahony2012}. Backstepping control is a Lyapunov based control technique for the stabilization of nonlinear dynamical systems. \\
-The basic principle is to create a cascaded structure by starting with a stable system as the most inner subsystem. A control loop is added around it, by stepping back" from this subsystem. This new loop contains a control law that defines a change of coordinates, which allows control of a new state, while stabilizing the inner structure.
-%it that stabilizes the new system and enables the control of another state. 
-This is repeated until the final external control is reached, see Figure \ref{fig:con.loop}.
+A backstepping approach will be used in this research for the control of the load trajectory tracking problem, and is commonly used \a{qr} control\cite{Mahony2012}. Backstepping control is a Lyapunov based control technique for the stabilization of nonlinear dynamical systems developed by \cite{Kanellakopoulos1991}. 
+The method relies on a \textit{triangular structure} of the system in a certain set of coordinates. The system is split into subsystems in a cascaded structure and recursive techniques allow a systematically design of feedback control laws and corresponding Lyapunov functions.\\
+The control structure is created by starting with a stable system as the most inner subsystem. 
+By "stepping back" from this subsystem, a control loop can be added around it containing a control law that defines a change of coordinates, which allows control of a new state, while still stabilizing the inner structure. The control law is designed by using states as virtual control inputs, such that each loop computes a virtual command signal for the adjacent inner loop. This is repeated until the final external control is reached.\\
+The backstepping approach determines how to stabilize the \a{qr} with the control inputs $ f $ and $ M $, while several controllers are able to track different states, see Figure \ref{fig:con.loop}. 
+The inner controller determines what the required control inputs are, driven by $ R_c $.  
+The next controller calculates how to drive the computed rotation matrix $ R_c $ based on $ q_c $, such that the \a{qr} is stabilized.
+And the last controller determines which load attitude $ q_c $ is required, such that the desired load position $ x_{L,d} $ is tracked.
 \begin{figure}[h!]
 	\centering
-	\makebox[\textwidth][c]{\includegraphics[trim={0 0 0 9cm},clip,width=.95\textwidth]{./StyleStuff/backstepQR2.png}}
+	\makebox[\textwidth][c]{\includegraphics[trim={0 0 0 12cm},clip,width=.95\textwidth]{./StyleStuff/backstepQR3.png}}
 	\caption{Nonlinear Geometric Control Loop of the QR-Load system \cite{Sreenath2013c}\label{fig:con.loop}}
 \end{figure}	
 
-The control law is designed by using states as virtual control signals, such that each loop computes a virtual command signal for the adjacent inner loop. 
-This backstepping approach determines how to stabilize the \a{qr} with the control inputs $ f $ and $ M $. 
-The inner controller determines what the required control inputs are, driven by $ R_c $.  
-The next controller calculates how to drive $ R_c $ based on $ q_c $, such that the \a{qr} is stabilized.
-And the last controller determines which $ q_c $ is needed to follow the desired load position $ x_{L,d} $.
-
-% CHECK nodig?
+% EXTRA LINK
+%\url{https://www.slideshare.net/ieijjournal/feedback-linearization-and-backstepping-controllers-for-coupled-tanks}
 %\url{http://www.control.lth.se/media/Education/EngineeringProgram/FRTN05/2013/lec09_2013eight.pdf}
 %We want to design a state feedback u=u(x) that stabilizes
 %\begin{equation}\label{key}
@@ -218,22 +217,21 @@ And the last controller determines which $ q_c $ is needed to follow the desired
 Since the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s of the \a{qr}-Load system simultaneously. The backstepping approach allows control of different flight modes in which a combination of \a{DOF}s are controlled. The flight modes and their functions are defined below in order, from the most inner loop to the most outer loop.
 \begin{outline}
 	\1 QR Attitude Controlled Mode 
-	\2 Track a desired QR attitude $ R_d(t) $ or commanded signal $ R_c(t) $ and a heading direction $ b_{1_d}(t) $
-	\2 Give a desired input $ M $ to the \a{qr}-Load system
+	\2 Track a desired QR attitude $ R_d(t) $ or commanded signal $ R_c(t) $, and a heading direction $ b_{1_d}(t) $
+	\2 Calculate the control input $ M $ for the \a{qr}-Load system
 	\1 Load Attitude Controlled Mode 
 	\2 Track a desired load attitude $ q_d(t) $ or commanded signal $ q_c(t) $
-	\2 Give a computed \a{qr} attitude $ R_c $ to the \a{qr} attitude controller
-	\2 Give a desired input $ f $ to the \a{qr}-Load system	
+	\2 Calculate a computed \a{qr} attitude $ R_c $ for the \a{qr} attitude controller
+	\2 Calculate the control input $ f $ for the \a{qr}-Load system	
 	\1 Load Position Controlled Mode
 	\2 Track a desired load position $ x_{L,d}(t) $
-	\2 Give a computed load attitude $ q_c $ to the load attitude controller
-	\2 Give a desired input $ f $ to the \a{qr}-Load system		
+	\2 Calculate a computed load attitude $ q_c $ for the load attitude controller
+	\2 Calculate the control input $ f $ for the \a{qr}-Load system		
 \end{outline}
 where the subscript $d $ denotes a desired tracking reference, and the subscript $ c $ denotes a computed tracking reference, calculated by the controllers. 
 More detailed derivations of the equations in the following sections can be found in Section \ref{sec:app.error}.
 %value that is calculated as a . The difference in this notation is whether the signal is a predefined desired signal, or a signal computed by a controller.
 %The controller that is used in this research is shown in Figure \ref{fig:con.loop}. The lowest levels have the highest bandwidth and are in control of the rotor rotational speeds $ \omega_i $, the total force $ f $ and moments $ M $. The next level controls the load attitude $ q $, and the top level controls the load position $ x_L $. 
-
 
 \subsection{Quadrotor Attitude Tracking}\label{sec:con.qratt}
 The \a{qr} Attitude Controlled Mode is designed to control the \a{qr} attitude by tracking a smooth desired \a{qr} attitude $ R_d(t) $.  
@@ -311,24 +309,10 @@ Furthermore, there exist constants $ \alpha_R,\beta_R>0 $ such that
 Equations \ref{eq:dom1} and \ref{eq:dom2} determine the domain of attraction, which is the region in which the trajectory of the system is able to converge to an asymptotically stable equilibrium point. 
 
 Note that the tracking of the \a{qr} attitude does not require any specification of the thrust magnitude $ f $. During this flight mode, the translational motion can only be controlled partially, which makes this flight mode suitable for attitude maneuvers with short time periods.
-%CHECK what this is about
-%Asymptotic tracking of the quadrotor attitude does not require specification of the thrust magnitude. As an auxiliary problem, the thrust magnitude can be chosen in many different ways to achieve an additional translational motion objective. For example, it can be used to asymptotically track a quadrotor altitude command [28]. Since the translational motion of the quadrotor UAV can only be partially controlled; this flight mode is most suitable for short time periods where an attitude maneuver is to be completed. \cite{Goodarzi2015b}
-
-
 
 \subsection{Load Attitude Tracking}\label{sec:con.loadatt}
-
-%ADD How is the controller built.
-%CHECK nodig? Net als bij M, hoe komen ze hier op?
-%A control input is composed of a proportional term along the gradient of $ \Psi_q $, a derivative term and a cancellation term.
-%\begin{equation}\label{key}
-%u=mL^2(-k_qq_d\times q-k_{\omega}\omega-\frac{g}{L}q\times e_3)
-%\end{equation}
-
 %ADD Dependent of what values? 	How to choose parameters.
-
 The Load Attitude Controlled Mode is designed to track a desired load attitude $ q_d $.
-%Note that
 In order to influence the load dynamics, see Equation \ref{eq:mod.loadatt}, the load attitude controller calculates a computed \a{qr} attitude $ R_c $ for the \a{qr} attitude controller, such that
 $ R_d $ is replaced by $ R_c $, where $ R_c $ is defined as
 \begin{equation}\label{eq:con.R}
@@ -388,7 +372,6 @@ and the control input $ M $ will be defined as
 M = -\frac{1}{\epsilon^2}k_Re_R-\frac{1}{\epsilon}k_\Omega e_\Omega+\Omega\times J\Omega-J(\hat{\Omega}R^TR_c\Omega_c-R^TR_c\dot{\Omega}_c)
 \end{equation} 
 
-%ADD explain that error function will be asymptoticallly stable for right parameters. larger region of attraction
 It is proven in \cite{Sreenath2013c} and \cite[Lemma 11.23]{Bullo2005} that the zero equilibrium of the closed loop tracking error $ (e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0) $ is exponentially stable, if the initial conditions satisfy
 \begin{equation}\label{eq:dom3}
 \Psi_q(q(0),q_d(0))<2
@@ -499,12 +482,10 @@ Since these manifolds are locally Euclidean, local stability properties of a clo
 Based on these error functions, controllers are designed in a backstepping approach, enabling both load position tracking and stabilization of the system.
 Using the geometric properties of the system allows the design of globally defined controllers that ensure almost-global stability.
 In order to test the control performance of a load position tracking objective, experiments are defined in the next chapter. 
-%Stability analysis is different from a Lyapunov analysis on Euclidean spaces.
-%This fact is 
 
-%ADD Why Geometric Control? Why is useful
-%PRO
-%The proposed control system is robust to switching conditions since each flight mode has almost global stability properties, and it is straightforward to design a complex maneuver of a QR. \cite{Lee2010c}
+% CHECK Chaturvadi?
+%Stability analysis is different from a Lyapunov analysis on Euclidean spaces.
+
 
 
 

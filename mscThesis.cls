@@ -60,6 +60,8 @@
             {\def\mscname{#1}}
 \newcommand*{\mscTitle}[1]%
             {\def\msctitle{#1}}
+\newcommand*{\mscTitleA}[1]%
+            {\def\msctitleA{#1}}
 \newcommand*{\mscSubTitle}[1]%
             {\def\mscsubtitle{#1}}
 \newcommand*{\mscDate}[1]%
@@ -91,6 +93,7 @@
 \mscProgram{}
 \mscName{}
 \mscTitle{}
+\mscTitleA{}
 \mscSubTitle{}
 \mscKeyWords{}
 \mscDate{\today}
@@ -241,7 +244,8 @@
   \null\vfil
   \vskip 60\p@
   \begin{center}%
-    {\LARGE \@title \par}%
+\hskip -5cm %%%    
+{\LARGE \@title \par}%
     \vskip 3em%
     {\large
      \lineskip .75em%
@@ -1116,10 +1120,10 @@
  \setlength{\parskip}{0mm}
  \vspace*{\stretch{2}}
  \HRule
- \begin{flushright}
+ \begin{center}
  \Huge{\textbf{\textsf{\msctitle}}}\\ \Large{\textbf{\textsf{\mscsubtitle}}} \\[5mm]
  \Large{\textbf{\textsf{ \mscname}}}
- \end{flushright}
+ \end{center}
  \HRule
  \\ \mscdate \\
  \vspace*{\stretch{2}}
@@ -1160,16 +1164,17 @@
 \newpage
 \thispagestyle{empty}
 
-\ifthenelse{ \equal{\mscthirdpartytext}{} }{}{
-\vspace*{1cm}
-\mscthirdpartytext \\
-}
 \ifthenelse{ \equal{\mscthirdpartylogo}{} }{}{
 %\vspace{1cm}
 \begin{figure}[h!]
 \includegraphics[height=3cm]{\mscthirdpartylogo}
 \end{figure}
 }
+\ifthenelse{ \equal{\mscthirdpartytext}{} }{}{
+\vspace*{0.5cm}
+\mscthirdpartytext \\
+}
+
 
 %\vspace*{15cm}
 \vspace*{\stretch{3}}
@@ -1197,18 +1202,18 @@ All rights reserved.
 
 The undersigned hereby certify that they have read and recommend
 to the Faculty of \mscfaculty\ for acceptance a thesis
-entitled \textbf{``\msctitle''} by
+entitled \textbf{``\msctitleA''} by
 \textbf{\mscname} in partial fulfillment of the
 requirements for the degree of \textbf{Master of Science}.
 
 \vspace{4cm}
 
-\mbox{} \hfill Dated: \underline{ \mscdate }
+\mbox{} \hfill Dated: \mscdate
 
 \vspace{1cm}
 
 \noindent
-Supervisor:    \hfill \underline{ \hspace{7cm} }\\
+Supervisor TU Delft:    \hfill \underline{ \hspace{7cm} }\\
 \mbox{}        \hfill  \mscreaderone\\
 \\
 \\
@@ -1221,6 +1226,7 @@ Readers:       \hfill \underline{ \hspace{7cm} }\\
 }
 \ifthenelse{ \equal{\mscreaderfour}{} }{}{\\
 \\
+Supervisor Alten:
 \mbox{}        \hfill \underline{ \hspace{7cm} }\\
 \mbox{}        \hfill \mscreaderfour\\
 }%

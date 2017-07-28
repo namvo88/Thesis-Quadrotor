@@ -22,13 +22,6 @@ The control design with its different flight modes and the corresponding control
 %deze references introduceren
 %\cite{Bullo2005,Jurdjevic1997}
 
-***************************************\\
-%BART
-bart: Descibe just as in chapter 2 what we are going to read in the next sections\\
-nam: please check
-
-***************************************\\
-
 \section{Nonlinear Geometric Control}\label{sec:con.nlgc}
 Many control systems are developed for the standard form of ordinary differential equations
 \begin{equation}\label{key}
@@ -44,9 +37,24 @@ The objective is to express both the system dynamics and control inputs on nonli
 In contrast to locally defined linear control, nonlinear geometric control can be defined almost globally, avoiding singularities that would occur in the representation of large angles and complex maneuvering.
 
 The design of the controllers for the \a{qr} attitude can be found in \cite{Lee2010}, and the controllers of load attitude- and position this can be found in \cite{Sreenath2013c}. Thorough stability analyses are presented in these references. For a deeper understanding of Lyapunov stability analysis in geometric control, the reader can refer to \cite{Bullo2005}.
-In contrast to hybrid control systems \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally. A study on global nonlinear dynamics of various classes of closed loop attitude control systems can be found in \cite{Chaturvedi2011a}. 
+In contrast to hybrid control systems that are able to switch between control modes, but without the use of differential geometry \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally. A study on global nonlinear dynamics of various classes of closed loop attitude control systems can be found in \cite{Chaturvedi2011a}. 
+
+
+***************************************\\
+Bart: Stability analysis goed in relatie gebracht met de scope van jouw thesis. Hier heb je wat aan en weet je wat je te wachten staat als je hybrid gaat toevoegen in further research.\\
+Nam: Het gaat eigenlijk over hybrid control zonder differential geometry. Aangepast.
+
+***************************************\\
 
 \subsection{Error Functions}\label{sec:con.configerr}
+
+
+***************************************\\
+%ADD almost-global uitleg
+Bart: Suggestie: ALmost gloabally staat ook in de Abstract en summary. Dan lijkt het mij belangrijk. Maar wordt hier niet uitgelegd waarom almost. Waar heb je dit uitgelegd? Ik verwacht het ergens te vinden met ctrl f \\
+Nam: aan het einde van de controller uitleg. almost globally = globally minus de punten waarop het niet gestabiliseerd kan worden. Wordt gedefinieerd in domain of attraction.
+
+***************************************\\
 The control of a trajectory tracking problem requires state feedback to define tracking errors, a measure of the difference between the current states and the desired states.
 Since the closed-loop system dynamics evolve on nonlinear manifolds, which describe the configuration space of the \a{qr} attitude $ \in SO(3) $ and the load attitude $ \in \mathbb{S}^2 $, 
 error functions are defined on these same manifolds \cite{Bullo2005}. 
@@ -129,6 +137,13 @@ Similar to the form of Equation \ref{eq:mod.R}, $ e_\Omega $ represents the angu
 \frac{d}{dt}(R^T_dR)=(R_d^TR)\hat{e}_\Omega
 \end{equation}
 %Having defined a measure 
+
+***************************************\\
+Bart: Wat is het verschil tussen de velocity error between curves R en Rd en angular velocity tracking error?\\
+Nam: velocity error $ \dot{e} $ is velocity error tussen $ \dot{R} $ en $ \dot{R}_d $.  Angular velocity error $ e_\Omega $ is de angular velocity vector van $ R_d^TR $, dus verschil tussen $ \Omega $ en $ \Omega_d $.
+
+***************************************\\
+
 The values of the \a{qr} attitude tracking error $ e_R $ and the \a{qr} angular velocity tracking error $ e_\Omega $ 
 are used later on to design control for the \a{qr} attitude.
 %a controller can use this values to control
@@ -217,7 +232,7 @@ And the last controller determines which load attitude $ q_c $ is required, such
 Since the \a{qr} has only four actuators, it is not possible to control all \a{DOF}s of the \a{qr}-Load system simultaneously. The backstepping approach allows control of different flight modes in which a combination of \a{DOF}s are controlled. The flight modes and their functions are defined below in order, from the most inner loop to the most outer loop.
 \begin{outline}
 	\1 QR Attitude Controlled Mode 
-	\2 Track a desired QR attitude $ R_d(t) $ or commanded signal $ R_c(t) $, and a heading direction $ b_{1_d}(t) $
+	\2 Track a desired QR attitude $ R_d(t) $ or commanded signal $ R_c(t) $. Optional tracking of a desired heading direction $ b_{1_d}(t) $, the first column of $ R_d(t) $.
 	\2 Calculate the control input $ M $ for the \a{qr}-Load system
 	\1 Load Attitude Controlled Mode 
 	\2 Track a desired load attitude $ q_d(t) $ or commanded signal $ q_c(t) $
@@ -228,7 +243,14 @@ Since the \a{qr} has only four actuators, it is not possible to control all \a{D
 	\2 Calculate a computed load attitude $ q_c $ for the load attitude controller
 	\2 Calculate the control input $ f $ for the \a{qr}-Load system		
 \end{outline}
+
+***************************************\\
+Bart: Dit wist ik niet. Waar komt heading direction vandaan. Is nergens anders gedefinieerd in je document\\
+Nam: b1d is een extra state die nog getracked kan worden in deze controller, het is een kolom van $ R_d $, maar hoeft niet per se. Kan er voor zorgen dat de QR niet rondjes gaat draaien. Later wordt b1d, b1c en definieert hiermee Rc. Iets veranderd boven, duidelijk?
+
+***************************************\\
 where the subscript $d $ denotes a desired tracking reference, and the subscript $ c $ denotes a computed tracking reference, calculated by the controllers. 
+%CHECK NODIG??
 More detailed derivations of the equations in the following sections can be found in Section \ref{sec:app.error}.
 %value that is calculated as a . The difference in this notation is whether the signal is a predefined desired signal, or a signal computed by a controller.
 %The controller that is used in this research is shown in Figure \ref{fig:con.loop}. The lowest levels have the highest bandwidth and are in control of the rotor rotational speeds $ \omega_i $, the total force $ f $ and moments $ M $. The next level controls the load attitude $ q $, and the top level controls the load position $ x_L $. 
@@ -307,6 +329,7 @@ Furthermore, there exist constants $ \alpha_R,\beta_R>0 $ such that
 \end{equation}
 %T is defined by Equations . 
 Equations \ref{eq:dom1} and \ref{eq:dom2} determine the domain of attraction, which is the region in which the trajectory of the system is able to converge to an asymptotically stable equilibrium point. 
+The domain of attraction almost covers $ SO(3) $, this is referred to as almost-global exponential attractiveness.
 
 Note that the tracking of the \a{qr} attitude does not require any specification of the thrust magnitude $ f $. During this flight mode, the translational motion can only be controlled partially, which makes this flight mode suitable for attitude maneuvers with short time periods.
 
@@ -325,6 +348,18 @@ And $ \Omega_d $ is replaced by $ \Omega_c $, where $ \Omega_c $ is defined by
 \hat{\Omega}_c=R_c^T\dot{R}_c
 \end{equation}
 which will influence the \a{qr} attitude dynamics, see Equation \ref{eq:mod.qratt}.\\
+The unit vector $ b_{1c} $ is the first column of $ R_c $ and is constructed by normalizing the projection of a desired heading angle $ b_{1d}\in \mathbb{S}^2 $ onto the plane normal to $ b_{3c} $, see Figure \ref{fig:con.b1c}. 
+\begin{figure}[h!]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[trim={0 3cm 0 6cm},clip,width=.45\textwidth]{./StyleStuff/b1c.png}}
+	\caption{Representation of $ R_c $\label{fig:con.b1c}}
+\end{figure}	
+Defining $ b_{1c}\in\mathbb{S}^2$ orthogonal to  $ b_{3c}$ guarantees that $ R_c \in SO(3) $ \cite{Lee2010c}.
+This is defined as 
+\begin{equation}\label{key}
+b_{1c}=-\frac{1}{||b_{3c}\times b_{1d}||}(b_{3c}\times(b_{3c}\times b_{1d}))
+\end{equation}
+such that $ b_{1d} $ is chosen, not parallel to $ b_{3c} $. \\
 $ b_{3c} \in \mathbb{S}^2 $ is the third column of $ R_c $ and is defined by a normalization of $ F $,
 \begin{equation}\label{eq:con.b3c}
 b_{3c}=\frac{F}{||F||}
@@ -349,21 +384,8 @@ for positive constants $ k_q, k_\omega $.\\
 \begin{equation}\label{key}
 F_{ff}=m_QL\langle\!\langle q,q_d\times\dot{q}_d\rangle\!\rangle_{\mathbb{R}^3}(q\times \dot{q})+m_QL(q_d\times \ddot{q}_d)\times q
 \end{equation}
-The unit vector $ b_{1c} $ is the first column of $ R_c $ and is constructed by normalizing the projection of $ b_{1d} $ onto the plane normal to $ b_{3c} $, see Figure \ref{fig:con.b1c}. 
-\begin{figure}[h!]
-	\centering
-	\makebox[\textwidth][c]{\includegraphics[trim={0 3cm 0 6cm},clip,width=.45\textwidth]{./StyleStuff/b1c.png}}
-	\caption{Representation of $ R_c $\label{fig:con.b1c}}
-\end{figure}	
-
-Defining $ b_{1c}\in\mathbb{S}^2$ orthogonal to  $ b_{3c}$ guarantees that $ R_c \in SO(3) $ \cite{Lee2010c}.
-This is defined as 
-\begin{equation}\label{key}
-b_{1c}=-\frac{1}{||b_{3c}\times b_{1d}||}(b_{3c}\times(b_{3c}\times b_{1d}))
-\end{equation}
-where $ b_{1d}\in \mathbb{S}^2 $ is chosen, not parallel to $ b_{3c} $. 
 	
-This controller affects the control input $ f $ such that it defined as
+This controller affects the control input $ f $, which is defined as
 \begin{equation}\label{eq:con.fLoadatt}
 f=F\cdot Re_3
 \end{equation}
@@ -414,7 +436,7 @@ F_n=(A\cdot q)q
 \end{equation}
 which is substituted in Equation \ref{eq:con.F}, resulting in a new control input $ f $. 
 
-This controller ensures that the zero equilibrium of the closed loop tracking error $ (e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable, if the initial conditions satisfy
+This controller ensures that the zero equilibrium of the closed loop tracking error $ (e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially attractive, if the initial conditions satisfy
 \begin{equation}\label{eq:dom5}
 \Psi_q(q(0),q_c(0))<\psi_1<1
 \end{equation}
@@ -455,23 +477,6 @@ The domain of attraction is defined by Equations \ref{eq:dom1}, \ref{eq:dom2}, \
 %%Justify choice of parameters. Up to what level can we push the system? Where can we find more info about domain of attractions.
 %%How to choose parameters and how to select gains for errors
 
-***************************************\\
-%BART 
-Betreft: Section \textit{Stability Analysis}\\
-Bart: Ok, but what are you doing with this? Does this relate to backstepping?\\
-Nam: Stukje over stability verwijderd. Verwerkt in de subsecties
-%Dit gaat over analyse die je normaal doet mbv Lyapunov om de stabiliteit aan te tonen. 
-
-***************************************\\
-
-
-***************************************\\
-%BART
-Betreft: Section \textit{Stability Analysis}\\
-Bart: Does this include a part about tuning of the controller?\\
-Nam: De stabiliteit hangt wel samen met de control parameters. De keuze hiervan is op dit moment arbitrair. De 'juiste' gains kiezen is wellicht zoals eerder besproken overbodig 
-
-***************************************\\
 
 \section*{Summary}
 In this chapter, control design based on Nonlinear Geometric Control is discussed.
@@ -480,7 +485,7 @@ In this chapter, control design based on Nonlinear Geometric Control is discusse
 What is particular in this control technique, is the fact that error functions are defined on non-Euclidean manifolds, similar to the manifolds that describe the configuration space of the system.
 Since these manifolds are locally Euclidean, local stability properties of a closed-loop equilibrium solution can be determined by using standard Lyapunov methods. 
 Based on these error functions, controllers are designed in a backstepping approach, enabling both load position tracking and stabilization of the system.
-Using the geometric properties of the system allows the design of globally defined controllers that ensure almost-global stability.
+Using the geometric properties of the system allows the design of globally defined controllers that ensure almost-global convergence of the \a{qr} attitude and load attitude.
 In order to test the control performance of a load position tracking objective, experiments are defined in the next chapter. 
 
 % CHECK Chaturvadi?

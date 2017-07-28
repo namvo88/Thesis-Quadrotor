@@ -16,6 +16,6 @@
 \nomenclatureentry{c $ L $@[{$ L $}]\begingroup \MakeUppercase Length of the cable\nomeqref {2-14}|nompageref}{11}
 \nomenclatureentry{c $ J\in \mathbb {R}^{3\times 3} $@[{$ J\in \mathbb {R}^{3\times 3} $}]\begingroup \MakeUppercase Inertia tensor of \a {qr}\nomeqref {2-20}|nompageref}{12}
 \nomenclatureentry{c $ g $@[{$ g $}]\begingroup \MakeUppercase Gravitation constant\nomeqref {2-20}|nompageref}{12}
-\nomenclatureentry{c $ \epsilon $@[{$ \epsilon $}]\begingroup \MakeUppercase Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $\nomeqref {3-20}|nompageref}{21}
-\nomenclatureentry{c $ \lambda _M(\cdot ) $@[{$ \lambda _M(\cdot ) $}]\begingroup \MakeUppercase Maximum eigenvalue\nomeqref {3-25}|nompageref}{21}
-\nomenclatureentry{c $ x_{CM} $@[{$ x_{CM} $}]\begingroup \MakeUppercase Position CM of \a {qr}-Load system\nomeqref {A-0}|nompageref}{45}
+\nomenclatureentry{c $ \epsilon $@[{$ \epsilon $}]\begingroup \MakeUppercase Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $\nomeqref {3-20}|nompageref}{22}
+\nomenclatureentry{c $ \lambda _M(\cdot ) $@[{$ \lambda _M(\cdot ) $}]\begingroup \MakeUppercase Maximum eigenvalue\nomeqref {3-25}|nompageref}{22}
+\nomenclatureentry{c $ x_{CM} $@[{$ x_{CM} $}]\begingroup \MakeUppercase Position CM of \a {qr}-Load system\nomeqref {A-0}|nompageref}{47}

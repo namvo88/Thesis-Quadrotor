@@ -22,17 +22,17 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Case B}{section.4.2}% 22
 \BOOKMARK [2][-]{subsection.4.2.3}{Case C}{section.4.2}% 23
 \BOOKMARK [1][-]{section.4.3}{Setup}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Results}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Case A}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Case B}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{Case C}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{Conclusion}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 30
-\BOOKMARK [1][-]{section.6.1}{Summary and Conclusions}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.2}{Recommendations for Future Work}{chapter.6}% 32
-\BOOKMARK [2][-]{subsection.6.2.1}{Investigate Implementation}{section.6.2}% 33
-\BOOKMARK [2][-]{subsection.6.2.2}{Minimum Snap Trajectory Generation}{section.6.2}% 34
-\BOOKMARK [2][-]{subsection.6.2.3}{Hybrid System}{section.6.2}% 35
+\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.4.1}{Case A}{section.4.4}% 26
+\BOOKMARK [2][-]{subsection.4.4.2}{Case B}{section.4.4}% 27
+\BOOKMARK [2][-]{subsection.4.4.3}{Case C}{section.4.4}% 28
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 29
+\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 30
+\BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.2}{Recommendations for Future Work}{chapter.5}% 32
+\BOOKMARK [2][-]{subsection.5.2.1}{Investigate Implementation}{section.5.2}% 33
+\BOOKMARK [2][-]{subsection.5.2.2}{Minimum Snap Trajectory Generation}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.3}{Hybrid System}{section.5.2}% 35
 \BOOKMARK [0][-]{appendix.A}{Appendix}{}% 36
 \BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 37
 \BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 38

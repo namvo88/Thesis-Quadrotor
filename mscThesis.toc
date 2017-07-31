@@ -22,20 +22,20 @@
 \contentsline {subsection}{\numberline {3-2-3}Load Position Tracking}{24}{subsection.3.2.3}
 \contentsline {chapter}{\numberline {4}Experiment}{27}{chapter.4}
 \contentsline {section}{\numberline {4-1}Procedure}{27}{section.4.1}
-\contentsline {section}{\numberline {4-2}Trajectories}{28}{section.4.2}
-\contentsline {subsection}{\numberline {4-2-1}Case A}{28}{subsection.4.2.1}
+\contentsline {section}{\numberline {4-2}Trajectories}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4-2-1}Case A}{29}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4-2-2}Case B}{29}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4-2-3}Case C}{29}{subsection.4.2.3}
-\contentsline {section}{\numberline {4-3}Setup}{29}{section.4.3}
-\contentsline {paragraph}{Model parameters}{29}{section*.29}
-\contentsline {paragraph}{LQR Control}{29}{section*.31}
-\contentsline {paragraph}{Geometric Control}{30}{section*.34}
-\contentsline {paragraph}{Command Filtering}{30}{section*.36}
-\contentsline {section}{\numberline {4-4}Results}{32}{section.4.4}
-\contentsline {subsection}{\numberline {4-4-1}Case A}{33}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4-4-2}Case B}{36}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4-4-3}Case C}{38}{subsection.4.4.3}
-\contentsline {section}{\numberline {4-5}Conclusion}{41}{section.4.5}
+\contentsline {section}{\numberline {4-3}Setup}{30}{section.4.3}
+\contentsline {paragraph}{Model parameters}{30}{section*.29}
+\contentsline {paragraph}{LQR Control}{30}{section*.31}
+\contentsline {paragraph}{Geometric Control}{31}{section*.34}
+\contentsline {paragraph}{Command Filtering}{31}{section*.36}
+\contentsline {section}{\numberline {4-4}Results}{33}{section.4.4}
+\contentsline {subsection}{\numberline {4-4-1}Case A}{34}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4-4-2}Case B}{37}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4-4-3}Case C}{39}{subsection.4.4.3}
+\contentsline {section}{\numberline {4-5}Conclusion}{42}{section.4.5}
 \contentsline {chapter}{\numberline {5}Conclusions and Future Work}{43}{chapter.5}
 \contentsline {section}{\numberline {5-1}Summary and Conclusions}{43}{section.5.1}
 \contentsline {section}{\numberline {5-2}Recommendations for Future Work}{44}{section.5.2}

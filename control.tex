@@ -37,7 +37,10 @@ The objective is to express both the system dynamics and control inputs on nonli
 In contrast to locally defined linear control, nonlinear geometric control can be defined almost globally, avoiding singularities that would occur in the representation of large angles and complex maneuvering.
 
 The design of the controllers for the \a{qr} attitude can be found in \cite{Lee2010}, and the controllers of load attitude- and position this can be found in \cite{Sreenath2013c}. Thorough stability analyses are presented in these references. For a deeper understanding of Lyapunov stability analysis in geometric control, the reader can refer to \cite{Bullo2005}.
-In contrast to hybrid control systems that are able to switch between control modes, but without the use of differential geometry \cite{Gillula2010}, complicated reachability set analysis is not required to guarantee safe switching between different flight modes, as the region of attraction for each flight mode covers the configuration space almost globally. A study on global nonlinear dynamics of various classes of closed loop attitude control systems can be found in \cite{Chaturvedi2011a}. 
+Other control systems that are able to switch between control modes, such as the hybrid control described in \cite{Gillula2010}, require complicated reachability set analysis to guarantee safe switching between different flight modes.
+%but without the use of differential geometry,  
+%In contrast to such controllers, 
+Nonlinear Geometric Control does not requires such analysis, as the region of attraction for each flight mode covers the configuration space almost globally. A study on global nonlinear dynamics of various classes of closed loop attitude control systems can be found in \cite{Chaturvedi2011a}. 
 
 
 ***************************************\\
@@ -46,15 +49,26 @@ Nam: Het gaat eigenlijk over hybrid control zonder differential geometry. Aangep
 
 ***************************************\\
 
+
+***************************************\\
+Bart: Bedoel je hier This is in contrast to ....
+
+Met andere woorden volgens mij klopt die zin niet helemaal toch? 
+
+En waarom haal je hier aan dat hybrid control geen complicated analysis nodig heeft? \\
+Nam: Doel is om duidelijk te maken dat die hybrid controller -zonder geometric control- júist wel complicated analysis nodig heeft, om te switchen naar andere flight modes. En de Geometric Controller niet. Zin veranderd: duidelijker?
+
+***************************************\\
+
 \subsection{Error Functions}\label{sec:con.configerr}
 
 
-***************************************\\
-%ADD almost-global uitleg
-Bart: Suggestie: ALmost gloabally staat ook in de Abstract en summary. Dan lijkt het mij belangrijk. Maar wordt hier niet uitgelegd waarom almost. Waar heb je dit uitgelegd? Ik verwacht het ergens te vinden met ctrl f \\
-Nam: aan het einde van de controller uitleg. almost globally = globally minus de punten waarop het niet gestabiliseerd kan worden. Wordt gedefinieerd in domain of attraction.
-
-***************************************\\
+%***************************************\\
+%%ADD almost-global uitleg
+%Bart: Suggestie: ALmost gloabally staat ook in de Abstract en summary. Dan lijkt het mij belangrijk. Maar wordt hier niet uitgelegd waarom almost. Waar heb je dit uitgelegd? Ik verwacht het ergens te vinden met ctrl f \\
+%Nam: aan het einde van de controller uitleg. almost globally = globally minus de punten waarop het niet gestabiliseerd kan worden. Wordt gedefinieerd in domain of attraction.
+%
+%***************************************\\
 The control of a trajectory tracking problem requires state feedback to define tracking errors, a measure of the difference between the current states and the desired states.
 Since the closed-loop system dynamics evolve on nonlinear manifolds, which describe the configuration space of the \a{qr} attitude $ \in SO(3) $ and the load attitude $ \in \mathbb{S}^2 $, 
 error functions are defined on these same manifolds \cite{Bullo2005}. 
@@ -68,7 +82,7 @@ These functions play a role in the definition of the potential function for the 
 %Attitude control systems naturally evolve on nonlinear configuration spaces such as $ \mathbb{S}^2 $ and $ SO(3) $. 
 %Attitude tracking control is developed on $ SO(3) $, therefore it avoids singularities of Euler-Angles.
 \subsubsection*{Quadrotor Attitude Error}
-Recall that $ R $ is the rotation matrix to describe the \a{qr} attitude, and $ R_d $ is the desired rotation matrix. To describe the relative rotation from the body frame to the desired frame, an \textit{attitude error} is defined as $ R^T_dR $. 
+Recall that $ R $ is the rotation matrix to describe the \a{qr} attitude, and $ R_d $ is the desired rotation matrix. To describe the relative rotation from the body frame to the desired frame, an \textit{attitude error} is defined as $ R^T_dR $. Note that $ R^T_dR $ is again a rotation matrix itself.
 Based on this attitude error, the \textit{tracking error function} $ \Psi_R $ on $ SO(3) $ is chosen to be 
 \begin{equation}\label{eq:psiR}
 \Psi_R(R,R_d)=\frac{1}{2}tr\left[I-R_d^TR\right]
@@ -244,11 +258,6 @@ Since the \a{qr} has only four actuators, it is not possible to control all \a{D
 	\2 Calculate the control input $ f $ for the \a{qr}-Load system		
 \end{outline}
 
-***************************************\\
-Bart: Dit wist ik niet. Waar komt heading direction vandaan. Is nergens anders gedefinieerd in je document\\
-Nam: b1d is een extra state die nog getracked kan worden in deze controller, het is een kolom van $ R_d $, maar hoeft niet per se. Kan er voor zorgen dat de QR niet rondjes gaat draaien. Later wordt b1d, b1c en definieert hiermee Rc. Iets veranderd boven, duidelijk?
-
-***************************************\\
 where the subscript $d $ denotes a desired tracking reference, and the subscript $ c $ denotes a computed tracking reference, calculated by the controllers. 
 %CHECK NODIG??
 More detailed derivations of the equations in the following sections can be found in Section \ref{sec:app.error}.
@@ -374,7 +383,7 @@ The inclusion of $ F_n $ ensures that $ b_{3c} $ is always well defined. $ F_n $
 F_n=-(q_d\cdot q)q
 \end{equation}
 The control forces $ F_{pd} $ and $ F_{ff} $ are defined for trajectory tracking in \cite[11.2.5]{Bullo2005} as follows
-\begin{equation}\label{key}
+\begin{equation}\label{eq:con.Fpd}
 \begin{aligned}
 F_{pd}&=-k_P\hat{q}^2q_d-k_D(\dot{q}-(q_d\times\dot{q}_d)\times q)\\
 &=-k_qe_q-k_\omega e_{\dot{q}}
@@ -426,7 +435,7 @@ In order to stabilize the error dynamics, it is proven in \cite{Sreenath2013c} t
 q_c = - \frac{A}{||A||}
 \end{equation}
 where
-\begin{equation}\label{key}
+\begin{equation}\label{eq:con.A}
 A = -k_xe_x-k_ve_v+(m_Q+m_L)(\ddot{x}_{L,d}+ge_3)+m_QL(\dot{q}\cdot\dot{q})q
 \end{equation}
 %with $ e_x=x_L-x_{L,d} $ and $ e_v=\dot{x}_L-\dot{x}_{L,d} $.

@@ -18,29 +18,26 @@
 \BOOKMARK [0][-]{chapter.4}{Experiment}{}% 18
 \BOOKMARK [1][-]{section.4.1}{Procedure}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.2}{Trajectories}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.2.1}{Case A}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.2}{Case B}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.3}{Case C}{section.4.2}% 23
-\BOOKMARK [1][-]{section.4.3}{Setup}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.4.1}{Case A}{section.4.4}% 26
-\BOOKMARK [2][-]{subsection.4.4.2}{Case B}{section.4.4}% 27
-\BOOKMARK [2][-]{subsection.4.4.3}{Case C}{section.4.4}% 28
-\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 29
-\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 30
-\BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.2}{Recommendations for Future Work}{chapter.5}% 32
-\BOOKMARK [2][-]{subsection.5.2.1}{Investigate Implementation}{section.5.2}% 33
-\BOOKMARK [2][-]{subsection.5.2.2}{Minimum Snap Trajectory Generation}{section.5.2}% 34
-\BOOKMARK [2][-]{subsection.5.2.3}{Hybrid System}{section.5.2}% 35
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 36
-\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 37
-\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 38
-\BOOKMARK [1][-]{section.A.2}{Derivation Error dynamics}{appendix.A}% 39
-\BOOKMARK [2][-]{subsection.A.2.1}{Quadrotor Attitude}{section.A.2}% 40
-\BOOKMARK [2][-]{subsection.A.2.2}{Load Attitude}{section.A.2}% 41
-\BOOKMARK [1][-]{section.A.3}{LQR controller}{appendix.A}% 42
-\BOOKMARK [2][-]{subsection.A.3.1}{Modeling}{section.A.3}% 43
-\BOOKMARK [1][-]{section.A.4}{Classical Modeling}{appendix.A}% 44
-\BOOKMARK [1][-]{section.A.5}{Figures}{appendix.A}% 45
-\BOOKMARK [0][-]{section*.48}{Acronyms}{}% 46
+\BOOKMARK [1][-]{section.4.3}{Setup}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.4.1}{Case A}{section.4.4}% 23
+\BOOKMARK [2][-]{subsection.4.4.2}{Case B}{section.4.4}% 24
+\BOOKMARK [2][-]{subsection.4.4.3}{Case C}{section.4.4}% 25
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Conclusions and Future Work}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Summary and Conclusions}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{Recommendations for Future Work}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.2.1}{Investigate Implementation}{section.5.2}% 30
+\BOOKMARK [2][-]{subsection.5.2.2}{Minimum Snap Trajectory Generation}{section.5.2}% 31
+\BOOKMARK [2][-]{subsection.5.2.3}{Hybrid System}{section.5.2}% 32
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 33
+\BOOKMARK [1][-]{section.A.1}{Derivation of Equations of motion}{appendix.A}% 34
+\BOOKMARK [2][-]{subsection.A.1.1}{Load Dynamics}{section.A.1}% 35
+\BOOKMARK [1][-]{section.A.2}{Derivation Error dynamics}{appendix.A}% 36
+\BOOKMARK [2][-]{subsection.A.2.1}{Quadrotor Attitude}{section.A.2}% 37
+\BOOKMARK [2][-]{subsection.A.2.2}{Load Attitude}{section.A.2}% 38
+\BOOKMARK [1][-]{section.A.3}{LQR controller}{appendix.A}% 39
+\BOOKMARK [2][-]{subsection.A.3.1}{Modeling}{section.A.3}% 40
+\BOOKMARK [1][-]{section.A.4}{Classical Modeling}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.5}{Figures}{appendix.A}% 42
+\BOOKMARK [0][-]{section*.53}{Acronyms}{}% 43

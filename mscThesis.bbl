@@ -12,9 +12,9 @@ R.~P.~K. Jain and T.~Keviczky, ``{MSc Thesis: Transportation of Cable Suspended
   approach},'' 2015.
 
 \bibitem{Sadr2014}
-S.~Sadr, S.~A.~A. Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and Control
-  of a Quad-rotor Helicopter},'' {\em Journal of Robotics, Hindawi Publishing
-  Corporation}, vol.~2014, no.~August 2016, 2014.
+S.~Sadr, S.~Ali, A.~Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and
+  Control of a Quadrotor with Swing Load},'' {\em Journal of Robotics, Hindawi
+  Publishing Corporation}, vol.~2014.
 
 \bibitem{Lee2010}
 T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
@@ -105,6 +105,16 @@ R.~Mahony, V.~Kumar, and P.~Corke, ``{Multirotor Aerial Vehicles: Modeling,
 I.~Kanellakopoulos, P.~V. Kokotovic, and A.~S. Morse, ``{Systematic Design of
   Adaptive Controllers for Feedback Linearizable Systems},'' {\em IEEE
   Transactions on Automatic Control}, vol.~36, no.~11, pp.~1241--1253, 1991.
+
+\bibitem{Cornelis2014}
+U.~A.~V. Cornelis and M.~Vlaar, ``{Incremental Nonlinear Dynamic Inversion
+  flight control},'' no.~November, 2014.
+
+\bibitem{Reyes-Valeria2013}
+E.~Reyes-Valeria, R.~Enriquez-Caldera, S.~Camacho-Lara, and J.~Guichard, ``{LQR
+  control for a quadrotor using unit quaternions: Modeling and simulation BT -
+  Electronics, Communications and Computing (CONIELECOMP), 2013 International
+  Conference on},'' pp.~172--178, 2013.
 
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered

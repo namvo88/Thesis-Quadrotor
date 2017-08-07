@@ -2,25 +2,28 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2-1}{\ignorespaces Configuration Space of a 2-link arm\relax }}{6}{figure.caption.7}
 \contentsline {figure}{\numberline {2-2}{\ignorespaces A manifold locally resembles a Euclidean space\relax }}{7}{figure.caption.9}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces Tangent Spaces on different manifolds\relax }}{7}{figure.caption.10}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor model representation\relax }}{10}{figure.caption.14}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Quadrotor with Load model representation\relax }}{11}{figure.caption.16}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Tangent Spaces on different manifolds\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor model representation\relax }}{11}{figure.caption.14}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Quadrotor with Load model representation\relax }}{12}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Transport map $ \mathcal {T}(q,r) $\relax }}{17}{figure.caption.21}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \cite {Sreenath2013c}\relax }}{20}{figure.caption.24}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Representation of $ R_c $\relax }}{23}{figure.caption.25}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Transport map $ \mathcal {T}(q,r) $\relax }}{20}{figure.caption.22}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \cite {Sreenath2013c}\relax }}{22}{figure.caption.25}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Representation of $ R_c $\relax }}{25}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Desired Load Position Case A\relax }}{29}{figure.caption.28}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Desired Load Position Case B\relax }}{30}{figure.caption.30}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Desired Load Position Case C\relax }}{30}{figure.caption.32}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces LQR control design\relax }}{31}{figure.caption.39}
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Controller Comparison Case A\relax }}{35}{figure.caption.42}
-\contentsline {figure}{\numberline {4-6}{\ignorespaces Results Nonlinear Geometric Control Case A \relax }}{37}{figure.caption.43}
-\contentsline {figure}{\numberline {4-7}{\ignorespaces Controller Comparison Case B\relax }}{38}{figure.caption.44}
-\contentsline {figure}{\numberline {4-8}{\ignorespaces Results Nonlinear Geometric Control Case B \relax }}{39}{figure.caption.45}
-\contentsline {figure}{\numberline {4-9}{\ignorespaces Controller Comparison Case C\relax }}{40}{figure.caption.46}
-\contentsline {figure}{\numberline {4-10}{\ignorespaces Results Nonlinear Geometric Control Case C \relax }}{42}{figure.caption.47}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Desired Load Position Case A\relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Desired Load Position Case B\relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Desired Load Position Case C\relax }}{32}{figure.caption.33}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces LQR control design\relax }}{34}{figure.caption.42}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Trajectory Tracking Nonlinear Geometric Control Case A \relax }}{36}{figure.caption.44}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case A \relax }}{37}{figure.caption.45}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces Controller Comparison Case A\relax }}{38}{figure.caption.46}
+\contentsline {figure}{\numberline {4-8}{\ignorespaces Trajectory Tracking Nonlinear Geometric Control Case B \relax }}{39}{figure.caption.48}
+\contentsline {figure}{\numberline {4-9}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case B \relax }}{40}{figure.caption.49}
+\contentsline {figure}{\numberline {4-10}{\ignorespaces Controller Comparison Case B\relax }}{41}{figure.caption.50}
+\contentsline {figure}{\numberline {4-11}{\ignorespaces Trajectory Tracking Nonlinear Geometric Control Case C \relax }}{42}{figure.caption.52}
+\contentsline {figure}{\numberline {4-12}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case C \relax }}{43}{figure.caption.53}
+\contentsline {figure}{\numberline {4-13}{\ignorespaces Controller Comparison Case C\relax }}{44}{figure.caption.54}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A-1}{\ignorespaces Model representation\relax }}{52}{figure.caption.51}
-\contentsline {figure}{\numberline {A-2}{\ignorespaces Simulink Command Filter\relax }}{53}{figure.caption.52}
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Model representation\relax }}{54}{figure.caption.58}
+\contentsline {figure}{\numberline {A-2}{\ignorespaces Simulink Command Filter\relax }}{55}{figure.caption.59}

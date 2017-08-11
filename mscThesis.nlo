@@ -18,6 +18,6 @@
 \nomenclatureentry{c $\theta _L$@[{$\theta _L$}]\begingroup \MakeUppercase Angle of rotation about $ e_2 $ w.r.t. \IF \nomeqref {2-14}|nompageref}{13}
 \nomenclatureentry{c $ J\in \mathbb {R}^{3\times 3} $@[{$ J\in \mathbb {R}^{3\times 3} $}]\begingroup \MakeUppercase Inertia tensor of \a {qr}\nomeqref {2-20}|nompageref}{13}
 \nomenclatureentry{c $ g $@[{$ g $}]\begingroup \MakeUppercase Gravitation constant\nomeqref {2-20}|nompageref}{13}
-\nomenclatureentry{c $ \epsilon $@[{$ \epsilon $}]\begingroup \MakeUppercase Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $\nomeqref {3-20}|nompageref}{24}
-\nomenclatureentry{c $ \lambda _M(\cdot ) $@[{$ \lambda _M(\cdot ) $}]\begingroup \MakeUppercase Maximum eigenvalue\nomeqref {3-25}|nompageref}{24}
-\nomenclatureentry{c $ x_{CM} $@[{$ x_{CM} $}]\begingroup \MakeUppercase Position CM of \a {qr}-Load system\nomeqref {A-0}|nompageref}{51}
+\nomenclatureentry{c $ \epsilon $@[{$ \epsilon $}]\begingroup \MakeUppercase Tuning parameter to enable rapid exponential convergence of $ e_R, e_\Omega $\nomeqref {3-21}|nompageref}{24}
+\nomenclatureentry{c $ \lambda _M(\cdot ) $@[{$ \lambda _M(\cdot ) $}]\begingroup \MakeUppercase Maximum eigenvalue\nomeqref {3-26}|nompageref}{24}
+\nomenclatureentry{c $ x_{CM} $@[{$ x_{CM} $}]\begingroup \MakeUppercase Position CM of \a {qr}-Load system\nomeqref {A-0}|nompageref}{53}

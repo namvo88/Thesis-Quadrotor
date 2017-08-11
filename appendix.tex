@@ -93,8 +93,6 @@ E_{cl}(t,\mathbf{x,v})=k_P(1-\langle\!\langle\mathbf{ r,x}\rangle\!\rangle_{\mat
 \end{equation}
 
 \section{LQR controller}\label{app:lqr}
-
-\subsection{Modeling}
 %From Newton's laws follows
 %\begin{align}
 %x_Q&=fRe_3-m_Qge_3-Tq\\
@@ -175,56 +173,129 @@ g(m_Q+m_L) &0 &0& 0
 \end{bmatrix}^T
 \end{aligned}
 \end{equation}
-The linearized equations of motion are rearranged into Equation \ref{eq:app.2ode} and substituted in Equation \ref{eq:app.ss}.
+The linearized equations of motion are rearranged as in Equation \ref{eq:app.2ode}, and substituted back into Equation \ref{eq:app.ss}.
 \begin{equation}\label{eq:app.2ode}
 \begin{bmatrix}
-content...
+\texttt{LQRM1}
 \end{bmatrix}
 \begin{bmatrix}
 		\delta \ddot{x} \\\delta\ddot{y}\\\delta\ddot{z}\\\delta\ddot{\phi}\\\delta\ddot{\theta}\\\delta\ddot{\psi}\\\delta\ddot{\phi}_L\\\delta\ddot{\theta}_L 
-		\end{bmatrix}+
+		\end{bmatrix}
+		\newline
+		+
 \begin{bmatrix}
-content...
+\texttt{LQRM2}
 \end{bmatrix}
 \begin{bmatrix}
 		\delta {x} \\\delta{y}\\\delta{z}\\\delta{\phi}\\\delta{\theta}\\\delta{\psi}\\\delta{\phi}_L\\\delta{\theta}_L 
 \end{bmatrix}
 =
 \begin{bmatrix}
-content...
+\texttt{LQRM3}
 \end{bmatrix}
 \begin{bmatrix}
 \delta u_1\\\delta u_2\\\delta u_3\\\delta u_4
 \end{bmatrix}
 \end{equation}
+With $ I_L = m_LL^2$, the matrices \texttt{LQRM1,LQRM2,LQRM3} are defined as follows
+\begin{equation}\label{key}
+LQRM1 = 
+\begin{bmatrix}
+%\texttt{LQRM1}
+m_Q+m_L&0&0&0&0&0&0&Lm_L\\%ddx
+0&m_Q+m_L&0&0&0&0&Lm_L&0\\%ddy
+0&0&m_Q+m_L&0&0&0&0&0\\%&ddz
+0&0&0&Ixx&0&0&0&0\\%&ddphi
+0&0&0&0&Iyy&0&0&0\\%&ddthe
+0&0&0&0&0&Izz&0&0\\%&ddpsi
+0&m_LL&0&0&0&0&I_L+L^2m_L&0\\%ddphiL&&&&&&&&
+m_LL&0&0&0&0&0&0&I_L+L^2m_L%ddtheL
+\end{bmatrix}
+\end{equation}
+\begin{equation}\label{key}
+LQRM2 =
+\begin{bmatrix}
+0&0&0&0&-g(m_Q+m_L)&0&0&0\\%x
+0&0&0&g(m_Q+m_L)&0&0&0&0\\%y
+0&0&0&0&0&0&0&0\\%z
+0&0&0&0&0&0&0&0\\%phi
+0&0&0&0&0&0&0&0\\%the
+0&0&0&0&0&0&0&0\\%psi
+0&0&0&0&0&0&gLm_L&0\\%phiL
+0&0&0&0&0&0&0&gLm_L%theL
+\end{bmatrix}
+\end{equation}
+\begin{equation}\label{key}
+LQRM3  =
+\begin{bmatrix}
+0&0&0&0\\%x
+0&0&0&0\\%y
+1&0&0&0\\%z
+0&1&0&0\\%phi
+0&0&1&0\\%the
+0&0&0&1\\%psi
+0&1&0&0\\%phiL
+0&0&1&0%theL
+\end{bmatrix}
+\end{equation}
+%\begin{lstlisting}
+%LQRM1   = [
+%mQ+mL 0 0, 0 0 0, 0 mL*L;%ddx
+%0 mQ+mL 0, 0 0 0, mL*L 0;%ddy
+%0 0 mQ+mL, 0 0 0, 0 0;% ddz
+%0 0 0, Ixx 0 0, 0 0;% ddphi
+%0 0 0, 0 Iyy 0, 0 0;% ddthe
+%0 0 0, 0 0 Izz, 0 0;% ddpsi
+%0 L*mL 0, 0 0 0, I_L+L^2*mL 0;%ddphiL        
+%L*mL 0 0, 0 0 0, 0 I_L+L^2*mL];%ddtheL
+%\end{lstlisting}
+%\begin{lstlisting}
+%LQRM2  = [
+%0 0 0, 0 -g*(mQ+mL) 0, 0 0;%x
+%0 0 0, g*(mQ+mL) 0 0, 0 0; %y
+%0 0 0, 0 0 0, 0 0;         %z
+%0 0 0, 0 0 0, 0 0;         %phi
+%0 0 0, 0 0 0, 0 0;         %the
+%0 0 0, 0 0 0, 0 0;         %psi
+%0 0 0, 0 0 0, g*L*mL 0;    %phiL
+%0 0 0, 0 0 0, 0 g*L*mL];   %theL
+%\end{lstlisting}
+%\begin{lstlisting}
+%LQRM3  = [
+%0 0 0 0; %x
+%0 0 0 0; %y
+%1 0 0 0; %z
+%0 1 0 0; %phi
+%0 0 1 0; %the
+%0 0 0 1; %psi
+%0 1 0 0; %phiL
+%0 0 1 0];%theL
+%\end{lstlisting}
 
-%ADD LQRA
-\begin{lstlisting}
-LQRA =
-
-\end{lstlisting}
-%ADD LQRB
-\begin{lstlisting}
-LQRB =
-
-\end{lstlisting}
 The tuning parameters of the \a{lqr} controller a chosen as follows
 %TEST different values LQR
-\begin{equation}\label{key}
-\begin{aligned}
-Q &= diag\begin{pmatrix}
-10 &10 &100,& 1& 1& 1, &1& 1,& 1& 1 &1,& 1& 1& 1,& 1& 1
-\end{pmatrix}\\
-R &= diag\begin{pmatrix}
-0.044, &1.56,& 1.56, &1.56
-\end{pmatrix}
-\end{aligned}
-\end{equation}
+%ADD Q
+\begin{lstlisting}
+Q =
+\end{lstlisting}
+%ADD R
+\begin{lstlisting}
+R =
+\end{lstlisting}
+%\begin{equation}\label{key}
+%\begin{aligned}
+%Q &= diag\begin{pmatrix}
+%10 &10 &100,& 1& 1& 1, &1& 1,& 1& 1 &1,& 1& 1& 1,& 1& 1
+%\end{pmatrix}\\
+%R &= diag\begin{pmatrix}
+%0.044, &1.56,& 1.56, &1.56
+%\end{pmatrix}
+%\end{aligned}
+%\end{equation}
 \texttt{Matlab} command \texttt{lqr(LQRA,LQRB,Q,R)} generates the following gain matrix $ K $
 %ADD K
 \begin{lstlisting}
 K =
-
 \end{lstlisting}
 
 

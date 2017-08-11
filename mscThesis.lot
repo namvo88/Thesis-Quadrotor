@@ -4,8 +4,9 @@
 \contentsline {table}{\numberline {2-2}{\ignorespaces Modeling assumptions Quadrotor-Load model\relax }}{12}{table.caption.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4-1}{\ignorespaces Modeling Parameters\relax }}{33}{table.caption.35}
-\contentsline {table}{\numberline {4-2}{\ignorespaces Controller Gains Nonlinear Geometric Controller\relax }}{33}{table.caption.37}
-\contentsline {table}{\numberline {4-3}{\ignorespaces Command Filter Parameters\relax }}{34}{table.caption.39}
+\contentsline {table}{\numberline {4-1}{\ignorespaces Modeling Parameters\relax }}{35}{table.caption.36}
+\contentsline {table}{\numberline {4-2}{\ignorespaces Hardware Parameters for Bebop Parrot Drone 1\relax }}{35}{table.caption.37}
+\contentsline {table}{\numberline {4-3}{\ignorespaces Command Filter Parameters\relax }}{36}{table.caption.40}
+\contentsline {table}{\numberline {4-4}{\ignorespaces Controller Gains Nonlinear Geometric Controller\relax }}{37}{table.caption.42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

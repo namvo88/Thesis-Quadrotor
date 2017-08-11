@@ -9,15 +9,15 @@ A level-1 auxiliary file: appendix.aux
 The style file: ieeetr.bst
 A level-1 auxiliary file: glossary.aux
 Database file #1: library.bib
-Repeated entry---line 922 of file library.bib
- : @article{Chaturvedi2011
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 2205 of file library.bib
+Repeated entry---line 1614 of file library.bib
  : @article{Sadr2014
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2323 of file library.bib
+Repeated entry---line 1881 of file library.bib
+ : @article{Chaturvedi2011
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2444 of file library.bib
  : @book{Murray1994
  :                 ,
 I'm skipping whatever remains of this entry
@@ -25,6 +25,6 @@ Warning--empty year in Sadr2014
 Warning--empty publisher in Murray1994
 Warning--empty journal in Lee2011
 Warning--empty journal in Cornelis2014
-Warning--empty journal in Reyes-Valeria2013
 Warning--empty journal in Farrell2008
+Warning--empty journal in Reyes-Valeria2013
 (There were 3 error messages)

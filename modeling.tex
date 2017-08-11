@@ -1,7 +1,8 @@
 \chapter{Dynamic Model} \label{ch:model}
 A mathematical model of the system needs to be derived in order to simulate and study the effects of nonlinear Geometric Control. In Section \ref{sec:mod.geometric}, an introduction is given about Geometric Mechanics. This is a modern description of the classical mechanics from the perspective of Differential Geometry, which is a discipline in mathematics that studies manifolds and their geometric properties, using the tools of calculus. 
 
-The assumptions that are applied to simplify the model are shortly discussed in Section \ref{sec:mod.assum}. Next, in Section \ref{sec:mod.QRLmod} a dynamical model of the \a{qr}-Load system is obtained with Geometric Mechanics, resulting in a compact, coordinate-free, unambiguous representation of the dynamics, described on nonlinear manifolds.
+Section \ref{sec:mod.QRmod} starts by discussing assumptions that are applied to simplify the model. Next, a dynamical model of the \a{qr} is presented. 
+In Section \ref{sec:mod.QRLmod}, the same is done to obtain a dynamical model of the \a{qr}-Load system with Geometric Mechanics, resulting in a compact, coordinate-free, unambiguous representation of the dynamics, described on nonlinear manifolds.
 
 \newpage
 \section{Geometric Mechanics}\label{sec:mod.geometric}
@@ -12,6 +13,35 @@ There are 24 possible sets of Euler angles and many different conventions are us
 An other disadvantage of Euler angles, is that the transformation from their time rates of change to the angular velocity vector is not globally defined. Furthermore, when angular errors are large, the difference in Euler angles is no longer a good metric to define the orientation error. 
 %Local coordinates often require symbolic computational tools due to complexity of multi-body systems. 
 Hence, the error is rather written as the required rotation to get from the current to a desired orientation, which can be achieved by considering geometric properties of the system.
+%
+%
+%***************************************\\
+%The disadvantages are:
+%1. All Euler angle representations have mathematical singularity problems: no set of three angles can globally
+%represent all orientations without singularity, [107]. This means that a set of neighbouring orientations
+%cannot always be represented by a set of neighbouring Euler angles. (The converse is true: the rotation
+%matrix in, for example, Eq. (3.36) is a continuous function of its Euler angle parameters.) For example, the
+%robot wrist in Figure 3.7 has a singularity when two axes line up. This happens when the rotation about
+%the second axis brings the third axis parallel to the first. Indeed, two orientations nearly parallel to the
+%base frame of the wrist, but with their origins lying on opposite sides of the Y axis, cannot be given Euler
+%angle values that lie close to each other. This can cause problems if the robot controller blindly interpolates
+%between the initial orientation and the desired end orientation. Another example: a small rotation about
+%the X-axis requires large rotations of the joints in a ZYZ wrist.
+%Inverse relations such as Eqs (3.38)-(3.39) always become singular for some particular values of the Euler
+%angles. Physically, this corresponds to the fact that any spherical wrist with three joints has configurations
+%in which two of the axes line up. This phenomenon was first experienced in the mechanisms (“gimbals”)
+%that were developed to support the compasses on ships, and there it got its name of gimbal lock.
+%2. Some orientations don’t have unique Euler angles. For example, the ZXZ Euler angle set described above
+%is not one-to-one if the angle ranges include the limits ±π or ±π/2: the “north” and “south poles” are
+%covered an infinite number of times. Finally, one should be aware of this
+%3. Euler angles are not a vector :
+%• Adding two sets of Euler angles does not give the set of Euler angles that corresponds to the composed
+%orientation. Obviously, also subtraction of Euler angle sets is not physically meaningful.
+%• The order of rotations matters: composition of rotations is not commutative, while vector addition is.
+%So, one should not blindly apply linear vector space properties to Euler angles!
+
+%
+%***************************************\\
 
 In Geometric Mechanics the configuration space of systems is a \textit{group manifold} instead of a Euclidean space. The kinetic and potential energies are expressed in terms of this configuration space and their tangent spaces. It explores the geometric structure of a Lagrangian- or Hamiltonian system through the concepts of vector calculus, linear algebra, differential geometry, and nonlinear control theory. Geometric mechanics provides fundamental insights into the nonlinear system mechanics and yields useful tools for dynamics and control theory.
 
@@ -129,7 +159,7 @@ where $ \omega $ is the angular velocity of the suspended load.
 %\dot{q} = \omega\times q
 %\end{equation}
 \newpage
-\section{Quadrotor Model}
+\section{Quadrotor Model}\label{sec:mod.QRmod}
 %\section{Modeling Assumptions}\label{sec:mod.assum} 
 Assumptions can be made to simplify the complexity of the mathematical model.
 %With the modeling in Table \ref{tab:mod.assumptionsQR}, it is possible to obtain a simplified mathematical model for the \a{qr} system.

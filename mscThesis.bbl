@@ -16,6 +16,10 @@ S.~Sadr, S.~Ali, A.~Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and
   Control of a Quadrotor with Swing Load},'' {\em Journal of Robotics, Hindawi
   Publishing Corporation}, vol.~2014.
 
+\bibitem{Lee2008}
+T.~Lee, {\em {Computational Geometric Mechanics and Control of Rigid Bodies}}.
+\newblock PhD thesis, The University of Michigan, 2008.
+
 \bibitem{Lee2010}
 T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
   Quadrotor UAV on SE(3)},'' {\em 49th IEEE Conference on Decision and
@@ -44,17 +48,13 @@ S.~Tang, ``{Aggressive Maneuvering of a Quadrotor with a Cable-Suspended
   Pennsylvania, 2014.
 
 \bibitem{Chaturvedi2011}
-N.~Chaturvedi, ``{Rigid-Body Attitude Control},'' {\em IEEE Control Systems},
-  vol.~31, no.~3, pp.~30--51, 2011.
+N.~Chaturvedi, A.~Sanyal, and N.~McClamroch, ``{Rigid-Body Attitude Control},''
+  {\em IEEE Control Systems}, vol.~31, no.~3, pp.~30--51, 2011.
 
 \bibitem{Murray1994}
 R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
   Robotic Manipulation}}, vol.~29.
 \newblock 1994.
-
-\bibitem{Lee2008}
-T.~Lee, {\em {Computational Geometric Mechanics and Control of Rigid Bodies}}.
-\newblock PhD thesis, The University of Michigan, 2008.
 
 \bibitem{Lee2005}
 T.~L.~T. Lee, N.~McClamroch, and M.~Leok, ``{A lie group variational integrator
@@ -110,15 +110,24 @@ I.~Kanellakopoulos, P.~V. Kokotovic, and A.~S. Morse, ``{Systematic Design of
 U.~A.~V. Cornelis and M.~Vlaar, ``{Incremental Nonlinear Dynamic Inversion
   flight control},'' no.~November, 2014.
 
+\bibitem{Farrell2008}
+J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
+  Backstepping},'' pp.~1923--1928, 2008.
+
+\bibitem{Farrell2005}
+J.~Farrell, M.~Polycarpou, and M.~Sharma, ``{Backstepping-Based Flight Control
+  with Adaptive Function Approximation},'' {\em Journal of Guidance, Control,
+  and Dynamics}, vol.~28, no.~6, pp.~1089--1102, 2005.
+
+\bibitem{Borra2012}
+B.~M. Borra, ``{Nonlinear UAV Flight Control Using Command Filtered
+  Backstepping},'' {\em Simulation}, no.~March, pp.~1--161, 2012.
+
 \bibitem{Reyes-Valeria2013}
 E.~Reyes-Valeria, R.~Enriquez-Caldera, S.~Camacho-Lara, and J.~Guichard, ``{LQR
   control for a quadrotor using unit quaternions: Modeling and simulation BT -
   Electronics, Communications and Computing (CONIELECOMP), 2013 International
   Conference on},'' pp.~172--178, 2013.
-
-\bibitem{Farrell2008}
-J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
-  Backstepping},'' pp.~1923--1928, 2008.
 
 \bibitem{Mellinger2011}
 D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control

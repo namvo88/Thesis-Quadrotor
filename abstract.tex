@@ -1,18 +1,18 @@
 \nonumchap{Abstract}
 \vspace{-2cm}
-A Quadrotor is a type of Unmanned Aerial Vehicle that has received an increasing amount of attention recently with many applications including search and rescue, surveillance, supply of food and medicines as disaster relief and object manipulation in construction and transportation.
-An interesting subproblem of load transportation, is the control of the position of a cable suspended load. The challenge is in the fact that the Quadrotor-Load system is highly nonlinear and under-actuated. The load cannot be controlled directly and has a natural swing at the end of each Quadrotor movement. 
+A Quadrotor is a type of Unmanned Aerial Vehicle that has received an increasing amount of attention recently with many applications being actively investigated. 
+Possible applications include search and rescue, surveillance, supply of food and medicines as disaster relief and object manipulation in construction and transportation.
+An interesting subproblem of load transportation is the control of the position of a cable suspended load. The challenge is in the fact that the Quadrotor-Load system is highly nonlinear and under-actuated. The load cannot be controlled directly and has a natural swing at the end of each Quadrotor movement. 
 
 This thesis presents a Nonlinear Geometric Control approach for the position tracking of a cable suspended load. 
-The focus lies on the subsystem of the total Quadrotor-Load system where the cable tension is non-zero, which is analogous to a system with a rigid link between the Quadrotor and Load.
+The focus lies on the subsystem of the total Quadrotor-Load system where the cable tension is non-zero, which is analogous to modeling a rigid link between the Quadrotor and Load.
+The main goal is to investigate the possibilities and limitations of Nonlinear Geometric Control for the purpose of load trajectory tracking of a Quadrotor with a cable-suspended Load, by evaluating the stability of the system and the tracking performance on different load trajectories. 
 
 First, an introduction is given on Geometric Mechanics, an approach that applies differential geometric techniques to systems modeling and control, based on the geometric properties of the dynamics of the system. 
-It is shown how the configuration of the Quadrotor-Load system can be described on smooth nonlinear geometric configuration spaces. Analyzing these geometric structures with the principles of differential geometry allows modeling in an unambiguous coordinate-free dynamic fashion, while avoiding the problem of singularities that would occur on local charts. The geometric properties are utilized to define tracking error functions on these same spaces, making it possible to design almost globally defined controllers.
-
-The main goal of this thesis is to investigate the possibilities and limitations of Nonlinear Geometric Control for the purpose of load trajectory tracking of a Quadrotor with a cable-suspended Load, by evaluating the stability of the system and the tracking performance on different load trajectories. 
-The Quadrotor-Load system is modeled with the tools of differential geometry in order to make it suitable for Nonlinear Geometric Control.
-A backstepping approach is applied to generate a cascaded structure with multiple nonlinear Geometric controllers, allowing control of several flight modes that are responsible for the control of 1) Quadrotor attitude, 2) Load attitude and 3) Load position. 
-A Linear Quadratic Regulator is derived to compare control performance. Simulations are generated to demonstrate the stability of the closed-loop system, and the tracking performance of both linear and nonlinear controllers are discussed. 
+It is shown how the configuration of the Quadrotor-Load system can be described on smooth nonlinear geometric configuration spaces. Analyzing these geometric structures with the principles of differential geometry allows modeling in an unambiguous coordinate-free dynamic fashion, while avoiding the problem of singularities that would occur on local charts. \\
+Next, the Quadrotor-Load system is modeled with the tools of differential geometry in order to make it suitable for Nonlinear Geometric Control. The geometric properties are utilized to define tracking error functions on these same spaces, making it possible to design almost-globally defined controllers. A backstepping approach is applied to generate a cascaded structure with multiple nonlinear Geometric controllers, allowing control of several flight modes that are responsible for the control of 1) Quadrotor attitude, 2) Load attitude and 3) Load position.\\ 
+Finally, simulations demonstrate the stability and abilities of the Nonlinear Geometric Controller, and a Linear Quadratic Regulator is derived to compare control performance. The tracking performances of both controllers are discussed, final conclusions are presented, and the thesis is concluded with recommendations for future work.
+ 
 
 %%CHANGE meer power / eye cather, wat gebeurt er in deze thesis
 %Different cases are tested to investigate the possibilities and limitations of Nonlinear Geometric Control. 

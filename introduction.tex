@@ -3,7 +3,13 @@ A \acf{qr} is a type of \acf*{uav} that has received an increasing amount of att
 
 The inspiration for this research is build upon the idea of creating a system of multiple autonomous \a{qr}s for a cooperative towing task. The advantage of such systems for object manipulation is the increased reach and the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
 
-Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load. This cooperation can be executed in many ways, but this research focuses on \a{qr}s with a cable-suspended load in motion. The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated. Possible objectives are minimizing the oscillations of the load during or after motion, minimizing the time to position the load, trajectory tracking, trajectory generation and obstacle avoidance.
+Considering a multi-agent task, one can think of multiple \a{qr}s assisting in the transportation of a common load in many ways.
+One interesting method is the transportation of a load suspended via a cable.
+%However, this research focuses on the transportation of a load, suspended via a cable. 
+%To be more specific, 
+Prior to a multi-agent load transportation task, research must be done to this task involving a single \a{qr}.
+This research revolves around load position control of a single \a{qr} with a cable-suspended load in motion. 
+The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated. Possible objectives are minimizing the oscillations of the load during or after motion, minimizing the time to position the load, trajectory tracking, trajectory generation and obstacle avoidance.
 
 \newpage
 \section{Aim and Motivation}\label{sec:int.motivation}
@@ -40,7 +46,7 @@ Former work includes a nonlinear geometric control of a \a{qr} \cite{Lee2010,Goo
 Nonlinear Geometric Control for \a{qr} systems is rarely found in literature, despite the advantageous properties of differential geometry. 
 
 %ADD MOTIVATION
-This motivates to investigate the potential and limitations of a rarely used nonlinear Geometric Control approach, and to investigate the performance of a load transportation maneuver, when compared to a commonly used linear control strategy.
+This motivates to investigate the potential and limitations of a rarely used nonlinear Geometric Control approach, and the performance of a load transportation maneuver, when compared to a commonly used linear control strategy.
 
 Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of the control design.
 It is possible to investigate which advantages or disadvantages this nonlinear approach has compared to a linear approach, in terms of stability and performance.
@@ -57,18 +63,16 @@ It is possible to investigate which advantages or disadvantages this nonlinear a
 In this first chapter, a brief introduction of the subject is given and the problem is described. This is followed by discussing the aim, motivation and contributions of this thesis for this research. The organization of the report is as follows.
 %\item Chapter \ref{ch:model}\\
 
-In Chapter \ref{ch:model} the dynamics of the \a{qr}-Load system is described by the laws of kinematics and the application of Newton's laws or Lagrangian mechanics. 
-Geometric Mechanics is used to understand and derive the system's equations of motion in order to allow nonlinear geometric controller design and analysis. 
-The system configuration space is described on a differentiable manifold using the tools of Differential geometry, 
-instead of using the tools of Euclidean geometry, where the system dynamics evolve in a three dimensional space.
+Chapter \ref{ch:model} introduces Geometric Mechanics to understand and derive the system's equations of motion in order to allow nonlinear geometric controller design and analysis. 
+The system configuration space is described on a differentiable manifold using the tools of Differential geometry instead of Euclidean geometry, where the system dynamics evolve in a three dimensional space.
+The dynamics of the \a{qr}-Load system are then described by the laws of kinematics and the application of Newton's laws and Lagrangian mechanics. 
 In contrast with classical modeling techniques, geometric modeling results in a compact, unambiguous and coordinate-free model.
 
 %\item Chapter \ref{ch:control}\\
 Describing the system dynamics on nonlinear manifolds allows the design of nonlinear geometric controllers on these same manifolds. The control design is presented in Chapter \ref{ch:control}. The controller has a cascaded structure, allowing the control of several flight modes that are accountable for the control of different degrees of freedom.
 
-Chapter \ref{ch:results} describes the experiments that are done to investigate the abilities and performance of a nonlinear Geometric Control design. 
-Different tracking objectives are defined in order to compare the performance between an \a{lqr} control design and a nonlinear Geometric Control design. 
-The results are presented and findings are discussed.
+Chapter \ref{ch:exp} describes the experiments that are done to investigate the abilities and performance of a nonlinear Geometric Control design. 
+Different tracking objectives are defined in order to compare the performance between an \a{lqr} control design and a nonlinear Geometric Control design. The results are presented and findings are discussed.
 
 %\item Chapter \ref{ch:conclusion}\\
 In the final chapter a summary of the thesis is given, followed by the conclusions that were made based on the results of the research.

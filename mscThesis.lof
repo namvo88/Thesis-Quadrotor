@@ -18,14 +18,15 @@
 \contentsline {figure}{\numberline {4-5}{\ignorespaces LQR control design\relax }}{37}{figure.caption.45}
 \contentsline {figure}{\numberline {4-6}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case A \relax }}{38}{figure.caption.47}
 \contentsline {figure}{\numberline {4-7}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case A \relax }}{39}{figure.caption.48}
-\contentsline {figure}{\numberline {4-8}{\ignorespaces Controller Comparison Case A\relax }}{40}{figure.caption.49}
-\contentsline {figure}{\numberline {4-9}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case B \relax }}{41}{figure.caption.51}
-\contentsline {figure}{\numberline {4-10}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case B \relax }}{42}{figure.caption.52}
-\contentsline {figure}{\numberline {4-11}{\ignorespaces Controller Comparison Case B\relax }}{43}{figure.caption.53}
-\contentsline {figure}{\numberline {4-12}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case C \relax }}{44}{figure.caption.55}
-\contentsline {figure}{\numberline {4-13}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case C \relax }}{45}{figure.caption.56}
-\contentsline {figure}{\numberline {4-14}{\ignorespaces Controller Comparison Case C\relax }}{46}{figure.caption.57}
+\contentsline {figure}{\numberline {4-8}{\ignorespaces Controller Comparison Case A. Solid: NGC, Dash-dot: LQR\relax }}{40}{figure.caption.49}
+\contentsline {figure}{\numberline {4-9}{\ignorespaces Controller Comparison Case A. Solid: NGC, Dash-dot: LQR\relax }}{41}{figure.caption.50}
+\contentsline {figure}{\numberline {4-10}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case B \relax }}{42}{figure.caption.52}
+\contentsline {figure}{\numberline {4-11}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case B \relax }}{43}{figure.caption.53}
+\contentsline {figure}{\numberline {4-12}{\ignorespaces Controller Comparison Case B. Solid: NGC, Dash-dot: LQR\relax }}{44}{figure.caption.54}
+\contentsline {figure}{\numberline {4-13}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case C \relax }}{45}{figure.caption.56}
+\contentsline {figure}{\numberline {4-14}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case C \relax }}{46}{figure.caption.57}
+\contentsline {figure}{\numberline {4-15}{\ignorespaces Controller Comparison Case C. Solid: NGC, Dash-dot: LQR\relax }}{47}{figure.caption.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A-1}{\ignorespaces Model representation\relax }}{57}{figure.caption.61}
-\contentsline {figure}{\numberline {A-2}{\ignorespaces Simulink Command Filter\relax }}{58}{figure.caption.62}
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Model representation\relax }}{57}{figure.caption.62}
+\contentsline {figure}{\numberline {A-2}{\ignorespaces Simulink Command Filter\relax }}{58}{figure.caption.63}

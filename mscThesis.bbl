@@ -139,4 +139,9 @@ S.~Tang and V.~Kumar, ``{Mixed Integer Quadratic Program Trajectory Generation
   for a Quadrotor with a Cable-Suspended Payload},'' {\em IEEE International
   Conference on Robotics and Automation (ICRA)}, pp.~2216--2222, 2015.
 
+\bibitem{Becker2013}
+J.~D.~A. Becker, {\em {Modeling and Control of a Quadrotor with Dynamic
+  Inertia}}.
+\newblock PhD thesis, 2013.
+
 \end{thebibliography}

@@ -28,14 +28,14 @@
 \contentsline {paragraph}{Geometric Control}{36}{section*.41}
 \contentsline {paragraph}{LQR Control}{36}{section*.43}
 \contentsline {section}{\numberline {4-4}Results}{38}{section.4.4}
-\contentsline {section}{\numberline {4-5}Conclusion}{47}{section.4.5}
+\contentsline {section}{\numberline {4-5}Conclusion}{48}{section.4.5}
 \contentsline {chapter}{\numberline {5}Conclusions and Future Work}{49}{chapter.5}
 \contentsline {section}{\numberline {5-1}Summary and Conclusions}{49}{section.5.1}
 \contentsline {section}{\numberline {5-2}Recommendations for Future Work}{50}{section.5.2}
 \contentsline {subsection}{\numberline {5-2-1}Investigate Implementation}{50}{subsection.5.2.1}
-\contentsline {paragraph}{Digital Control}{50}{section*.58}
-\contentsline {paragraph}{Model identification and validation}{50}{section*.59}
-\contentsline {paragraph}{Robustness}{50}{section*.60}
+\contentsline {paragraph}{Digital Control}{50}{section*.59}
+\contentsline {paragraph}{Model identification and validation}{50}{section*.60}
+\contentsline {paragraph}{Robustness}{50}{section*.61}
 \contentsline {subsection}{\numberline {5-2-2}Minimum Snap Trajectory Generation}{51}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5-2-3}Hybrid System}{51}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {A}Appendix}{53}{appendix.A}
@@ -46,5 +46,5 @@
 \contentsline {subsection}{\numberline {A-2-2}Load Attitude}{54}{subsection.A.2.2}
 \contentsline {section}{\numberline {A-3}LQR controller}{55}{section.A.3}
 \contentsline {section}{\numberline {A-4}Classical Modeling}{56}{section.A.4}
-\contentsline {section}{\numberline {A-5}Figures}{58}{section.A.5}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{65}{section*.63}
+\contentsline {section}{\numberline {A-5}Figures}{57}{section.A.5}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acronyms}{65}{section*.64}

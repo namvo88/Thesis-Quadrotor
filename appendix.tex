@@ -173,38 +173,57 @@ g(m_Q+m_L) &0 &0& 0
 \end{bmatrix}^T
 \end{aligned}
 \end{equation}
-The linearized equations of motion are rearranged as in Equation \ref{eq:app.2ode}, and substituted back into Equation \ref{eq:app.ss}.
+The linearized equations of motion are rearranged in Equation \ref{eq:app.2ode}, as done in \cite{Becker2013}, and substituted back into Equation \ref{eq:app.ss}.
+%\begin{equation}\label{eq:app.2ode}
+%\begin{bmatrix}
+%{LQRM_1}
+%\end{bmatrix}
+%\begin{bmatrix}
+%		\delta \ddot{x} \\\delta\ddot{y}\\\delta\ddot{z}\\\delta\ddot{\phi}\\\delta\ddot{\theta}\\\delta\ddot{\psi}\\\delta\ddot{\phi}_L\\\delta\ddot{\theta}_L 
+%		\end{bmatrix}
+%		\newline
+%		+
+%\begin{bmatrix}
+%{LQRM_2}
+%\end{bmatrix}
+%\begin{bmatrix}
+%		\delta {x} \\\delta{y}\\\delta{z}\\\delta{\phi}\\\delta{\theta}\\\delta{\psi}\\\delta{\phi}_L\\\delta{\theta}_L 
+%\end{bmatrix}
+%=
+%\begin{bmatrix}
+%{LQRM_3}
+%\end{bmatrix}
+%\begin{bmatrix}
+%\delta u_1\\\delta u_2\\\delta u_3\\\delta u_4
+%\end{bmatrix}
+%\end{equation}
 \begin{equation}\label{eq:app.2ode}
-\begin{bmatrix}
-\texttt{LQRM1}
-\end{bmatrix}
-\begin{bmatrix}
-		\delta \ddot{x} \\\delta\ddot{y}\\\delta\ddot{z}\\\delta\ddot{\phi}\\\delta\ddot{\theta}\\\delta\ddot{\psi}\\\delta\ddot{\phi}_L\\\delta\ddot{\theta}_L 
-		\end{bmatrix}
-		\newline
-		+
-\begin{bmatrix}
-\texttt{LQRM2}
-\end{bmatrix}
-\begin{bmatrix}
-		\delta {x} \\\delta{y}\\\delta{z}\\\delta{\phi}\\\delta{\theta}\\\delta{\psi}\\\delta{\phi}_L\\\delta{\theta}_L 
-\end{bmatrix}
+%\begin{bmatrix}
+{M_1}
+%\end{bmatrix}
+\delta \mathbf{\ddot{x}}
+\newline
++
+%\begin{bmatrix}
+{M_2}
+%\end{bmatrix}
+\delta \mathbf{x}
 =
-\begin{bmatrix}
-\texttt{LQRM3}
-\end{bmatrix}
-\begin{bmatrix}
-\delta u_1\\\delta u_2\\\delta u_3\\\delta u_4
-\end{bmatrix}
+%\begin{bmatrix}
+{M_3}
+%\end{bmatrix}
+%\begin{bmatrix}
+\delta u
+%\end{bmatrix}
 \end{equation}
-With $ I_L = m_LL^2$, the matrices \texttt{LQRM1,LQRM2,LQRM3} are defined as follows
+With $ I_L = m_LL^2$ and $ m_T=m_Q+m_L $, the matrices $ M1,M2,M3 $ are defined as follows
 \begin{equation}\label{key}
-LQRM1 = 
+M_1 = 
 \begin{bmatrix}
-%\texttt{LQRM1}
-m_Q+m_L&0&0&0&0&0&0&Lm_L\\%ddx
-0&m_Q+m_L&0&0&0&0&Lm_L&0\\%ddy
-0&0&m_Q+m_L&0&0&0&0&0\\%&ddz
+%\texttt{M1}
+m_T&0&0&0&0&0&0&Lm_L\\%ddx
+0&m_T&0&0&0&0&Lm_L&0\\%ddy
+0&0&m_T&0&0&0&0&0\\%&ddz
 0&0&0&Ixx&0&0&0&0\\%&ddphi
 0&0&0&0&Iyy&0&0&0\\%&ddthe
 0&0&0&0&0&Izz&0&0\\%&ddpsi
@@ -213,10 +232,10 @@ m_LL&0&0&0&0&0&0&I_L+L^2m_L%ddtheL
 \end{bmatrix}
 \end{equation}
 \begin{equation}\label{key}
-LQRM2 =
+M_2 =
 \begin{bmatrix}
-0&0&0&0&-g(m_Q+m_L)&0&0&0\\%x
-0&0&0&g(m_Q+m_L)&0&0&0&0\\%y
+0&0&0&0&-gm_T&0&0&0\\%x
+0&0&0&gm_T&0&0&0&0\\%y
 0&0&0&0&0&0&0&0\\%z
 0&0&0&0&0&0&0&0\\%phi
 0&0&0&0&0&0&0&0\\%the
@@ -226,7 +245,7 @@ LQRM2 =
 \end{bmatrix}
 \end{equation}
 \begin{equation}\label{key}
-LQRM3  =
+M_3  =
 \begin{bmatrix}
 0&0&0&0\\%x
 0&0&0&0\\%y
@@ -239,7 +258,7 @@ LQRM3  =
 \end{bmatrix}
 \end{equation}
 %\begin{lstlisting}
-%LQRM1   = [
+%M1   = [
 %mQ+mL 0 0, 0 0 0, 0 mL*L;%ddx
 %0 mQ+mL 0, 0 0 0, mL*L 0;%ddy
 %0 0 mQ+mL, 0 0 0, 0 0;% ddz
@@ -250,7 +269,7 @@ LQRM3  =
 %L*mL 0 0, 0 0 0, 0 I_L+L^2*mL];%ddtheL
 %\end{lstlisting}
 %\begin{lstlisting}
-%LQRM2  = [
+%M2  = [
 %0 0 0, 0 -g*(mQ+mL) 0, 0 0;%x
 %0 0 0, g*(mQ+mL) 0 0, 0 0; %y
 %0 0 0, 0 0 0, 0 0;         %z
@@ -261,7 +280,7 @@ LQRM3  =
 %0 0 0, 0 0 0, 0 g*L*mL];   %theL
 %\end{lstlisting}
 %\begin{lstlisting}
-%LQRM3  = [
+%M3  = [
 %0 0 0 0; %x
 %0 0 0 0; %y
 %1 0 0 0; %z

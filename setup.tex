@@ -457,6 +457,7 @@ together with the corresponding load position and velocity errors.\\
 %$ e_x $ and velocity error $ e_v $.\\ 
 The stability of the closed-loop system is investigated by observing whether the controller is able to bring the system to a stationary final state.
 The error dynamics are analyzed through the error functions, as described in Chapter \ref{ch:control}. 
+%If the required initial conditions are satisfied
 %Figures \ref{fig:set.caseAres2}, \ref{fig:set.caseBres2} and \ref{fig:set.caseCres2} show 
 The configuration errors $ \Psi_R, \Psi_q $
 and the corresponding tracking errors of the \a{qr} attitude $ e_R, e_\Omega $, load attitude $ e_q, e_{\dot{q}} $ are presented.\\
@@ -480,30 +481,31 @@ This was to be expected due to large \a{qr} rotations. The error remains within 
 %CHECK
 $ 2.83 s $, 
 to eventually reach a steady-state at the step size of $ 0.25 m $. 
-
-%ADD
-%Also speed of response is important or not? With high rise time it is easy to have no overshoot but mostly this is not desired behavior.\\
 %CHECK 
 %to increase at a high rate, causing commanded signals to change at high rates. Due to limited bandwidth in the commanded filters, this could cause 
-
 \begin{figure}[h!]
 	\centering
 	\makebox[.49\textwidth][c]{\subfloat[][]{\includegraphics[width=.49\textwidth]{\dir{LPOSQRL-xL\caseA}}\label{fig:AxL}}}	
 	\makebox[.49\textwidth][c]{\subfloat[][]{\includegraphics[width=.49\textwidth]{\dir{LPOSQRL-exL\caseA}}\label{fig:AexL}}}	
 	\caption{Load Position Tracking Nonlinear Geometric Control Case A \label{fig:set.caseAres}}
 \end{figure}
+
+Tuning of the controller is be done by checking the responses of the error functions.
+Too high gains for the \a{qr} attitude controller will create aggressive responses to errors. 
+This will require large and fast rotations, which results in overshoot and destabilization of the closed-loop system.
+Too small gains however will result in slow responses, and small rotations, creating large errors in the load position.
 	
-
-Figure \ref{fig:AeR} and \ref{fig:Aeq} show the tracking errors of the \a{qr} attitude and load attitude, respectively.\\
-Observations: $(e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable
+Figure \ref{fig:AeR} and \ref{fig:Aeq} show the tracking errors of the \a{qr} attitude and load attitude, respectively. 
+The error in \a{qr} attitude and angular velocity are large at the moments the slope starts and ends, indicating that a large sudden \a{qr} rotation with high angular velocity is required to respond to the sudden input. Nevertheless, the figures indicate that the errors in both \a{qr} and load attitude are driven to zero.
+Furthermore, Figure \ref{fig:APsiR} and \ref{fig:APsiq} show that the tracking error functions of the \a{qr} and load, respectively, are also driven to zero.
+From this can be concluded that $(e_x,e_v,e_q,e_{\dot{q}},e_R,e_\Omega)=(0,0,0,0,0,0) $ is exponentially stable. 
 %The figures show that $ (e_x,e_v)=(0,0) $ is exponentially attractive. 
-
-
-Figure \ref{fig:APsiR} and \ref{fig:APsiq} show the tracking error functions of the \a{qr} and load, respectively. \\
-Observations: there exist constants $ \alpha_q,\beta_q>0 $ such that
-\begin{equation}\label{key}
-\Psi_q(q(t),q_d(t)) \leq min\left\lbrace 2,\alpha_qe^{-\beta_qt}\right\rbrace 
-\end{equation}
+% \\
+%From this can be observed that there exist constants $ \alpha,\beta>0 $ for both $ \Psi_R $ and $ \Psi_q $, such it holds that $ \leq min\left\lbrace 2,\alpha e^{-\beta t}\right\rbrace $
+%Observations: there exist constants $ \alpha_q,\beta_q>0 $ such that
+%\begin{equation}\label{key}
+%\Psi_q(q(t),q_d(t)) \leq min\left\lbrace 2,\alpha e^{-\beta t}\right\rbrace 
+%\end{equation}
 \begin{figure}[h!]
 	\centering
 	\makebox[.49\textwidth][c]{\subfloat[][]{\includegraphics[width=.49\textwidth]{\dir{LPOSQRL-eR\caseA}}\label{fig:AeR}}}	
@@ -513,11 +515,11 @@ Observations: there exist constants $ \alpha_q,\beta_q>0 $ such that
 	\caption{Geometric Error functions Nonlinear Geometric Control Case A \label{fig:set.caseAres2}}
 \end{figure}	
 
-For both control approaches, Figure \ref{fig:AxLlqr} shows the load position along the desired load position $ x_{L,d} $ and Figure \ref{fig:AexLlqr} shows the load position error. From this can be observed that the \a{lqr} controller has a much slower response. 
+For both control approaches, Figure \ref{fig:AxLlqr} shows the load position along the desired load position $ x_{L,d} $ and Figure \ref{fig:AexLlqr} shows the corresponding load position error. From this can be observed that the \a{lqr} controller has a slower response. 
 
 
-Figure \ref{fig:AQRang} shows the \a{qr} attitude with respect to \IF.\\
-In Figure \ref{fig:ALang} the load angle with respect to \BF is shown.\\
+Figure \ref{fig:AQRang} shows the \a{qr} attitude with respect to \IF. \\
+In Figure \ref{fig:ALang} the load angle with respect to \IF is shown.\\
 
 whereas for the \a{lqr}, this is reached at $  $
 
@@ -631,19 +633,19 @@ Observations: Load angles are huge, check results
 \section{Conclusion}\label{set:exp.con}
 %CHECK 
 %What can we learn and conclude from different performance comparisons
-%CHECK
-%What is its value of nonlinear control compared to linear control
 
-Geometric Mechanics creates a new perspective 
+The Nonlinear Geometric Controller was tested for its ability to track various load trajectories. 
+The control design is capable of stabilizing the system and enables tracking of a load trajectory. 
 
-Nonlinear Geometric Control opens a new way of looking into 
+
+of tracking various
+load position tracking
+
+High gains in the \a{qr} attitude controller forces the \a{qr} to large and fast rotations. 
+
 
 Near the equilibrium configuration, the \a{lqr} controller is able to reduce the swing fast and accurate, as can be seen in the results of case A. 
 However, the shortcomings of the \a{lqr} controller become evident when it is commanded to track fast trajectories. Following these trajectories continuously requires fast changing movements, far away from the equilibrium configuration. The controller is not able to cope with the fast changing dynamics, resulting in overshoots and slow responses, lagging behind the desired trajectory.
-
-The nonlinear geometric controller depends on feed forward terms that are obtained from the desired trajectories. 
-Trajectory generation approaches exist that are able to generate the required desired position, velocity and acceleration by 
-however it is possible to compute these with trajectory generating algorithms too.
 
 The controllers are functions of the computed tracking references $ q_c, R_c $ and their derivatives. These terms are approximated by a command filter, which means that the accuracy decreases because high frequency terms are filtered.
 

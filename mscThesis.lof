@@ -1,32 +1,38 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Configuration Space of a 2-link arm\relax }}{6}{figure.caption.7}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces A manifold locally resembles a Euclidean space\relax }}{7}{figure.caption.9}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces Tangent Spaces on different manifolds\relax }}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Quadrotor model representation\relax }}{11}{figure.caption.14}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Quadrotor with Load model representation\relax }}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Configuration Space of a 2-link arm\relax }}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces A manifold locally resembles a Euclidean space\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Tangent Spaces on different manifolds\relax }}{8}{figure.caption.11}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces quadrotor model representation\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces quadrotor with load model representation\relax }}{12}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Transport map $ \mathcal {T}(q,r) $\relax }}{19}{figure.caption.22}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Nonlinear Geometric Control Loop of the QR-Load system \cite {Sreenath2013c}\relax }}{22}{figure.caption.25}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces QR Attitude Controller\relax }}{23}{figure.caption.26}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces Construction of $ b_{1c} $ to define $ R_c $\relax }}{25}{figure.caption.27}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Transport map $ \mathcal {T}(q,r) $\relax }}{19}{figure.caption.23}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces nonlinear geometric control Loop of the QR-load system \cite {Sreenath2013c}\relax }}{22}{figure.caption.26}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces QR Attitude controller\relax }}{23}{figure.caption.27}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Construction of $ b_{1c} $ to define $ R_c $\relax }}{25}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces Desired Load Position Case A\relax }}{31}{figure.caption.30}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Desired Load Position Case B\relax }}{33}{figure.caption.32}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Desired Load Position Case C\relax }}{33}{figure.caption.34}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces Command Filter\relax }}{36}{figure.caption.39}
-\contentsline {figure}{\numberline {4-5}{\ignorespaces LQR control design\relax }}{37}{figure.caption.45}
-\contentsline {figure}{\numberline {4-6}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case A \relax }}{38}{figure.caption.47}
-\contentsline {figure}{\numberline {4-7}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case A \relax }}{39}{figure.caption.48}
-\contentsline {figure}{\numberline {4-8}{\ignorespaces Controller Comparison Case A. Solid: NGC, Dash-dot: LQR\relax }}{40}{figure.caption.49}
-\contentsline {figure}{\numberline {4-9}{\ignorespaces Controller Comparison Case A. Solid: NGC, Dash-dot: LQR\relax }}{41}{figure.caption.50}
-\contentsline {figure}{\numberline {4-10}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case B \relax }}{42}{figure.caption.52}
-\contentsline {figure}{\numberline {4-11}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case B \relax }}{43}{figure.caption.53}
-\contentsline {figure}{\numberline {4-12}{\ignorespaces Controller Comparison Case B. Solid: NGC, Dash-dot: LQR\relax }}{44}{figure.caption.54}
-\contentsline {figure}{\numberline {4-13}{\ignorespaces Load Position Tracking Nonlinear Geometric Control Case C \relax }}{45}{figure.caption.56}
-\contentsline {figure}{\numberline {4-14}{\ignorespaces Geometric Error functions Nonlinear Geometric Control Case C \relax }}{46}{figure.caption.57}
-\contentsline {figure}{\numberline {4-15}{\ignorespaces Controller Comparison Case C. Solid: NGC, Dash-dot: LQR\relax }}{47}{figure.caption.58}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces Desired load Position Case A\relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Desired load Position Case B\relax }}{32}{figure.caption.33}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Desired load Position Case C\relax }}{33}{figure.caption.35}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces Desired load Position Case C\relax }}{34}{figure.caption.36}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Command Filter\relax }}{36}{figure.caption.41}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces LQR control design\relax }}{37}{figure.caption.47}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces Load Position Tracking \acs {ngc} Case A \relax }}{39}{figure.caption.49}
+\contentsline {figure}{\numberline {4-8}{\ignorespaces Geometric Error functions \acs {ngc} Case A \relax }}{40}{figure.caption.50}
+\contentsline {figure}{\numberline {4-9}{\ignorespaces Geometric Tracking Error functions \acs {ngc} Case A \relax }}{40}{figure.caption.51}
+\contentsline {figure}{\numberline {4-10}{\ignorespaces Controller Comparison Case A. Solid: \acs {ngc}, Dash-dot: \acs {lqr}\relax }}{41}{figure.caption.52}
+\contentsline {figure}{\numberline {4-11}{\ignorespaces Controller Comparison Case A. Solid: \acs {ngc}, Dash-dot: \acs {lqr}\relax }}{42}{figure.caption.53}
+\contentsline {figure}{\numberline {4-12}{\ignorespaces Load Position Tracking nonlinear geometric control Case B \relax }}{43}{figure.caption.55}
+\contentsline {figure}{\numberline {4-13}{\ignorespaces Geometric Error functions \acs {ngc} Case B \relax }}{44}{figure.caption.56}
+\contentsline {figure}{\numberline {4-14}{\ignorespaces Geometric Tracking Error functions \acs {ngc} Case B \relax }}{44}{figure.caption.57}
+\contentsline {figure}{\numberline {4-15}{\ignorespaces Controller Comparison Case B. Solid: \acs {ngc}, Dash-dot: \acs {lqr}\relax }}{45}{figure.caption.58}
+\contentsline {figure}{\numberline {4-16}{\ignorespaces Controller Comparison Case B. Solid: \acs {ngc}, Dash-dot: \acs {lqr}\relax }}{45}{figure.caption.59}
+\contentsline {figure}{\numberline {4-17}{\ignorespaces Load Position Tracking nonlinear geometric control Case C \relax }}{46}{figure.caption.61}
+\contentsline {figure}{\numberline {4-18}{\ignorespaces Geometric Error functions \acs {ngc} Case C \relax }}{47}{figure.caption.62}
+\contentsline {figure}{\numberline {4-19}{\ignorespaces Geometric Tracking Error functions \acs {ngc} Case C \relax }}{47}{figure.caption.63}
+\contentsline {figure}{\numberline {4-20}{\ignorespaces Controller Comparison Case C. Solid: \acs {ngc}, Dash-dot: \acs {lqr}\relax }}{48}{figure.caption.64}
+\contentsline {figure}{\numberline {4-21}{\ignorespaces Controller Comparison Case C. Solid: \acs {ngc}, Dash-dot: \acs {lqr}\relax }}{48}{figure.caption.65}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A-1}{\ignorespaces Model representation\relax }}{57}{figure.caption.62}
-\contentsline {figure}{\numberline {A-2}{\ignorespaces Simulink Command Filter\relax }}{58}{figure.caption.63}
+\contentsline {figure}{\numberline {A-1}{\ignorespaces Model representation\relax }}{59}{figure.caption.69}
+\contentsline {figure}{\numberline {A-2}{\ignorespaces Simulink Command Filter\relax }}{60}{figure.caption.70}

@@ -1,43 +1,95 @@
 \chapter{Conclusions and Future Work}\label{ch:conclusion}
-%ADD in this section etc
+\section{Summary and Conclusions}
+%CHECK
+%This report starts with an introduction to subject. The aim is described and the motivation for this research is given. 
+%This chapter ends with a description of the organization of the report. 
+
+This thesis aims to give insight in a nonlinear geometric approach for the control of a quadrotor with a cable suspended load. 
+%WAAROM 
+To do this, a mathematical model is composed by applying techniques from differential geometry. 
+This allows the model to be defined globally on nonlinear manifolds, which is not possible on Euclidean spaces.
+Nonlinear geometric control is used for the design of a control system for this dynamic system that evolves on nonlinear manifolds.
+Experiments are simulated and compared to the proven concept of an \a{lqr} controller.
+The nonlinear tracking controller proves almost-global exponential attractiveness to the zero equilibrium of the tracking errors. 
+
+In order to test the concept of the nonlinear geometric approach, a mathematical model is created by introducing the concepts of geometric mechanics. 
+Differential geometry is the mathematical discipline that is used to study these geometric problems.
+The configuration space of the system is described on nonlinear manifolds, instead of applying Euclidean spaces that are defined by Cartesian coordinates.
+With the tools of differential geometry, differential calculus and integral calculus, a globally defined model is obtained.
+
+The model allows nonlinear geometric controllers to calculate error values that evolve on the same nonlinear manifolds, through matrix operations that arise from linear algebra. 
+%as function of geometric properties between the measured and desired states.
+%The controllers are driven by error functions
+A backstepping approach allows different \a{DOF}s of the under-actuated system to be controlled.
+The controllers consists of control laws that guarantee stabilization of the closed-loop system in a cascaded structure by using the states as virtual control inputs. 
+%
+%This allows the system dynamics, error functions and the control to be described in a nonlinear geometric manner.
+%
+%The geometric control is based on 
+% are functions
+%of error functions defined on nonlinear manifolds.
+%by differential geometry. 
+
+The stability and performance of the nonlinear geometric controller is tested in a set of experiments, each describing different load trajectories. 
+The nonlinear control performance is compared with the performance of a well-known \a{lqr} control approach. 
+Where the nonlinear geometric controller employs a nonlinear model defined on nonlinear manifolds,
+the main difference is that the \a{lqr} controller employs a model that is defined and linearized in a Euclidean space, 
+
+%main differences in the latter approach, 
+%se approaches are the way that the dynamical models are defined
+%
+%Testing the nonlinear geometric controller
+%To compare with a common linear controller, \a{lqr} control is used to compare
+
+The nonlinear geometric controller has proven effective in tracking complex trajectories and fast maneuvers.
+However, tuning the controller is not an intuitive process. 
+
+The performance of the \a{lqr} controller depends on the tuning of the cost function. 
+To adjust the effects of states and control inputs, the controller can be tuned intuitively by adjusting the weight matrices in the cost function.
+However, the model of the system is incomplete due to unmodeled dynamics, and the controller does not allow direct tracking of a load trajectory.
+For that reason, in order to tune the \a{lqr} controller, a trade-off must be made between sufficient \a{qr} position tracking and minimization of the load swing. 
+
+
+%CONCLUSIE
+% wat lost het op?
+%wat is het voordeel?
+%Result/conclusie;
+%Wat is goed, wat is niet goed? Waar komt dat door?
+
+
 
 %CHECK
 %What is its value of nonlinear control compared to linear control
-Geometric Mechanics creates a new perspective 
 
-\section{Summary and Conclusions}
-This report starts with an introduction to subject. The aim is described and the motivation for this research is given. 
-This chapter ends with a description of the organization of the report. 
-
-After the main introduction, the concepts of Geometric Mechanics are introduced. 
-Differential Geometry is a mathematical discipline that is used to study geometric problems. 
-Instead of employing Euclidean spaces that are defined by Cartesian coordinates, the configuration space of the system is described on nonlinear manifolds.
-With the tools of differential geometry, differential calculus and integral calculus, a globally defined model is obtained.
-
-Based on the geometric model, a nonlinear geometric control design is discussed.  
-A backstepping approach allows different \a{DOF}s of the under-actuated system to be controlled in a cascaded structure. 
-The controllers are driven by error functions, which are defined on the geometric spaces through matrix operations that arise from linear algebra.
-
-
-The geometric control is based on 
- are functions
-of error functions defined on nonlinear manifolds.
-by Differential Geometry. 
-
-Next, the experiment is defined. The nonlinear controller is used to track desired load trajectories in different situations. The nonlinear performance is compared to an \a{lqr} control 
-Testing the nonlinear Geometric Controller
-To compare with a common linear controller, \a{lqr} control is used to compare
+OTHER GAINS FOR LQR!\\
+Very small penalty on load angle results in swinging load; decreasing load position error, but very bad anti-swing. 
+Observations: fact that LQR can not control load position is obvious.\\
 
 Results are,
 
 This research 
 The conclusions that can be extracted from the experiments is that 
 
+The \a{ngc} controller is designed to track a load position, where 
+
+Tuning of the controller can be done by checking the responses of the error functions.
+Too high gains for the \a{qr} attitude controller will create aggressive responses to errors. 
+This will require large and fast rotations, which results in overshoot and destabilization of the closed-loop system.
+Too small gains however will result in slow responses, and small rotations, creating large errors in the load position.
+
+The \a{lqr} control pushes the system to its equilibrium 
+%rather stays
+%commands small rotations in order to succeed in both position tracking of the \a{qr} and minimization of the load swing.
+
+%The largest differences between the \a{lqr} and \a{ngc} controllers lie in the fact that 
+
+%This illustrates the differences 
+
+The \a{ngc} control commands large \a{qr} rotations in order to create a large influence on the load attitude dynamics, see Equation \ref{eq:mod.loadatt}. 
+
 The nonlinear geometric controller depends on feed forward terms that are obtained from the desired trajectories. 
 Trajectory generation approaches exist that are able to generate the required desired position, velocity and acceleration by 
 however it is possible to compute these with trajectory generating algorithms too.
-
-
 
 
 \section{Recommendations for Future Work}\label{ch:future}
@@ -47,12 +99,12 @@ however it is possible to compute these with trajectory generating algorithms to
 %Lack of time: no implementation possible. 
 %In order to realize this, one needs to investigate the subjects
 
-\paragraph{Digital Control} The concept of Geometric Control is shown under the assumption of continuous-time control. 
+\paragraph{Digital control} The concept of geometric control is shown under the assumption of continuous-time control. 
 However, an analysis must be done in the discrete-time domain for the implementation of a real-time application. This must verify whether it is feasible to run the controller on an on-board processor on a \a{qr}. The control performance could be limited by the bandwidth of either the discretized control system or the wireless communication.
 It must be investigated whether the control system is still able to deal with the fast dynamics that are required for aggressive maneuvering. 
 Continuous-time Euler-Lagrange equations could be found by minimizing the action integral, which is a function of the Lagrangian. In a similar procedure the discrete-time Euler-Lagrange can be obtained, by minimizing te summation of a discrete Lagrangian, which is demonstrated in \cite{Lee2008}. 
 %ADD reference Lee, digital geometric control. computed
-%Computational Geometric Mechanics and Control\\
+%Computational geometric mechanics and control\\
 %\cite{Lee2008}
 %Computation algorithms must be developed which preserve the geometric properties of a mechanical system.\\
 
@@ -64,7 +116,7 @@ As a theoretical extension the influence of model mismatches could be simulated.
 
 \paragraph{Robustness}
 The control in this thesis assumes perfect state feedback. In practice the controller depends on visual feedback or data obtained from an on-board inertial measurement unit. Unlike in simulations, this data will contain noise, uncertainties and possibly drift. 
-Based on a nonlinear geometric approach for a \a{qr} without load, \cite{Goodarzi2013a} includes uncertainties in the translational dynamics and rotational dynamics to prove the robustness against unstructured uncertainties. This work could be extended to a \a{qr}-Load system to investigate the effects of non-perfect state feedback. 
+Based on a nonlinear geometric approach for a \a{qr} without load, \cite{Goodarzi2013a} includes uncertainties in the translational dynamics and rotational dynamics to prove the robustness against unstructured uncertainties. This work could be extended to a \a{qr}-load system to investigate the effects of non-perfect state feedback. 
 
 Due to uncertainties
 In what way would parameter choice in the controllers affect robustness?

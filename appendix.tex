@@ -1,11 +1,11 @@
 \chapter{Appendix}
 
 \section{Derivation of Equations of motion}
-\subsection{Load Dynamics}\label{sec:app.loaddyn}
+\subsection{load Dynamics}\label{sec:app.loaddyn}
 %PROOF prop.3 Sreenath2013a. Also Sreenath2013b?
 %DEFINE e_3 / R / f 
 
-Let \lsymb{$ x_{CM} $}{Position CM of \a{qr}-Load system} denote the position of the center of mass of the combined Quadrotor-Load system, expressed in \IF. Which can be found by
+Let \lsymb{$ x_{CM} $}{Position CM of \a{qr}-load system} denote the position of the center of mass of the combined quadrotor-load system, expressed in \IF. Which can be found by
 \begin{align}\label{eq:CM}
 \begin{split}
 m_Q(x_Q-x_{CM})+m_L(x_L-x_{CM})&=0\\
@@ -29,7 +29,7 @@ Applying Newton's laws of motion to (\ref{eq:CM}) and inserting (\ref{eq:mod.xQ2
 Here comes the derivation of $ \ddot{q} $, obtained by geometric mechanics.
 
 \section{Derivation Error dynamics}\label{sec:app.error}
-\subsection{Quadrotor Attitude}
+\subsection{quadrotor Attitude}
 From the angular velocity tracking error $ e_\Omega $ follows
 \begin{equation}\label{eq:app.eOmega}
 \begin{aligned}
@@ -72,7 +72,7 @@ where $\hat{\Omega}_d\Omega_d=\Omega_d \times \Omega_d=0  $. Substituting Equati
 \dot{e}_\Omega=J^{-1}(-\Omega\times J\Omega + M)+\hat{\Omega}R^TR_d\Omega_d-R^TR_d\dot{\Omega}_d
 \end{equation}
 
-\subsection{Load Attitude}
+\subsection{load Attitude}
 For the load attitude tracking problem on manifold $ \mathbb{S}^2 $, the error function $ E_{cl} $ is defined as follows \cite[p.]{Bullo2005}
 \begin{equation}\label{eq:app.Ecl}
 E_{cl}(v_{q},w_r)=\Psi(q,r)+\frac{1}{2}\parallel v_q-\mathcal{T}(q,r)\cdot w_r\parallel^2_{\mathbb{G}}
@@ -348,8 +348,8 @@ When assuming small angle maneuvers, \textit{Euler-angles} can be used to locall
 
 \begin{figure}[h!]
 	\centering
-	\makebox[.65\textwidth][c]{\subfloat[][Quadrotor model representation \label{fig:app.model}]{\includegraphics[width=.5\textwidth]{./StyleStuff/qrmodel.png}}}
-	\makebox[.34\textwidth][c]{\subfloat[][Load angles  \label{fig:app.angles}]{\includegraphics[width=.5\textwidth]{./StyleStuff/angles.png}}}
+	\makebox[.65\textwidth][c]{\subfloat[][quadrotor model representation \label{fig:app.model}]{\includegraphics[width=.5\textwidth]{./StyleStuff/qrmodel.png}}}
+	\makebox[.34\textwidth][c]{\subfloat[][load angles  \label{fig:app.angles}]{\includegraphics[width=.5\textwidth]{./StyleStuff/angles.png}}}
 	\caption{Model representation\label{fig:}}
 \end{figure}		
 
@@ -381,7 +381,7 @@ The Z-X-Y Euler angles rotate \BF, as can be seen in Figure \ref{fig:app.model}.
 %\begin{figure}[h!]
 %	\centering
 %	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/qrmodel.png}}
-%	\caption{Quadrotor-Load model representation\label{fig:mod.modelQRtrad}}
+%	\caption{quadrotor-load model representation\label{fig:mod.modelQRtrad}}
 %\end{figure}
 
 The unit vector $ q $ from the \a{qr} to the load is represented in \BF. Define $ \phi_L $ as the rotation of the load around the z-axis, measured from $ \vec{b}_1 $, and $ \theta_L $ is the angle between the cable and the z-axis of \BF, see Figure \ref{fig:app.angles}.
@@ -401,13 +401,13 @@ s_{\theta_L}s_{\phi_L}\\
 %\begin{figure}[h!]
 %	\centering
 %	\makebox[\textwidth][c]{\includegraphics[width=.45\textwidth]{./StyleStuff/angles.png}}
-%	\caption{Load angles \label{fig:app.angles}}
+%	\caption{load angles \label{fig:app.angles}}
 %\end{figure}	
 
 %\begin{figure}[h!]
 %	\centering
 %	\makebox[\textwidth][c]{\includegraphics[width=.5\paperwidth]{./StyleStuff/qrmodel.png}}
-%	\caption{Quadrotor model representation\label{fig:mod.model}}
+%	\caption{quadrotor model representation\label{fig:mod.model}}
 %\end{figure}	
 
 

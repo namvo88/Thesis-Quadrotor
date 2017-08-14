@@ -1,5 +1,5 @@
 \chapter{Introduction} \label{ch:intro}
-A \acf{qr} is a type of \acf*{uav} that has received an increasing amount of attention recently with many applications being actively investigated. Possible applications include search and rescue, surveillance, reliable supply of food and medicines as disaster relief and object manipulation in construction and transportation. It has already proven itself useful for many tasks like multi-agent missions, mapping, explorations, transportation and entertainment such as acrobatic performances.
+A \acf{qr} is a type of \acf*{uav} that has received an increasing amount of attention recently with many applications being actively investigated. Possible applications include search and rescue, surveillance, reliable supply of food and medicines in emergency situations and object manipulation in construction and transportation. It has already proven itself useful for many tasks like multi-agent missions, mapping, explorations, transportation and entertainment such as acrobatic performances.
 
 The inspiration for this research is build upon the idea of creating a system of multiple autonomous \a{qr}s for a cooperative towing task. The advantage of such systems for object manipulation is the increased reach and the possibility to reduce complexity of the individual robot, decrease cost over traditional robotic systems and high reliability. One can think of examples in nature, where individuals coordinate, cooperate and collaborate to perform tasks that they individually can not accomplish. Redundancy makes development of fail safe control methods possible and can extend the capabilities of a single robot. 						
 
@@ -9,18 +9,18 @@ One interesting method is the transportation of a load suspended via a cable.
 %To be more specific, 
 Prior to a multi-agent load transportation task, research must be done to this task involving a single \a{qr}.
 This research revolves around load position control of a single \a{qr} with a cable-suspended load in motion. 
-The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation, or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated. Possible objectives are minimizing the oscillations of the load during or after motion, minimizing the time to position the load, trajectory tracking, trajectory generation and obstacle avoidance.
+The suspended object naturally continues to swing at the end of every movement. In case a residual motion can result in damage or in order to avoid obstacles and path following, an accurate positioning is required. Reducing the oscillation or controlling the position of the suspended load might be necessary, but is challenging in the fact that this cable-suspended system is under-actuated. Possible objectives are minimizing the oscillations of the load during or after motion, minimizing the time to position the load, trajectory tracking, trajectory generation and obstacle avoidance.
 
 \newpage
 \section{Aim and Motivation}\label{sec:int.motivation}
-The aim is to control the position of a suspended load using a \a{qr}. Before considering multiple \a{qr}s, it is important to investigate the possibilities of a single \a{qr} with load system. Hence, in this research a single \a{qr} is considered for the transportation of a cable suspended load, which will exert additional forces and torques on the \a{qr}. This is a challenging control problem in the fact that the \a{qr} system is under-actuated. Adding a suspended load will add extra \a{DOF}s and oscillations of the load occur at the end of every movement. 
+The aim is to control the position of a suspended load using a \a{qr}. Before considering multiple \a{qr}s, it is important to investigate the possibilities of a single \a{qr} with load system. Hence, in this research a single \a{qr} is considered for the transportation of a cable suspended load, which will exert additional forces and torques on the \a{qr}. This is a challenging control problem in the fact that the \a{qr} system is under-actuated. Adding a suspended load will add extra \acf{DOF}s and oscillations of the load occur at the end of every movement. 
 
 The system can be divided into two subsystems. The first subsystem is where the cable tension is non-zero and the distance between the \a{qr} and the load is defined by the cable length. Both \a{qr} and load are coupled as one system. The second subsystem is where the cable tension is zero, such that the \a{qr} and load in free fall are two separate decoupled systems. This research focuses on the first subsystem, such that the cable tension is non-zero. In order to control both subsystems, hybrid control must be applied, which is considered out of the scope of this research.
 
 %ADD cite MPC \cite{Bangura2014}
 %ADD cite PID LQR?
 Former work on attitude control of \a{qr} and/or load often relies on linear control methods such as \acs{pid}, \a{mpc} and \a{lqr} control. The dynamics are linearized around an equilibrium point, describing the system dynamics by a set of linear differential equations. 
-The control of a \a{qr}-Load system is a very specific case and scarcely investigated. Former work includes \a{mpc} \cite{PraveenThesis} and \a{lqr} control approaches, where an optimal control strategy is used to minimize the swing of the load. 
+The control of a \a{qr}-load system is a very specific case and scarcely investigated. Former work includes \a{mpc} \cite{PraveenThesis} and \a{lqr} control approaches, where an optimal control strategy is used to minimize the swing of the load. 
 %ADD what more former work?
 %ADD cite lqr
 %ADD sadr?
@@ -42,13 +42,13 @@ Nam: Duidelijk: is nog ToDo
 Nonlinear Geometric Control is a nonlinear model based control technique based on a modeling approach involving the concepts of differential geometry. This results in a globally defined coordinate-free dynamical model, while preventing issues regarding singularities, and enabling the design of controllers that offer almost-global convergence properties. %CHECK waar moet dit?
 For a study on rigid body dynamics and optimal control problems, where geometric features are incorporated, one can refer to \cite{Lee2008}. 
 
-Former work includes a nonlinear geometric control of a \a{qr} \cite{Lee2010,Goodarzi2013a} and nonlinear geometric control of the load position, load attitude and \a{qr} attitude of a \a{qr}-Load system \cite{Sreenath2013a,Sreenath2013b,Tang2014}.
+Former work includes a nonlinear geometric control of a \a{qr} \cite{Lee2010,Goodarzi2013a} and nonlinear geometric control of the load position, load attitude and \a{qr} attitude of a \a{qr}-load system \cite{Sreenath2013a,Sreenath2013b,Tang2014}.
 Nonlinear Geometric Control for \a{qr} systems is rarely found in literature, despite the advantageous properties of differential geometry. 
 
 %ADD MOTIVATION
 This motivates to investigate the potential and limitations of a rarely used nonlinear Geometric Control approach, and the performance of a load transportation maneuver, when compared to a commonly used linear control strategy.
 
-Different aspects involving the modeling and control for the QR-Load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of the control design.
+Different aspects involving the modeling and control for the QR-load system must be investigated, for it can be expected that the non-linearity will have a great influence in the representation of the dynamics and the stability, accuracy and type of the control design.
 It is possible to investigate which advantages or disadvantages this nonlinear approach has compared to a linear approach, in terms of stability and performance.
 
 %ADD Contributions in this thesis
@@ -64,8 +64,8 @@ In this first chapter, a brief introduction of the subject is given and the prob
 %\item Chapter \ref{ch:model}\\
 
 Chapter \ref{ch:model} introduces Geometric Mechanics to understand and derive the system's equations of motion in order to allow nonlinear geometric controller design and analysis. 
-The system configuration space is described on a differentiable manifold using the tools of Differential geometry instead of Euclidean geometry, where the system dynamics evolve in a three dimensional space.
-The dynamics of the \a{qr}-Load system are then described by the laws of kinematics and the application of Newton's laws and Lagrangian mechanics. 
+The system configuration space is described on a differentiable manifold using the tools of differential geometry instead of Euclidean geometry, where the system dynamics evolve in a three dimensional space.
+The dynamics of the \a{qr}-load system are then described by the laws of kinematics and the application of Newton's laws and Lagrangian mechanics. 
 In contrast with classical modeling techniques, geometric modeling results in a compact, unambiguous and coordinate-free model.
 
 %\item Chapter \ref{ch:control}\\

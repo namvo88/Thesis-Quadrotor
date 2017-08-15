@@ -2,22 +2,25 @@
 \section{Summary and Conclusions}
 % %MODEL
 This thesis aims to give insight in a nonlinear geometric approach for the control of a quadrotor with a cable suspended load. 
-In order to test the concept of the nonlinear geometric approach, a mathematical model is composed by applying techniques from differential geometry. 
-Differential geometry is the mathematical discipline that is used to study these geometric problems.
-This method allows the model to be defined globally on nonlinear manifolds, which is not possible on Euclidean spaces.
-The configuration space of the system is described on nonlinear manifolds, instead of applying Euclidean spaces that are defined by Cartesian coordinates.
-With the tools of differential geometry, differential calculus and integral calculus, a globally defined model is obtained.
+In order to test the concept of the nonlinear geometric approach, a mathematical model is composed by applying techniques from differential geometry, differential calculus and integral calculus. 
+%Differential geometry is the mathematical discipline that is used to study these geometric problems.
+This method allows the model to be defined globally on nonlinear manifolds instead of Euclidean spaces that are defined by Cartesian coordinates, avoiding the obstacle of singularities that occur on local charts.
+%, which is not possible on Euclidean spaces.
+%The configuration space of the system is described on nonlinear manifolds,
+%With the tools of differential geometry, a globally defined model is obtained.
 
 %%CONTROL
-Nonlinear geometric control is used for the design of a control system for this dynamic system that evolves on nonlinear manifolds.
-The model allows nonlinear geometric controllers to define error functions tot calculate error values that evolve on the same nonlinear manifolds, 
-through matrix operations that arise from linear algebra. 
+After defining the model, nonlinear geometric control is used as a control system for the \a{qr} with load.
+%for the design of a control system 
+%for this dynamic system that evolves on nonlinear manifolds.
+Now, both the dynamic system and controller evolve on nonlinear manifolds.
+The model allows nonlinear geometric controllers to define error functions to calculate error through matrix operations that arise from linear algebra. 
 A backstepping approach allows different \a{DOF}s of the under-actuated system to be controlled.
 The controllers consists of control laws that guarantee stabilization of the closed-loop system in a cascaded structure by using the states as virtual control inputs. 
 
 % %EXPERIMENTS
 The stability and performance of the nonlinear geometric controller is tested in a set of experiments, each describing different load trajectories. 
-Experiments are simulated and the nonlinear control performance is compared to the proven concept of an \a{lqr} controller.
+The experiments are simulated and the nonlinear control performance is compared to the proven concept of an \a{lqr} controller.
 The nonlinear tracking controller proves almost-global exponential attractiveness to the zero equilibrium of the tracking errors. 
 
 % %CONCLUSIE
@@ -38,16 +41,15 @@ The controller shows overall satisfying results for the load position tracking e
 Tuning of the controller can be done by checking the system responses and the error functions.
 Tuning the controllers for the \a{qr} and load attitude controlled mode can be done in a similar fashion as tuning a simple \a{pd} controller. 
 Adding proportional gain results in a faster response, where adding derivative gain for a better damping. 
-However, tuning the load position controlled mode is no longer intuitive due to the nonlinearities and coordinate changes by the control laws.
+However, tuning the load position controlled mode is no longer intuitive due to the nonlinearities, the increased complexity introduced by the control laws and the under-actuated nature of the system.
 
 Where the nonlinear geometric controller employs a nonlinear model that is defined on nonlinear manifolds,
 the \a{lqr} controller employs a model that is defined and linearized in a Euclidean space. 
 The nonlinear geometric approach allows the control of the dynamics that are described by the nonlinear model.
 The linear controller has an incomplete model due to unmodeled dynamics, and the controller does not allow direct tracking of a load trajectory.
-For that reason, the \a{lqr} controller is tuned by making a trade-off must be made between sufficient \a{qr} position tracking and minimization of the load swing. 
+For that reason, the \a{lqr} controller is tuned by making a trade-off between sufficient \a{qr} position tracking and minimization of the load swing. 
 
-From the comparison between the controllers it can be concluded that, 
-near the equilibrium configuration, the \a{lqr} controller is able to reduce the swing relatively fast and accurate.
+From the comparison between the controllers it can be concluded that near the equilibrium configuration, the \a{lqr} controller is able to reduce the swing relatively fast and accurate.
 %The controller was able to steer the \a{qr} to large angles, but loses
 However, the shortcomings of the \a{lqr} controller become evident when it is given the task to track complex trajectories. 
 The controller is not able to cope with the fast changing dynamics, resulting in overshoots and slow responses, causing the load to lag behind the desired trajectory.

@@ -6,10 +6,42 @@ K.~Sreenath, {Taeyoung Lee}, and V.~Kumar, ``{Geometric control and
   {\em 52nd IEEE Conference on Decision and Control}, pp.~2269--2274, IEEE, dec
   2013.
 
+\bibitem{Bouabdallah2004c}
+S.~Bouabdallah, A.~Noth, R.~Siegwart, and R.~Siegwan, ``{PID vs LQ Control
+  Techniques Applied to an Indoor Micro Quadrotor},'' {\em IEEE/RSJ
+  International Conference on Intelligent Robots and Systems}, vol.~3,
+  pp.~2451--2456, 2004.
+
+\bibitem{Michael2010b}
+N.~Michael, D.~Mellinger, Q.~Lindsey, and V.~Kumar, ``{The GRASP multiple
+  micro-UAV testbed},'' {\em IEEE Robotics and Automation Magazine}, vol.~17,
+  no.~3, pp.~56--65, 2010.
+
+\bibitem{Bangura2014}
+M.~Bangura and R.~Mahony, ``{Real-time model predictive control for
+  quadrotors},'' in {\em IFAC Proceedings Volumes (IFAC-PapersOnline)},
+  vol.~19, pp.~11773--11780, 2014.
+
+\bibitem{Reyes-Valeria2013}
+E.~Reyes-Valeria, R.~Enriquez-Caldera, S.~Camacho-Lara, and J.~Guichard, ``{LQR
+  control for a quadrotor using unit quaternions: Modeling and simulation},''
+  {\em International Conference on Electronics, Communications and Computing.
+  CONIELECOMP 2013}, pp.~172--178, 2013.
+
 \bibitem{PraveenThesis}
 R.~P.~K. Jain and T.~Keviczky, ``{MSc Thesis: Transportation of Cable Suspended
   Load using Unmanned Aerial Vehicles: A Real-time Model Predictive Control
   approach},'' 2015.
+
+\bibitem{Luis2016}
+F.~Luis, M.~Z{\"{u}}rn, and F.~Gonzalez, ``{MPC controlled Multirotor with
+  suspended slung Load : System Architecture and Visual Load Detection},''
+  2016.
+
+\bibitem{Becker2013}
+J.~D.~A. Becker, {\em {Modeling and Control of a Quadrotor with Dynamic
+  Inertia}}.
+\newblock PhD thesis, 2013.
 
 \bibitem{Sadr2014}
 S.~Sadr, S.~Ali, A.~Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and
@@ -19,6 +51,11 @@ S.~Sadr, S.~Ali, A.~Moosavian, and P.~Zarafshan, ``{Dynamics Modeling and
 \bibitem{Lee2008}
 T.~Lee, {\em {Computational Geometric Mechanics and Control of Rigid Bodies}}.
 \newblock PhD thesis, The University of Michigan, 2008.
+
+\bibitem{Bullo2005}
+F.~Bullo and A.~D. Lewis, {\em {Geometric control of mechanical systems:
+  modeling, analysis, and design for simple mechanical control systems}}.
+\newblock Springer, 2005.
 
 \bibitem{Lee2010}
 T.~Lee, M.~Leok, and N.~H. Mcclamroch, ``{Geometric Tracking Control of a
@@ -47,9 +84,14 @@ S.~Tang, ``{Aggressive Maneuvering of a Quadrotor with a Cable-Suspended
   Payload},'' tech. rep., University of Pennsylvania Philadelphia,
   Pennsylvania, 2014.
 
+\bibitem{Boothby2003}
+W.~M. Boothby, {\em {An Introduction to Differentiable Manifolds and Riemannian
+  Geometry}}.
+\newblock 2003.
+
 \bibitem{Chaturvedi2011}
-N.~Chaturvedi, A.~Sanyal, and N.~McClamroch, ``{Rigid-Body Attitude Control},''
-  {\em IEEE Control Systems}, vol.~31, no.~3, pp.~30--51, 2011.
+N.~Chaturvedi, ``{Rigid-Body Attitude Control},'' {\em IEEE Control Systems},
+  vol.~31, no.~3, pp.~30--51, 2011.
 
 \bibitem{Murray1994}
 R.~M. Murray, Z.~Li, and S.~S. Sastry, {\em {A Mathematical Introduction to
@@ -75,11 +117,6 @@ T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Stable Manifolds of Saddle Points for
 T.~Lee, M.~Leok, and N.~H. McClamroch, ``{Lie group variational integrators for
   the full body problem in orbital mechanics},'' {\em Celestial Mechanics and
   Dynamical Astronomy}, vol.~98, no.~2, pp.~121--144, 2007.
-
-\bibitem{Bullo2005}
-F.~Bullo and A.~D. Lewis, {\em {Geometric control of mechanical systems:
-  modeling, analysis, and design for simple mechanical control systems}}.
-\newblock Springer, 2005.
 
 \bibitem{Gillula2010}
 J.~H. Gillula, H.~Huang, M.~P. Vitus, and C.~J. Tomlin, ``{Design of guaranteed
@@ -107,8 +144,9 @@ I.~Kanellakopoulos, P.~V. Kokotovic, and A.~S. Morse, ``{Systematic Design of
   Transactions on Automatic Control}, vol.~36, no.~11, pp.~1241--1253, 1991.
 
 \bibitem{Cornelis2014}
-U.~A.~V. Cornelis and M.~Vlaar, ``{Incremental Nonlinear Dynamic Inversion
-  flight control},'' no.~November, 2014.
+U.~A.~V. Cornelis and M.~Vlaar, {\em {Incremental Nonlinear Dynamic Inversion
+  flight control}}.
+\newblock PhD thesis, Tecnico Lisboa, 2014.
 
 \bibitem{Farrell2008}
 J.~A. Farrell, M.~Polycarpou, M.~Sharma, and W.~Dong, ``{Command Filtered
@@ -123,25 +161,14 @@ J.~Farrell, M.~Polycarpou, and M.~Sharma, ``{Backstepping-Based Flight Control
 B.~M. Borra, ``{Nonlinear UAV Flight Control Using Command Filtered
   Backstepping},'' {\em Simulation}, no.~March, pp.~1--161, 2012.
 
-\bibitem{Reyes-Valeria2013}
-E.~Reyes-Valeria, R.~Enriquez-Caldera, S.~Camacho-Lara, and J.~Guichard, ``{LQR
-  control for a quadrotor using unit quaternions: Modeling and simulation BT -
-  Electronics, Communications and Computing (CONIELECOMP), 2013 International
-  Conference on},'' pp.~172--178, 2013.
-
-\bibitem{Mellinger2011}
-D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
-  for quadrotors},'' in {\em Proceedings - IEEE International Conference on
-  Robotics and Automation}, pp.~2520--2525, 2011.
-
 \bibitem{Tang2015}
 S.~Tang and V.~Kumar, ``{Mixed Integer Quadratic Program Trajectory Generation
   for a Quadrotor with a Cable-Suspended Payload},'' {\em IEEE International
   Conference on Robotics and Automation (ICRA)}, pp.~2216--2222, 2015.
 
-\bibitem{Becker2013}
-J.~D.~A. Becker, {\em {Modeling and Control of a Quadrotor with Dynamic
-  Inertia}}.
-\newblock PhD thesis, 2013.
+\bibitem{Mellinger2011}
+D.~Mellinger and V.~Kumar, ``{Minimum snap trajectory generation and control
+  for quadrotors},'' in {\em Proceedings - IEEE International Conference on
+  Robotics and Automation}, pp.~2520--2525, 2011.
 
 \end{thebibliography}

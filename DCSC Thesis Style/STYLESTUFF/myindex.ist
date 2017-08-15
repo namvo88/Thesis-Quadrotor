@@ -1,0 +1,11 @@
+% mystyle.ist
+heading_prefix "{\\bfseries\\hfil "
+heading_suffix "\\hfil}\\nopagebreak\n"
+headings_flag       1
+delim_0 "\\dotfill "
+delim_1 "\\dotfill "
+delim_2 "\\dotfill "
+%headings_flag 1
+%heading_prefix "{\\bfseries "
+%heading_suffix "\\hfil}\\nopagebreak\n"
+%symhead_positive "Symbols"

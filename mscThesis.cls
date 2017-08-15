@@ -1,45 +1,99 @@
-%%--------------------------------------------------------------------------------------
-%%        Master of Science thesis style file
-%%        Delft Center for Systems and Control
-%%        Delft University of Technology
+%%-----------------------------------------------------------------------------
+%% Master of Science thesis style file
+%% Delft Center for Systems and Control
+%% Delft University of Technology
 %%
-%%    This thesis style is distributed freely. 
-%%    Please be so kind to report errors and possible improvements to the authors
+%% This thesis style is distributed freely. 
+%% Please be so kind to report errors and possible improvements to the authors
 %% 
 %%        P.S.C. Heuberger
 %%        p.s.c.heuberger@tudelft.nl
 %%
-%%--------------------------------------------------------------------------------------
+%%-----------------------------------------------------------------------------
 %% Adapted from:
 %%
-%%    Delft University of Technology Control and Simulation MSc thesis
-%%    http://www.cs.lr.tudelft.nl/
+%% Delft University of Technology Control and Simulation MSc thesis
+%% http://www.cs.lr.tudelft.nl/
 %%
 %%        C. DeWagter, Msc.
 %%        C. Borst, MSc.
-%%--------------------------------------------------------------------------------------
-%% First adaptation for DCSC by M. Burger and S.D. Snorradottir
-%%--------------------------------------------------------------------------------------
-%% Last update for DCSC by P.S.C. Heuberger,  January 9, 2009
+%%-----------------------------------------------------------------------------
+%% First adaptation for DCSC
+%%
+%%        M. Burger
+%%        S.D. Snorradottir
+%%-----------------------------------------------------------------------------
 %% Update information:
-%% June 12, 2008       option  breaklinks=true added at hyperref package
-%%                     takes care of wrapping long lines in tables of contents etc 
-%% December 11, 2008   Improved Logo picture on title page  (DCSC/TUDelft)
-%%                     text "Delft Center for Systems and Control" changed to white
-%% January 9, 2009     Removed background picture option for titlepage
-%%                     Added option for Third Party Logo and text on Copyright Page 
-%%                     Added option for Title Page picture
-%%                     Include example eps files for Title Page picture / Third Party logo
-%% January 15, 2009    Added option mscProgram
-%%--------------------------------------------------------------------------------------
+%%
+%% November 15, 2011 (Peter Heuberger)
+%%     - repaired error for black title box on cover  (line 1248)
+%% 
+%%
+%% October 24, 2011 (Peter Heuberger)
+%%     -corrected width of "bies" from 610 to 595 (line 1194) 
+%%     - improved command for black title box on cover  (line 1248)
+%%
+%% August 18, 2010 (Peter Heuberger)
+%%     -corrected the use of \large in the signature section
+%%      as of now using 10pt,11pt and 12pt results in really different font size
+%%     -changed a minor typoo in the introduction text
+%%
+%% June 9, 2010 (Peter Heuberger)
+%%     added info on (re)newcommand
+%%     added package relsize
+%%
+%% April 9. 2010 (Peter Heuberger)
+%%   Adapted for Linux: 
+%%   - Changed alle references to Stylestuff into STYLESTUFF
+%%   - Renamed directory Stylestuff into STYLESTUFF
+%% March 25, 2010 (Peter Heuberger)
+%%   - Acronyms are no longer displayed in small capitals
+%%     removed 'smaller' from \RequirePackage[printonlyused,smaller]{acronym}
+%% March 16, 2010 (Peter Heuberger)
+%%  -emptied \mscProgram and \mscDepartment
+%%   these are filled in the tex file!
+%%  - in def of Backgroundpicture   )fill up page)
+%%    replaced     \centering\includegraphics{#1}
+%%    by \centering\includegraphics[width=\paperwidth,height=\paperheight]{#1}
+%%  - Made a distinction between supervisors (max 3)) and readers (max 4) on signature page
+%%  - added program on signature page
+%%  - added option to add confidential on Cover, Title page and footer
+%%
+%% October 20, 2009 (Peter Heuberger)
+%%  - changed Delft Centre for....  in Delft Center for...
+%%  - empty mscProgram changed to Systems and Control
+%%  - mscDepartment{Systems and Control}: added Delft Center for
+%%
+%% May 12, 2009 (Steven Mulder)
+%%  - Updated cover page to match new TU huisstijl
+%%  - Added option 'nosignatures' to turn off signature page
+%%  - Fixed warnings due to deprecated options and packages
+%%  - Fixed bad boxes in titlepages
+%%  - Added package lmodern for slightly better fonts
+%%  - Added hyperref pdf bookmarks for titlepages, TOC, ...
+%%
+%% January 15, 2009 (P.S.C. Heuberger)
+%%  - Added option mscProgram
+%%
+%% January 9, 2009  (P.S.C. Heuberger)
+%%  - Removed background picture option for titlepage
+%%  - Added option for Third Party Logo and text on Copyright Page 
+%%  - Added option for Title Page picture
+%%  - Include example eps files for Title Page picture / Third Party logo
+%%
+%% December 11, 2008 (P.S.C. Heuberger)
+%%  - Improved Logo picture on title page  (DCSC/TUDelft)
+%%  - Text "Delft Center for Systems and Control" changed to white
+%%
+%% June 12, 2008 (P.S.C. Heuberger)
+%%  - Option  breaklinks=true added at hyperref package takes care of wrapping
+%%    long lines in tables of contents etc.
+%%-----------------------------------------------------------------------------
 %%
 %% based on LaTeX 'book.cls'
-%%--------------------------------------------------------------------------------------
+%%-----------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{mscThesis}[12/03/2007 Standard Systems and Control MSc Thesis class]
-%%\ProvidesClass{mscThesis}
-%%              [2004/09/28 v1.0f
-%% Standard Control and Simulation MSc Thesis class]
 %%
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,11 +101,12 @@
 %%    MSc Thesis Definitions
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  \mscProgram
 %%
+%%
+\newcommand*{\mscConfidential}[1]%
+            {\def\mscconfidential{#1}}
 \newcommand*{\mscDepartment}[1]%
             {\def\mscdepartment{#1}}
-%new  Jan 15, 2009
 \newcommand*{\mscProgram}[1]%
             {\def\mscprogram{#1}}
 \newcommand*{\mscFaculty}[1]%
@@ -60,24 +115,24 @@
             {\def\mscname{#1}}
 \newcommand*{\mscTitle}[1]%
             {\def\msctitle{#1}}
-\newcommand*{\mscTitleA}[1]%
-            {\def\msctitleA{#1}}
 \newcommand*{\mscSubTitle}[1]%
             {\def\mscsubtitle{#1}}
 \newcommand*{\mscDate}[1]%
             {\def\mscdate{#1}}
-%removed Jan 8, 2009
-%\newcommand*{\mscBackPicture}[1]%
-%            {\def\mscbackpicture{#1}}
-%new Jan 8, 2009
-\newcommand*{\mscTitlePagePicture}[1]%
-            {\def\msctitlepagepicture{#1}}
-%new Jan 8, 2009
+\newcommand*{\mscCoverPicture}[1]%
+            {\def\msccoverpicture{#1}}
+\newcommand*{\mscTitlePagePicture}[1]% added for compatibility
+            {\def\msccoverpicture{#1}}
 \newcommand*{\mscThirdPartyLogo}[1]%
             {\def\mscthirdpartylogo{#1}}
-%new Jan 8, 2009
 \newcommand*{\mscThirdPartyText}[1]%
             {\def\mscthirdpartytext{#1}}
+\newcommand*{\mscSupervisorOne}[1]%
+            {\def\mscsupervisorone{#1}}
+\newcommand*{\mscSupervisorTwo}[1]%
+            {\def\mscsupervisortwo{#1}}
+\newcommand*{\mscSupervisorThree}[1]%
+            {\def\mscsupervisorthree{#1}}
 \newcommand*{\mscReaderOne}[1]%
             {\def\mscreaderone{#1}}
 \newcommand*{\mscReaderTwo}[1]%
@@ -88,23 +143,22 @@
             {\def\mscreaderfour{#1}}
 \newcommand*{\mscKeyWords}[1]%
             {\def\msckeywords{#1}}
+\mscConfidential{}
 \mscDepartment{}
-\mscFaculty{Mechanical, Maritime and Materials Engineering (3ME)}
 \mscProgram{}
+\mscFaculty{}
 \mscName{}
 \mscTitle{}
-\mscTitleA{}
 \mscSubTitle{}
 \mscKeyWords{}
 \mscDate{\today}
-%removed Jan 8, 2009
-%\mscBackPicture{}
-%new Jan 8, 2009
+\mscCoverPicture{}
 \mscTitlePagePicture{}
-%new Jan 8, 2009
 \mscThirdPartyLogo{}
-%new Jan 8, 2009
 \mscThirdPartyText{}
+\mscSupervisorOne{}
+\mscSupervisorTwo{}
+\mscSupervisorThree{}
 \mscReaderOne{}
 \mscReaderTwo{}
 \mscReaderThree{}
@@ -122,44 +176,57 @@
 \newif\if@restonecol
 \newif\if@titlepage
 \@titlepagetrue
+%
+% custom boolean for turning the signatures page on/off
+\newif\ifsigpage
+\sigpagetrue
+%
 \newif\if@openright
-\newif\if@mainmatter \@mainmattertrue
+\newif\if@mainmatter
+\@mainmattertrue
 \if@compatibility\else
-\DeclareOption{a4paper}
-   {\setlength\paperheight {297mm}%
-    \setlength\paperwidth  {210mm}}
-\DeclareOption{landscape}
-   {\setlength\@tempdima   {\paperheight}%
+    \DeclareOption{a4paper}{%
+        \setlength\paperheight {297mm}%
+    \setlength\paperwidth  {210mm}%
+  }
+    \DeclareOption{landscape}{%
+    \setlength\@tempdima   {\paperheight}%
     \setlength\paperheight {\paperwidth}%
-    \setlength\paperwidth  {\@tempdima}}
+    \setlength\paperwidth  {\@tempdima}%
+    }
 \fi
 \if@compatibility
   \renewcommand\@ptsize{0}
 \else
-\DeclareOption{10pt}{\renewcommand\@ptsize{0}}
+    \DeclareOption{10pt}{\renewcommand\@ptsize{0}}
 \fi
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
 \DeclareOption{12pt}{\renewcommand\@ptsize{2}}
 \if@compatibility\else
-\DeclareOption{oneside}{\@twosidefalse \@mparswitchfalse}
+    \DeclareOption{oneside}{\@twosidefalse \@mparswitchfalse}
 \fi
 \DeclareOption{twoside}{\@twosidetrue  \@mparswitchtrue}
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \if@compatibility\else
-\DeclareOption{final}{\setlength\overfullrule{0pt}}
+    \DeclareOption{final}{\setlength\overfullrule{0pt}}
 \fi
 \DeclareOption{titlepage}{\@titlepagetrue}
 \if@compatibility\else
-\DeclareOption{notitlepage}{\@titlepagefalse}
+    \DeclareOption{notitlepage}{\@titlepagefalse}
 \fi
+%
+% custom option for turning the signature page on/off
+\DeclareOption{signatures}{\sigpagetrue}
+\DeclareOption{nosignatures}{\sigpagefalse}
+%
 \if@compatibility
-\@openrighttrue
+    \@openrighttrue
 \else
-\DeclareOption{openright}{\@openrighttrue}
-\DeclareOption{openany}{\@openrightfalse}
+    \DeclareOption{openright}{\@openrighttrue}
+    \DeclareOption{openany}{\@openrightfalse}
 \fi
 \if@compatibility\else
-\DeclareOption{onecolumn}{\@twocolumnfalse}
+    \DeclareOption{onecolumn}{\@twocolumnfalse}
 \fi
 \DeclareOption{twocolumn}{\@twocolumntrue}
 \DeclareOption{leqno}{\input{leqno.clo}}
@@ -174,7 +241,7 @@
       }%
    \renewcommand\newblock{\par}}%
 }
-\ExecuteOptions{a4paper,11pt,twoside,onecolumn,final,openright}
+\ExecuteOptions{a4paper,11pt,twoside,onecolumn,final,openright,signatures}
 \ProcessOptions
 \input{bk1\@ptsize.clo}
 \setlength\lineskip{1\p@}
@@ -244,8 +311,7 @@
   \null\vfil
   \vskip 60\p@
   \begin{center}%
-\hskip -5cm %%%    
-{\LARGE \@title \par}%
+    {\LARGE \@title \par}%
     \vskip 3em%
     {\large
      \lineskip .75em%
@@ -343,18 +409,32 @@
 \newcommand\frontmatter{%
     \cleardoublepage
   \@mainmatterfalse
-  \pagenumbering{roman}}
+  \pagenumbering{roman}
+  \pagestyle{fancyplain}
+    %
+    \pdfbookmark[-1]{Front Matter}{frontmatter_anchor}
+    %
+    }
 \newcommand\mainmatter{%
     \cleardoublepage
   \@mainmattertrue
-  \pagenumbering{arabic}}
+  \pagenumbering{arabic}
+  \pagestyle{fancyplain}
+    %
+    \pdfbookmark[-1]{Main Matter}{mainmatter_anchor}
+    %
+    }
 \newcommand\backmatter{%
   \if@openright
     \cleardoublepage
   \else
     \clearpage
   \fi
-  \@mainmatterfalse}
+  \@mainmatterfalse
+    %
+    \pdfbookmark[-1]{Back Matter}{backmatter_anchor}
+    %
+    }
 \newcommand\part{%
   \if@openright
     \cleardoublepage
@@ -418,7 +498,7 @@
                          \addcontentsline{toc}{chapter}%
                                    {\protect\numberline{\thechapter}#1}%
                        \else
-                         \addcontentsline{toc}{chapter}{#1}%
+                         \addcontentsline{toc}{chapter}{\numberline{}#1}%
                        \fi
                     \else
                       \addcontentsline{toc}{chapter}{#1}%
@@ -506,7 +586,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%%  Commands
+%%  Enumeration style
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -561,16 +641,6 @@
                {\list{}{\rightmargin\leftmargin}%
                 \item\relax}
                {\endlist}
-% --- Define Annexdote Style ---
-\RequirePackage{ntheorem}
-\newcounter{Anecdote}
-\setcounter{Anecdote}{1} \theoremstyle{plain}
-%\theoremheaderfont{\slshape}
-\theoremheaderfont{\scshape} \theorembodyfont{\upshape}
-\theoremindent1.5cm
-\newtheorem{anecdote}{Anecdote}[Anecdote]
-%\renewcommand{\theanecdote}{\thechapter.\arabic{anecdote}}
-\renewcommand{\theanecdote}{\arabic{anecdote}}
 %%
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -691,7 +761,7 @@
 \newcommand\@dotsep{4.5}
 \setcounter{tocdepth}{3}
 \newcommand\tableofcontents{%
-    \thispagestyle{empty}
+%    \thispagestyle{empty}
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -699,7 +769,10 @@
     \fi
     \chapter*{\contentsname
         \@mkboth{%
-           \contentsname}{\contentsname}}%
+           \contentsname}{\contentsname}\pdfbookmark[0]{Table of Contents}{toc_anchor}}%
+    %
+    
+    %
     \@starttoc{toc}%
     \if@restonecol\twocolumn\fi
     \cleardoublepage
@@ -745,7 +818,7 @@
     \else
       \@restonecolfalse
     \fi
-    \chapter*{\listfigurename}%
+    \chapter*{\listfigurename\pdfbookmark[0]{List of Figures}{lof_anchor}}%
       \@mkboth{\listfigurename}%
               {\listfigurename}%
     \@starttoc{lof}%
@@ -758,7 +831,7 @@
     \else
       \@restonecolfalse
     \fi
-    \chapter*{\listtablename}%
+    \chapter*{\listtablename\pdfbookmark[0]{List of Tables}{lot_anchor}}%
       \@mkboth{%
           \listtablename}%
          {\listtablename}%
@@ -770,7 +843,8 @@
 \setlength\bibindent{1.5em}
 \newenvironment{thebibliography}[1]
      {\chapter*{\bibname}%
-      \@mkboth{\bibname}{\bibname}%
+%      \@mkboth{\bibname}{\bibname}%
+            \chaptermark{\bibname}%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth
@@ -790,14 +864,15 @@
 \newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
 \let\@openbib@code\@empty
 \newenvironment{theindex}
-               {\if@twocolumn
+               {\phantomsection
+               \addcontentsline{toc}{chapter}{\numberline{}Index}
+               \if@twocolumn
                   \@restonecolfalse
                 \else
                   \@restonecoltrue
                 \fi
                 \twocolumn[\@makeschapterhead{\indexname}]%
-                \@mkboth{\indexname}%
-                        {\indexname}%
+                \chaptermark{\indexname}%
                 \thispagestyle{plain}\parindent\z@
                 \parskip\z@ \@plus .3\p@\relax
                 \columnseprule \z@
@@ -831,7 +906,7 @@
 \def\today{\ifcase\month\or
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
-  \space\number\day, \number\year}
+  \space\oldstylenums{\number\day}, \oldstylenums{\number\year}}
 \setlength\columnsep{10\p@}
 \setlength\columnseprule{0\p@}
 \pagestyle{headings}
@@ -847,422 +922,530 @@
 % \else
   \onecolumn
 % \fi
-
-%--------------------------------------------------------------------------------------
 %%
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%%  HyperReference
+%%  REQUIRED PACKAGES
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%
-\RequirePackage{hyperref}
-\RequirePackage{colortbl}
-%
-\definecolor{darkred}{rgb}{0.5,0,0}
-\definecolor{darkgreen}{rgb}{0,0.3,0}
-\definecolor{darkblue}{rgb}{0,0,0.5}
-\definecolor{darkbrown}{rgb}{0.28,0.07,0.07}
-%
-\hypersetup{colorlinks=true,
-            breaklinks=true,
-            citecolor=darkblue,
-            urlcolor=darkblue,
-            linkcolor=darkblue,
-            menucolor=darkblue,
-            anchorcolor=red,}
-%            pagecolor=cyan,}
-%            pdfborder=[0 0 0],}
+\RequirePackage[T1]{fontenc}                        % T1 font encoding for PDFs
+\RequirePackage{lmodern}                                % extended font definition
+\RequirePackage{amsmath,amssymb,amsthm} % most important math stuff
+\RequirePackage{a4wide}                                 % make better use of A4 paper
+\RequirePackage{fancyhdr}                               % custom headers and footers
+\RequirePackage{fncychap}                               % custom chapter titles
+\RequirePackage{graphicx}                               % graphics
+\RequirePackage{color}                                  % color
+\RequirePackage{booktabs}                               % extra tabular commands
+\RequirePackage[format=plain]{caption}  % improved caption format
+\RequirePackage{nomencl}                                % cool nomenclature listing
+\RequirePackage{makeidx}                                % create your index
+\RequirePackage[printonlyused]{acronym}
+\RequirePackage{ifthen}                                 % if-then commands (used in maketitle)
+\RequirePackage{eso-pic}                                % picture in back/forground (used in cover)
+\RequirePackage{relsize}                                % \textlarger, \textsmaller etc
 %%
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%%  Extra Packages
+%%  Set up Matlab and C++ Listings
+%%  REQUIRES PACKAGE listings AND colortbl
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%
-\RequirePackage{a4wide}
-\RequirePackage{fancyhdr}
-\RequirePackage[leftbars]{StyleStuff/changebar}
-\RequirePackage{theorem}
-\RequirePackage{graphicx}
-\RequirePackage{psfrag}
-
-\RequirePackage{makeidx}
-\RequirePackage{color,ifthen,epsfig}
-\RequirePackage{StyleStuff/eso-pic}
-\RequirePackage{StyleStuff/fncychap}
-\RequirePackage{sidecap}
-\RequirePackage{amsmath,amssymb,nicefrac,eurosym}
-\RequirePackage{StyleStuff/latexcad}   % latexcad.sty for drawings etc
-    \setlength{\unitlength}{1mm}
-%%
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%  Matlab and C++ Listings
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%%
+\RequirePackage{listings}%
+\RequirePackage{xcolor}%
 %
-%---MATLAB INSERTING---%
-\RequirePackage{listings}
-\RequirePackage{colortbl}
+\definecolor{string}{rgb}{0.7,0.0,0.0}
+\definecolor{comment}{rgb}{0.13,0.54,0.13}
+\definecolor{keyword}{rgb}{0.0,0.0,1.0}
 %
-\lstloadlanguages{Matlab}
-%
-\lstset{language=Matlab, numbers = right, stepnumber = 5,breaklines=true}
-%
-\definecolor{MATdarkgreen}{rgb}{0.1333,0.545,0.1333}
-\definecolor{MATdarkred}{rgb}{0.698,0,0}
-%
-\lstset{basicstyle=\tiny, tabsize=4,
-        stringstyle=\ttfamily\color{MATdarkred},
-        keywordstyle=\ttfamily\color{blue},
-        identifierstyle=\ttfamily,
-        showstringspaces=false,
-        commentstyle=\ttfamily\color{MATdarkgreen}}
+\lstloadlanguages{Matlab,C++}
+\lstset{breaklines=true,%
+                basicstyle=\small,%
+                tabsize=2,%
+        stringstyle=\ttfamily\color{string},%
+        keywordstyle=\ttfamily\color{keyword},%
+        identifierstyle=\ttfamily,%
+        showstringspaces=false,%
+        commentstyle=\ttfamily\color{comment},%             
+                numbers=left,
+                numberstyle=\scriptsize}
 % EXTRA: \bfseries \underbar \ttfamily
-
-\newcommand{\matlab}{\textsc{Matlab}}
-
-%
-% --- Use Acronyms ---
-\RequirePackage{acronym}
-\renewcommand{\ac}[1]{%
-  \expandafter\ifx\csname ac@#1@\thechapter\endcsname\relax%
-    \acf{#1}%
-    \expandafter\gdef\csname ac@#1@\thechapter\endcsname{x}%
-  \else%
-    \acs{#1}%
-  \fi}
-%
-%--------------------------------------------------------------------------------------
-%\renewcommand{\captionfont}{\small\sffamily}
-%\renewcommand{\captionlabelfont}{\small\bfseries\sffamily}
-%\setlength{\captionmargin}{20pt}
-%For fncychap
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Font for captions
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\renewcommand{\captionfont}{\small\sffamily}
+\renewcommand{\captionlabelfont}{\small\bfseries\sffamily}
+\setlength{\captionmargin}{20pt}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Fancy chapters
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
 \makeatletter
-  %\ChNameUpperCase
-  %\ChTitleUpperCase
-  \ChNameVar{\raggedleft\Huge\rm}
-  \ChNumVar{\Huge\rm}
-  \ChTitleVar{\raggedleft\Huge\sf\bfseries}
-  \ChRuleWidth{2pt}
-
-  \renewcommand{\DOCH}{%
+%\ChNameUpperCase
+%\ChTitleUpperCase
+\ChNameVar{\raggedleft\Huge\rm}
+\ChNumVar{\Huge\rm}
+\ChTitleVar{\raggedleft\Huge\sf\bfseries}
+\ChRuleWidth{2pt}
+\renewcommand{\DOCH}{%
     %\mghrulefill{3\RW}\par\nobreak % vette lijn
     \vskip -0.5\baselineskip
     \mghrulefill{\RW}\par\nobreak
     \CNV\FmN{\@chapapp}\space \CNoV\thechapter
     \par\nobreak
     \vskip -0.5\baselineskip
-   }
-  \renewcommand{\DOTI}[1]{%
+    \acresetall
+    }
+\renewcommand{\DOTI}[1]{%
     \mghrulefill{\RW}\par\nobreak
     \CTV\FmTi{#1}\par\nobreak
     \vskip 60\p@
     }
-  \renewcommand{\DOTIS}[1]{%
+\renewcommand{\DOTIS}[1]{%
     \mghrulefill{\RW}\par\nobreak
     \CTV\FmTi{#1}\par\nobreak
     \vskip 60\p@
     }
 \makeatother
-
-\definecolor{dark}{gray}{.25}
-
-%REQUIRES "FANCYHDR.STY"
-%-------------------------------------------------------------------------------------------
-%                            Header definitions... (Clark Borst)
-%-------------------------------------------------------------------------------------------
+%%
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Chapter with no numbers
+%%  ORIGINAL: Clark and Christophe
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\newcommand{\nonumchap}[1]{%
+        \cleardoublepage
+    \phantomsection % Added by Martijn van de Giessen
+    \pagestyle{fancyplain}
+    \addcontentsline{toc}{chapter}{\numberline{}#1}
+    \chapter*{#1}
+    \chaptermark{#1}
+    %
+    % test:
+    \lhead[\fancyplain{}{\small\textsf{\thepage}}]%
+          {\fancyplain{}{\small\textsf{\rightmark}}}
+        \rhead[\fancyplain{}{\small\textsf{\leftmark}}]%
+          {\fancyplain{}{\small\textsf{\thepage}}}
+        \cfoot{}
+        \lfoot[\small\textsf{\mscname}]%
+              {\small\textsf{Master of Science Thesis}}
+        \rfoot[\small\textsf{Master of Science Thesis}]%
+              {\small\textsf{\mscname}} 
+}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Fancy headers
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
 \pagestyle{fancyplain}
-\addtolength{\headheight}{\baselineskip} %add some space to headheight to eliminate LaTeX "Overfull \vbox..." warnings
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
+\setlength{\headheight}{13.6pt} %add some space to headheight to eliminate LaTeX "Overfull \vbox..." warnings
+\renewcommand{\chaptermark}[1]%
+             {\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]%
+             {\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\small\textsf{\thepage}}]%
+      {\fancyplain{}{\small\textsf{\rightmark}}}
+\rhead[\fancyplain{}{\small\textsf{\leftmark}}]%
+      {\fancyplain{}{\small\textsf{\thepage}}}
 \cfoot{}
-%--------------------------------------------------------------------------------------
-
-%REQUIRES PACKAGE "THEOREM.STY" AND "CHANGEBAR.STY"
-%------------------------------------------------------------------------------------%
-%                       EXAMPLE ENVIRONMENT (Clark Borst)                            %
-%------------------------------------------------------------------------------------%
-\setlength{\changebarwidth}{5mm} \setlength{\changebarsep}{-20pt}
-\setcounter{changebargrey}{75}
-\theoremstyle{break} \theorembodyfont{\normalfont\small}
-\theoremheaderfont{\sffamily\bfseries\Large}
-\newtheorem{example}{EXAMPLE}[chapter]
-\newenvironment{ex}{\begin{quote}%
-  \begin{example} \begin{changebar}}{\end{changebar} \end{example} \end{quote}}%
-\newenvironment{exa}{\vspace*{\baselineskip} \begin{ex}}%
-                    {\end{ex} \vspace*{\baselineskip}}
-%------------------------------------------------------------------------------------%
-%                            EXAMPLE ENVIRONMENT                                     %
-%------------------------------------------------------------------------------------%
-\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
-
-\renewcommand{\Re}{\mathfrak{Re}}
-\renewcommand{\Im}{\mathfrak{Im}}
-
-\setlength{\parskip}{\medskipamount}
-\setlength{\parindent}{0pt}
-
-\setcounter{tocdepth}{3}
-
-%\renewcommand{\cfttoctitlefont}%
-%{   \vskip -0.5\baselineskip
-%    \mghrulefill{\RW}\par\nobreak \vskip 0.5\baselineskip
-%    \raggedleft
-%     \Huge\bfseries\sffamily}
-%\renewcommand{\cftchapfont}{\large\bfseries\sffamily}
-%\renewcommand{\cftsecfont}{\sffamily}
-%\renewcommand{\cftsubsecfont}{\sffamily}
-%\renewcommand{\cftsubsubsecfont}{\sffamily}
-%\renewcommand{\cftpartfont}{\Large\bfseries\sffamily}
-%\renewcommand{\cftmarktoc}{\markboth{\bfseries\contentsname}{\bfseries\contentsname}}
-%\setlength{\cftaftertoctitleskip}{2cm}
+\lfoot[\small\textsf{\mscname}]%
+      {\small\textsf{Master of Science Thesis}}
+\rfoot[\small\textsf{Master of Science Thesis}]%
+      {\small\textsf{\mscname}} 
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Set up nomenclature listing
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\renewcommand{\nomname}{List of Symbols}
+\setlength{\nomitemsep}{-0.5\parsep}
+\newcommand{\abbrev}[2]%
+           {#2 (#1)\nomenclature[a ]{#1}{\MakeUppercase#2}}
+\newcommand{\lsymb}[2]%
+           {#1\nomenclature[c ]{#1}{\MakeUppercase#2}}
+\newcommand{\gsymb}[2]%
+           {#1\nomenclature[b ]{#1}{\MakeUppercase#2}}
+\newcommand{\subs}[2]%
+           {\nomenclature[d ]{$ _{#1} $}{\MakeUppercase#2}}
+\newcommand{\supers}[2]%
+           {\nomenclature[e ]{$ ^{#1} $}{\MakeUppercase#2}}
+\newcommand{\others}[2]%
+           {\nomenclature[f ]{#1}{\MakeUppercase#2}}
+\renewcommand{\nomgroup}[1]{%
+  \ifthenelse{\equal{#1}{A}}{%
+    \medskip\item[\large\textbf{\textsf{Abbreviations}}]\medskip}{%
+    \ifthenelse{\equal{#1}{C}}{%    
+%      \medskip\item[\large\textbf{\textsf{Latin Symbols}}]\medskip}{%
+            \medskip}{%
+      \ifthenelse{\equal{#1}{B}}{%
+%        \medskip\item[\large\textbf{\textsf{Greek Symbols}}]\medskip}{%
+                \medskip}{%
+        \ifthenelse{\equal{#1}{D}}{%
+%          \medskip\item[\large\textbf{\textsf{Subscripts}}]\medskip}{%
+                    \medskip}{%
+          \ifthenelse{\equal{#1}{E}}{%
+%            \medskip\item[\large\textbf{\textsf{Superscripts}}]\medskip}{%
+            \medskip}{%
+              \ifthenelse{\equal{#1}{F}}{%
+%                \medskip\item[\large\textbf{\textsf{Other}}]\medskip}
+                \medskip}{%
+                }%
+   }}}}}}
+\newcommand{\printnomencl}{%
+  \phantomsection % Added by Martijn van de Giessen
+    \addcontentsline{toc}{section}{\numberline{}\nomname}
+%  \markboth{\nomname}{\nomname}
+  \printnomenclature[0.8in]
+}
+\newcommand{\printacronyms}{%
+  \phantomsection % Added by Martijn van de Giessen
+    \addcontentsline{toc}{section}{\numberline{}List of Acronyms}
+%  \markboth{\nomname}{\nomname}
+    \section*{List of Acronyms}
+}
 %
-%\renewcommand{\cftloftitlefont}%
-%{\Huge\bfseries\sffamily}
-%\setlength{\cftafterloftitleskip}{2cm}
-%\renewcommand{\cftfigfont}{\sffamily}
-%\renewcommand{\cftmarklof}{\markboth{\bfseries\listfigurename}{\bfseries\listfigurename}}
-%
-%\renewcommand{\cftlottitlefont}%
-%{\Huge\bfseries\sffamily}
-%\setlength{\cftafterlottitleskip}{2cm}
-%\renewcommand{\cfttabfont}{\sffamily}
-%\renewcommand{\cftmarklot}{\markboth{\bfseries\listtablename}{\bfseries\listtablename}}
-%--------------------------------------------------------------------------------------
-%\renewcommand{\nomname}{Nomenclature}
-%\setlength{\nomitemsep}{-0.5\parsep}
-
-		\newcommand{\abbrev}[2]
-		   {#2 (#1)\nomenclature[a ]{#1}{\MakeUppercase#2}}
-		
-		\newcommand{\lsymb}[2]
-		   {#1\nomenclature[c ]{#1}{\MakeUppercase#2}}
-		
-		\newcommand{\gsymb}[2]
-		   {#1\nomenclature[b ]{#1}{\MakeUppercase#2}}
-		
-		\newcommand{\subs}[2]
-		   {\nomenclature[d ]{$ _{#1} $}{\MakeUppercase#2}}
-		
-		\newcommand{\supers}[2]
-		   {\nomenclature[e ]{$ ^{#1} $}{\MakeUppercase#2}}
-		
-		\newcommand{\others}[2]
-		   {\nomenclature[f ]{#1}{\MakeUppercase#2}}
-
-
-
-%\renewcommand{\nomgroup}[1]{%
-%  \ifthenelse{\equal{#1}{A}}{%
-%  \medskip\item[\LARGE\textbf{\textsf{Abbreviations}}]\medskip}{%
-%  \ifthenelse{\equal{#1}{C}}{%
-%   \medskip\item[\LARGE\textbf{\textsf{Latin Symbols}}]\medskip}{%
-%  \ifthenelse{\equal{#1}{B}}{%
-%   \medskip\item[\LARGE\textbf{\textsf{Greek Symbols}}]\medskip}{%
-%  \ifthenelse{\equal{#1}{D}}{%
-%   \medskip\item[\LARGE\textbf{\textsf{Subscripts}}]\medskip}{%
-%  \ifthenelse{\equal{#1}{E}}{%
-%  \medskip\item[\LARGE\textbf{\textsf{Superscripts}}]\medskip}{%
-%    \ifthenelse{\equal{#1}{F}}{%
-%   \medskip\item[\LARGE\textbf{\textsf{Other}}]\medskip}{}%
-%   }}}}}}
-%--------------------------------------------------------------------------------------
 \makeatletter
-%removed Jan 8, 2009
-%\newcommand\BackgroundPicture[1]{%
-%    \setlength{\unitlength}{1pt}%
-%    \put(0,\strip@pt\paperheight){%
-%    \parbox[t][\paperheight]{\paperwidth}{%
-%    \vfill
-%    \centering\includegraphics{#1}
-%    \vfill
-%}}}
-\newcommand\TuPicture[1]{%
+\renewcommand{\thenomenclature}{%
+    \section*{\nomname}
+    \if@intoc\addcontentsline{toc}{section}{\nomname}\fi%
+  \nompreamble
+  \list{}{%
+    \labelwidth\nom@tempdim
+    \leftmargin\labelwidth
+    \advance\leftmargin\labelsep
+    \itemsep\nomitemsep
+    \let\makelabel\nomlabel}}
+\makeatother
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Set up bibliography
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\newcommand{\printbib}[1]{%
+\cleardoublepage%
+\chaptermark{\bibname}
+\phantomsection% Added by Martijn van de Giessen
+\addcontentsline{toc}{chapter}{\numberline{}\bibname}%
+\bibliography{#1}%
+\cleardoublepage%
+}
+%%
+%% Appendix
+%%
+\renewcommand{\appendix}{\par
+  \setcounter{chapter}{0}%
+  \setcounter{section}{0}%
+%  \gdef\@chapapp{\appendixname}%
+%  \gdef\thechapter{\@Alph\c@chapter}
+    \renewcommand{\chaptername}{\appendixname}
+    \renewcommand{\thechapter}{\Alph{chapter}}
+    %
+    \pdfbookmark[-1]{Appendices}{apdx_anchor}
+    %
+    }
+
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Title pages etc.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\makeatletter
+\newcommand\BackgroundPicture[1]{%
     \setlength{\unitlength}{1pt}%
     \put(0,\strip@pt\paperheight){%
     \parbox[t][\paperheight]{\paperwidth}{%
     \vfill
-    \centering\includegraphics{#1}
+    \centering\includegraphics[width=\paperwidth,height=\paperheight]{#1}
+    \vfill
 }}}
+\newcommand\TuBies{%
+  \setlength{\unitlength}{1pt}%
+  \put(0,\strip@pt\paperheight){%
+    \parbox[t][\paperheight]{\paperwidth}{%
+        \vfill
+%PH aangepast 24-10-2011
+%            \begin{picture}(610,90)%
+            \begin{picture}(595,90)%
+                \linethickness{90pt}%
+                \put(0,45){\color{white} \line(1,0){614}}%
+                \linethickness{38pt}%
+                \put(0,19){\color{cyan} \line(1,0){614}}%
+                \linethickness{1pt}%
+                \put(0,90){\color{black} \line(1,0){614}}%
+                \put(0,14){\color{white} \line(1,0){614}}%
+                \put(80,43){\includegraphics{STYLESTUFF/TU_LOGO}}%
+                \put(352,45){\textsf{Delft Center for Systems and Control}}%
+            \end{picture}%
+        }
+    }
+}
 \makeatother
-%--------------------------------------------------------------------------------------
-\newcommand{\eqnref}[1]{Eq.\ (\ref{#1})}
-\newcommand{\figref}[1]{Figure~\ref{#1}}
-\newcommand{\tabref}[1]{Table~\ref{#1}}
-%--------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 \renewcommand{\maketitle}{%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Main title with picture
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{titlepage}
-%removed Jan 8, 2009
-%\ifthenelse{ \equal{\mscbackpicture}{} }{}{
-%\AddToShipoutPicture*{\BackgroundPicture{\mscbackpicture}}
-%}
-%new Jan 8, 2009: name of eps file
-\AddToShipoutPicture*{\TuPicture{StyleStuff/TUD_DCSC_bies_white_A4_ENG}}
- \begin{center}
- \large{\textsc{Master of Science Thesis}}\\
- \end{center}%
- \newcommand{\HRule}{\rule{\linewidth}{1mm}}
- \setlength{\parindent}{0mm}
- \setlength{\parskip}{0mm}
- \vspace*{\stretch{2}}
- \HRule
- \begin{center}
- \Huge{\textbf{\textsf{\msctitle}}}\\ \Large{\textbf{\textsf{\mscsubtitle}}} \\[5mm]
- \Large{\textbf{\textsf{ \mscname}}}
- \end{center}
- \HRule
- \\ \mscdate \\
- \vspace*{\stretch{2}}
-
-\ifthenelse{ \equal{\msctitlepagepicture}{} }{}{
-\begin{figure}[h!]
-\centerline{\includegraphics[width=16cm]{\msctitlepagepicture}}
-\end{figure}
-}
-\vspace*{\stretch{2}}
-\hspace{1cm}
-\end{titlepage}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Second title page
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearemptydoublepage
-\thispagestyle{empty}
-\setcounter{page}{1}
-\begin{center}
-\Huge{\textbf{\textsf{\msctitle}}}\\ \Large{\textbf{\textsf{\mscsubtitle}}} \\[1cm]
-\Large{\textsc{Master of Science Thesis}}\\[2cm]
-\Large{For obtaining the degree of Master of Science in \mscprogram\ at Delft University of Technology}\\[5cm]
-\Large{\mscname}\\[1cm]
-\Large{\mscdate}
-\end{center}
- \vspace*{\stretch{2}}
- %\begin{center} \epsfig{file=cslogo.eps,width=3cm} \end{center}
- %
- \begin{center}
- \begin{tabular}{lcr}
- Faculty of \mscfaculty & $\cdot$ & Delft University of Technology\\
-  \end{tabular}
- \end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Copyright page
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\thispagestyle{empty}
-
-\ifthenelse{ \equal{\mscthirdpartylogo}{} }{}{
-%\vspace{1cm}
-\begin{figure}[h!]
-\includegraphics[height=3cm]{\mscthirdpartylogo}
-\end{figure}
-}
-\ifthenelse{ \equal{\mscthirdpartytext}{} }{}{
-\vspace*{0.5cm}
-\mscthirdpartytext \\
-}
-
-
-%\vspace*{15cm}
-\vspace*{\stretch{3}}
-\begin{figure}[h!]
-  \includegraphics{StyleStuff/tud}
-  \label{fig:TUDlogo}
-\end{figure}
-Copyright \copyright\ \mscdepartment \\
-All rights reserved.
-\cleardoublepage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Readers Page
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\thispagestyle{empty}
-
-\begin{center}
-     \large \textsc{Delft University Of Technology}\\
-%     \textsc{Department Of} \\
-     \textsc{\mscdepartment}
-\end{center}
-
-\vspace{1cm}
-%
-%\large
-
-The undersigned hereby certify that they have read and recommend
-to the Faculty of \mscfaculty\ for acceptance a thesis
-entitled \textbf{``\msctitleA''} by
-\textbf{\mscname} in partial fulfillment of the
-requirements for the degree of \textbf{Master of Science}.
-
-\vspace{4cm}
-
-\mbox{} \hfill Dated: \mscdate
-
-\vspace{1cm}
-
-\noindent
-Supervisor TU Delft:    \hfill \underline{ \hspace{7cm} }\\
-\mbox{}        \hfill  \mscreaderone\\
-\\
-\\
-Readers:       \hfill \underline{ \hspace{7cm} }\\
-\mbox{}        \hfill  \mscreadertwo\\
-\ifthenelse{ \equal{\mscreaderthree}{} }{}{\\
-\\
-\mbox{}        \hfill \underline{ \hspace{7cm} }\\
-\mbox{}        \hfill \mscreaderthree\\
-}
-\ifthenelse{ \equal{\mscreaderfour}{} }{}{\\
-\\
-Supervisor Alten:
-\mbox{}        \hfill \underline{ \hspace{7cm} }\\
-\mbox{}        \hfill \mscreaderfour\\
-}%
-\newpage\clearemptydoublepage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Fill out PDF author - title
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\setThesisInfo}{
-
-\makeindex
-\hypersetup{pdftitle    = Masters Thesis: \msctitle,
-            pdfauthor   = \mscname,
-            pdfsubject  = \mscsubtitle,
-            pdfkeywords = \msckeywords}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% TOC / LOF / LOT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\toc}{
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% Cover page with picture
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{titlepage}
+        \pagenumbering{Roman}
+        %
+        \ifthenelse{ \equal{\mscconfidential}{} }{}{        
+        \begin{center}
+        {\bf\large\textsc{\mscconfidential}}\\
+        \vspace*{0.5cm}
+        \cfoot{\small\textsf{\mscconfidential}}
+        \end{center}
+    }
+        %
+        \pdfbookmark[0]{Cover Page}{cover_anchor}
+        %
+        \ifthenelse{ \equal{\msccoverpicture}{} }{}{
+            \AddToShipoutPicture*{\BackgroundPicture{\msccoverpicture}}
+        }
+        \AddToShipoutPicture*{\TuBies}
+        \setlength{\unitlength}{1cm}
+        %
+        % TITELBLOK EN OORMERK
+        \setlength{\fboxsep}{0cm}
+        \setlength{\unitlength}{\textwidth}
+        \begin{picture}(1,0.45)%
+%PH 15-11-2011 repaired next lines        
+            % black box for title and name
+            \put(0,0){%
+%PH 24-10-11 REPLACED NEXT LINE
+%                \colorbox{black}{\makebox(1,.45){}}
+                \colorbox[cmyk]{1,1,1,1}{\makebox(1,.45){}}
+           }%
+            % Title text (white)
+            \put(0.05,0.40){%
+                \begin{minipage}[t]{0.9\textwidth}%
+                    \Huge{\fontfamily{pbk}\selectfont%
+                    \setlength{\baselineskip}{1.3\baselineskip}%
+                    \color{white}\msctitle}%
+                    
+                    \vspace{2mm}%
+                    \Large{\fontfamily{pbk}\selectfont%
+                    \setlength{\baselineskip}{1.3\baselineskip}%
+                    \color{white}\mscsubtitle}%
+                \end{minipage}%
+            }%
+            % Author text (cyan)
+            \put(0.05,0.05){%
+                \parbox[b]{0.9\textwidth}{%
+                    \Huge{\fontfamily{pbk}\selectfont%
+                    \color{cyan}\mscname}%
+                }%
+            }%      
+            % cyan `oormerk' box
+            \put(-0.25,-0.45){%
+                \colorbox{cyan}{\makebox(0.25,0.45){}}
+            }%
+            \put(-0.05,-0.42){%
+                \rotatebox{90}{%
+                    \Large{\textsf{\color{white} Master of Science Thesis}}
+                }%
+            }%
+        \end{picture}
+    \end{titlepage}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% Main title page
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \clearemptydoublepage
     \thispagestyle{empty}
+  %
+        \ifthenelse{ \equal{\mscconfidential}{} }{}{        
+        \begin{center}
+        {\small\textsc{mscconfidential}}\\
+        \vspace*{0.5cm}
+        \end{center}
+    }
+
+  %
+    \pdfbookmark[0]{Title Page}{title_anchor}
+    %
+    \begin{center}
+        \Huge{\textbf{\textsf{\msctitle}}}\\ \Large{\textbf{\textsf{\mscsubtitle}}} \\[1cm]
+        \Large{\textsc{Master of Science Thesis}}\\[2cm]
+        \Large{For the degree of Master of Science in \mscprogram\ at Delft University of Technology}\\[5cm]
+        \Large{\mscname}\\[1cm]
+        \Large{\mscdate}
+    \end{center}
+    \vspace*{\stretch{2}}
+    \begin{center}
+        Faculty of \mscfaculty\ $\cdot$ Delft University of Technology
+    \end{center}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% Copyright page
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newpage
+    \thispagestyle{empty}
+    
+    \vspace*{0mm}
+    
+    \vfill
+    
+    \ifthenelse{ \equal{\mscthirdpartylogo}{} }{}{
+        \includegraphics[width=80pt]{\mscthirdpartylogo}
+        
+    }
+    \ifthenelse{ \equal{\mscthirdpartytext}{} }{}{
+%       \vspace*{1cm}
+        \mscthirdpartytext
+        
+    }
+    \vspace*{10mm}
+    \includegraphics{STYLESTUFF/TU_LOGO} \hfill \includegraphics[height=40pt]{STYLESTUFF/DCSC} \\
+    Copyright \copyright\ \mscdepartment \\
+    All rights reserved.
+    \cleardoublepage
+    \ifsigpage
+    {\large
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %% Signatures Page
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \thispagestyle{empty}
+        
+        %
+        \pdfbookmark[0]{Signatures}{readers_anchor}
+        %
+        \begin{center}
+          \textsc{Delft University of Technology}\\
+          \textsc{Department of} \\
+          \textsc{\mscdepartment}
+        \end{center}
+        
+        \vspace{0.5cm}
+        
+               
+        \begin{center}
+            The undersigned hereby certify that they have read and recommend to the Faculty of \mscfaculty\ for acceptance a thesis entitled
+            
+            \textsc{\msctitle}
+        
+            by
+            
+            \textsc{\mscname} 
+            
+            in partial fulfillment of the requirements for the degree of 
+            
+            \textsc{Master of Science \mscprogram}
+            
+        \end{center}
+        
+        \vspace{3cm}
+        
+        \mbox{} \hfill Dated: \underline{ \mscdate }
+        
+        \vspace{1cm}
+        
+        \noindent
+        Supervisor(s):    \hfill \underline{ \hspace{7cm} }\\
+        \mbox{}        \hfill  \mscsupervisorone
+
+    \ifthenelse{ \equal{\mscsupervisortwo}{} }{}{
+        
+            \vspace{1cm}
+            
+            \mbox{}        \hfill \underline{ \hspace{7cm} }\\
+            \mbox{}        \hfill \mscsupervisortwo}
+        
+    \ifthenelse{ \equal{\mscsupervisorthree}{} }{}{
+        
+            \vspace{1cm}
+            
+            \mbox{}        \hfill \underline{ \hspace{7cm} }\\
+            \mbox{}        \hfill \mscsupervisorthree}
+        
+        \vspace{1cm}
+        
+        Reader(s):       \hfill \underline{ \hspace{7cm} }\\
+        \mbox{}        \hfill  \mscreaderone
+
+        \ifthenelse{ \equal{\mscreadertwo}{} }{}{
+        
+            \vspace{1cm}
+            
+            \mbox{}        \hfill \underline{ \hspace{7cm} }\\
+            \mbox{}        \hfill \mscreadertwo}
+        
+        \ifthenelse{ \equal{\mscreaderthree}{} }{}{
+        
+            \vspace{1cm}
+            
+            \mbox{}        \hfill \underline{ \hspace{7cm} }\\
+            \mbox{}        \hfill \mscreaderthree}
+        
+        \ifthenelse{ \equal{\mscreaderfour}{} }{}{
+            
+            \vspace{1cm}
+            
+            \mbox{}        \hfill \underline{ \hspace{7cm} }\\
+            \mbox{}        \hfill \mscreaderfour}
+        \newpage\clearemptydoublepage%
+    }
+    \fi
+    \pagenumbering{roman}
+}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  TOC / LOF / LOT
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\newcommand{\toc}{
+%    \thispagestyle{empty}
     \setlength{\baselineskip}{0.5\baselineskip}
     \tableofcontents\cleardoublepage
     \setlength{\baselineskip}{2\baselineskip}
 }
-
 \newcommand{\toclof}{
-    \thispagestyle{empty}
+%    \thispagestyle{empty}
     \setlength{\baselineskip}{0.5\baselineskip}
     \tableofcontents\cleardoublepage
     \listoffigures\cleardoublepage
     \setlength{\baselineskip}{2\baselineskip}
 }
-
 \newcommand{\tocloflot}{
-    \thispagestyle{empty}
+%    \thispagestyle{empty}
     \setlength{\baselineskip}{0.5\baselineskip}
     \tableofcontents\cleardoublepage
     \listoffigures\cleardoublepage
@@ -1270,68 +1453,64 @@ Supervisor Alten:
     \setlength{\baselineskip}{2\baselineskip}
     \cleardoublepage
 }
-
-% ORIGINAL: Clark and Christophe
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Chapter with no numbers
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\nonumchap}[1]{%
-    \phantomsection % Added by Martijn van de Giessen
-    \addcontentsline{toc}{nonumchap}{\numberline{}#1}
-    \chapter*{#1}
-    \chaptermark{#1}
-    \markboth{#1}{#1}
-}
-    
+\setcounter{tocdepth}{2}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Set up HyperReference
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\RequirePackage{hyperref}
 %
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Print bib list
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newcommand{\printbib}[1]{
-% \cleardoublepage
-% \addcontentsline{toc}{chapter}{\numberline{}\bibname}
-% \lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries \bibname}}
-% \rhead[\fancyplain{}{\bfseries \bibname}]{\fancyplain{}{\bfseries\thepage}}
-% \bibliography{#1}
-% \cleardoublepage
-% \lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-% \rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
-% \cfoot{}
-% }
-% REVIEWED: MARTIJN
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Chapter with no numbers
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\nonumchap}[1]{%
-    \phantomsection % Added by Martijn van de Giessen
-    \addcontentsline{toc}{chapter}{\numberline{}#1}
-    \chapter*{#1}
-    \chaptermark{#1}
-    \markboth{#1}{#1}
+\hypersetup{colorlinks=true,
+            breaklinks=true,
+            citecolor=black,
+            urlcolor=blue,
+            linkcolor=black,
+            menucolor=blue,
+            anchorcolor=red,
+                        pdfstartview={XYZ null null 1},
+            bookmarksnumbered=false,
+            bookmarksopen=true,
+            bookmarksopenlevel=0}
+\newcommand{\setThesisInfo}{%
+  \makenomenclature
+  \makeindex
+  \hypersetup{pdftitle=Masters Thesis: \msctitle,
+            pdfauthor=\mscname,
+            pdfsubject=\mscsubtitle,
+            pdfkeywords=\msckeywords}
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Print bib list
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\printbib}[1]{
-\cleardoublepage
-\phantomsection % Added by Martijn van de Giessen
-\addcontentsline{toc}{chapter}{\numberline{}\bibname}
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries \bibname}}
-\rhead[\fancyplain{}{\bfseries \bibname}]{\fancyplain{}{\bfseries\thepage}}
-\bibliography{#1}
-\cleardoublepage
-\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-\rhead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\thepage}}
-\cfoot{}
-}
-%--------------------------------------------------------------------------------------
-\lfoot[\scriptsize \textsf{\mscname}]{\scriptsize \textsf{M.Sc. Thesis}}
-\rfoot[\scriptsize \textsf{M.Sc. Thesis}]{\scriptsize \textsf{\mscname}}
-%--------------------------------------------------------------------------------------
-\sloppy
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  MISCELLANEOUS
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+\newcommand{\clearemptydoublepage}%
+           {\newpage{\pagestyle{empty}\cleardoublepage}}
+%
+\renewcommand{\Re}{\mathfrak{Re}}
+\renewcommand{\Im}{\mathfrak{Im}}
+%
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+%
+\newcommand{\matlab}{\textsc{Matlab}}
+%
+\newcommand{\eqnref}[1]{Eq.~(\ref{#1})}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\chapref}[1]{Chapter~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+%
+%\sloppy
 \endinput
 %%
 %% End of file `mscThesis.cls'.

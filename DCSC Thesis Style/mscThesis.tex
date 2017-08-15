@@ -1,0 +1,99 @@
+\documentclass[nosignatures]{mscThesis}
+% replace the previous line with the next to include a signature page
+%\documentclass{mscThesis}
+% use the option 'nosignatures' to turn off the signatures page
+%\documentclass[nosignatures]{mscThesis}
+%
+% Thesis data
+%-For Confidential Reports, uncomment the next line, if desired change the argument. It is printed on the cover, title page and in the footer per page
+%\mscConfidential{CONFIDENTIAL}
+%
+%-Definition of department, programme, faculty
+\mscDepartment{Delft Center for Systems and Control (\textsmaller{DCSC})}%
+\mscProgram{Systems and Control}
+%Change if needed to
+%\mscProgram{Mechanical Engineering}
+\mscFaculty{Mechanical, Maritime and Materials Engineering (3mE)}%
+%
+%-name, date, title
+\mscName{J. Random Student}%
+\mscDate{\today}%
+\mscTitle{Thesis Title}%
+\mscSubTitle{Optional Subtitle}%
+\mscKeyWords{thesis, msc, subject}% only used in PDF properties
+%
+%-cover picture
+%\mscCoverPicture{STYLESTUFF/COVER}% to place a picture ( here the example COVER.eps) on the cover page. Comment out if no picture is to be used
+%
+%
+%-Third party options (create text/logo on the copywrite page)
+\mscThirdPartyText{The work in this thesis was supported by Aquaduct Swimming Supplies Incorporated. Their cooperation is hereby gratefully acknowledged.}
+\mscThirdPartyLogo{STYLESTUFF/EXAMPLELOGO}
+% NOTE: on the title page only the TU Delft logo is permitted.
+%
+%
+% The examination committee  - Supervisors and Readers
+\mscSupervisorOne{prof.dr.ir.~M.Y.~Supervisor}
+\mscSupervisorTwo{Dr.ir.~M.Y.~Second Super}
+%\mscSupervisorThree{}
+\mscReaderOne{prof.dr.ir.~M.Y.~First Reader}
+\mscReaderTwo{dr.ir.~F.S.T.~Reader-two}
+\mscReaderThree{ir.~Th.~Reader-three}
+%\mscReaderFour{}
+%
+% Finalize the thesis data
+\setThesisInfo
+%
+% Use \includeonly{} to build only certain parts of your thesis
+%\includeonly{introduction, real_chapter, empty_chapter, long_chapter}%
+%
+%PH Toegevoegd 24-10-2011
+%allow (matlab, C++ etc) listing max 1pt flexibility between lines
+\lstset{lineskip=0pt plus 1pt minus 0pt} %%
+%
+\begin{document}
+%
+%========================== Front matter ======================================
+\frontmatter %
+%
+% Make the cover page and hell of a lot of title pages
+\maketitle
+%
+\include{abstract}
+%
+% table of contents, (\toc of \toclof of \tocloflot )
+\tocloflot
+%
+%
+\include{preface}
+\include{acknowledgements}
+\include{dedication}
+%
+%========================== Main matter ======================================
+\mainmatter
+%
+\include{introduction}
+\include{structuring}
+\include{basics}
+%
+%
+%========================== Appendices =======================================
+\appendix
+%
+\include{app_back}
+\include{app_another}
+
+%========================== Back matter ======================================
+\backmatter
+%
+% Bibliography
+\bibliographystyle{ieeetr}
+\printbib{MyBib}
+%
+\include{glossary}
+%
+% Index
+\cleardoublepage
+\printindex
+
+\end{document}

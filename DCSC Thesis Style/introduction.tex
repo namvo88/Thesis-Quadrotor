@@ -1,0 +1,85 @@
+%
+% Introduction
+\chapter{Introduction} \label{chap::intro}
+
+This is a \LaTeX\ thesis and this is Chapter\ \ref{chap::intro}.
+
+\section{About \texorpdfstring{\LaTeX}{LaTeX}}
+
+\LaTeX\ is a document preparation system for the \TeX\ typesetting program. It offers programmable desktop publishing features and extensive facilities for automating most aspects of typesetting and desktop publishing, including numbering and cross-referencing, tables and figures, page layout, bibliographies, and much more.
+
+\LaTeX\ was originally written in 1984 by Leslie Lamport and has become the dominant method for using \TeX; few people write in plain \TeX\ anymore. The current version is \LaTeXe.
+
+If you want to know more about \LaTeX\ you better read \cite{texbook}.\index{LaTeX}
+
+
+\section{About Acronyms}
+
+This section contains an acronym of the \ac{DCSC}. The \ac{DCSC} is our department within the faculty of \ac{3mE} at \ac{TU}. \index{acronym}
+
+Acronyms are automatically listed in the Glossary in the back of this thesis. You have to define acronyms in \texttt{glossary.tex} using \verb"\acro{ACRONYM}{Full text}". You print an acronym by using the command \verb"\ac{...}". You can always force a full, long or short printout by using \verb"\acf{...}", \verb"\acl{...}" or \verb"\acs{...}" respectively.
+
+\begin{itemize}
+    \item \verb"\acf{DCSC}": \acf{DCSC};
+    \item \verb"\acl{DCSC}": \acl{DCSC};
+    \item \verb"\acs{DCSC}": \acs{DCSC}.
+\end{itemize}
+
+\section{About the Nomenclature}
+
+When you use symbols in your thesis -- as you probably will -- you can put them into the nomenclature listing (List of Symbols) at the back of your thesis. \tabref{tab:nomencl} shows the \LaTeX\ commands you need.\index{nomenclature}
+
+\begin{table}%
+    \centering
+    \caption{Nomenclature codes}
+    \label{tab:nomencl}
+    \begin{tabular}{llcl}
+        \toprule
+        Code & Usage & Example\\
+        \midrule
+        \verb"\gsymb{}" & Greek symbols & \gsymb{$\gamma$}{Path Angle}\\
+        \verb"\lsymb{}" & Letter symbols & \lsymb{$H(s)$}{Transfer function}\\
+        \verb"\supers{}" & Superscript symbols & \supers{max}{Maximum} &\emph{only printed in the List of Symbols} \\
+        \verb"\subs{}" & Subscript symbols & \subs{min}{Minimum} &\emph{only printed in the List of Symbols}\\
+        \verb"\others{}" & Other symbols & \others{[kts]}{Knots} \others{$^{\circ}$, [deg]}{Degrees} &\emph{only printed in the List of Symbols}\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{About {\textbackslash}(re)newcommand}
+As you will (soon) know the \LaTeX\ system makes use of commands in
+the form of \verb"\command". This can be used to make your life
+easier, since you can also define these commands yourself. Suppose
+that you often use an expression $e^{it}$. This would
+normally be written as \verb"$e^{it}$", or if already in math mode
+as \verb"e^{it}". Now you can define a command
+\verb"\eit" as follows\\
+\verb"\newcommand{\eit}{e^{it}}"\\
+This definition has to be placed in the so-called preamble, i.e.
+before the declaration\\ \verb"\begin{document}".\\ Now you can use
+this
+command in your text, so \verb"\eit" replaces \verb"e^{it}".\\
+Be aware that many commands are already in use by various packages.
+If you define an already existing command this will result in an
+error message. The best way to deal with this is to make sure your
+own command is unique, for instance by defining it as\\
+\verb"\newcommand{\MYeit}{e^{it}}".\\
+An alternative is to redefine the existing command by\\
+\verb"\renewcommand{\eit}{e^{it}}",\\
+but this is in general considered a tedious practice and should be
+avoided.
+See the \LaTeX\ documentation for more details and possibilities. You can also use arguments.\\
+%
+Don't underestimate the power of this feature. Suppose that you
+frequently use the expectation operator $E(x)$ in your text which is
+created with \verb"E(x)" (in math mode). Now your supervisor decides
+that he would prefer to see this as $\bf{E}(x)$. If you haven't
+defined your own command, you will have to go through the complete
+text, changing every instance. If you would have thought about it
+and
+would have defined originally\\
+\verb"\newcommand{\MyE{1}}{E(#1)}",\\
+using this in your text as
+\verb"\MyE{x}", \verb"\MyE{y}" etc.,\\
+then you can change this simply by adapting the definition to\\
+\verb"\newcommand{\MyE{1}}{\bf{E}(#1)}".

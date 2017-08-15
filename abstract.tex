@@ -7,13 +7,14 @@ An interesting subproblem of load transportation is the control of the position 
 The goal of this thesis is to present a nonlinear geometric control approach, investigate its possibilities and limitations to track the position of a cable suspended load. The focus lies on the quadrotor-load subsystem where the cable tension is non-zero, which is analogous to modeling a rigid link between the quadrotor and load.
 %The main goal is to investigate the possibilities and limitations of nonlinear geometric control for the purpose of load trajectory tracking of a quadrotor with a cable-suspended load, by evaluating the stability of the system and the tracking performance on different load trajectories. 
 
-After introducing the basic concepts, an introduction is given on geometric mechanics. This differential geometric based approach is used model and control the system, based on the geometric properties of the system dynamics. 
+After introducing the basic concepts, an introduction is given on geometric mechanics. This differential geometric based approach is used to model and control the system, based on the geometric properties of the system dynamics. 
 It is shown how the configuration of the quadrotor-load system can be described on smooth nonlinear geometric configuration spaces, and analyzed with the principles of differential geometry. 
 This allows for modeling in an unambiguous coordinate-free dynamic fashion, while avoiding the problem of singularities that would occur on local charts. \\
-%Next, the quadrotor-load system is modeled with the tools of differential geometry in order 
-%to make it suitable for nonlinear geometric control. T
 Next, the geometric properties are utilized to define tracking error functions on these same spaces, making it possible to design almost-globally defined nonlinear geometric controllers. A backstepping approach is applied to generate a cascaded structure with multiple nonlinear geometric controllers, allowing control of several flight modes that are responsible for the control of 1) quadrotor attitude, 2) load attitude and 3) load position.\\ 
-Finally, simulations demonstrate the stability and abilities of the nonlinear geometric controller. A Linear Quadratic Regulator is derived to compare control performance. The tracking performances of both controllers are discussed for three different experiments and final conclusions are presented. The thesis is concluded with a summary and recommendations for future work.
+Finally, simulations demonstrate the stability and abilities of the nonlinear geometric controller. A Linear Quadratic Regulator is derived to compare both of the control performances. The tracking performances of both controllers are discussed for three different experiments. 
+From the results of the experiments can be concluded that the nonlinear control design allows control of multiple states with the final objective of controlling the load position. The nonlinear geometric approach proves effective in load position tracking of complex trajectories and fast maneuvers,
+while maintaining stability of the closed-loop system. 
+%The thesis is concluded with a summary and recommendations for future work.
  
 
 %%CHANGE meer power / eye cather, wat gebeurt er in deze thesis

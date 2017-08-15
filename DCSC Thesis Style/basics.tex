@@ -1,0 +1,51 @@
+%
+% Second chapter
+\chapter{Some Basics}
+
+This chapter will cover figures and math. 
+
+\section{Figures}
+
+Figures are constructed using the \texttt{figure} environment:
+\begin{verbatim}
+\begin{figure}
+	\centering
+	\includegraphics[options]{imagefile_location}
+	\caption{Captions}
+	\label{fig:dummy}
+\end{figure}
+\end{verbatim}
+
+\LaTeX\ automatically decides the best placement of the Figure in your document. This will usually be at the top or bottom of the current page, or at the top of the next page. This system gives good results most of the time, but it can get confused when you have a large number of figures. The command \verb"\clearpage" creates an empty page where any `lost' figures will be printed.
+
+You can refer to a Figure by its label: \verb"\figref{label}". See for instance \figref{fig:dummy}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.31415\textwidth]{STYLESTUFF/DCSC}
+	\caption{The \acs{DCSC} logo. Pretty nice, eh?}
+	\label{fig:dummy}
+\end{figure}
+
+\section{Math: \texorpdfstring{$e^{j \pi}=0$}{``Euler's identity''}}
+
+I put some fancy math in the section title. Usually this generates complaints from the \texttt{hyperref} package, because the bookmarks you see on the left can only handle `regular text'. Fortunately, this problem can be solved by using a special command that inserts `regular text' whenever this is necessary during compilation of your thesis: \verb"\texorpdfstring{math}{text}".
+
+For further information about math in \LaTeX, I recommend looking at the Short Math Guide found at \href{http://www.ams.org/tex/amslatex.html}{the website} of the \ac{AMS}. \index{math}
+
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  1 &=& 2\\
+  x &=& 5 \\
+  y &=& \theta
+\end{eqnarray}
+
+
+\section{More About Acronyms}
+
+After the start of a new chapter all acronyms are reset and are printed as a full acronym the first time it is used again, e.g.\ \ac{DCSC}. After the first use, only the short acronym is printed again: \ac{DCSC}.
+
+
+\section{More About Nomenclature}
+
+This is a test for nomenclature \lsymb{$A(s)$}{Answer function} \index{test}

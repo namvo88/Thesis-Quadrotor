@@ -16,7 +16,7 @@
 		\usepackage{epstopdf}
 		\usepackage{url}
 		\usepackage{enumitem}			
-		
+		\usepackage{float}
 		\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
 		
 		% Acronyms
@@ -32,8 +32,8 @@
 		
 		\renewcommand{\a}[1]{\acs{#1}} %Fastkey \acs{[1]}
 		\renewcommand{\v}[1]{\vspace{-#1mm}} 
-		\newcommand{\IF}{$\left\lbrace\mathcal{I}\right\rbrace$ }
-		\newcommand{\BF}{$\left\lbrace\mathcal{B}\right\rbrace$ }	
+		\newcommand{\IF}{$\left\lbrace\mathcal{I}\right\rbrace$\,}
+		\newcommand{\BF}{$\left\lbrace\mathcal{B}\right\rbrace$\,}	
 		\newcommand{\dir}[1]{C:/Users/Nam/Documents/Git/Thesis-quadrotor-Code/NamMatlab/QRL/MatlabImages/{#1}.png}
 		
 		\setcounter{MaxMatrixCols}{20}
@@ -61,15 +61,15 @@
 \mscProgram{Mechanical Engineering} \mscFaculty{Mechanical,
 Maritime and Materials Engineering} \mscName{N.N. Vo}
 \mscDate{\today} 
-\mscTitle{nonlinear geometric control \\ of a quadrotor with \\ a Cable-Suspended load} 
-\mscTitleA{nonlinear geometric control of a quadrotor with a Cable-Suspended load} 
+\mscTitle{Nonlinear Geometric Control \\ of a Quadrotor with \\ a Cable-Suspended load} 
+%\mscTitleA{Nonlinear geometric control of a quadrotor with a Cable-Suspended load} 
 
 %\mscSubTitle{Subtitle}
 \mscKeyWords{thesis, msc, quadrotor, suspended load, nonlinear geometric control, differential geometry}
 %
 %use the next line if you want a picture on the title page
-%CHECK picture
-%\mscTitlePagePicture{example_titlefig}
+
+\mscTitlePagePicture{./StyleStuff/onshape3.png}
 %Note: the file example_titlefig.eps is just for illustration. Do not use this for your own thesis
 
 %% --------------------------------------------------------------------
@@ -81,18 +81,19 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 %NOTE: on the title page only the TUDelft and DCSC logo's are permitted. These are automatically created
 
 \mscThirdPartyLogo{./StyleStuff/ALTEN.png}
-\mscThirdPartyText{The work in this Master of Science Thesis was supported by Alten Nederland. Their cooperation is hereby gratefully acknowledged.}
+\mscThirdPartyText{The work in this Master of Science Thesis was supported by Alten Nederland.\\ Their cooperation is hereby gratefully acknowledged.}
 
 %Note: the file examplelogo.eps is just for illustration. Do not use this for your own thesis
 
 
 %% --------------------------------------------------------------------
 
-
-\mscReaderOne{dr.ir. T. Keviczky}
-\mscReaderTwo{Dr. J. Alonso-Mora}
-\mscReaderThree{A. Sharifi Kolarijani}
-\mscReaderFour{ir. B. van Vliet}
+\mscSupervisorOne{dr.ir. T. Keviczky}
+\mscSupervisorTwo{ir. B. van Vliet}
+\mscReaderOne{dr. J. Alonso-Mora}
+\mscReaderTwo{A. Sharifi Kolarijani}
+%\mscReaderThree{A. Sharifi Kolarijani}
+%\mscReaderFour{ir. B. van Vliet}
 %
 %
 \setThesisInfo
@@ -111,7 +112,7 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 %
 % Acknowledgements
     \nonumchap{Acknowledgements}%
-    I would like to thank my supervisors \mscreaderone\ from \textit{Delft Center of Systems and control}, and \mscreaderfour\ from \textit{Alten Nederland B.V.} for their assistance during my research and the writing of this thesis. I would also like to thank all colleagues from Alten and TU Delft for their time and advice.
+    I would like to thank my supervisors \mscsupervisorone\ from \textit{Delft Center of Systems and control}, and \mscsupervisortwo\ from \textit{Alten Nederland B.V.} for their assistance during my research and the writing of this thesis. I would also like to thank all colleagues from Alten and TU Delft for their time and advice.
     \vspace*{15mm}
 
     \noindent
@@ -160,8 +161,7 @@ Maritime and Materials Engineering} \mscName{N.N. Vo}
 	\bibliographystyle{ieeetr}
 	\bibliography{library}
 	
-	%CHECK all entries for uniformity 	
-	
+
 %	\printbib{library}
 	
 	% Index
